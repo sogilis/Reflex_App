@@ -47,10 +47,10 @@ package Tank is
    P3 : Pump_Record;  
    -- Tank3's outlet pump
    
-   B : Blender_Record;  
+   Blender : Blender_Record;  
    -- Blender
    
-   R : Resistance_Record; 
+   Resistance : Resistance_Record; 
    -- Resistance to heat the tank3'product
    
 end Tank;

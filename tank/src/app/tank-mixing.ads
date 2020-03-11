@@ -18,38 +18,33 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-package Tank.Filling is
+package Tank.Mixing is
    
-   type Filling_Record is tagged private;
+   type Mixing_Record is tagged private;
    
-   type Filling_State is 
+   type Mixing_State is 
       (Init_State,
-       Openning_Valves_State,
-       Running_Pumps_State,
-       Filling_emptying_State,
-       Closing_Valves_State,
-       Stopping_Pumps_State,
-       Waiting_State);
+       Mixing_State,
+       End_Mixing_State);
    
    procedure Initialize (This : in out Filling_Record);
    
    procedure Cyclic
-     (This           : in out Filling_Record;
-      Start_Filling  : Boolean;
-      Valves_Opened  : Boolean;
-      Valves_Closed  : Boolean;
-      Pumps_Started  : Boolean;  
-      Level_P        : Boolean;
-      Open_Valves    : out Boolean;
-      Start_Pumps    : out Boolean;
-      Close_Valves   : out Boolean);
+     (This             : in out Filling_Record;
+      Start_Mixing     : Boolean;
+      Mixing_Duration  : Initeger;
+      Second           : Integer;
+      Start_Blender    : out Boolean;
+      Start_Resistance : out Boolean;
+      End_Mixing       : out Boolean);
    
 private
    
-   type Filling_Record  is tagged record
-       State          : Filling_State;
+   type Mixing_Record  is tagged record
+      State           : Mixing_State;
+      Mising_Duration : Integer;
    end record;
    
-   No_Filling_Record : constant Filling_Record := (State => Init_State );
+   No_Mixing_Record : constant Mixing_Record := (State => Init_State );
    
-end Tank.Filling;
+end Tank.Mixing;

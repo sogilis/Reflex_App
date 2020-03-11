@@ -18,60 +18,36 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-with Ada.Text_IO; use Ada.Text_IO;
-
-package body Tank.Mixing is
+package Tank.Cycle is
    
-   ----------------
-   -- Initialize --
-   ----------------
+   type Cycle_Record is tagged private;
    
-   procedure Initialize (This : in out Filling_Record) is
-   begin
-      This := No_Mixing_Record;
-   end Initialize;
+   type Cycle_State is
+   (Init_State,
+    Filling_State,
+    Mixing_State,
+    Emptying_State,
+    End_Cycle);
    
-   ------------
-   -- Cyclic --
-   ------------
+   procedure Initialize (This : in out Cycle_Record);
    
    procedure Cyclic
-     (This             : in out Filling_Record;
-      Start_Mixing     : Boolean;
-      Mixing_Duration  : Initeger;
-      Second           : Integer;
-      Start_Blender    : out Boolean;
-      Start_Resistance : out Boolean;
-      End_Mixing       : out Boolean) is
-      
-      New_State : Mixing_State := This.State;
-   begin
-       case This.State is
-	 when Init_State =>
-	    if Start_Mixing then
-	       New_State := Mixing_State;
-    	    end if;
-
-	 when Mixing_State =>
-	    if Second then
-	       This.Mixing_Duration + 1;
-	    end if;
-	    
-	    if This.Mixing_Duration >= Mixing_Duration then
-	       New_State := End_Mixing_State;
-	    end if;
-
-	 when End_Mixing_State =>
-	    null;
-      end case;
-      
-      This.State := New_State;
-
-      -- Commandes
-      
-      Start_Blender    := (This.State = Mixing_State);
-      Start_Resistance := (This.State = Mixing_State);
-      End_Mixing       := (This.State = End_Mixing_State);
-   end Cyclic;
+     (This           : in out Cycle_Record;
+      Start          : in Boolean;
+      End_Filling    : Boolean;
+      End_Mixing     : Boolean;
+      End_Emptying   : Boolean;
+      Filling_Order  : out Boolean;
+      Mixing_Order   : out Boolean;
+      Emptying_Order : out Boolean;
+      End_Cycle      : out Boolean);
    
-end Tank.Mixing;
+private
+   
+   type Cycle_Record is tagged record
+      State : Cycle_State;
+   end record;
+   
+   No_Cycle_Record : constant Cycle_Record := (State => Init_State);
+   
+end Tank.Cycle;

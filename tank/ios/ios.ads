@@ -20,7 +20,10 @@
 
 package Ios is
    
-   --  Valve V1_R1
+   -- Valves for Filling --
+   ------------------------
+   
+   --  Valve V1_R1 
    
    V1_R1_Opened : Boolean;
    V1_R1_Closed : Boolean;
@@ -48,21 +51,44 @@ package Ios is
    V2_R2_Open_Order : Boolean;
    V2_R2_Close_Order : Boolean;
    
-   --  ¨Pump P1
+   -- Valves for Emptying --
+   -------------------------
+   
+   --  Valve V1_R3
+   
+   V1_R3_Opened : Boolean;
+   V1_R3_Closed : Boolean;
+   V1_R3_Open_Order : Boolean;
+   V1_R3_Close_Order : Boolean;
+   
+   --  Valve V2_R3
+   
+   V2_R3_Opened : Boolean;
+   V2_R3_Closed : Boolean;
+   V2_R3_Open_Order : Boolean;
+   V2_R3_Close_Order : Boolean;
+   
+   
+   --  Pump P1 Filling From Tank 1
    
    P1_Started : Boolean;
    P1_Start_Order : Boolean;
    
-   --  Pump P2
+   --  Pump P2 Filling from Tank 2
    
    P2_Started : Boolean;
    P2_Start_Order : Boolean;
    
+   --  Pump P3 Emptying
+   
+   P3_Started : Boolean;
+   P3_Start_Order : Boolean;
+   
    --  Bac
    
-   Tank_Low_Levl : Bollena;
-   Tank_Medium_Levl : Bollena;
-   Tank_High_Levl : Bollena;
+   Tank_Low_Levl : Boolean;
+   Tank_Medium_Levl : Boolean;
+   Tank_High_Levl : Boolean;
    
    --  Resistance Marche
    

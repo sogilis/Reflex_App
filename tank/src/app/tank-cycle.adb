@@ -18,60 +18,68 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-with Ada.Text_IO; use Ada.Text_IO;
-
-package body Tank.Mixing is
+package Tank.Cycle is
    
    ----------------
    -- Initialize --
    ----------------
    
-   procedure Initialize (This : in out Filling_Record) is
+   procedure Initialize (This : in out Cycle_Record) is
    begin
-      This := No_Mixing_Record;
+      This.State := No_Cycle_Record;
    end Initialize;
    
-   ------------
-   -- Cyclic --
-   ------------
-   
    procedure Cyclic
-     (This             : in out Filling_Record;
-      Start_Mixing     : Boolean;
-      Mixing_Duration  : Initeger;
-      Second           : Integer;
-      Start_Blender    : out Boolean;
-      Start_Resistance : out Boolean;
-      End_Mixing       : out Boolean) is
-      
-      New_State : Mixing_State := This.State;
+     (This           : in out Cycle_Record;
+      Start          : in Boolean;
+      End_Filling    : Boolean;
+      End_Mixing     : Boolean;
+      End_Emptying   : Boolean;
+      Filling_Order  : out Boolean;
+      Mixing_Order   : out Boolean;
+      Emptying_Order : out Boolean;
+      End_Cycle      : out Boolean) is
    begin
-       case This.State is
+      
+      New_State : Tank_State := This.State;
+   begin
+      Put_Line ("Tank.Cyclic");
+      case This.State is
 	 when Init_State =>
-	    if Start_Mixing then
+	       New_State := Filling_State;
+	       
+	 when Filling_State =>
+	    if This.End_Filling then
 	       New_State := Mixing_State;
-    	    end if;
-
-	 when Mixing_State =>
-	    if Second then
-	       This.Mixing_Duration + 1;
+	    end if; 
+         
+         when Mixing_State =>
+	    if This.End_Mixing then
+	       New_State := Emptying_State;
 	    end if;
 	    
-	    if This.Mixing_Duration >= Mixing_Duration then
-	       New_State := End_Mixing_State;
+	 when Emptying_State =>
+	    if  This.End_Emptying then
+	       New_State := Filling_State;
 	    end if;
-
-	 when End_Mixing_State =>
+	    
+	 when End_Cycle =>
 	    null;
       end case;
       
       This.State := New_State;
 
-      -- Commandes
-      
-      Start_Blender    := (This.State = Mixing_State);
-      Start_Resistance := (This.State = Mixing_State);
-      End_Mixing       := (This.State = End_Mixing_State);
+
+     -- Commandes
+
+	This.Filling_Order  := (This.State=Filling_State);
+	This.Mixing_Order   := (This.State=Mixing_State);
+	This.Emptying_Order := (This.State=Emptying_State);
    end Cyclic;
    
-end Tank.Mixing;
+private
+   
+   Mixing_Graf  : Mixing_Record;
+   Filling_Graf : Filling_Record;
+   
+end Tank.Cycle;

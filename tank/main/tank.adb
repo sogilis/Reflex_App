@@ -18,66 +18,11 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-with Ada.Text_IO; use Ada.Text_IO;
+with Regul;
+with Regul.Ramps;
 
-package body Tank is
+procedure Compil_Regul is
+begin
+   null;
+end Compil_Regul;
    
-   ---------------
-   -- New_Tank--
-   ---------------
-   
-   function New_Tank return Tank_Ptr is
-      This : Tank_Ptr := new Tank_Record'(No_Tank_Record);
-   begin
-      return This;
-   end New_Tank;
-   
-   ----------------
-   -- Initialize --
-   ----------------
-   
-   procedure Initialize (This : Tank_Ptr) is
-   begin
-      This.all := No_Tank_Record;
-   end Initialize;
-   
-   ------------
-   -- Cyclic --
-   ------------
-   
-   procedure Cyclic (This : access Tank_Record) is
-      
-      New_State : Tank_State := This.State;
-   begin
-      Put_Line ("Tank.Cyclic");
-      case This.State is
-	 when Init_State =>
-	       New_State := Filling_State;
-	 when Filling_State =>
-	    if This.End_Filling then
-            New_State := Mixing_State;
-         end if; 
-         
-         when Mixing_State =>
-	    if This.End_Mixing then
-	       New_State := Emptying_State;
-	    end if;
-	    
-	 when Emptying_State =>
-	    if  This.End_Emptying then
-	       New_State := Filling_State;
-	    end if;
-	
-      end case;
-      
-      This.State := New_State;
-
-     ------------   
-     --commande--
-     ------------
-	This.Filling_Order:= (This.State=Filling_State);
-	This.Mixing_Order:=(This.State=Mixing_State);
-	This.Emptying_Order:=(This.State=Emptying_State);
-   end Cyclic;
-   
-end Tank;

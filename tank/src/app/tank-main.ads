@@ -18,60 +18,44 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-with Ada.Text_IO; use Ada.Text_IO;
-
-package body Tank.Mixing is
+package Tank.Main is
    
-   ----------------
-   -- Initialize --
-   ----------------
+   procedure Initialize;
    
-   procedure Initialize (This : in out Filling_Record) is
-   begin
-      This := No_Mixing_Record;
-   end Initialize;
+   procedure Cyclic;
    
-   ------------
-   -- Cyclic --
-   ------------
    
-   procedure Cyclic
-     (This             : in out Filling_Record;
-      Start_Mixing     : Boolean;
-      Mixing_Duration  : Initeger;
-      Second           : Integer;
-      Start_Blender    : out Boolean;
-      Start_Resistance : out Boolean;
-      End_Mixing       : out Boolean) is
-      
-      New_State : Mixing_State := This.State;
-   begin
-       case This.State is
-	 when Init_State =>
-	    if Start_Mixing then
-	       New_State := Mixing_State;
-    	    end if;
-
-	 when Mixing_State =>
-	    if Second then
-	       This.Mixing_Duration + 1;
-	    end if;
-	    
-	    if This.Mixing_Duration >= Mixing_Duration then
-	       New_State := End_Mixing_State;
-	    end if;
-
-	 when End_Mixing_State =>
-	    null;
-      end case;
-      
-      This.State := New_State;
-
-      -- Commandes
-      
-      Start_Blender    := (This.State = Mixing_State);
-      Start_Resistance := (This.State = Mixing_State);
-      End_Mixing       := (This.State = End_Mixing_State);
-   end Cyclic;
    
-end Tank.Mixing;
+   Mixing_Graf  : Mixing_Record;
+   Filling_Graf : Filling_Record;
+   Cycle_Graf   : Cycle_Record;
+   
+   Start_Cycle    : Boolean;
+   End_Filling    : Boolean;
+   End_Mixing     : Boolean;
+   End_Emptying   : Boolean;
+   Filling_Order  : Boolean;
+   Mixing_Order   : Boolean;
+   Emptying_Order : Boolean;
+   End_Cycle      : Boolean);
+   
+   Filling_Valves_Opened  : Boolean;
+   Filling_Valves_Closed  : Boolean;
+   Filling_Pumps_Started  : Boolean;  
+   Level_P        : Boolean;
+   Filling_Open_Valves    : Boolean;
+   Filling_Start_Pumps    : Boolean;
+   Filling_Close_Valves   : Boolean;
+   
+   Mixing_Start_Blender : Boolean;
+   Mixing_Start_Resistance : Boolean;
+   Mixing_End : Boolean;
+   
+   
+   Mixing_Duration : constant Integer := 60 * 60;
+   --  Mising duration in seconds (60mn)
+   
+   Second : Boolean;
+   -- Raising edge each second
+   
+end Tank.Main;
