@@ -1,4 +1,0 @@
-tank.adb:35:11: cannot compile subprogram in file "tank.adb"
-tank.adb:35:11: incorrect spec in file "tank.ads" must be removed first
-tank-variables.ads:21:41: extra ";" ignored
-tank-variables.ads:61:30: missing ";"
