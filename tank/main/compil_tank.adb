@@ -18,11 +18,22 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-with Regul;
-with Regul.Ramps;
+with Devices;          use Devices;
+with Devices.Blenders; use  Devices.Blenders;
+with Devices.Valves;   use  Devices.Valves;
+with Devices.Pumps;    use  Devices.Pumps;
+with Devices.Resistances; use Devices.Resistances;
+with Regul; use Regul;
+with Regul.Ramps; use Regul.Ramps;
+with ios; use ios;
+with Tank.cycle; use Tank.cycle;
+with Tank.filling; use Tank.filling;
+with Tank.mixing; use Tank.mixing;
+with Tank.main; use Tank.main;
+with Tank.variables; use Tank.variables;
 
-procedure Compil_Regul is
+procedure Compil_Tank is
 begin
    null;
-end Compil_Regul;
+end Compil_Tank;
    

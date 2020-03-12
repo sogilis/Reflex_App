@@ -26,7 +26,7 @@ package body Tank.Mixing is
    -- Initialize --
    ----------------
    
-   procedure Initialize (This : in out Filling_Record) is
+   procedure Initialize (This : in out Mixing_Record) is
    begin
       This := No_Mixing_Record;
    end Initialize;
@@ -36,10 +36,11 @@ package body Tank.Mixing is
    ------------
    
    procedure Cyclic
-     (This             : in out Filling_Record;
+     (This             : in out Mixing_Record;
       Start_Mixing     : Boolean;
-      Mixing_Duration  : Initeger;
-      Second           : Integer;
+      Blender_Started  : Boolean;
+      Mixing_Duration  : Integer;
+      Second           : boolean;
       Start_Blender    : out Boolean;
       Start_Resistance : out Boolean;
       End_Mixing       : out Boolean) is
@@ -49,15 +50,20 @@ package body Tank.Mixing is
        case This.State is
 	 when Init_State =>
 	    if Start_Mixing then
-	       New_State := Mixing_State;
+	       New_State := Mix_State;
     	    end if;
 
-	 when Mixing_State =>
+	 when Mix_State =>
+	    if Blender_Started then
+	       New_State :=It_Mixes_State;
+    	    end if;
+
+	 when It_Mixes_State =>
 	    if Second then
-	       This.Mixing_Duration + 1;
+	       This.Counter:=This.Counter + 1;
 	    end if;
 	    
-	    if This.Mixing_Duration >= Mixing_Duration then
+	    if This.Counter = Mixing_Duration then
 	       New_State := End_Mixing_State;
 	    end if;
 
@@ -69,8 +75,8 @@ package body Tank.Mixing is
 
       -- Commandes
       
-      Start_Blender    := (This.State = Mixing_State);
-      Start_Resistance := (This.State = Mixing_State);
+      Start_Blender    := (This.State = It_Mixes_State);
+      Start_Resistance := (This.State = It_Mixes_State);
       End_Mixing       := (This.State = End_Mixing_State);
    end Cyclic;
    

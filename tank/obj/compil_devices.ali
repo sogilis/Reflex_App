@@ -1,0 +1,63 @@
+V "GNAT Lib v2019"
+M P W=b
+A -gnatA
+A -gnatp
+A -gnatVn
+A -gnat12
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U compil_devices%b	compil_devices.adb	986e36f7 NE OO SU
+W devices%s		devices.adb		devices.ali
+W devices.blenders%s	devices-blenders.adb	devices-blenders.ali
+W devices.pumps%s	devices-pumps.adb	devices-pumps.ali
+W devices.resistances%s	devices-resistances.adb	devices-resistances.ali
+W devices.valves%s	devices-valves.adb	devices-valves.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041255 bf4f806b ada.finalization%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D compil_devices.adb	20200310114514 744659c3 compil_devices%b
+D devices.ads		20200310113728 fb10b7fe devices%s
+D devices-blenders.ads	20200310114118 80505888 devices.blenders%s
+D devices-pumps.ads	20200310114634 48aa36ca devices.pumps%s
+D devices-resistances.ads  20200310122611 5a178b2a devices.resistances%s
+D devices-valves.ads	20200310115344 85d53da2 devices.valves%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-finmas.ads		20190518041255 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518041256 4ff27390 system.finalization_root%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-pooglo.ads		20190518041254 ede33ef8 system.pool_global%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20190518041255 b16154c2 system.storage_pools%s
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+G a e
+G c Z b b [compil_devices standard 27 11 none]
+X 7 compil_devices.adb
+27U11*Compil_Devices 27b11 30l5 30t19
+X 8 devices.ads
+21K9*Devices 7|21w6 21r28 22r6 22r29 23r6 23r29 24r6 24r29 25r6 25r31 8|39e12
+X 9 devices-blenders.ads
+21K17*Blenders 7|22w14 22r37 9|61e21
+X 10 devices-pumps.ads
+21K17*Pumps 7|24w14 24r37 10|53e18
+X 11 devices-resistances.ads
+21K17*Resistances 7|25w14 25r39 11|48e24
+X 12 devices-valves.ads
+21K17*Valves 7|23w14 23r37 12|55e19
+

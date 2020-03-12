@@ -32,9 +32,10 @@ package Devices.Resistances is
    
   
    procedure Cyclic
-     (This : in out Resistance_Record;
-      Run          : Boolean;
-      T_Regul     : Boolean);
+     (This       : in out Resistance_Record;
+      Run        : Boolean;
+      T_Regul    : Float;
+      Set_Point  : Float);
    
 private
    

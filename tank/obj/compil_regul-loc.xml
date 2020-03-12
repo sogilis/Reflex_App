@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Locations>
+  <Project>
+    <vfs_file />
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/reflex_software/tank/gpr/compil_devices.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 2" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/reflex_software/tank/gpr/compil_devices.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 30" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/reflex_software/tank/gpr/compil_devices.gpr</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 7" line=" 41" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/reflex_software/tank/src/devices/devices-resistances.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

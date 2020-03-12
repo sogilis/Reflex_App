@@ -1,0 +1,21 @@
+[GENERATED OBJECT FILE]
+b__compil_regul.o
+[PROJECT FILES]
+/home/sogilis/sb/reflex_software/tank/gpr/compil_regul.gpr
+20200310110514
+[BOUND OBJECT FILES]
+/home/sogilis/sb/reflex_software/tank/obj/regul.o
+/home/sogilis/sb/reflex_software/tank/obj/regul-ramps.o
+/home/sogilis/sb/reflex_software/tank/obj/compil_regul.o
+[GENERATED SOURCE FILES]
+b__compil_regul.ads
+b__compil_regul.adb
+b__compil_regul.ali
+[RESULTING OPTIONS]
+-L/home/sogilis/sb/reflex_software/tank/obj/
+-L/home/sogilis/sb/reflex_software/tank/obj/
+-L/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/
+-static
+-static-libgcc
+/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/libgnat.a
+-ldl

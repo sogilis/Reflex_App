@@ -21,41 +21,8 @@
 package Tank.Main is
    
    procedure Initialize;
-   
    procedure Cyclic;
-   
-   
-   
-   Mixing_Graf  : Mixing_Record;
-   Filling_Graf : Filling_Record;
-   Cycle_Graf   : Cycle_Record;
-   
-   Start_Cycle    : Boolean;
-   End_Filling    : Boolean;
-   End_Mixing     : Boolean;
-   End_Emptying   : Boolean;
-   Filling_Order  : Boolean;
-   Mixing_Order   : Boolean;
-   Emptying_Order : Boolean;
-   End_Cycle      : Boolean);
-   
-   Filling_Valves_Opened  : Boolean;
-   Filling_Valves_Closed  : Boolean;
-   Filling_Pumps_Started  : Boolean;  
-   Level_P        : Boolean;
-   Filling_Open_Valves    : Boolean;
-   Filling_Start_Pumps    : Boolean;
-   Filling_Close_Valves   : Boolean;
-   
-   Mixing_Start_Blender : Boolean;
-   Mixing_Start_Resistance : Boolean;
-   Mixing_End : Boolean;
-   
-   
-   Mixing_Duration : constant Integer := 60 * 60;
-   --  Mising duration in seconds (60mn)
-   
-   Second : Boolean;
-   -- Raising edge each second
+   procedure Pre;
+   procedure Post;
    
 end Tank.Main;

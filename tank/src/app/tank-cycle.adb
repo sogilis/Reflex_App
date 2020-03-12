@@ -18,7 +18,7 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-package Tank.Cycle is
+package body Tank.Cycle is
    
    ----------------
    -- Initialize --
@@ -26,45 +26,51 @@ package Tank.Cycle is
    
    procedure Initialize (This : in out Cycle_Record) is
    begin
-      This.State := No_Cycle_Record;
+      This := No_Cycle_Record;
    end Initialize;
    
    procedure Cyclic
-     (This           : in out Cycle_Record;
-      Start          : in Boolean;
-      End_Filling    : Boolean;
-      End_Mixing     : Boolean;
-      End_Emptying   : Boolean;
-      Filling_Order  : out Boolean;
-      Mixing_Order   : out Boolean;
-      Emptying_Order : out Boolean;
-      End_Cycle      : out Boolean) is
-   begin
+     (This             : in out Cycle_Record;
+      Start            : in Boolean;
+      End_Filling_P1   : Boolean;
+      End_Filling_P2   : Boolean;
+      End_Mixing       : Boolean;
+      End_Emptying     : Boolean;
+      Filling_P1_Order : out Boolean;
+      Filling_P2_Order : out Boolean;
+      Mixing_Order     : out Boolean;
+      Emptying_Order   : out Boolean;
+      End_Cycle        : out Boolean) is  
       
-      New_State : Tank_State := This.State;
+      New_State : Cycle_State := This.State;
    begin
-      Put_Line ("Tank.Cyclic");
       case This.State is
 	 when Init_State =>
-	       New_State := Filling_State;
+	       New_State := Filling_P1_State;
 	       
-	 when Filling_State =>
-	    if This.End_Filling then
+	 when Filling_P1_State =>
+	    if End_Filling_P1 then
+	       New_State := Filling_P2_State;
+	    end if;
+
+         When Filling_P2_State =>
+	    if End_Filling_P2 then
 	       New_State := Mixing_State;
 	    end if; 
          
          when Mixing_State =>
-	    if This.End_Mixing then
+	    if End_Mixing then
 	       New_State := Emptying_State;
 	    end if;
 	    
 	 when Emptying_State =>
-	    if  This.End_Emptying then
-	       New_State := Filling_State;
+	    if End_Emptying then
+	       New_State := End_Cycle_State;
 	    end if;
 	    
-	 when End_Cycle =>
-	    null;
+	 when End_Cycle_State =>
+            null;     
+            
       end case;
       
       This.State := New_State;
@@ -72,14 +78,12 @@ package Tank.Cycle is
 
      -- Commandes
 
-	This.Filling_Order  := (This.State=Filling_State);
-	This.Mixing_Order   := (This.State=Mixing_State);
-	This.Emptying_Order := (This.State=Emptying_State);
+	Filling_P1_Order  := (This.State=Filling_P1_State);
+	Filling_P2_Order  := (This.State=Filling_P2_State);
+	Mixing_Order      := (This.State=Mixing_State);
+        Emptying_Order    := (This.State=Emptying_State);
+      	End_Cycle         := (This.State=End_Cycle_State);
+
    end Cyclic;
-   
-private
-   
-   Mixing_Graf  : Mixing_Record;
-   Filling_Graf : Filling_Record;
    
 end Tank.Cycle;

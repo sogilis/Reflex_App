@@ -36,9 +36,10 @@ package body Devices.Resistances is
    ------------
    
    procedure Cyclic
-     (This    : in out Resistance_Record;
-      Run     : Boolean;
-      T_Regul : Float) is
+       (This       : in out Resistance_Record;
+        Run        : Boolean;
+        T_Regul    : Float;
+        Set_Point  : Float) is
       
       New_State : Resistance_State := This.State;
    begin
@@ -53,7 +54,7 @@ package body Devices.Resistances is
 	    end if;
 	    
 	 when Running_State =>
-	    if T_Regul then
+	    if T_Regul /= Set_Point then
 	       New_State := Running_State;
             elsif not Run then
 	       New_State := Init_State;
@@ -62,6 +63,9 @@ package body Devices.Resistances is
       end case;
       
       This.State := New_State;
+      
+      --Commande
+      
 
    end Cyclic;
    

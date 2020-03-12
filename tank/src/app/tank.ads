@@ -20,37 +20,6 @@
 
 package Tank is
    
-   V1_R1 : Valve_Record; 
-   -- Tank1's outlet valve
-   
-   V2_R1 : Valve_Record;  
-   -- Pump P1's outlet valve
-   
-   V1_R2 : Valve_Record; 
-   -- Tank2's outlet valve   
-   
-   V2_R2 : Valve_Record; 
-   -- Pump P2's outlet valve
-   
-   V1_R3 : Valve_Record; 
-   -- Tank3's outlet valve  
-   
-   V2_R3 : Valve_Record;
-   -- Pump P3's outlet valve
-   
-   P1 : Pump_Record; 
-   -- Tank1's outlet pump  
-   
-   P2 : Pump_Record;
-   -- Tank2's outlet pump 
-   
-   P3 : Pump_Record;  
-   -- Tank3's outlet pump
-   
-   Blender : Blender_Record;  
-   -- Blender
-   
-   Resistance : Resistance_Record; 
-   -- Resistance to heat the tank3'product
+
    
 end Tank;

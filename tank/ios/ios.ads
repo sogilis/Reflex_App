@@ -25,16 +25,16 @@ package Ios is
    
    --  Valve V1_R1 
    
-   V1_R1_Opened : Boolean;
-   V1_R1_Closed : Boolean;
-   V1_R1_Open_Order : Boolean;
+   V1_R1_Opened      : Boolean;
+   V1_R1_Closed      : Boolean;
+   V1_R1_Open_Order  : Boolean;
    V1_R1_Close_Order : Boolean;
    
    --  Valve V2_R1
    
-   V2_R1_Opened : Boolean;
-   V2_R1_Closed : Boolean;
-   V2_R1_Open_Order : Boolean;
+   V2_R1_Opened      : Boolean;
+   V2_R1_Closed      : Boolean;
+   V2_R1_Open_Order  : Boolean;
    V2_R1_Close_Order : Boolean;
    
    --  Valve V1_R2
@@ -46,9 +46,9 @@ package Ios is
    
    --  Valve V2_R2
    
-   V2_R2_Opened : Boolean;
-   V2_R2_Closed : Boolean;
-   V2_R2_Open_Order : Boolean;
+   V2_R2_Opened      : Boolean;
+   V2_R2_Closed      : Boolean;
+   V2_R2_Open_Order  : Boolean;
    V2_R2_Close_Order : Boolean;
    
    -- Valves for Emptying --
@@ -56,49 +56,61 @@ package Ios is
    
    --  Valve V1_R3
    
-   V1_R3_Opened : Boolean;
-   V1_R3_Closed : Boolean;
-   V1_R3_Open_Order : Boolean;
+   V1_R3_Opened      : Boolean;
+   V1_R3_Closed      : Boolean;
+   V1_R3_Open_Order  : Boolean;
    V1_R3_Close_Order : Boolean;
    
    --  Valve V2_R3
    
-   V2_R3_Opened : Boolean;
-   V2_R3_Closed : Boolean;
-   V2_R3_Open_Order : Boolean;
+   V2_R3_Opened      : Boolean;
+   V2_R3_Closed      : Boolean;
+   V2_R3_Open_Order  : Boolean;
    V2_R3_Close_Order : Boolean;
    
    
    --  Pump P1 Filling From Tank 1
    
-   P1_Started : Boolean;
+   P1_Started     : Boolean;
    P1_Start_Order : Boolean;
    
    --  Pump P2 Filling from Tank 2
    
-   P2_Started : Boolean;
+   P2_Started     : Boolean;
    P2_Start_Order : Boolean;
    
    --  Pump P3 Emptying
    
-   P3_Started : Boolean;
+   P3_Started     : Boolean;
    P3_Start_Order : Boolean;
    
    --  Bac
    
-   Tank_Low_Levl : Boolean;
-   Tank_Medium_Levl : Boolean;
-   Tank_High_Levl : Boolean;
+   Tank_Low_Level    : Boolean;
+   Tank_Medium_Level : Boolean;
+   Tank_High_Level   : Boolean;
+   
+   --ptemperature measured by the sensor
+   
+   T_Measured           : float;
    
    --  Resistance Marche
    
-   Resitor_Start : Boolean;
-   Resistor_Setpoint : Integer;
+   Gradient             : float;
+   Tmax                 : float;
    
+   --  Resistance Marche
+    
+   Resistance_SetPoint  : float;
+   
+   --  higher speed of mixing
+
+   V2_Order             : Boolean;
+
    --  Blinder
    
-   Blinder_Start : Boolean;
-   Blinder_Started : Boolean;
+   Blinder_Started     : Boolean;
+   Blinder_Start_Order : Boolean;
    
    --  Hmi
    

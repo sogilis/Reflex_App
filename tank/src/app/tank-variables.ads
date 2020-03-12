@@ -18,7 +18,7 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-with Devices.Valves; use Devices.Valves;;
+with Devices.Valves; use Devices.Valves;
 with Devices.Pumps; use Devices.Pumps;
 with Devices.Blenders; use Devices.Blenders;
 with Devices.Resistances; use Devices.Resistances;
@@ -28,43 +28,78 @@ with Tank.Cycle; use Tank.Cycle;
 
 package Tank.Variables is
    
-   Mixing_Graf  : Mixing_Record;
-   Filling_Graf : Filling_Record;
-   Cycle_Graf   : Cycle_Record;
+   Mixing_Graf     : Mixing_Record;
+   Filling_P1_Graf : Filling_Record;
+   Filling_P2_Graf : Filling_Record;
+   Emptying_Graf   : Filling_Record;
+   Cycle_Graf      : Cycle_Record;
    
    
-   V1_R1_Graf : Devices.Valves.Valve_Record;
-   V2_R1_Graf : Devices.Valves.Valve_Record;
-   V1_R2_Graf : Devices.Valves.Valve_Record;
-   V2_R2_Graf : Devices.Valves.Valve_Record;
+   V1_R1 : Devices.Valves.Valve_Record;
+   V2_R1 : Devices.Valves.Valve_Record;
+   V1_R2 : Devices.Valves.Valve_Record;
+   V2_R2 : Devices.Valves.Valve_Record;
+   V1_R3 : Devices.Valves.Valve_Record;
+   V2_R3 : Devices.Valves.Valve_Record;
+
+   P1 : Devices.Pumps.Pump_Record;
+   P2 : Devices.Pumps.Pump_Record;
+   P3 : Devices.Pumps.Pump_Record;
    
+   Blender : Devices.Blenders.Blender_Record;
+
+   Resistance : Devices.Resistances.Resistance_Record;
    
-   Start_Cycle    : Boolean;
-   End_Filling    : Boolean;
-   End_Mixing     : Boolean;
-   End_Emptying   : Boolean;
-   Filling_Order  : Boolean;
-   Mixing_Order   : Boolean;
-   Emptying_Order : Boolean;
-   End_Cycle      : Boolean);
+   End_Filling_P1   : Boolean;
+   End_Filling_P2   : Boolean;
+   End_Mixing       : Boolean;
+   End_Emptying     : Boolean;
+   Filling_P1_Order : Boolean;
+   Filling_P2_Order : Boolean;
+   Mixing_Order     : Boolean;
+   Emptying_Order   : Boolean;
+   End_Cycle        : Boolean;
    
-   Filling_Valves_Opened  : Boolean;
-   Filling_Valves_Closed  : Boolean;
-   Filling_Pumps_Started  : Boolean;  
-   Level_P        : Boolean;
-   Filling_Open_Valves    : Boolean;
-   Filling_Start_Pumps    : Boolean;
-   Filling_Close_Valves   : Boolean;
+   Filling_V_R1_Opened  : Boolean;
+   Filling_V_R1_Closed  : Boolean;
+   Filling_P1_Started   : Boolean;  
+   Filling_Open_V_R1    : Boolean;
+   Filling_Start_P1     : Boolean;
+   Filling_Close_V_R1   : Boolean;
    
-   Mixing_Start_Blender : Boolean;
+   Filling_V_R2_Opened  : Boolean;
+   Filling_V_R2_Closed  : Boolean;
+   Filling_P2_Started   : Boolean;  
+   Filling_Open_V_R2    : Boolean;
+   Filling_Start_P2     : Boolean;
+   Filling_Close_V_R2   : Boolean; 
+
+   Emptying_V_R3_Opened  : Boolean;
+   Emptying_V_R3_Closed  : Boolean;
+   Emptying_P3_Started   : Boolean;  
+   Emptying_Open_V_R3    : Boolean;
+   Emptying_Start_P3     : Boolean;
+   Emptying_Close_V_R3   : Boolean; 
+   
+   Mixing_Start_Blender    : Boolean;
    Mixing_Start_Resistance : Boolean;
-   Mixing_End : Boolean;
-   
+   Mixing_End              : Boolean;
    
    Mixing_Duration : constant Integer := 60 * 60;
    --  Mising duration in seconds (60mn)
    
    Second : Boolean;
    -- Raising edge each second
+
+   CP        : Boolean;
+   Therm     : Boolean;
+   Speed_1   : Boolean;
+   Speed_2   : Boolean;
+   Acqk      : Boolean;
+   
+   --Temperature adjust by regulator
+   
+   T_Adjusted : Float;   
+
    
 end Tank.Variables;

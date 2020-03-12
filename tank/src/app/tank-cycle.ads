@@ -24,23 +24,26 @@ package Tank.Cycle is
    
    type Cycle_State is
    (Init_State,
-    Filling_State,
+    Filling_P1_State,
+    Filling_P2_State,
     Mixing_State,
     Emptying_State,
-    End_Cycle);
+    End_Cycle_State);
    
    procedure Initialize (This : in out Cycle_Record);
    
    procedure Cyclic
-     (This           : in out Cycle_Record;
-      Start          : in Boolean;
-      End_Filling    : Boolean;
-      End_Mixing     : Boolean;
-      End_Emptying   : Boolean;
-      Filling_Order  : out Boolean;
-      Mixing_Order   : out Boolean;
-      Emptying_Order : out Boolean;
-      End_Cycle      : out Boolean);
+     (This             : in out Cycle_Record;
+      Start            : in Boolean;
+      End_Filling_P1   : Boolean;
+      End_Filling_P2   : Boolean;
+      End_Mixing       : Boolean;
+      End_Emptying     : Boolean;
+      Filling_P1_Order : out Boolean;
+      Filling_P2_Order : out Boolean;
+      Mixing_Order     : out Boolean;
+      Emptying_Order   : out Boolean;
+      End_Cycle        : out Boolean);
    
 private
    

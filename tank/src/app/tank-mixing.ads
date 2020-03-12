@@ -24,16 +24,18 @@ package Tank.Mixing is
    
    type Mixing_State is 
       (Init_State,
-       Mixing_State,
+       Mix_State,
+       It_Mixes_State,
        End_Mixing_State);
    
-   procedure Initialize (This : in out Filling_Record);
+   procedure Initialize (This : in out Mixing_Record);
    
    procedure Cyclic
-     (This             : in out Filling_Record;
+     (This             : in out Mixing_Record;
       Start_Mixing     : Boolean;
-      Mixing_Duration  : Initeger;
-      Second           : Integer;
+      Blender_Started  : Boolean;
+      Mixing_Duration  : Integer;
+      Second           : boolean;
       Start_Blender    : out Boolean;
       Start_Resistance : out Boolean;
       End_Mixing       : out Boolean);
@@ -41,10 +43,10 @@ package Tank.Mixing is
 private
    
    type Mixing_Record  is tagged record
-      State           : Mixing_State;
-      Mising_Duration : Integer;
+      State   : Mixing_State;
+      Counter : Integer;
    end record;
    
-   No_Mixing_Record : constant Mixing_Record := (State => Init_State );
+   No_Mixing_Record : constant Mixing_Record := (State => Init_State, Counter =>0);
    
 end Tank.Mixing;

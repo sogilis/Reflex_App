@@ -1,0 +1,112 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnatp
+A -gnatVn
+A -gnat12
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DISPATCHING_CALLS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U devices.blenders%b	devices-blenders.adb	c3b79255 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W devices%s		devices.adb		devices.ali
+
+U devices.blenders%s	devices-blenders.ads	7b40ef76 EE OO PF PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W devices%s		devices.adb		devices.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-ioexce.ads		20190518041254 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D devices.ads		20200310113728 fb10b7fe devices%s
+D devices-blenders.ads	20200310114118 80505888 devices.blenders%s
+D devices-blenders.adb	20200310114454 ed131fb0 devices.blenders%b
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041255 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041255 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [initialize devices__blenders 35 14 none]
+G c Z s b [cyclic devices__blenders 38 14 none]
+G c Z s s [blender_recordDA devices__blenders 52 9 none]
+G c Z s s [blender_recordDF devices__blenders 52 9 none]
+G c Z s s [blender_recordIP devices__blenders 52 9 none]
+G r s device_record [blender_recordIP devices__blenders 52 9 none] [device_recordIP devices 32 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 10|21r6 21r23
+X 6 a-textio.ads
+57K13*Text_IO 727e16 10|21w10 21r27
+508U14*Put_Line 10|52s7
+X 8 devices.ads
+21K9*Devices 39e12 9|21r9 61r5 10|23r14 109r5
+23R9*Device_Record 34e14 9|24r31 52r31
+25V13*Fault{boolean}
+26U14*Set_Fault
+36r4 No_Device_Record{23R9} 9|57r7
+X 9 devices-blenders.ads
+21K17*Blenders 8|21k9 9|52E9 61l13 61e21 10|23b22 109l13 109t21
+24R9*Blender_Record<8|23R9> 8|25p13 26p14 9|35p14 35r40 38p14 39r26 52c9
+. 54e14 56r33 10|29r40 39r26
+26E9*Blender_State 33e20 53r22 10|50r19
+27n7*Init_State{26E9} 58r23 10|54r15
+28n7*Stop_State{26E9} 10|55r29 56r15 79r29 90r29
+29n7*Starting_State{26E9} 10|58r29 61r15 84r29 92r26 103r34
+30n7*Running_V1_State{26E9} 10|63r29 68r15 104r26
+31n7*Running_V2_State{26E9} 10|72r29 82r15 105r34
+32n7*Stopping_State{26E9} 10|70r29 77r15
+33n7*Faulty_State{26E9} 10|65r29 74r29 86r29 88r15
+35U14*Initialize 35=26 10|29b14 32l8 32t18
+35r26 This{24R9} 10|29b26 31m7
+38U14*Cyclic 39=7 40>7 41>7 42>7 43>7 44>7 45>7 46>7 47<7 48<7 10|38b14 107l8
+. 107t14
+39r7 This{24R9} 10|39b7 50r36 53r13 97m7 103r21 104r13 105r21
+40b7 Run{boolean} 10|40b7 57r17 69r20
+41b7 CP{boolean} 10|41b7 57r25 64r23 73r23 85r23 91r28
+42b7 Therm{boolean} 10|42b7 57r36 64r29 73r29 85r29 91r35
+43b7 Running{boolean} 10|43b7 62r16 78r20 89r20
+44b7 Speed_1{boolean} 10|44b7 83r16
+45b7 Speed_2{boolean} 10|45b7 71r19
+46b7 Acqk{boolean} 10|46b7 91r19
+47b7 Run_Order{boolean} 10|47b7 103m7
+48b7 v2_Order{boolean} 10|48b7 105m7
+53e7 State{26E9} 58m7 10|50r41 53r18 97m12 103r26 104r18 105r26
+56r4 No_Blender_Record{24R9} 10|31r15
+X 10 devices-blenders.adb
+50e7 New_State{9|26E9} 55m16 58m16 63m16 65m16 70m16 72m16 74m16 79m16 84m16
+. 86m16 90m16 92m13 97r21
+

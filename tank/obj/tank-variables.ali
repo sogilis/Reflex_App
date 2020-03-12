@@ -1,0 +1,150 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnatp
+A -gnatVn
+A -gnat12
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U tank.variables%s	tank-variables.ads	b8856867 EE OO PK
+W devices%s		devices.adb		devices.ali
+W devices.blenders%s	devices-blenders.adb	devices-blenders.ali
+W devices.pumps%s	devices-pumps.adb	devices-pumps.ali
+W devices.resistances%s	devices-resistances.adb	devices-resistances.ali
+W devices.valves%s	devices-valves.adb	devices-valves.ali
+W tank%s		tank.ads		tank.ali
+W tank.cycle%s		tank-cycle.adb		tank-cycle.ali
+W tank.filling%s	tank-filling.adb	tank-filling.ali
+W tank.mixing%s		tank-mixing.adb		tank-mixing.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041255 bf4f806b ada.finalization%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D devices.ads		20200310113728 fb10b7fe devices%s
+D devices-blenders.ads	20200310114118 80505888 devices.blenders%s
+D devices-pumps.ads	20200310114634 48aa36ca devices.pumps%s
+D devices-resistances.ads  20200312124639 8061459c devices.resistances%s
+D devices-valves.ads	20200310115344 85d53da2 devices.valves%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-finmas.ads		20190518041255 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518041256 4ff27390 system.finalization_root%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-pooglo.ads		20190518041254 ede33ef8 system.pool_global%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20190518041255 b16154c2 system.storage_pools%s
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D tank.ads		20200312090552 d54e66a4 tank%s
+D tank-cycle.ads	20200312092514 b8b12d12 tank.cycle%s
+D tank-filling.ads	20200310113404 389997d9 tank.filling%s
+D tank-mixing.ads	20200312093044 65926ae8 tank.mixing%s
+D tank-variables.ads	20200312122950 453fc89c tank.variables%s
+G a e
+G c s s s [s tank__variables 29 1 none]
+G r s mixing_record [s tank__variables 29 1 none] [mixing_recordIP tank__mixing 45 9 none]
+G r s filling_record [s tank__variables 29 1 none] [filling_recordIP tank__filling 49 9 none]
+G r s cycle_record [s tank__variables 29 1 none] [cycle_recordIP tank__cycle 50 9 none]
+G r s valve_record [s tank__variables 29 1 none] [valve_recordIP devices__valves 47 9 none]
+G r s pump_record [s tank__variables 29 1 none] [pump_recordIP devices__pumps 45 9 none]
+G r s blender_record [s tank__variables 29 1 none] [blender_recordIP devices__blenders 52 9 none]
+G r s resistance_record [s tank__variables 29 1 none] [resistance_recordIP devices__resistances 42 9 none]
+X 7 devices.ads
+21K9*Devices 39e12 31|21r6 21r26 22r6 22r25 23r6 23r28 24r6 24r31 38r12 39r12
+. 40r12 41r12 42r12 43r12 45r9 46r9 47r9 49r14 51r17
+X 8 devices-blenders.ads
+21K17*Blenders 61e21 31|23w14 23r36 49r22
+24R9*Blender_Record<7|23R9> 54e14 31|49r31
+X 9 devices-pumps.ads
+21K17*Pumps 53e18 31|22w14 22r33 45r17 46r17 47r17
+24R9*Pump_Record<7|23R9> 47e14 31|45r23 46r23 47r23
+X 10 devices-resistances.ads
+21K17*Resistances 49e24 31|24w14 24r39 51r25
+24R9*Resistance_Record<7|23R9> 44e14 31|51r37
+X 11 devices-valves.ads
+21K17*Valves 55e19 31|21w14 21r34 38r20 39r20 40r20 41r20 42r20 43r20
+24R9*Valve_Record<7|23R9> 49e14 31|38r27 39r27 40r27 41r27 42r27 43r27
+X 27 tank.ads
+21K9*Tank 25e9 31|25r6 25r24 26r6 26r23 27r6 27r22 29r9 103r5
+X 28 tank-cycle.ads
+21K14*Cycle 56e15 31|27w11 27r27
+23R9*Cycle_Record 52e14 31|35r22
+X 29 tank-filling.ads
+21K14*Filling 55e17 31|25w11 25r29
+23R9*Filling_Record 51e14 31|32r22 33r22 34r22
+X 30 tank-mixing.ads
+21K14*Mixing 52e16 31|26w11 26r28
+23R9*Mixing_Record 48e14 31|31r22
+X 31 tank-variables.ads
+29K14*Variables 27|21k9 31|103l10 103e19
+31r4*Mixing_Graf{30|23R9}
+32r4*Filling_P1_Graf{29|23R9}
+33r4*Filling_P2_Graf{29|23R9}
+34r4*Emptying_Graf{29|23R9}
+35r4*Cycle_Graf{28|23R9}
+38r4*V1_R1{11|24R9}
+39r4*V2_R1{11|24R9}
+40r4*V1_R2{11|24R9}
+41r4*V2_R2{11|24R9}
+42r4*V1_R3{11|24R9}
+43r4*V2_R3{11|24R9}
+45r4*P1{9|24R9}
+46r4*P2{9|24R9}
+47r4*P3{9|24R9}
+49r4*Blender{8|24R9}
+51r4*Resistance{10|24R9}
+53b4*End_Filling_P1{boolean}
+54b4*End_Filling_P2{boolean}
+55b4*End_Mixing{boolean}
+56b4*End_Emptying{boolean}
+57b4*Filling_P1_Order{boolean}
+58b4*Filling_P2_Order{boolean}
+59b4*Mixing_Order{boolean}
+60b4*Emptying_Order{boolean}
+61b4*End_Cycle{boolean}
+63b4*Filling_V_R1_Opened{boolean}
+64b4*Filling_V_R1_Closed{boolean}
+65b4*Filling_P1_Started{boolean}
+66b4*Filling_Open_V_R1{boolean}
+67b4*Filling_Start_P1{boolean}
+68b4*Filling_Close_V_R1{boolean}
+70b4*Filling_V_R2_Opened{boolean}
+71b4*Filling_V_R2_Closed{boolean}
+72b4*Filling_P2_Started{boolean}
+73b4*Filling_Open_V_R2{boolean}
+74b4*Filling_Start_P2{boolean}
+75b4*Filling_Close_V_R2{boolean}
+77b4*Emptying_V_R3_Opened{boolean}
+78b4*Emptying_V_R3_Closed{boolean}
+79b4*Emptying_P3_Started{boolean}
+80b4*Emptying_Open_V_R3{boolean}
+81b4*Emptying_Start_P3{boolean}
+82b4*Emptying_Close_V_R3{boolean}
+84b4*Mixing_Start_Blender{boolean}
+85b4*Mixing_Start_Resistance{boolean}
+86b4*Mixing_End{boolean}
+88i4*Mixing_Duration{integer}
+91b4*Second{boolean}
+94b4*CP{boolean}
+95b4*Therm{boolean}
+96b4*Speed_1{boolean}
+97b4*Speed_2{boolean}
+98b4*Acqk{boolean}
+100f4*T_Adjusted{float}
+

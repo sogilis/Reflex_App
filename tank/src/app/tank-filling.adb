@@ -36,7 +36,7 @@ package body Tank.Filling is
    ------------
    
    procedure Cyclic
-     (This          : access Filling_Record;
+     (This          : in out Filling_Record;
       Start_Filling  : Boolean;
       Valves_Opened  : Boolean;
       Valves_Closed  : Boolean;
@@ -44,7 +44,7 @@ package body Tank.Filling is
       Level_P        : Boolean;
       Open_Valves    : out Boolean;
       Start_Pumps    : out Boolean;
-      Close_Valves   : out Boolean);
+      Close_Valves   : out Boolean) is
       
       New_State : Filling_State := This.State;
    begin

@@ -1,0 +1,69 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnatp
+A -gnatVn
+A -gnat12
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U regul.ramps%b		regul-ramps.adb		111351e0 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W regul%s		regul.ads		regul.ali
+
+U regul.ramps%s		regul-ramps.ads		db90afd7 EE NE OO PK
+W regul%s		regul.ads		regul.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-ioexce.ads		20190518041254 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D regul.ads		20200310105152 e0e0ca3a regul%s
+D regul-ramps.ads	20200310110216 3b7065ed regul.ramps%s
+D regul-ramps.adb	20200310110824 8497e160 regul.ramps%b
+D system.ads		20190518041255 4635ec04 system%s
+D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041255 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [ramp regul__ramps 23 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 12|21r6 21r23
+X 6 a-textio.ads
+57K13*Text_IO 727e16 12|21w10 21r27
+X 10 regul.ads
+21K9*Regul 23e10 11|21r9 31r5 12|23r14 46r5
+X 11 regul-ramps.ads
+21K15*Ramps 10|21k9 11|31l11 31e16 12|23b20 46l11 46t16
+23U14*Ramp 24>7 25>7 26>7 27>7 28>7 29<7 12|25b14 44l8 44t12
+24b7 Second{boolean} 12|26b7 35r10
+25f7 T_sensor{float} 12|27b7 35r21 36r20
+26f7 Set_Point{float} 12|28b7 35r33 39r18 43r26
+27f7 Gradient{float} 12|29b7 36r31
+28f7 Tmax{float} 12|30b7 39r37 40r19
+29f7 T_Adjusted{float} 12|31b7 43m6
+X 12 regul-ramps.adb
+33f7 Adjust{float} 36m10 39r11 40m9 43r19
+

@@ -18,9 +18,8 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-with Devices.Valves;
+with Ext_Ios; use Ext_Ios ;
 
-with
 package body Ios is
    
    --------------------
@@ -31,49 +30,56 @@ package body Ios is
    begin
       --  Valve V1_R1
       
-  V1_R1_Opened;
-  V1_R1_Closed;
+      V1_R1_Opened := Ext_V1_R1_Opened;
+      V1_R1_Closed := Ext_V1_R1_Closed;
       
       --  Valve V2_R1
       
-  V2_R1_Opened : Boolean;
-  V2_R1_Closed : Boolean;
+      V2_R1_Opened := Ext_V2_R1_Opened;
+      V2_R1_Closed := Ext_V2_R1_Opened;
       
       --  Valve V1_R2
       
-  V1_R2_Opened : Boolean;
-  V1_R2_Closed : Boolean;
+      V1_R2_Opened := Ext_V1_R2_Opened;
+      V1_R2_Closed := Ext_V1_R2_Opened;
       
       --  Valve V2_R2
       
-  V2_R2_Opened : Boolean;
-  V2_R2_Closed : Boolean;
+      V2_R2_Opened := Ext_V2_R2_Opened;
+      V2_R2_Closed := Ext_V1_R2_Opened;
       
       --  ¨Pump P1
       
-  P1_Started : Boolean;
+      P1_Started := Ext_P1_Started;
       
       --  Pump P2
       
-  P2_Started : Boolean;
+      P2_Started := Ext_P2_Started;
       
       --  Bac
       
-  Tank_Low_Levl : Bollena;
-  Tank_Medium_Levl : Bollena;
-  Tank_High_Levl : Bollena;
+      Tank_Low_Level := Ext_Tank_Low_Level;
+      Tank_Medium_Level := Ext_Tank_Medium_Level;
+      Tank_High_Level := Ext_Tank_High_Level;
       
       --  Resistance Marche
       
-  Resistor_Temperature : Integer;
+      Resistance_SetPoint := Ext_Resistance_SetPoint;
+      
+      --Regulator
+      
+      Gradient := Ext_Gradient;
+      Tmax := Ext_Tmax;
+
+
       
       --  Blinder
       
-  Blinder_Started : Boolean;
+      Blinder_Started := Ext_Blinder_Started;
       
       --  Hmi
       
-  Start_Cycle : Boolean;
+      Start_Cycle := Ext_Start_Cycle;
       
    end Acquire_Inputs;
    
@@ -85,44 +91,44 @@ package body Ios is
    begin
       --  Valve V1_R1
       
-  V1_R1_Open_Order : Boolean;
-  V1_R1_Close_Order : Boolean;
+      Ext_V1_R1_Open_Order := V1_R1_Open_Order;
+      Ext_V1_R1_Close_Order := V1_R1_Close_Order;
       
       --  Valve V2_R1
       
-  V2_R1_Open_Order : Boolean;
-  V2_R1_Close_Order : Boolean;
+      Ext_V2_R1_Open_Order := V2_R1_Open_Order;
+      Ext_V2_R1_Close_Order := V2_R1_Close_Order;
       
       --  Valve V1_R2
       
-  V1_R2_Open_Order : Boolean;
-  V1_R2_Close_Order : Boolean;
+      Ext_V1_R2_Open_Order := V1_R2_Open_Order;
+      Ext_V1_R2_Close_Order := V1_R2_Close_Order;
       
       --  Valve V2_R2
       
-  V2_R2_Open_Order : Boolean;
-  V2_R2_Close_Order : Boolean;
+      Ext_V2_R2_Open_Order := V2_R2_Open_Order;
+      Ext_V2_R2_Close_Order := V2_R2_Close_Order;
       
       --  ¨Pump P1
       
-  P1_Start_Order : Boolean;
+      Ext_P1_Start_Order := P1_Start_Order;
       
       --  Pump P2
       
-  P2_Start_Order : Boolean;
+      Ext_P2_Start_Order := P2_Start_Order;
       
       --  Resistance Marche
       
-  Resitor_Start : Boolean;
-  Resistor_Order : Integer;
-      
+      Ext_T_Measured := T_Measured ;
+      Ext_V2_Order   := V2_Order;
+   
       --  Blinder
       
-  Blinder_Start : Boolean;
+      Ext_Blinder_Start := Blinder_Started;
       
       --  Hmi
       
-  Start_Cycle : Boolean;
+      Ext_Start_Cycle := Start_Cycle;
       
    end Set_Outputs;
    
