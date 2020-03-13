@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file />
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 21" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul_valve.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul_valve.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 26" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul_valve.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul_valve.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 25" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/devices/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 26" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/devices/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 42" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 27" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/devices/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 26" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/devices/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 27" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 24" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 33" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 30" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 10" line=" 132" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 30" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 12" line=" 137" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 30" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 39" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 59" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 35" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 32" line=" 61" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 59" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/devices/simul-devices-valves.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/devices/simul-devices-valves.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 36" line=" 42" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/devices/simul-devices-valves.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 69" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 61" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 121" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 120" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 139" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/devices/simul-devices-blenders.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 38" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/devices/simul-devices-blenders.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 139" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/devices/simul-devices-blenders.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 27" line=" 38" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/devices/simul-devices-blenders.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 139" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/devices/simul-devices-blenders.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/devices/simul-devices-blenders.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 61" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/devices/simul-devices-blenders.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 140" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/ios/ios_simul.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 140" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 108" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/ios/ios_simul.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 142" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/src/simul/simul_tank-main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 106" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/ios/ios_simul.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 45" line=" 49" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/ios/ios_simul.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 78" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/ios/ios_simul.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 39" line=" 79" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/ios/ios_simul.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 130" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/ios/ios_simul.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/ios/ios_simul.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 7" line=" 130" >
+      <vfs_project />
+      <vfs_file>/home/sogilis/sb/tank-simul/ios/ios_simul.adb</vfs_file>
+    </file_marker>
+  </Project>
+  <Project >
+    <vfs_file >/home/sogilis/sb/tank-simul/gpr/main.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/sogilis/sb/tank-simul/gpr/main.gpr</vfs_project>
+      <vfs_file >/home/sogilis/sb/tank-simul/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 21">
+      <vfs_project >/home/sogilis/sb/tank-simul/gpr/main.gpr</vfs_project>
+      <vfs_file >/home/sogilis/sb/tank-simul/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/sogilis/sb/tank-simul/gpr/main.gpr</vfs_project>
+      <vfs_file >/home/sogilis/sb/tank-simul/src/simul_valve.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1">
+      <vfs_project >/home/sogilis/sb/tank-simul/gpr/main.gpr</vfs_project>
+      <vfs_file >/home/sogilis/sb/tank-simul/src/simul_valve.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 26">
+      <vfs_project >/home/sogilis/sb/tank-simul/gpr/main.gpr</vfs_project>
+      <vfs_file >/home/sogilis/sb/tank-simul/src/simul_valve.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1">
+      <vfs_project >/home/sogilis/sb/tank-simul/gpr/main.gpr</vfs_project>
+      <vfs_file >/home/sogilis/sb/tank-simul/src/simul_valve.ads</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

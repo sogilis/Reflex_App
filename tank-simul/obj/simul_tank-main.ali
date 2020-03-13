@@ -1,0 +1,154 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnatp
+A -gnatVn
+A -gnat12
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DEFAULT_INITIALIZATION
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U simul_tank.main%b	simul_tank-main.adb	45a8f2af NE OO PK
+W ios_simul%s		ios_simul.adb		ios_simul.ali
+W simul%s		simul.ads		simul.ali
+W simul.devices%s	simul-devices.adb	simul-devices.ali
+W simul.devices.blenders%s  simul-devices-blenders.adb  simul-devices-blenders.ali
+W simul.devices.pumps%s	simul-devices-pumps.adb	simul-devices-pumps.ali
+W simul.devices.valves%s  simul-devices-valves.adb  simul-devices-valves.ali
+W simul_tank%s		simul_tank.ads		simul_tank.ali
+
+U simul_tank.main%s	simul_tank-main.ads	63d826ef EE OO PK
+W simul%s		simul.ads		simul.ali
+W simul.devices%s	simul-devices.adb	simul-devices.ali
+W simul.devices.blenders%s  simul-devices-blenders.adb  simul-devices-blenders.ali
+W simul.devices.pumps%s	simul-devices-pumps.adb	simul-devices-pumps.ali
+W simul.devices.valves%s  simul-devices-valves.adb  simul-devices-valves.ali
+W simul_tank%s		simul_tank.ads		simul_tank.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D ios_simul.ads		20200313162533 f4e217bd ios_simul%s
+D simul.ads		20200313140915 eccef7fa simul%s
+D simul-devices.ads	20200313105214 440da83d simul.devices%s
+D simul-devices-blenders.ads  20200313162311 2e79e810 simul.devices.blenders%s
+D simul-devices-pumps.ads  20200313141521 5f4c4c72 simul.devices.pumps%s
+D simul-devices-valves.ads  20200313161934 2795c798 simul.devices.valves%s
+D simul_tank.ads	20200313161236 13fc2af8 simul_tank%s
+D simul_tank-main.ads	20200313161904 26846fed simul_tank.main%s
+D simul_tank-main.adb	20200313162045 c16ee905 simul_tank.main%b
+D system.ads		20190518041255 4635ec04 system%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+G a e
+G c s s s [s simul_tank__main 25 1 none]
+G c Z s b [initialize simul_tank__main 37 14 none]
+G c Z s b [cyclic simul_tank__main 38 14 none]
+G r s valve_record [s simul_tank__main 25 1 none] [valve_recordIP simul__devices__valves 46 9 none]
+G r s blender_record [s simul_tank__main 25 1 none] [blender_recordIP simul__devices__blenders 45 9 none]
+G r c none [initialize simul_tank__main 37 14 none] [initialize simul__devices__valves 33 14 none]
+G r c none [initialize simul_tank__main 37 14 none] [initialize simul__devices__blenders 32 14 none]
+G r c none [cyclic simul_tank__main 38 14 none] [cyclic simul__devices__valves 36 14 none]
+G r c none [cyclic simul_tank__main 38 14 none] [cyclic simul__devices__pumps 23 14 none]
+G r c none [cyclic simul_tank__main 38 14 none] [cyclic simul__devices__blenders 35 14 none]
+X 6 ios_simul.ads
+21K9*Ios_Simul 118e14 14|27w6 27r21
+28b4*V1_R1_Opened_Simul{boolean} 14|64m26
+29b4*V1_R1_Closed_Simul{boolean} 14|65m26
+30b4*V1_R1_Open_Order_Simul{boolean} 14|62r26
+31b4*V1_R1_Close_Order_Simul{boolean} 14|63r26
+35b4*V2_R1_Opened_Simul{boolean} 14|74m26
+36b4*V2_R1_Closed_Simul{boolean} 14|75m26
+37b4*V2_R1_Open_Order_Simul{boolean} 14|72r26
+38b4*V2_R1_Close_Order_Simul{boolean} 14|73r26
+42b4*V1_R2_Opened_Simul{boolean} 14|84m26
+43b4*V1_R2_Closed_Simul{boolean} 14|85m26
+44b4*V1_R2_Open_Order_Simul{boolean} 14|82r26
+45b4*V1_R2_Close_Order_Simul{boolean} 14|83r26
+49b4*V2_R2_Opened_Simul{boolean} 14|94m26
+50b4*V2_R2_Closed_Simul{boolean} 14|95m26
+51b4*V2_R2_Open_Order_Simul{boolean} 14|92r26
+52b4*V2_R2_Close_Order_Simul{boolean} 14|93r26
+59b4*V1_R3_Opened_Simul{boolean} 14|104m26
+60b4*V1_R3_Closed_Simul{boolean} 14|105m26
+61b4*V1_R3_Open_Order_Simul{boolean} 14|102r26
+62b4*V1_R3_Close_Order_Simul{boolean} 14|103r26
+66b4*V2_R3_Opened_Simul{boolean} 14|114m26
+67b4*V2_R3_Closed_Simul{boolean} 14|115m26
+68b4*V2_R3_Open_Order_Simul{boolean} 14|112r26
+69b4*V2_R3_Close_Order_Simul{boolean} 14|113r26
+75b4*P1_Start_Order_Simul{boolean} 14|120r24
+79b4*P2_Started_Simul{boolean} 14|121m24 127m23
+80b4*P2_Start_Order_Simul{boolean} 14|126r23
+84b4*P3_Started_Simul{boolean} 14|133m23
+85b4*P3_Start_Order_Simul{boolean} 14|132r23
+105b4*V1_Speed_Simul{boolean} 14|142m22
+106b4*V2_Speed_Simul{boolean} 14|143m22
+107b4*Blender_Start_Order_Simul{boolean} 14|139r22
+108b4*V1_Order_Simul{boolean} 14|140r22
+109b4*V2_Order_Simul{boolean} 14|141r22
+X 7 simul.ads
+21K9*Simul 24e10 13|21r6 21r32 22r6 22r31 23r6 23r34 14|21r6 21r32 22r6 22r31
+. 23r6 23r34 59r7 69r7 79r7 89r7 99r7 109r7 119r6 125r6 131r6 137r6
+X 8 simul-devices.ads
+21K15*Devices 39e18 13|21r12 21r38 22r12 22r37 23r12 23r40 14|21r12 21r38
+. 22r12 22r37 23r12 23r40 59r13 69r13 79r13 89r13 99r13 109r13 119r12 125r12
+. 131r12 137r12
+X 9 simul-devices-blenders.ads
+21K23*Blenders 54e27 13|23w20 23r48 14|23w20 23r48 137r20
+24R9*Blender_Record<8|23R9> 47e14 13|33r22
+32U14*Initialize 14|44s20
+35U14*Cyclic 14|137s29
+36r7 This{24R9} 14|138r9
+37b7 V1_Order{boolean} 14|140r9
+38b7 V2_Order{boolean} 14|141r9
+39b7 Run_Order{boolean} 14|139r9
+40b7 Speed_1{boolean} 14|142r9
+41b7 Speed_2{boolean} 14|143r9
+X 10 simul-devices-pumps.ads
+21K23*Pumps 27e24 13|22w20 22r45 14|22w20 22r45 119r20 125r20 131r20
+23U14*Cyclic 14|119s26 125s26 131s26
+24b5 Run_Order{boolean} 14|120r11 126r10 132r10
+25b7 Running{boolean} 14|121r11 127r10 133r10
+X 11 simul-devices-valves.ads
+21K23*Valves 54e25 13|21w20 21r46 14|21w20 21r46 59r21 69r21 79r21 89r21
+. 99r21 109r21
+24R9*Valve_Record<8|23R9> 48e14 13|27r22 28r22 29r22 30r22 31r22 32r22
+33U14*Initialize 14|38s18 39s18 40s18 41s18 42s18 43s18
+36U14*Cyclic 14|59s28 69s28 79s28 89s28 99s28 109s28
+37r10 This{24R9} 14|60r10 70r10 80r10 90r10 100r10 110r10
+38b10 Second{boolean} 14|61r10 71r10 81r10 91r10 101r10 111r10
+39b10 Open_Order{boolean} 14|62r10 72r10 82r10 92r10 102r10 112r10
+40b10 Close_Order{boolean} 14|63r10 73r10 83r10 93r10 103r10 113r10
+41b10 Opened{boolean} 14|64r10 74r10 84r10 94r10 104r10 114r10
+42b10 Closed{boolean} 14|65r10 75r10 85r10 95r10 105r10 115r10
+X 12 simul_tank.ads
+21K9*Simul_Tank 25e15 13|25r9 41r5 14|30r14 147r5
+X 13 simul_tank-main.ads
+25K20*Main 12|21k9 13|41l16 41e20 14|30b25 147l16 147t20
+27r6*V1_R1_Simul{11|24R9} 14|38m6 38r6 60m26 60r26
+28r6*V2_R1_Simul{11|24R9} 14|39m6 39r6 70m26 70r26
+29r6*V1_R2_Simul{11|24R9} 14|40m6 40r6 80m26 80r26
+30r6*V2_R2_Simul{11|24R9} 14|41m6 41r6 90m26 90r26 110m26 110r26
+31r6*V1_R3_Simul{11|24R9} 14|42m6 42r6 100m26 100r26
+32r6*V2_R3_Simul{11|24R9} 14|43m6 43r6
+33r6*Blender_Simul{9|24R9} 14|44m6 44r6 138m22 138r22
+35b6*Second{boolean} 14|61r26 71r26 81r26 91r26 101r26 111r26
+37U14*Initialize 14|36b14 46l8 46t18
+38U14*Cyclic 14|52b14 145l8 145t14
+

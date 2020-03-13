@@ -1,0 +1,121 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnatp
+A -gnatVn
+A -gnat12
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U simul_valves%b	simul_valves.adb	0fd171ba NE OO PK
+W ada%s			ada.ads			ada.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+U simul_valves%s	simul_valves.ads	75f3da02 EE OO PF PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041255 bf4f806b ada.finalization%s
+D a-ioexce.ads		20190518041254 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D simul_valves.ads	20200305122116 75f3da02 simul_valves%s
+D simul_valves.adb	20200305122139 d4d67ed5 simul_valves%b
+D system.ads		20190518041255 4635ec04 system%s
+D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
+D s-finmas.ads		20190518041255 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518041256 4ff27390 system.finalization_root%s
+D s-memory.ads		20190518041255 597d6634 system.memory%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-pooglo.ads		20190518041254 ede33ef8 system.pool_global%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stalib.adb		20190518041254 f2fe2716 system.standard_library%b
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041255 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20190518041255 b16154c2 system.storage_pools%s
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041255 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [new_simul_valve simul_valves 35 13 none]
+G c Z s b [initialize simul_valves 37 14 none]
+G c Z s b [cyclic simul_valves 40 14 none]
+G c Z s s [simul_valve_recordDA simul_valves 44 9 none]
+G c Z s s [simul_valve_recordDF simul_valves 44 9 none]
+G c Z s s [simul_valve_recordIP simul_valves 44 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 12|21r6 21r23
+X 7 a-textio.ads
+57K13*Text_IO 727e16 12|21w10 21r27
+508U14*Put_Line 12|52s7
+X 11 simul_valves.ads
+21K9*Simul_Valves 44E9 60l5 60e17 12|23b14 95l5 95t17
+24R9*Simul_Valve_Record 25r39 26r45 40p14 40r36 44c9 50e14 52r37 12|30r37
+. 48r36
+25P9*Simul_Valve_Ptr(24R9) 35r36 37r33 12|29r36 30r14 39r33
+26P9*Simul_Valve_Class_Ptr(24R9)
+28E9*Simul_Valve_State 33e20 49r22 12|50r19
+29n7*Waiting_State{28E9} 58r23 12|55r15 69r29 79r29
+31n7*Opened_State{28E9} 12|59r29 67r15 89r35
+33n7*Closed_State{28E9} 12|57r29 77r15 90r35
+35V13*New_Simul_Valve{25P9} 12|29b13 33l8 33t23
+37U14*Initialize 37>26 12|39b14 42l8 42t18
+37p26 This{25P9} 12|39b26 41r7
+40U14*Cyclic 40^22 12|48b14 91l8 91t14
+40p22 This(24R9) 12|48b22 50r40 53r12 56r16 58r19 68r16 78r16 83r7 89r7 89r23
+. 90r7 90r23
+45b7*Opened{boolean} 54m7 12|89m12
+46b7*Closed{boolean} 55m7 12|90m12
+47b7*Open_Order{boolean} 56m7 12|58r24 78r21
+48b7*Close_Order{boolean} 57m7 12|56r21 68r21
+49e7*State{28E9} 58m7 12|50r45 53r17 83m12 89r28 90r28
+52r4 No_Simul_Valve_Record{24R9} 12|30r57 41r19
+X 12 simul_valves.adb
+30p7 This{11|25P9} 32r14
+50e7 New_State{11|28E9} 57m16 59m16 69m16 79m16 83r21
+X 13 system.ads
+67M9*Address
+X 19 s-memory.ads
+53V13*Alloc{13|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{13|67M9} 105i<c,__gnat_realloc>22
+X 26 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+
