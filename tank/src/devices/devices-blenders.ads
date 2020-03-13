@@ -40,12 +40,12 @@ package Devices.Blenders is
       Run       : Boolean;
       CP        : Boolean;
       Therm     : Boolean;
-      Running   : Boolean;
       Speed_1   : Boolean;
       Speed_2   : Boolean;
       Acqk      : Boolean;
       Run_Order : out Boolean;
-      v2_Order  : out Boolean);
+      v2_Order  : out Boolean;
+      v1_Order  : out Boolean);
    
 private
    

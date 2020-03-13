@@ -71,12 +71,11 @@ package body Ios is
       Gradient := Ext_Gradient;
       Tmax := Ext_Tmax;
 
+      --  Blender
+      
+      V1_Speed := ext_V1_Speed;
+      V2_Speed := ext_V2_Speed;          
 
-      
-      --  Blinder
-      
-      Blinder_Started := Ext_Blinder_Started;
-      
       --  Hmi
       
       Start_Cycle := Ext_Start_Cycle;
@@ -120,11 +119,12 @@ package body Ios is
       --  Resistance Marche
       
       Ext_T_Measured := T_Measured ;
-      Ext_V2_Order   := V2_Order;
-   
-      --  Blinder
+
+      --  Blender
       
-      Ext_Blinder_Start := Blinder_Started;
+      Ext_Blender_Start_Order := Blender_Start_Order;
+      Ext_V2_Order   := V2_Order;
+      Ext_V1_Order   := V1_Order;
       
       --  Hmi
       

@@ -93,8 +93,6 @@ package Tank.Variables is
 
    CP        : Boolean;
    Therm     : Boolean;
-   Speed_1   : Boolean;
-   Speed_2   : Boolean;
    Acqk      : Boolean;
    
    --Temperature adjust by regulator

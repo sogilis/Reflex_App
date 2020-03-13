@@ -53,7 +53,7 @@ package  Ext_Ios is
       
       --  Bac
       
-	Ext_Tank_Low_Level     : Boolean;
+	Ext_Tank_Low_Level    : Boolean;
 	Ext_Tank_Medium_Level : Boolean;
 	Ext_Tank_High_Level   : Boolean;
       
@@ -66,7 +66,7 @@ package  Ext_Ios is
       
       --  Blinder
       
-	Ext_Blinder_Started : Boolean;
+	Ext_Blender_Started : Boolean;
       
       --  Hmi
       
@@ -106,16 +106,17 @@ package  Ext_Ios is
       
       --  Resistance Marche
       
-        Ext_T_Measured          : Float;
-        Ext_V2_Order            : Boolean;
-
- 
+        Ext_T_Measured : Float;
 
 
-      
       --  Blinder
       
-       Ext_Blinder_Start : Boolean;
+       Ext_Blender_Start       : Boolean;
+       Ext_V1_Speed            : Boolean;
+       Ext_V2_Speed            : Boolean;
+       Ext_V1_Order            : Boolean;
+       Ext_V2_Order            : Boolean;
+       Ext_Blender_Start_Order : Boolean;
    
       
       --  Hmi

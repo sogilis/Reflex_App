@@ -40,26 +40,28 @@ package body Devices.Blenders is
       Run       : Boolean;
       CP        : Boolean;
       Therm     : Boolean;
-      Running   : Boolean;
       Speed_1   : Boolean;
       Speed_2   : Boolean;
       Acqk      : Boolean;
       Run_Order : out Boolean;
-      v2_Order  : out Boolean) is
+      v2_Order  : out Boolean;
+      v1_Order  : out Boolean) is
+
       
       New_State : Blender_State := This.State;
    begin
       Put_Line ("Blenders.Cyclic");
        case This.State is
 	 when Init_State =>
-	       New_State := Stop_State;
+               New_State := Stop_State;
+         
 	 when Stop_State =>
 	    if (Run and CP and not Therm) then
 	       New_State := starting_State;
 	    end if;
 	    
 	 when Starting_State =>
-	    if Running then
+	    if Speed_1 then
 	       New_State := Running_V1_State;
             elsif not CP or Therm then
 	       New_State := Faulty_State;
@@ -75,21 +77,22 @@ package body Devices.Blenders is
 	    end if;
 	    
 	 when Stopping_State =>
-	    if not Running then
+	    if not speed_1 then
 	       New_State := Stop_State;
 	    end if;
 	    
 	 when Running_V2_State =>
 	    if Speed_1 then
-	       New_State := Starting_State;
+	       New_State := Running_V1_State;
             elsif not CP or Therm then
 	       New_State := Faulty_State;
-	    end if;
+            end if;
+         
 	 when Faulty_State =>
-	    if not Running then
+	    if not Speed_1 then
 	       New_State := Stop_State;
             elsif Acqk and CP and Therm then
-            New_State := Starting_State;
+               New_State := Starting_State;
             end if;
 
       end case;
@@ -100,8 +103,8 @@ package body Devices.Blenders is
    --Commande--
    ------------
 
-      Run_Order := (This.State = Starting_State) 
-	or (This.State = Running_V1_State);
+      Run_Order := (This.State = Starting_State); 
+      V1_Order  := (This.State = Running_V1_State);
       V2_Order  := (This.State = Running_V2_State);
       --  Fault     := (This.State = Faulty_State);
    end Cyclic;

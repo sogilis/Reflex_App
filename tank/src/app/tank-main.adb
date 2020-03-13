@@ -18,6 +18,7 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
+with Ada.Text_IO; use Ada.Text_IO;
 with Devices.Valves; use Devices.Valves;
 with Devices.Pumps; use Devices.Pumps;
 with Devices.Blenders; use Devices.Blenders;
@@ -105,6 +106,9 @@ package body Tank.Main is
    
    procedure Cyclic is
    begin
+
+      Put_Line ("Tank.Cyclic");
+ 
       --  Acquire Inputs
       
       --  Pre Treatment
@@ -154,7 +158,7 @@ package body Tank.Main is
       Tank.Mixing.Cyclic
 	(This             => Mixing_Graf,
 	 Start_Mixing     => Mixing_Order,
-         Blender_Started  => Blinder_Started,
+         Blender_Started  =>V1_Speed,
 	 Mixing_Duration  => Mixing_Duration,
 	 Second           => Second,
 	 Start_Blender    => Mixing_Start_Blender,--on met des variable intermédiaire pour pour les sorties pour plus d'option sur  la fonction post
@@ -272,11 +276,11 @@ package body Tank.Main is
          Run       => Mixing_Start_Blender,
          CP        => CP,
          Therm     => Therm,
-         Running   => Blinder_Started,
-         Speed_1   => Speed_1,
-         Speed_2   => Speed_2,
+         Speed_1   => V1_Speed,
+         Speed_2   => V2_Speed,
          Acqk      => Acqk,
-         Run_Order => Blinder_Start_Order,
+         Run_Order => Blender_Start_Order,
+         v1_Order  => V1_Order,
          v2_Order  => V2_Order);
       
      Regul.Ramps.Ramp

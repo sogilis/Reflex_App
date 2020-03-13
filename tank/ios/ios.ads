@@ -103,15 +103,15 @@ package Ios is
     
    Resistance_SetPoint  : float;
    
-   --  higher speed of mixing
+   --  Blender
 
-   V2_Order             : Boolean;
 
-   --  Blinder
-   
-   Blinder_Started     : Boolean;
-   Blinder_Start_Order : Boolean;
-   
+   V1_Speed            : Boolean;
+   V2_Speed            : Boolean;
+   Blender_Start_Order : Boolean;
+   V1_Order            : Boolean;
+   V2_Order            : Boolean;
+
    --  Hmi
    
    Start_Cycle : Boolean;
