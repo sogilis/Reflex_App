@@ -1,0 +1,29 @@
+V "GNAT Lib v2016"
+A -gnatA
+A -gnat2012
+A -mtune=generic
+A -march=pentium4
+P ZX
+
+RN
+RV NO_FIXED_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U rxrt.rxclock%s	rxrt-rxclock.ads	6eba6925 NE OO PK
+W rxrt%s		rxrt.adb		rxrt.ali
+
+D rxrt.ads		20171213094154 032df926 rxrt%s
+D rxrt-rxclock.ads	20171213094216 6d979003 rxrt.rxclock%s
+D system.ads		20160516092930 2da59038 system%s
+X 1 rxrt.ads
+32K9*Rxrt 120e9 2|31r9 47r5
+X 2 rxrt-rxclock.ads
+31K14*RxClock 1|32k9 2|47l10 47e17
+33V13*Clock{duration} 35b<ada,Rxrt_Clock>24
+34U14*Set_Clock 34>25 36b<ada,Rxrt_Set_Clock>24
+34o25 C{duration}
+41V13*Tick{duration} 43b<ada,Rxrt_Tick>24
+42U14*Set_Tick 42>24 44b<ada,Rxrt_Set_Tick>24
+42o24 T{duration}
+

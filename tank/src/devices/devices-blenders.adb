@@ -50,7 +50,7 @@ package body Devices.Blenders is
       
       New_State : Blender_State := This.State;
    begin
-      Put_Line ("Blenders.Cyclic");
+      Put_Line ("app_Blenders.Cyclic");
        case This.State is
 	 when Init_State =>
                New_State := Stop_State;

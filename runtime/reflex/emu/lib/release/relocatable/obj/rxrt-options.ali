@@ -1,0 +1,23 @@
+V "GNAT Lib v2019"
+A -O2
+A -gnatA
+A -fPIC
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U rxrt.options%s	rxrt-options.ads	764cd954 NE OO PK
+W rxrt%s		rxrt.adb		rxrt.ali
+
+D rxrt.ads		20171213093654 335d1b0c rxrt%s
+D rxrt-options.ads	20170110132930 4511c258 rxrt.options%s
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+X 1 rxrt.ads
+30K9*Rxrt 102e9 2|21r9 23r5
+X 2 rxrt-options.ads
+21K14*Options 1|30k9 2|23l10 23e17
+

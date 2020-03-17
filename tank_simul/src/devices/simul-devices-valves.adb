@@ -20,7 +20,7 @@
 
 with Ada.Text_IO; use Ada.Text_IO;
 
-package body Devices.Valves is
+package body Simul.Devices.Valves is
    
    ----------------
    -- Initialize --
@@ -35,59 +35,56 @@ package body Devices.Valves is
    -- Cyclic --
    ------------
    
-   procedure Cyclic
-     
-     (This         : in out Valve_Record;
-      Open         : Boolean;
-      Close        : Boolean;
-      Opened       : Boolean;
-      Closed       : Boolean;
-      Open_Order   : out Boolean;
-      Close_Order  : out Boolean) is
+   procedure Cyclic 
+	(This         : In Out Valve_Record;
+         Second       : Boolean;
+         Open_Order   : Boolean;
+         Close_Order  : Boolean;
+         Opened       : out Boolean;
+         Closed       : out Boolean) is
       
       New_State : Valve_State := This.State;
    begin
-      Put_Line ("App_Valves.Cyclic");
+      Put_Line ("Simul_Valves.Cyclic");
       case This.State is
-	 when Init_State =>
-	       New_State :=Waiting_State;
 
 	 when Waiting_State =>
-	    if Close then
+	    if Close_Order then
 	       New_State := Closing_State;
-	    elsif Open then
+	    elsif Open_Order then
 	       New_State := Opening_State;
 	    end if;
 	    
 	 when Opening_State =>
-	    if Opened then
-	       New_State := Opened_State;
-	    end if;
+	   if Second then
+	     New_State := Opened_State;
+	  end if;
+
+	 when Closing_State =>
+	  if Second then
+	    New_State := Closed_State;
+	  end if;
 	    
 	 when Opened_State =>
-	    if Close then
+	    if Close_Order then
 	       New_State := Waiting_State;
-	    end if;
-	    
-	 when Closing_State =>
-	    if Closed then
-	       New_State := Closed_State;
 	    end if;
 	    
 	 when Closed_State =>
-	    if Open then
+	    if Open_Order then
 	       New_State := Waiting_State;
 	    end if;
+
       end case;
       
       This.State := New_State;
 
    ------------
-   --Commande--
+   --commande--
    ------------
 
-      Close_Order := (This.State=Closing_State);
-      Open_Order  := (This.State=Opening_State);
+      Opened := (This.State= Opened_State);
+      Closed := (This.State= Closed_State);
    end Cyclic;
    
-end Devices.Valves;
+end Simul.Devices.Valves;

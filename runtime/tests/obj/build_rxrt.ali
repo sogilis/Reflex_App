@@ -1,0 +1,33 @@
+V "GNAT Lib v2016"
+M P W=b
+A -gnatA
+A -gnat2012
+A -mtune=generic
+A -march=pentium4
+P ZX
+
+RN
+RV NO_FIXED_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U build_rxrt%b		build_rxrt.adb		e9743cff NE OO SU
+W rxrt%s		rxrt.adb		rxrt.ali
+W rxrt.rxclock%s	rxrt-rxclock.ads	rxrt-rxclock.ali
+W rxrt.tasks%s		rxrt-tasks.ads		rxrt-tasks.ali
+
+D build_rxrt.adb	20171212145932 836200fb build_rxrt%b
+D rxrt.ads		20171213094154 032df926 rxrt%s
+D rxrt-rxclock.ads	20171213094216 6d979003 rxrt.rxclock%s
+D rxrt-tasks.ads	20171213094300 04ac5521 rxrt.tasks%s
+D system.ads		20160516092930 2da59038 system%s
+X 1 build_rxrt.adb
+34U11*Build_Rxrt 34b11 38l5 38t15
+35o4 D{duration} 37m4
+X 2 rxrt.ads
+32K9*Rxrt 1|30w6 31r6 32r6 37r9 2|120e9
+X 3 rxrt-rxclock.ads
+31K14*RxClock 1|31w11 37r14 3|47e17
+33V13*Clock{duration} 1|37s22
+X 4 rxrt-tasks.ads
+2K14*Tasks 1|32w11 4|118e15
+

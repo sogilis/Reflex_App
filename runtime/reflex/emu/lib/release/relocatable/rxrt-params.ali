@@ -1,0 +1,37 @@
+V "GNAT Lib v2019"
+A -O2
+A -gnatA
+A -fPIC
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U rxrt.params%s		rxrt-params.ads		399f92a0 NE OO PK
+W rxrt%s		rxrt.adb		rxrt.ali
+
+D rxrt.ads		20171213093654 335d1b0c rxrt%s
+D rxrt-params.ads	20170110132944 0ac289ac rxrt.params%s
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+X 1 rxrt.ads
+30K9*Rxrt 102e9 2|29r9 52r5
+X 2 rxrt-params.ads
+29K14*Params 1|30k9 2|52l10 52e16
+31i4*Max_Tasks{integer} 37r39
+33i4*Max_Tasks_List{integer} 39r44
+35i4*User_Tasks_Count{positive}
+37I11*Task_Id{integer} 41r34 41r45 44r30
+39I11*Task_List_Id{integer} 42r34 42r50 45r30
+41i3*First_Task_Id{37I11} 44r46
+42i3*First_Task_List_Id{39I11} 45r46
+44i3*No_Task_Id{37I11}
+45i3*No_Task_List_Id{39I11}
+47N3*Tasks_Initial
+48N3*Tasks_Increment
+49N3*Lists_Initial
+50N3*Lists_Increment
+

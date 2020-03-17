@@ -1,0 +1,27 @@
+[GENERATED OBJECT FILE]
+b__build_rxrt.o
+[PROJECT FILES]
+D:\home\jean\nrx\reflex-lib\rxlib\runtime\tests\gpr\build_rxrt.gpr
+20171212151054
+D:\home\jean\nrx\reflex-lib\rxlib\runtime\reflex\emu\gpr\erxrt_shared.gpr
+20171212151032
+[BOUND OBJECT FILES]
+D:\home\jean\nrx\reflex-lib\rxlib\runtime\tests\obj\rxrt.o
+D:\home\jean\nrx\reflex-lib\rxlib\runtime\tests\obj\rxrt-rxclock.o
+D:\home\jean\nrx\reflex-lib\rxlib\runtime\tests\obj\rxrt-tasks.o
+D:\home\jean\nrx\reflex-lib\rxlib\runtime\tests\obj\build_rxrt.o
+[GENERATED SOURCE FILES]
+b__build_rxrt.ads
+b__build_rxrt.adb
+b__build_rxrt.ali
+[RESULTING OPTIONS]
+-LD:\home\jean\nrx\reflex-lib\rxlib\runtime\tests\obj\
+-LD:\home\jean\nrx\reflex-lib\rxlib\runtime\tests\obj\
+-LD:\home\jean\nrx\reflex-lib\rxlib\runtime\reflex\emu\lib\release\relocatable\
+-LC:/gnat/2016/lib/gcc/i686-pc-mingw32/4.9.4/adalib/
+-shared
+-shared-libgcc
+-lgnat-2016
+-Wl,--stack=0x2000000
+[RUN PATH OPTION]
+C:/gnat/2016/lib/gcc/i686-pc-mingw32/4.9.4/adalib/

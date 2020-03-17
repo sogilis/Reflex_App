@@ -1,0 +1,27 @@
+[LIBRARY PATH]
+/home/sogilis/sb/reflex-2020/reflex-lib/runtime/reflex/emu/lib/release/relocatable/librxrt.so
+[OBJECT FILES]
+/home/sogilis/sb/reflex-2020/reflex-lib/runtime/reflex/emu/lib/release/relocatable/obj/rxrt-handler.o
+20200316105940
+/home/sogilis/sb/reflex-2020/reflex-lib/runtime/reflex/emu/lib/release/relocatable/obj/rxrt-locks.o
+20200316105940
+/home/sogilis/sb/reflex-2020/reflex-lib/runtime/reflex/emu/lib/release/relocatable/obj/rxrt-logutils.o
+20200316105940
+/home/sogilis/sb/reflex-2020/reflex-lib/runtime/reflex/emu/lib/release/relocatable/obj/rxrt-options.o
+20200316105940
+/home/sogilis/sb/reflex-2020/reflex-lib/runtime/reflex/emu/lib/release/relocatable/obj/rxrt-params.o
+20200316105940
+/home/sogilis/sb/reflex-2020/reflex-lib/runtime/reflex/emu/lib/release/relocatable/obj/rxrt-rxclock.o
+20200316105940
+/home/sogilis/sb/reflex-2020/reflex-lib/runtime/reflex/emu/lib/release/relocatable/obj/rxrt-table.o
+20200316105940
+/home/sogilis/sb/reflex-2020/reflex-lib/runtime/reflex/emu/lib/release/relocatable/obj/rxrt-tasks.o
+20200316105940
+/home/sogilis/sb/reflex-2020/reflex-lib/runtime/reflex/emu/lib/release/relocatable/obj/rxrt-tasks_params_types.o
+20200316105940
+/home/sogilis/sb/reflex-2020/reflex-lib/runtime/reflex/emu/lib/release/relocatable/obj/rxrt-tlists.o
+20200316105940
+/home/sogilis/sb/reflex-2020/reflex-lib/runtime/reflex/emu/lib/release/relocatable/obj/rxrt-types.o
+20200316105940
+/home/sogilis/sb/reflex-2020/reflex-lib/runtime/reflex/emu/lib/release/relocatable/obj/rxrt.o
+20200316105940

@@ -20,15 +20,15 @@
 
 with Ada.Text_IO; use Ada.Text_IO;
 
-package body Devices.Valves is
+package body Simul.Devices.Blenders is
    
    ----------------
    -- Initialize --
    ----------------
    
-   procedure Initialize (This : in out Valve_Record) is
+   procedure Initialize (This : in out Blender_Record) is
    begin
-      This := No_Valve_Record;
+      This := No_Blender_Record;
    end Initialize;
    
    ------------
@@ -36,48 +36,38 @@ package body Devices.Valves is
    ------------
    
    procedure Cyclic
-     
-     (This         : in out Valve_Record;
-      Open         : Boolean;
-      Close        : Boolean;
-      Opened       : Boolean;
-      Closed       : Boolean;
-      Open_Order   : out Boolean;
-      Close_Order  : out Boolean) is
+    (This      : in out Blender_Record;
+      V1_Order  : Boolean;
+      V2_Order  : Boolean;
+      Run_Order : Boolean;
+      Speed_1   : out Boolean;
+      Speed_2   : out Boolean) is
       
-      New_State : Valve_State := This.State;
+      New_State : Blender_State := This.State;
    begin
-      Put_Line ("App_Valves.Cyclic");
-      case This.State is
-	 when Init_State =>
-	       New_State :=Waiting_State;
+            Put_Line ("Simul_Blenders.Cyclic");
 
-	 when Waiting_State =>
-	    if Close then
-	       New_State := Closing_State;
-	    elsif Open then
-	       New_State := Opening_State;
+       case This.State is
+	 when Init_State =>
+	       New_State := Stop_State;
+
+	 when Stop_State =>
+	    if Run_Order then
+	       New_State := Running_V1_State;
 	    end if;
 	    
-	 when Opening_State =>
-	    if Opened then
-	       New_State := Opened_State;
+	 when Running_V1_State =>
+	    if V2_Order then
+	       New_State := Running_V2_State;
+	    elsif not Run_Order then
+	       New_State := Stop_State;
 	    end if;
 	    
-	 when Opened_State =>
-	    if Close then
-	       New_State := Waiting_State;
+	 when Running_V2_State =>
+	    if V1_Order  then
+	       New_State := Running_V1_State;
 	    end if;
-	    
-	 when Closing_State =>
-	    if Closed then
-	       New_State := Closed_State;
-	    end if;
-	    
-	 when Closed_State =>
-	    if Open then
-	       New_State := Waiting_State;
-	    end if;
+    
       end case;
       
       This.State := New_State;
@@ -86,8 +76,9 @@ package body Devices.Valves is
    --Commande--
    ------------
 
-      Close_Order := (This.State=Closing_State);
-      Open_Order  := (This.State=Opening_State);
+      Speed_1 := (This.State = Running_V1_State); 
+      Speed_2 := (This.State = Running_V2_State);
+
    end Cyclic;
    
-end Devices.Valves;
+end Simul.Devices.Blenders;

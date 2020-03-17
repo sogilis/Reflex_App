@@ -20,74 +20,26 @@
 
 with Ada.Text_IO; use Ada.Text_IO;
 
-package body Devices.Valves is
-   
-   ----------------
-   -- Initialize --
-   ----------------
-   
-   procedure Initialize (This : in out Valve_Record) is
-   begin
-      This := No_Valve_Record;
-   end Initialize;
+package body Simul.Devices.Pumps is
    
    ------------
    -- Cyclic --
    ------------
    
-   procedure Cyclic
+   procedure Cyclic 
+     (Run_Order : Boolean;
+      Running   : out Boolean) is
+      
+    begin
+      Put_Line ("Simul_pumps.Cyclic");
+      
+   ------------   
+   --commande--
+   ------------
      
-     (This         : in out Valve_Record;
-      Open         : Boolean;
-      Close        : Boolean;
-      Opened       : Boolean;
-      Closed       : Boolean;
-      Open_Order   : out Boolean;
-      Close_Order  : out Boolean) is
-      
-      New_State : Valve_State := This.State;
-   begin
-      Put_Line ("App_Valves.Cyclic");
-      case This.State is
-	 when Init_State =>
-	       New_State :=Waiting_State;
-
-	 when Waiting_State =>
-	    if Close then
-	       New_State := Closing_State;
-	    elsif Open then
-	       New_State := Opening_State;
-	    end if;
-	    
-	 when Opening_State =>
-	    if Opened then
-	       New_State := Opened_State;
-	    end if;
-	    
-	 when Opened_State =>
-	    if Close then
-	       New_State := Waiting_State;
-	    end if;
-	    
-	 when Closing_State =>
-	    if Closed then
-	       New_State := Closed_State;
-	    end if;
-	    
-	 when Closed_State =>
-	    if Open then
-	       New_State := Waiting_State;
-	    end if;
-      end case;
-      
-      This.State := New_State;
-
-   ------------
-   --Commande--
-   ------------
-
-      Close_Order := (This.State=Closing_State);
-      Open_Order  := (This.State=Opening_State);
-   end Cyclic;
+      Running := Run_Order; 
    
-end Devices.Valves;
+   end Cyclic;
+
+
+end Simul.Devices.Pumps;

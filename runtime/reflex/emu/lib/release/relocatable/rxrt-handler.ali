@@ -1,0 +1,94 @@
+V "GNAT Lib v2019"
+A -O2
+A -gnatA
+A -fPIC
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U rxrt.handler%b	rxrt-handler.adb	7b88f538 NE OO PK
+W rxrt%s		rxrt.adb		rxrt.ali
+W rxrt.logutils%s	rxrt-logutils.adb	rxrt-logutils.ali
+W rxrt.rxclock%s	rxrt-rxclock.adb	rxrt-rxclock.ali
+W rxrt.tasks%s		rxrt-tasks.adb		rxrt-tasks.ali
+
+U rxrt.handler%s	rxrt-handler.ads	8dc25827 EE NE OO PK
+W rxrt%s		rxrt.adb		rxrt.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-c.ads		20190518041254 5421119b interfaces.c%s
+D i-cstrin.ads		20190518041255 341d0ddf interfaces.c.strings%s
+D rxrt.ads		20171213093654 335d1b0c rxrt%s
+D rxrt-handler.ads	20171213093920 be9f432b rxrt.handler%s
+D rxrt-handler.adb	20170120063638 8b2531d7 rxrt.handler%b
+D rxrt-logutils.ads	20171213093732 82d032c0 rxrt.logutils%s
+D rxrt-params.ads	20170110132944 0ac289ac rxrt.params%s
+D rxrt-rxclock.ads	20171213094012 27896f20 rxrt.rxclock%s
+D rxrt-table.ads	20170110134154 ccb1467e rxrt.table%s
+D rxrt-tasks.ads	20171213093526 eb6bda24 rxrt.tasks%s
+D rxrt-types.ads	20170110133818 231915c4 rxrt.types%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+G a e
+G c Z s b [initialize_run_time rxrt__handler 31 14 none]
+G c Z s b [pre_processing rxrt__handler 34 14 none]
+G c Z s b [post_processing rxrt__handler 38 14 none]
+G c Z s b [initialize_application rxrt__handler 41 14 none]
+G c Z s b [run rxrt__handler 45 14 none]
+G c Z b b [master_run rxrt__handler 136 14 none]
+G c Z b b [refresh_outputs_connectors rxrt__handler 158 14 none]
+G c Z b b [refresh_inputs_connectors rxrt__handler 172 14 none]
+G r c none [initialize_run_time rxrt__handler 31 14 none] [log_line rxrt__logutils 26 14 none]
+G r c none [initialize_run_time rxrt__handler 31 14 none] [initialize_clock rxrt__rxclock 43 14 none]
+G r c none [initialize_run_time rxrt__handler 31 14 none] [initialize rxrt__tasks 48 14 none]
+G r c none [pre_processing rxrt__handler 34 14 none] [log_line rxrt__logutils 26 14 none]
+G r c none [pre_processing rxrt__handler 34 14 none] [update_clock rxrt__rxclock 46 14 none]
+G r c none [pre_processing rxrt__handler 34 14 none] [update_running_tasks rxrt__tasks 143 14 none]
+G r c none [post_processing rxrt__handler 38 14 none] [log_line rxrt__logutils 26 14 none]
+G r c none [post_processing rxrt__handler 38 14 none] [reset_running_tasks rxrt__tasks 145 14 none]
+G r c none [run rxrt__handler 45 14 none] [log_line rxrt__logutils 26 14 none]
+G r c none [run rxrt__handler 45 14 none] [update_clock rxrt__rxclock 46 14 none]
+G r c none [run rxrt__handler 45 14 none] [update_running_tasks rxrt__tasks 143 14 none]
+G r c none [run rxrt__handler 45 14 none] [run_tasks rxrt__tasks 147 14 none]
+G r c none [run rxrt__handler 45 14 none] [reset_running_tasks rxrt__tasks 145 14 none]
+G r c none [master_run rxrt__handler 136 14 none] [log_line rxrt__logutils 26 14 none]
+G r c none [master_run rxrt__handler 136 14 none] [update_clock rxrt__rxclock 46 14 none]
+G r c none [master_run rxrt__handler 136 14 none] [update_running_tasks rxrt__tasks 143 14 none]
+G r c none [master_run rxrt__handler 136 14 none] [run_tasks rxrt__tasks 147 14 none]
+G r c none [master_run rxrt__handler 136 14 none] [reset_running_tasks rxrt__tasks 145 14 none]
+X 6 rxrt.ads
+30K9*Rxrt 102e9 7|29r9 52r5 8|32r6 32r25 34r6 35r6 37r14 54r7 58r7 72r7 79r7
+. 95r7 123r7 145r7 181r5
+X 7 rxrt-handler.ads
+29K14*Handler 6|30k9 7|52l10 52e17 8|37b19 181l10 181t17
+31U14*Initialize_Run_Time 48r24 8|43b14 61l8 61t27
+34U14*Pre_Processing 8|67b14 82l8 82t22 119s7 141s7
+38U14*Post_Processing 8|88b14 98l8 98t23 127s7 149s7
+41U14*Initialize_Application 49r24 8|104b14 108l8 108t30
+45U14*Run 50r24 8|114b14 130l8 130t11
+X 8 rxrt-handler.adb
+136U14 Master_Run 136b14 152l8 152t18
+158U14 Refresh_Outputs_Connectors 158b14 166l8 166t34
+172U14 Refresh_Inputs_Connectors 172b14 179l13 179t38
+X 9 rxrt-logutils.ads
+21K14*Logutils 8|32w11 32r30 9|34e18
+26U14*Log_Line 8|46s7 60s7 69s7 81s7 90s7 97s7 116s7 129s7 138s7 151s7
+X 11 rxrt-rxclock.ads
+31K14*RxClock 8|34w11 54r12 72r12 11|80e17
+43U14*Initialize_Clock 8|54s20
+46U14*Update_Clock 8|72s20
+X 13 rxrt-tasks.ads
+33K14*Tasks 8|35w11 58r12 79r12 95r12 123r12 145r12 13|293e15
+48U14*Initialize 8|58s18
+143U14*Update_Running_Tasks 8|79s18
+145U14*Reset_Running_Tasks 8|95s18
+147U14*Run_Tasks 8|123s18 145s18
+

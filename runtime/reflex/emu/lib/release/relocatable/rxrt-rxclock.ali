@@ -1,0 +1,56 @@
+V "GNAT Lib v2019"
+A -O2
+A -gnatA
+A -fPIC
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_FIXED_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U rxrt.rxclock%b	rxrt-rxclock.adb	57a57887 NE OO PK
+W rxrt%s		rxrt.adb		rxrt.ali
+
+U rxrt.rxclock%s	rxrt-rxclock.ads	14d4742c EE NE OO PK
+W rxrt%s		rxrt.adb		rxrt.ali
+
+D rxrt.ads		20171213093654 335d1b0c rxrt%s
+D rxrt-rxclock.ads	20171213094012 27896f20 rxrt.rxclock%s
+D rxrt-rxclock.adb	20170110133106 702c17a7 rxrt.rxclock%b
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+G c Z s b [clock rxrt__rxclock 33 13 none]
+G c Z s b [set_clock rxrt__rxclock 34 14 none]
+G c Z s b [tick rxrt__rxclock 39 13 none]
+G c Z s b [set_tick rxrt__rxclock 40 14 none]
+G c Z s b [initialize_clock rxrt__rxclock 43 14 none]
+G c Z s b [update_clock rxrt__rxclock 46 14 none]
+X 1 rxrt.ads
+30K9*Rxrt 102e9 2|31r9 80r5 3|31r14 127r5
+X 2 rxrt-rxclock.ads
+31K14*RxClock 1|30k9 2|70E4 80l10 80e17 3|31b19 127l10 127t17
+33V13*Clock{duration} 75r24 3|37b13 40l8 40t13
+34U14*Set_Clock 34>25 76r24 3|46b14 49l8 49t17
+34o25 C{duration} 3|46b25 48r20
+39V13*Tick{duration} 77r24 3|55b13 58l8 58t12
+40U14*Set_Tick 40>24 78r24 3|64b14 67l8 67t16
+40o24 T{duration} 3|64b24 66r19
+43U14*Initialize_Clock 3|73b14 88l8 88t24
+46U14*Update_Clock 3|94b14 107l8 107t20
+58b4*Tick_1_Sec{boolean} 3|80m7 100m7
+59b4*Tick_10_Msec{boolean} 3|78m7 98m7
+60b4*Tick_100_Msec{boolean} 3|79m7 99m7
+61b4*Tick_1_Min{boolean} 3|81m7 101m7
+63b4*BT_1_Sec{boolean} 3|85m7 105m7
+64b4*BT_10_Msec{boolean} 3|83m7 103m7
+65b4*BT_100_Msec{boolean} 3|84m7 104m7
+66b4*BT_1_Min{boolean} 3|86m7 106m7
+70o4 The_Tick{duration} 3|57r14 66m7 76m7 96r32
+71o4 The_Clock{duration} 3|39r14 48m7 75m7 96m7 96r20
+73o4 Previous_Clock{duration}
+X 3 rxrt-rxclock.adb
+113U14 Pre_Cycle 113b14 116l8 116t17
+122U14 Post_Cycle 122b14 125l8 125t18
+

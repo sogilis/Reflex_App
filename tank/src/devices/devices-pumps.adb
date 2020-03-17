@@ -43,7 +43,7 @@ package body Devices.Pumps is
       
       New_State : Pump_State := This.State;
    begin
-      Put_Line ("Pump.Cyclic");
+      Put_Line ("app_Pump.Cyclic");
       case This.State is
 	 when Init_State =>
 	       New_State := stop_State;

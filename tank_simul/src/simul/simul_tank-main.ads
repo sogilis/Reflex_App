@@ -17,68 +17,25 @@
 -- Reflex is originally developed  by the Artics team at Grenoble.          --
 --                                                                          --
 ------------------------------------------------------------------------------
+with Simul;
+with Simul.Devices.Valves; use Simul.Devices.Valves;
+with Simul.Devices.Pumps; use Simul.Devices.Pumps;
+with Simul.Devices.Blenders; use Simul.Devices.Blenders;
 
-with Ada.Text_IO; use Ada.Text_IO;
+package Simul_Tank.Main is
 
-package body Tank.Mixing is
+     V1_R1_Simul   : Valve_Record;
+     V2_R1_Simul   : Valve_Record;
+     V1_R2_Simul   : Valve_Record;
+     V2_R2_Simul   : Valve_Record;
+     V1_R3_Simul   : Valve_Record;
+     V2_R3_Simul   : Valve_Record;
+     Blender_Simul : Blender_Record;
    
-   ----------------
-   -- Initialize --
-   ----------------
-   
-   procedure Initialize (This : in out Mixing_Record) is
-   begin
-      This := No_Mixing_Record;
-   end Initialize;
-   
-   ------------
-   -- Cyclic --
-   ------------
-   
-   procedure Cyclic
-     (This             : in out Mixing_Record;
-      Start_Mixing     : Boolean;
-      Blender_Started  : Boolean;
-      Mixing_Duration  : Integer;
-      Second           : boolean;
-      Start_Blender    : out Boolean;
-      Start_Resistance : out Boolean;
-      End_Mixing       : out Boolean) is
-      
-      New_State : Mixing_State := This.State;
-   begin
-      Put_Line ("App_Mixing.Cyclic");
-       case This.State is
-	 when Init_State =>
-	    if Start_Mixing then
-	       New_State := Mix_State;
-    	    end if;
+     Second_3        : Boolean;
+        
+   procedure Initialize;
+   procedure Cyclic;
 
-	 when Mix_State =>
-	    if Blender_Started then
-	       New_State :=It_Mixes_State;
-    	    end if;
-
-	 when It_Mixes_State =>
-	    if Second then
-	       This.Counter:=This.Counter + 1;
-	    end if;
-	    
-	    if This.Counter = Mixing_Duration then
-	       New_State := End_Mixing_State;
-	    end if;
-
-	 when End_Mixing_State =>
-	    null;
-      end case;
-      
-      This.State := New_State;
-
-      -- Commandes
-      
-      Start_Blender    := (This.State = It_Mixes_State);
-      Start_Resistance := (This.State = It_Mixes_State);
-      End_Mixing       := (This.State = End_Mixing_State);
-   end Cyclic;
    
-end Tank.Mixing;
+end Simul_Tank.Main;

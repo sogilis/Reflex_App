@@ -1,0 +1,57 @@
+V "GNAT Lib v2019"
+A -O2
+A -gnatA
+A -fPIC
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_FIXED_POINT
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U rxrt.tasks_params_types%s  rxrt-tasks_params_types.ads  2d2b9871 EE OO PK
+W rxrt%s		rxrt.adb		rxrt.ali
+W rxrt.params%s		rxrt-params.ads		rxrt-params.ali
+
+D rxrt.ads		20171213093654 335d1b0c rxrt%s
+D rxrt-params.ads	20170110132944 0ac289ac rxrt.params%s
+D rxrt-tasks_params_types.ads  20170110133732 14b40ad1 rxrt.tasks_params_types%s
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+G c Z s s [task_description_recordIP rxrt__tasks_params_types 43 9 none]
+G c Z s s [Tapplication_tasks_arrayBIP rxrt__tasks_params_types 87 4 none]
+X 1 rxrt.ads
+30K9*Rxrt 102e9 3|29r6 31r9 88r25 93r5
+X 2 rxrt-params.ads
+29K14*Params 52e16 3|29w11 88r30
+35i4*User_Tasks_Count{positive} 3|88r37
+X 3 rxrt-tasks_params_types.ads
+31K14*Tasks_Params_Types 1|30k9 3|93l10 93e28
+33P9*Access_Procedure 47r16 50r17 53r23 56r20 59r14
+34P9*Access_Boolean(boolean) 67r23
+36E9*Task_Kind_Type 39e27 62r19
+37n7*Periodic_Task{36E9} 81r24
+38n7*Conditionnal_Task{36E9}
+39n7*Unconditionnal_Task{36E9}
+41P9*String_Ptr(string) 44r14
+43R9*Task_Description_Record 70e14 72r44 74r35 89r9
+44p7*Name{41P9} 75m7
+47p7*Inputs{33P9} 76m7
+50p7*Outputs{33P9} 77m7
+53p7*Data_Register{33P9} 78m7
+56p7*Initialize{33P9} 79m7
+59p7*Main{33P9} 80m7
+62e7*Task_Kind{36E9} 81m7
+64o7*Period{duration} 82m7
+67p7*Run_Condition{34P9} 83m7
+72P9*Task_Description_Ptr(43R9)
+74r4*No_Task_Description{43R9}
+87A9*Application_Tasks_Array(43R9)<integer> 91r45
+91P9*Application_Tasks_Ptr(87A9)
+

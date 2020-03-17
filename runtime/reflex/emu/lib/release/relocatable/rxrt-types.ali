@@ -1,0 +1,32 @@
+V "GNAT Lib v2019"
+A -O2
+A -gnatA
+A -fPIC
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U rxrt.types%s		rxrt-types.ads		10440ec8 EE OO PK
+W rxrt%s		rxrt.adb		rxrt.ali
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D rxrt.ads		20171213093654 335d1b0c rxrt%s
+D rxrt-types.ads	20170110133818 231915c4 rxrt.types%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+G a e
+X 3 rxrt.ads
+30K9*Rxrt 102e9 4|21r9 25r5
+X 4 rxrt-types.ads
+21K14*Types 3|30k9 4|25l10 25e15
+23X4*Unrecoverable_Error
+

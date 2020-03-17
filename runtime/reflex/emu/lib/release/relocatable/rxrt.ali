@@ -1,0 +1,58 @@
+V "GNAT Lib v2019"
+A -O2
+A -gnatA
+A -fPIC
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ACCESS_SUBPROGRAMS
+RV NO_FIXED_POINT
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV SPARK_05
+
+U rxrt%b		rxrt.adb		fc95328a NE OO PK
+
+U rxrt%s		rxrt.ads		335d1b0c EE NE OO PK
+
+D rxrt.ads		20171213093654 335d1b0c rxrt%s
+D rxrt.adb		20171213085142 cfc82986 rxrt%b
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+G c Z s s [task_description_recordIP rxrt 46 9 none]
+G c Z s b [set_applications_tasks rxrt 97 14 none]
+G c Z s s [application_tasks_arrayIP rxrt 91 9 none]
+X 1 rxrt.ads
+30K9*Rxrt 100E7 102l5 102e9 2|30b14 50l5 50t9
+32P9*Access_Procedure 34r26 50r16 53r17 56r23 59r20 62r14
+33P9*Access_Boolean(boolean) 35r26 70r23
+38E9*Task_Kind_Type 42e19 65r19
+39n7*Periodic_Task{38E9} 85r24
+40n7*Conditionnal_Task{38E9}
+41n7*Unconditionnal_Task{38E9}
+42n7*System_Task{38E9}
+44P9*String_Ptr(string) 47r14
+46R9*Task_Description_Record 73e14 76r44 78r35 92r29 2|36r30
+47p7*Name{44P9} 79m7
+50p7*Inputs{32P9} 80m7
+53p7*Outputs{32P9} 81m7
+56p7*Data_Register{32P9} 82m7
+59p7*Initialize{32P9} 83m7
+62p7*Main{32P9} 84m7
+65e7*Task_Kind{38E9} 85m7
+67o7*Period{duration} 86m7
+70p7*Run_Condition{33P9} 87m7
+76P9*Task_Description_Ptr(46R9)
+78r4*No_Task_Description{46R9}
+91A9*Application_Tasks_Array(46R9)<integer> 94r41
+94P9*Application_Tasks_Ptr(91A9) 97r46 100r27 2|45r46
+97U14*Set_Applications_Tasks 97>38 98r24 2|45b14 48l8 48t30
+97p38 Tasks{94P9} 2|45b38 47r28
+100p7 Application_Tasks{94P9} 2|47m7
+X 2 rxrt.adb
+36U14 Add_Task 36b14 36>24 39l8 39t16
+36r24 Tsk{1|46R9}
+
