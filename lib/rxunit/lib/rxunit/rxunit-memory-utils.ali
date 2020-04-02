@@ -1,0 +1,34 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_LOCAL_ALLOCATORS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U rxunit.memory.utils%b	rxunit-memory-utils.adb	604ae2a4 NE OO PK
+W rxunit.memory%s	rxunit-memory.adb	rxunit-memory.ali
+
+U rxunit.memory.utils%s	rxunit-memory-utils.ads	3dc7c177 BN EE NE OO PK
+W rxunit.memory%s	rxunit-memory.adb	rxunit-memory.ali
+
+D rxunit.ads		20200305085644 420f4fb3 rxunit%s
+D rxunit-memory.ads	20200323095712 5dc9d95b rxunit.memory%s
+D rxunit-memory-utils.ads  20200323095924 600e182c rxunit.memory.utils%s
+D rxunit-memory-utils.adb  20200323095318 0044fa88 rxunit.memory.utils%b
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+X 1 rxunit.ads
+22K9*Rxunit 32e11 3|22r9 30r5 4|20r14 31r5
+X 2 rxunit-memory.ads
+28K16*Memory 1|22k9 2|41e18 3|22r16 30r12 4|20r21 31r12
+X 3 rxunit-memory-utils.ads
+22K23*Utils 2|28k16 3|30l19 30e24 4|20b28 31l19 31t24
+25+12 Object 26r27 4|28r18
+26P12 Name(25+12) 27r34 28r30 4|26r30
+28v13*Gen_Alloc 4|26b13 29l8 29t17
+

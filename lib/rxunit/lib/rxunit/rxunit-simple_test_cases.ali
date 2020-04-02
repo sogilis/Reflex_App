@@ -1,0 +1,251 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U rxunit.simple_test_cases%b  rxunit-simple_test_cases.adb  044980e8 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.traceback%s	g-traceb.adb		g-traceb.ali
+W gnat.traceback.symbolic%s  g-trasym.ads	g-trasym.ali
+W rxunit%s		rxunit.adb		rxunit.ali
+W rxunit.assertions%s	rxunit-assertions.adb	rxunit-assertions.ali
+W rxunit.options%s	rxunit-options.ads	rxunit-options.ali
+W rxunit.test_filters%s	rxunit-test_filters.adb	rxunit-test_filters.ali
+W rxunit.time_measure%s	rxunit-time_measure.adb	rxunit-time_measure.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U rxunit.simple_test_cases%s  rxunit-simple_test_cases.ads  547c20fa EE OO PF PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W rxunit%s		rxunit.adb		rxunit.ali
+W rxunit.assertions%s	rxunit-assertions.adb	rxunit-assertions.ali
+W rxunit.options%s	rxunit-options.ads	rxunit-options.ali
+W rxunit.test_results%s	rxunit-test_results.adb	rxunit-test_results.ali
+Z system%s		system.ads		system.ali
+Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-calend.ads		20190518041255 474d9720 ada.calendar%s
+D a-contai.ads		20190518041254 61e5e089 ada.containers%s
+D a-cdlili.ads		20190518041254 8e06b4f2 ada.containers.doubly_linked_lists%s
+D a-conhel.ads		20190518041254 20298884 ada.containers.helpers%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-exctra.ads		20190518041256 0966bad0 ada.exceptions.traceback%s
+D a-finali.ads		20190518041255 bf4f806b ada.finalization%s
+D a-iteint.ads		20190518041255 7c7305e9 ada.iterator_interfaces%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D gnat.ads		20190518041256 b5988c27 gnat%s
+D g-souinf.ads		20190518041256 291df751 gnat.source_info%s
+D g-traceb.ads		20190518041254 0526e8e7 gnat.traceback%s
+D g-trasym.ads		20190518041254 f121a8ad gnat.traceback.symbolic%s
+D rxunit.ads		20200305085644 420f4fb3 rxunit%s
+D rxunit-assertions.ads	20200305084356 16fd6860 rxunit.assertions%s
+D rxunit-options.ads	20200323093912 8a230c9f rxunit.options%s
+D rxunit-simple_test_cases.ads  20200323093728 e6f70d5b rxunit.simple_test_cases%s
+D rxunit-simple_test_cases.adb  20200323093838 cf5876de rxunit.simple_test_cases%b
+D rxunit-simple_test_cases-run_routine.adb  20200305084750 74548c5f rxunit.simple_test_cases.run_routine
+D rxunit-test_filters.ads  20200323093528 c56c13cd rxunit.test_filters%s
+D rxunit-test_results.ads  20200305083948 6c5a06ed rxunit.test_results%s
+D rxunit-tests.ads	20200305080210 aca85f34 rxunit.tests%s
+D rxunit-time_measure.ads  20200305080722 e9a989c6 rxunit.time_measure%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-atocou.ads		20190518041256 b45c2d8d system.atomic_counters%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-finmas.ads		20190518041255 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518041256 4ff27390 system.finalization_root%s
+D s-memory.ads		20190518041255 597d6634 system.memory%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-pooglo.ads		20190518041254 ede33ef8 system.pool_global%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stalib.adb		20190518041254 f2fe2716 system.standard_library%b
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041255 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20190518041255 b16154c2 system.storage_pools%s
+D s-stposu.ads		20190518041254 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traceb.ads		20190518041256 5e7928b4 system.traceback%s
+D s-trasym.ads		20190518041256 bf205bb0 system.traceback.symbolic%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [routine_name rxunit__simple_test_cases 38 13 none]
+G c Z s b [set_up rxunit__simple_test_cases 45 14 none]
+G c Z s b [tear_down rxunit__simple_test_cases 48 14 none]
+G c Z s b [run rxunit__simple_test_cases 55 14 none]
+G c Z s s [test_caseDA rxunit__simple_test_cases 63 9 none]
+G c Z s s [test_caseDF rxunit__simple_test_cases 63 9 none]
+G c Z s s [test_caseIP rxunit__simple_test_cases 63 9 none]
+G c Z b b [run_routine rxunit__simple_test_cases 26 14 none]
+G r c none [run rxunit__simple_test_cases 55 14 none] [current_test rxunit__assertions 112 13 none]
+G r c none [run rxunit__simple_test_cases 55 14 none] [set_current_test rxunit__assertions 113 14 none]
+G r c none [run rxunit__simple_test_cases 55 14 none] [init_test rxunit__assertions 91 14 none]
+G r c none [run rxunit__simple_test_cases 55 14 none] [start_test rxunit__test_results 108 14 none]
+G r c none [run rxunit__simple_test_cases 55 14 none] [clear_failures rxunit__assertions 94 14 none]
+G r c none [run rxunit__simple_test_cases 55 14 none] [start_measure rxunit__time_measure 35 14 none]
+G r c none [run rxunit__simple_test_cases 55 14 none] [stop_measure rxunit__time_measure 38 14 none]
+G r c none [run rxunit__simple_test_cases 55 14 none] [format rxunit 30 13 none]
+G r c none [run rxunit__simple_test_cases 55 14 none] [add_error rxunit__test_results 66 14 none]
+G r c none [run rxunit__simple_test_cases 55 14 none] [has_failures rxunit__assertions 97 13 none]
+G r c none [run rxunit__simple_test_cases 55 14 none] [has_failure rxunit__assertions 104 13 none]
+G r c none [run rxunit__simple_test_cases 55 14 none] [get_failure rxunit__assertions 105 13 none]
+G r c none [run rxunit__simple_test_cases 55 14 none] [add_failure rxunit__test_results 74 14 none]
+G r c none [run rxunit__simple_test_cases 55 14 none] [next rxunit__assertions 107 14 none]
+G r c none [run rxunit__simple_test_cases 55 14 none] [first_failure rxunit__assertions 103 13 none]
+G r c none [run rxunit__simple_test_cases 55 14 none] [add_success rxunit__test_results 82 14 none]
+G r s test [test_caseIP rxunit__simple_test_cases 63 9 none] [testIP rxunit__assertions 141 9 none]
+G r c none [run_routine rxunit__simple_test_cases 26 14 none] [clear_failures rxunit__assertions 94 14 none]
+G r c none [run_routine rxunit__simple_test_cases 26 14 none] [start_measure rxunit__time_measure 35 14 none]
+G r c none [run_routine rxunit__simple_test_cases 26 14 none] [stop_measure rxunit__time_measure 38 14 none]
+G r c none [run_routine rxunit__simple_test_cases 26 14 none] [format rxunit 30 13 none]
+G r c none [run_routine rxunit__simple_test_cases 26 14 none] [add_error rxunit__test_results 66 14 none]
+G r c none [run_routine rxunit__simple_test_cases 26 14 none] [has_failures rxunit__assertions 97 13 none]
+G r c none [run_routine rxunit__simple_test_cases 26 14 none] [has_failure rxunit__assertions 104 13 none]
+G r c none [run_routine rxunit__simple_test_cases 26 14 none] [get_failure rxunit__assertions 105 13 none]
+G r c none [run_routine rxunit__simple_test_cases 26 14 none] [add_failure rxunit__test_results 74 14 none]
+G r c none [run_routine rxunit__simple_test_cases 26 14 none] [next rxunit__assertions 107 14 none]
+G r c none [run_routine rxunit__simple_test_cases 26 14 none] [first_failure rxunit__assertions 103 13 none]
+G r c none [run_routine rxunit__simple_test_cases 26 14 none] [add_success rxunit__test_results 82 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 22|20r6 20r26
+X 4 a-cdlili.ads
+60R9*Cursor
+X 6 a-except.ads
+54K13*Exceptions 349e19 22|20w10 20r30
+72V13*Exception_Name{string} 22|73s52
+94V13*Exception_Message{string} 22|74s52
+X 9 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[4|69]>
+X 13 gnat.ads
+34K9*GNAT 57e9 22|22r6 22r35
+X 15 g-traceb.ads
+80K14*Traceback 111e19 22|22r11 22r40
+X 16 g-trasym.ads
+37K24*Symbolic=37:58 22|22w21 22r50
+X 17 rxunit.ads
+22K9*Rxunit 32e11 20|26r6 27r6 28r6 28r31 30r9 32r35 56r36 63r35 65r5 21|20r6
+. 20r31 21r6 21r31 22r6 22r31 24r14 83r37 89r10 97r10 101r5 22|24r6 26r11
+. 31r21
+24P9*Message_String(string) 20|35r44 38r52 21|47r52
+28E9*Status 28e37 20|58r36 21|30r24 41r24 81r24 22|33r21
+28n20*Success{28E9} 21|85r18 22|80r18
+28n29*Failure{28E9} 22|83r18
+30V13*Format{24P9} 22|73s44 74s44 75s44
+X 18 rxunit-assertions.ads
+34K16*Assertions 145e22 20|26w13 32r42 63r42 21|20w13 20r38 83r44 89r17 97r17
+82X4*Assertion_Error 22|58r12
+86H9*Test<25|22R9> 143e14 20|32r53 63r53
+89P9*Test_Access(86R9) 21|83r22 89r46
+91U14*Init_Test 21|90s10
+94U14*Clear_Failures 22|44R4
+97V13*Has_Failures{boolean} 22|79R45
+100R9*Failure_Iter<4|60R9[135]> 22|85r14
+103V13*First_Failure{100R9} 22|85R30
+104V13*Has_Failure{boolean} 22|87s16
+105V13*Get_Failure{24|33R9} 22|91s26
+107U14*Next<4|208p14> 22|93s13
+112V13*Current_Test{89P9} 21|83s55
+113U14*Set_Current_Test 21|89s28 97s28
+X 19 rxunit-options.ads
+22K16*Options 38e19 20|27w13 56r43 21|21w13 21r38 22|31r28
+24R9*RxUnit_Options 29e14 20|56r51 21|28r24 39r24 79r24 22|31r36
+26b7*Test_Case_Timer{boolean} 22|47r18 53r18 59r21 64r21
+28p7*Filter{23|30P9} 21|86r18 87r36
+X 20 rxunit-simple_test_cases.ads
+30K16*Simple_Test_Cases 17|22k9 20|63E9 65l12 65e29 21|24b21 101l12 101t29
+. 22|26r18
+32H9*Test_Case<18|86R9> 18|91p14 94p14 97p13 103p13 20|33r40 35p13 35r26
+. 38p13 38r34 41p14 42r30 45p14 45r36 48p14 48r39 55p14 55r36 63c9 63e74
+. 21|27r24 38r24 47r34 57r36 67r39 78r24 94r18 96r21 22|30r21
+33P9*Test_Case_Access(32R9)
+35y13*Name{17|24P9} 35>19 22|71R13 81R23 89R26
+35r19 Test{32R9}
+38V13*Routine_Name{17|24P9} 38>27 21|47b13 51l8 51t20 22|72R13 81R40 90R26
+38r27 Test{32R9} 21|47b27 48r28
+41x14*Run_Test 42=7 22|51R7
+42r7 Test{32R9}
+45U14*Set_Up 45=22 21|57b14 61l8 61t14 94R10
+45r22 Test{32R9} 21|57b22 58r28
+48U14*Tear_Down 48=25 21|67b14 71l8 71t17 96R10
+48r25 Test{32R9} 21|67b25 68r28
+55U14*Run 55^19 56>19 57=19 58<19 21|77b14 99l8 99t11
+55p19 Test(32R9) 21|78b7 87r48 89r59 90r21 94r35 95r23 96r38
+56r19 Options{19|24R9} 21|79b7 86r10 87r28 95r29
+57c19 R<24|29R9> 21|80b7 91m22 95m38
+58e19 Outcome{17|28E9} 21|81b7 85m7 95m41
+X 21 rxunit-simple_test_cases.adb
+26U14 Run_Routine 27^7 28>7 29=7 30<7 37b14 95s10 22|29b11 98l5 98t16
+27p7 Test(20|32R9) 38b7 22|30b4 44r20 51r17 71r19 72r27 79r59 81r29 81r54
+. 85r45 89r32 90r40
+28r7 Options{19|24R9} 39b7 22|31b4 47r10 53r10 59r13 64r13
+29c7 R<24|29R9> 40b7 22|32b4 70m13 81m20 88m26
+30e7 Outcome{17|28E9} 41b7 22|33b4 80m7 83m7
+83p7 Old{18|89P9} 97r46
+X 22 rxunit-simple_test_cases-run_routine.adb
+35b4 Unexpected_Exception{boolean} 68m10 79r11
+36r4 Time{26|24R9} 48m25 48r25 54m24 54r24 60m27 60r27 65m27 65r27 76r24
+. 81r65 92r26
+63r12 E{6|63R9} 73r68 74r71 75r72
+85r10 C{18|100R9} 87r29 91r39 93m19 93r19
+X 23 rxunit-test_filters.ads
+27K16*Test_Filters 21|22w13 22r38 23|65e24
+30P9*Test_Filter_Access(29R9)
+31y13*Is_Active{boolean} 21|87R17
+X 24 rxunit-test_results.ads
+27K16*Test_Results 20|28w13 28r38 24|136e24
+29R9*Result 20|57r36 21|29r24 40r24 80r24 22|32r21 24|134e14
+43p7*Exception_Name{17|24P9} 22|73m23
+44p7*Exception_Message{17|24P9} 22|74m23
+45p7*Traceback{17|24P9} 22|75m23
+66U14*Add_Error 22|69R10
+70r7 Error{42R9} 22|73r13
+71r7 Elapsed{26|24R9} 22|76r13
+74U14*Add_Failure 22|88R13
+82U14*Add_Success 22|81R7
+108U14*Start_Test 21|91R10
+X 26 rxunit-time_measure.ads
+22K16*Time_Measure 22|24w13 36r11 36r32 38r8 26|61e24
+24R9*Time 22|36r24 26|27e14
+31r4*Null_Time{24R9} 22|36r45
+35U14*Start_Measure 22|48s10
+38U14*Stop_Measure 22|54s10 60s13 65s13
+X 27 system.ads
+67M9*Address
+X 32 s-memory.ads
+53V13*Alloc{27|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{27|67M9} 105i<c,__gnat_realloc>22
+X 39 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+X 45 s-traceb.ads
+81V13*C_Call_Chain{natural} 84i<c,system__traceback__c_call_chain>22
+X 46 s-trasym.ads
+96V13*Symbolic_Traceback{string} 22|75s52
+

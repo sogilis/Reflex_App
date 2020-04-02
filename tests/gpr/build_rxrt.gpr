@@ -1,10 +1,10 @@
 
-with "../../runtime/reflex/emu/gpr/erxrt_shared";
+with "../../lib/runtime/reflex/emu/gpr/erxrt_shared";
 
 project Build_Rxrt is
 	
    Test_Path :=
-        ("../../runtime",
+        ("../../lib/runtime",
 	 "../../tank/ios",
 	 "../../tank/src/devices",
 	 "../../tank/src/regul",

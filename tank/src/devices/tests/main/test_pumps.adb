@@ -1,11 +1,11 @@
 ------------------------------------------------------------------------------
 --                                                                          --
---                         REFLEX EXAMPLES                                  --
+--                         REFLEX COMPILER COMPONENTS                       --
 --                                                                          --
 --          Copyright (C) 1992-2011, Free Software Foundation, Inc.         --
 --                                                                          --
 -- Reflex is free software; you can redistribute it  and/or modify it under --
--- terms of the  GNU General Public Licensea as published  by the Free Soft- --
+-- terms of the  GNU General Public License as published  by the Free Soft- --
 -- ware Foundation; either version 3, or (at your option) any later version --
 -- Reflex is distributed in the hope that it will be useful, but WITH-      --
 -- OUT ANY WARRANTY;  without even the  implied warranty of MERCHANTABILITY --
@@ -18,37 +18,19 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-package Devices.Valves is
+
+with RxUnit.Reporter.Text; 
+with RxUnit.Run;
+with Devices.Pumps_Suite;
+
+procedure Test_Pumps is
+
+   procedure Run is new RxUnit.Run.Test_Runner (Devices.Pumps_Suite.Suite);
    
-   
-   type Valve_Record is new Device_Record with private;
-   
-   type Valve_State is 
-     (Init_State,
-      Waiting_State,
-      Opening_State,
-      Opened_State,
-      Closing_State);
-   
-   procedure Initialize (This : in out Valve_Record);
-   
-   procedure Cyclic
-     (This         : in out Valve_Record;
-      Open         : Boolean;
-      Close        : Boolean;
-      Opened       : Boolean;
-      Closed       : Boolean;
-      Open_Order   : out Boolean;
-      Close_Order  : out Boolean);
-   
-private
-   
-   type Valve_Record is new Device_Record with record
-      State        : Valve_State;
-   end record;
-   
-   No_Valve_Record : constant Valve_Record :=
-     (No_Device_Record with
-      State        => Init_State);
-   
-end Devices.Valves;
+   Reporter : RxUnit.Reporter.Text.Text_Reporter;
+   --  Reporter : RxUnit.Reporter.XML.XML_Reporter;
+
+begin
+   Run (Reporter);
+end Test_Pumps;
+

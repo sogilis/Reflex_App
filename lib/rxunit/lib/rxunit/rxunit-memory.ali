@@ -1,0 +1,42 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U rxunit.memory%b	rxunit-memory.adb	c418dd3e NE OO PK
+W rxunit%s		rxunit.adb		rxunit.ali
+
+U rxunit.memory%s	rxunit-memory.ads	59f37aec BN EE NE OO PK
+W rxunit%s		rxunit.adb		rxunit.ali
+W system%s		system.ads		system.ali
+
+D rxunit.ads		20200305085644 420f4fb3 rxunit%s
+D rxunit-memory.ads	20200323095712 5dc9d95b rxunit.memory%s
+D rxunit-memory.adb	20200323095356 99d10465 rxunit.memory%b
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+G c Z s b [rxunit_alloc rxunit__memory 32 13 none]
+G c Z s b [rxunit_free rxunit__memory 34 14 none]
+X 1 rxunit.ads
+22K9*Rxunit 32e11 2|28r9 41r5 3|22r14 46r5
+X 2 rxunit-memory.ads
+28K16*Memory 1|22k9 2|41l12 41e18 3|22b21 46l12 46t18
+30M9*size_t 32r34 3|28r34 29r34
+32V13*RxUnit_Alloc{4|67M9} 32>27 38r19 3|28b13 33l8 33t20
+32m27 Size{30M9} 3|28b27 32r25
+34U14*RxUnit_Free 34>27 39r19 3|39b14 44l8 44t19
+34m27 Obj{4|67M9} 3|39b27 43r16
+X 3 rxunit-memory.adb
+29V16*RT_Malloc{4|67M9} 29>27 30b<c,__gnat_malloc>25 32s14
+29m27 Size{2|30M9}
+40U17*RT_Free 40>26 41b<c,__gnat_free>25 43s7
+40m26 Obj{4|67M9}
+X 4 system.ads
+37K9*System 2|26w6 32r49 34r33 3|28r49 29r49 39r33 40r32 4|156e11
+67M9*Address 2|32r56 34r40 3|28r56 29r56 39r40 40r39
+

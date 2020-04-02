@@ -1,0 +1,256 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U rxunit.reporter.text%b  rxunit-reporter-text.adb  9be0e5a4 OO PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.io%s		g-io.adb		g-io.ali
+W rxunit%s		rxunit.adb		rxunit.ali
+W rxunit.reporter%s	rxunit-reporter.ads	rxunit-reporter.ali
+W rxunit.time_measure%s	rxunit-time_measure.adb	rxunit-time_measure.ali  ED
+Z system.exp_int%s	s-expint.adb		s-expint.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+U rxunit.reporter.text%s  rxunit-reporter-text.ads  e10cbcef EE OO PF PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W rxunit.reporter%s	rxunit-reporter.ads	rxunit-reporter.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-calend.ads		20190518041255 474d9720 ada.calendar%s
+D a-contai.ads		20190518041254 61e5e089 ada.containers%s
+D a-cdlili.ads		20190518041254 8e06b4f2 ada.containers.doubly_linked_lists%s
+D a-conhel.ads		20190518041254 20298884 ada.containers.helpers%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041255 bf4f806b ada.finalization%s
+D a-iteint.ads		20190518041255 7c7305e9 ada.iterator_interfaces%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D gnat.ads		20190518041256 b5988c27 gnat%s
+D g-io.ads		20190518041254 9f0d3ab2 gnat.io%s
+D rxunit.ads		20200305085644 420f4fb3 rxunit%s
+D rxunit-options.ads	20200323093912 8a230c9f rxunit.options%s
+D rxunit-reporter.ads	20200323100558 4002e7c3 rxunit.reporter%s
+D rxunit-reporter-text.ads  20200323100610 a10e5b2c rxunit.reporter.text%s
+D rxunit-reporter-text.adb  20200323100100 4c4a0dfc rxunit.reporter.text%b
+D rxunit-test_filters.ads  20200323093528 c56c13cd rxunit.test_filters%s
+D rxunit-test_results.ads  20200305083948 6c5a06ed rxunit.test_results%s
+D rxunit-tests.ads	20200305080210 aca85f34 rxunit.tests%s
+D rxunit-time_measure.ads  20200305080722 e9a989c6 rxunit.time_measure%s
+D rxunit-time_measure.adb  20200305081838 061ba0ed rxunit.time_measure%b
+D system.ads		20190518041255 4635ec04 system%s
+D s-atocou.ads		20190518041256 b45c2d8d system.atomic_counters%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-expint.ads		20190518041256 192336fc system.exp_int%s
+D s-finmas.ads		20190518041255 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518041256 4ff27390 system.finalization_root%s
+D s-memory.ads		20190518041255 597d6634 system.memory%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-pooglo.ads		20190518041254 ede33ef8 system.pool_global%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stalib.adb		20190518041254 f2fe2716 system.standard_library%b
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041255 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20190518041255 b16154c2 system.storage_pools%s
+D s-stposu.ads		20190518041254 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+G a e
+G c b b b [b rxunit__reporter__text 24 1 none]
+G c Z s b [set_use_ansi_colors rxunit__reporter__text 25 14 none]
+G c Z s b [report rxunit__reporter__text 32 14 none]
+G c Z s b [report_ok_tests rxunit__reporter__text 36 14 none]
+G c Z s b [report_fail_tests rxunit__reporter__text 38 14 none]
+G c Z s b [report_error_tests rxunit__reporter__text 40 14 none]
+G c Z s s [text_reporterDA rxunit__reporter__text 50 9 none]
+G c Z s s [text_reporterDF rxunit__reporter__text 50 9 none]
+G c Z s s [text_reporterIP rxunit__reporter__text 50 9 none]
+G c Z b b [indent rxunit__reporter__text 26 14 none]
+G c Z b b [dump_result_list rxunit__reporter__text 29 14 none]
+G c Z b b [put_measureR rxunit__reporter__text__put_measureGP1738 32 14 none]
+G c Z b b [put_measure rxunit__reporter__text 32 14 none]
+G c Z b b [report_test rxunit__reporter__text 35 14 none]
+G r i none [b rxunit__reporter__text 24 1 none] [gen_put_measure rxunit__time_measure 47 14 none]
+G r c none [report rxunit__reporter__text 32 14 none] [success_count rxunit__test_results 111 13 none]
+G r c none [report rxunit__reporter__text 32 14 none] [failure_count rxunit__test_results 99 13 none]
+G r c none [report rxunit__reporter__text 32 14 none] [error_count rxunit__test_results 92 13 none]
+G r c none [report rxunit__reporter__text 32 14 none] [successes rxunit__test_results 114 14 none]
+G r c none [report rxunit__reporter__text 32 14 none] [get_measure rxunit__time_measure 41 13 none]
+G r c none [report rxunit__reporter__text 32 14 none] [failures rxunit__test_results 102 14 none]
+G r c none [report rxunit__reporter__text 32 14 none] [errors rxunit__test_results 95 14 none]
+G r c none [report rxunit__reporter__text 32 14 none] [test_count rxunit__test_results 120 13 none]
+G r c none [report rxunit__reporter__text 32 14 none] [elapsed rxunit__test_results 105 13 none]
+G r c none [report_ok_tests rxunit__reporter__text 36 14 none] [successes rxunit__test_results 114 14 none]
+G r c none [report_ok_tests rxunit__reporter__text 36 14 none] [get_measure rxunit__time_measure 41 13 none]
+G r c none [report_fail_tests rxunit__reporter__text 38 14 none] [failures rxunit__test_results 102 14 none]
+G r c none [report_fail_tests rxunit__reporter__text 38 14 none] [get_measure rxunit__time_measure 41 13 none]
+G r c none [report_error_tests rxunit__reporter__text 40 14 none] [errors rxunit__test_results 95 14 none]
+G r c none [report_error_tests rxunit__reporter__text 40 14 none] [get_measure rxunit__time_measure 41 13 none]
+G r s reporter [text_reporterIP rxunit__reporter__text 50 9 none] [reporterIP rxunit__reporter 25 9 none]
+G r c none [dump_result_list rxunit__reporter__text 29 14 none] [get_measure rxunit__time_measure 41 13 none]
+G r c none [report_test rxunit__reporter__text 35 14 none] [get_measure rxunit__time_measure 41 13 none]
+X 3 a-contai.ads
+20I9*Count_Type<integer>
+X 4 a-cdlili.ads
+51R9*List<7|43R9> 18|29r49[20|62] 39r70[20|62] 78r49[20|62] 105r24[20|62]
+60R9*Cursor 18|82r11[20|62]
+67V13*Has_Element{boolean} 18|84s10[20|62] 91s13[20|62]
+80V13*Element{20|51R9} 18|92s23[20|62]
+198V13*First{60R9[20|62]} 18|82s21[20|62]
+208U14*Next 18|93s10[20|62]
+X 8 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[4|69]>
+X 12 gnat.ads
+34K9*GNAT 57e9 18|20r6 20r30
+X 13 g-io.ads
+41K14*IO 91e12 18|20w11 20r35
+59U14*Put 18|174s7 177s7 180s7 183s7 227s10 22|45i22
+68U14*Put 18|70s10 109s10 115s10 173s7 176s7 179s7 182s7 189s10 202s7 203s7
+. 204s7 207s10 208s10 212s10 215s10 224s10 225s10 226s10 236s13 22|46i22
+72U14*Put_Line 18|191s10 222s10 232s10 237s13 242s13 256s19
+77U14*New_Line 18|85s10 172s7 175s7 178s7 181s7 184s7 218s7 228s10 262s10
+X 14 rxunit.ads
+22K9*Rxunit 32e11 17|21r9 54r5 18|21r6 21r31 24r14 266r5
+24P9*Message_String(string)
+X 15 rxunit-options.ads
+24R9*RxUnit_Options 29e14 17|34r32 18|157r17
+27b7*Report_Successes{boolean} 18|165r18
+32r4*Default_Options{24R9} 17|34r50 18|157r35
+X 16 rxunit-reporter.ads
+23K16*Reporter 14|22k9 16|34e20 17|21r16 54r12 18|24r21 266r12
+25H9*Reporter 25e48 17|23r30 50r30
+X 17 rxunit-reporter-text.ads
+21K25*Text 16|23k16 17|50E9 54l21 54e25 18|24b30 266l21 266t25
+23R9*Text_Reporter<16|25R9> 25p14 26r23 32P14 32r32 36p14 36r40 38p14 38r42
+. 40p14 40r43 50c9 52e14 18|43r17 57r23 102r17 124r17 133r17 142r17 155r17
+. 166r30 169r27 170r27
+25U14*Set_Use_ANSI_Colors 26=7 27>7 18|56b14 61l8 61t27
+26r7 Engine{23R9} 18|57b7 60m7
+27b7 Value{boolean} 18|58b7 60r26
+32U14*Report<16|27p14> 32>22 33=22 34>22 18|154b14 193l8 193t14
+32r22 Engine{23R9} 18|155b7 166r51 169r48 170r48
+33c22 R<20|29R9> 18|156b7 159r61 160r61 161r59 166m60 169m57 170m57 174r33
+. 186r19 187r37
+34r22 Options{15|24R9} 18|157b7 165r10
+36U14*Report_OK_Tests 36>31 37=31 18|123b14 130l8 130t23 166R10
+36r31 Engine{23R9} 18|124b8 129r17
+37c31 R<20|29R9> 18|125b8 129m25
+38U14*Report_Fail_Tests 38>33 39=33 18|132b14 139l8 139t25 169R7
+38r33 Engine{23R9} 18|133b8 138r17
+39c33 R<20|29R9> 18|134b8 138m25
+40U14*Report_Error_Tests 40>34 41=34 18|141b14 148l8 148t26 170R7
+40r34 Engine{23R9} 18|142b8 147r17
+41c34 R<20|29R9> 18|143b8 147m25
+51b7 Use_ANSI{boolean} 18|60m14 108r17 114r17
+X 18 rxunit-reporter-text.adb
+26U14 Indent 26>22 67b14 72l8 72t14 221s10 223s10 231s10 235s13 241s13 255s19
+26i22 N{natural} 67b22 69r21
+29U14 Dump_Result_List 29>32 29>55 78b14 95l8 95t24 112s7
+29r32 L{4|51R9[20|62]} 78b32 82r28
+29a55 Prefix{string} 78b55 92r36
+32U14 Put_Measure[22|47] 190s10 214s10 23|54b14
+35U14 Report_Test 35>27 35>47 92s10 199b14 264l8 264t19
+35r27 Test{20|51R9} 199b27 204r12 206r10 208r15 211r10 213r28 220r10 222r20
+. 225r15 227r15 230r13 232r20 234r13 237r23 240r13 245r38 247r30 249r31 250r30
+. 256r29
+35a47 Prefix{string} 199b47 202r12
+39U22 Get 39=27 39=46 107s7
+39r27 R{20|29R9}
+39r46 L{4|51R9[20|62]}
+40a7 Label{string} 112r28
+41a7 Color{string} 109r15
+42u14 Report_Tests 43>8 44=8 101b14 117l8 117t20 127r33 136r33 145r33
+43r8 Engine{17|23R9} 102b8 108r10 114r10
+44c8 R<20|29R9> 103b8 107m20 107r20
+47a4 ANSI_Def{string} 115r15
+48a4 ANSI_Green{string} 127r64
+49a4 ANSI_Purple{string} 136r65
+50a4 ANSI_Red{string} 145r64
+69i11 J{integer}
+82r7 C{4|60R9[20|62]} 84r23 91r26 92r32 93m16 93r16
+105r7 S{4|51R9[20|62]} 107m24 107r24 112r25
+127U17 Internal[42] 101b14 129s7
+136U17 Internal[42] 101b14 138s7
+145U17 Internal[42] 101b14 147s7
+159i7 S_Count{integer} 177r12
+160i7 F_Count{integer} 180r12
+161i7 E_Count{integer} 183r12
+162o7 T{22|29O9} 187m10 190r23
+200o7 T{22|29O9} 213m10 214r23
+245i16 From{natural} 247r22 248r25 256r51 257m19
+245i22 To{natural} 248m19 249r25 250r52 252m22 252r28 256r59 257r27
+X 20 rxunit-test_results.ads
+29R9*Result 17|33r39 37r47 39r49 41r50 18|39r38 44r24 103r24 107r12 125r24
+. 134r24 143r24 156r24 20|134e14
+34p7*Message{14|24P9} 18|222r33
+35p7*Source_Name{14|24P9} 18|225r28
+36i7*Line{natural} 18|227r28
+38P9*Test_Failure_Access(33R9)
+43p7*Exception_Name{14|24P9} 18|232r31
+44p7*Exception_Message{14|24P9} 18|234r24 237r34
+45p7*Traceback{14|24P9} 18|240r24 245r49 247r41 249r42 250r41 256r40
+47P9*Test_Error_Access(42R9)
+51R9*Test_Result 18|35r34 199r34 20|57e14
+52p7*Test_Name{14|24P9} 18|204r17
+53p7*Routine_Name{14|24P9} 18|206r15 208r20
+54p7*Failure{38P9} 18|220r15 222r25 225r20 227r20
+55p7*Error{47P9} 18|230r18 232r25 234r18 237r28 240r18 245r43 247r35 249r36
+. 250r35 256r34
+56r7*Elapsed{22|24R9} 18|211r15 213r33
+62K12*Result_Lists[4|46] 18|29r36 39r57 78r36 80r11 105r11
+92V13*Error_Count{3|20I9} 18|161R46
+95U14*Errors 18|145r47
+99V13*Failure_Count{3|20I9} 18|160R46
+102U14*Failures 18|136r47
+105V13*Elapsed{22|24R9} 18|186R10 187R28
+111V13*Success_Count{3|20I9} 18|159R46
+114U14*Successes 18|127r47
+120V13*Test_Count{3|20I9} 18|174R21
+X 22 rxunit-time_measure.ads
+22K16*Time_Measure 18|21w13 21r38 186r25 211r26 22|61e24
+29O9*Rxunit_Duration<duration> 18|162r11 200r11
+31r4*Null_Time{24R9} 18|186r38 211r39
+41V13*Get_Measure{29O9} 18|187s15 213s15
+47u14*Gen_Put_Measure 18|32r33
+X 24 system.ads
+67M9*Address
+X 30 s-memory.ads
+53V13*Alloc{24|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{24|67M9} 105i<c,__gnat_realloc>22
+X 37 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+

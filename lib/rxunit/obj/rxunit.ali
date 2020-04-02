@@ -1,0 +1,36 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_LOCAL_ALLOCATORS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U rxunit%b		rxunit.adb		ee89e0ab NE OO PK
+
+U rxunit%s		rxunit.ads		420f4fb3 EE NE OO PK
+
+D rxunit.ads		20200305085644 420f4fb3 rxunit%s
+D rxunit.adb		20200305085824 ac86af18 rxunit%b
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+G c Z s b [format rxunit 30 13 none]
+X 1 rxunit.ads
+22K9*Rxunit 32l5 32e11 2|22b14 38l5 38t11
+24P9*Message_String(string) 26r27 30r40 2|28r40 29r22
+26P12*Test_String{24P9}
+28E9*Status 28e37
+28n20*Success{28E9}
+28n29*Failure{28E9}
+30V13*Format{24P9} 30>21 2|28b13 36l8 36t14
+30a21 S{string} 2|28b21 29r52 31r16 32r19 32r35
+X 2 rxunit.adb
+29p7 Ptr{1|24P9} 32r10 35r14
+31i11 J{integer} 32r15 32r38
+

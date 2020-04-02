@@ -1,0 +1,87 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U rxunit.reporter%s	rxunit-reporter.ads	e474a202 EE OO PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W rxunit%s		rxunit.adb		rxunit.ali
+W rxunit.options%s	rxunit-options.ads	rxunit-options.ali
+W rxunit.test_results%s	rxunit-test_results.adb	rxunit-test_results.ali
+Z system%s		system.ads		system.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-calend.ads		20190518041255 474d9720 ada.calendar%s
+D a-contai.ads		20190518041254 61e5e089 ada.containers%s
+D a-cdlili.ads		20190518041254 8e06b4f2 ada.containers.doubly_linked_lists%s
+D a-conhel.ads		20190518041254 20298884 ada.containers.helpers%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041255 bf4f806b ada.finalization%s
+D a-iteint.ads		20190518041255 7c7305e9 ada.iterator_interfaces%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D rxunit.ads		20200305085644 420f4fb3 rxunit%s
+D rxunit-options.ads	20200323093912 8a230c9f rxunit.options%s
+D rxunit-reporter.ads	20200323100558 4002e7c3 rxunit.reporter%s
+D rxunit-test_filters.ads  20200323093528 c56c13cd rxunit.test_filters%s
+D rxunit-test_results.ads  20200305083948 6c5a06ed rxunit.test_results%s
+D rxunit-tests.ads	20200305080210 aca85f34 rxunit.tests%s
+D rxunit-time_measure.ads  20200305080722 e9a989c6 rxunit.time_measure%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-atocou.ads		20190518041256 b45c2d8d system.atomic_counters%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-finmas.ads		20190518041255 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518041256 4ff27390 system.finalization_root%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-pooglo.ads		20190518041254 ede33ef8 system.pool_global%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041255 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20190518041255 b16154c2 system.storage_pools%s
+D s-stposu.ads		20190518041254 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+G a e
+G c Z s s [reporterDA rxunit__reporter 25 9 none]
+G c Z s s [reporterDF rxunit__reporter 25 9 none]
+G c Z s s [reporterIP rxunit__reporter 25 9 none]
+X 8 a-iteint.ads
+24h9 Forward_Iterator
+32h9 Reversible_Iterator<24R9[4|69]>
+X 12 rxunit.ads
+22K9*Rxunit 32e11 14|20r6 20r31 21r6 21r31 23r9 34r5
+X 13 rxunit-options.ads
+22K16*Options 38e19 14|20w13 20r38
+24R9*RxUnit_Options 29e14 14|30r17
+32r4*Default_Options{24R9} 14|30r35
+X 14 rxunit-reporter.ads
+23K16*Reporter 12|22k9 14|34l12 34e20
+25H9*Reporter 25e48 27p14 28r17
+27x14*Report 28>7 29=7 30>7
+28r7 Engine{25R9}
+29c7 R<16|29R9>
+30r7 Options{13|24R9}
+X 16 rxunit-test_results.ads
+27K16*Test_Results 14|21w13 21r38 16|136e24
+29R9*Result 14|29r24 16|134e14
+

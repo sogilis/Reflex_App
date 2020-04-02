@@ -1,0 +1,13 @@
+
+library project RxUnit is
+
+   for Languages use ("Ada");
+
+   for Source_Dirs use ("../../include/rxunit");
+
+   for Library_Dir use "../lib/rxunit";
+   for Library_Kind use "static";
+   for Library_Name use "rxunit";
+   for Externally_Built use "True";
+
+end RxUnit;

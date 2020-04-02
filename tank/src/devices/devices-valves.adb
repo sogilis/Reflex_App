@@ -50,12 +50,10 @@ package body Devices.Valves is
       Put_Line ("App_Valves.Cyclic");
       case This.State is
 	 when Init_State =>
-	       New_State :=Waiting_State;
+	       New_State := Waiting_State;
 
 	 when Waiting_State =>
-	    if Close then
-	       New_State := Closing_State;
-	    elsif Open then
+	    if Open then
 	       New_State := Opening_State;
 	    end if;
 	    
@@ -66,18 +64,14 @@ package body Devices.Valves is
 	    
 	 when Opened_State =>
 	    if Close then
-	       New_State := Waiting_State;
+	       New_State := Closing_State;
 	    end if;
 	    
 	 when Closing_State =>
 	    if Closed then
-	       New_State := Closed_State;
-	    end if;
-	    
-	 when Closed_State =>
-	    if Open then
 	       New_State := Waiting_State;
 	    end if;
+	    
       end case;
       
       This.State := New_State;

@@ -1,0 +1,54 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U rxunit.options%s	rxunit-options.ads	0d4050e1 NE OO PK
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W rxunit%s		rxunit.adb		rxunit.ali
+W rxunit.test_filters%s	rxunit-test_filters.adb	rxunit-test_filters.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041255 bf4f806b ada.finalization%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D rxunit.ads		20200305085644 420f4fb3 rxunit%s
+D rxunit-options.ads	20200323093912 8a230c9f rxunit.options%s
+D rxunit-test_filters.ads  20200323093528 c56c13cd rxunit.test_filters%s
+D rxunit-tests.ads	20200305080210 aca85f34 rxunit.tests%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-finmas.ads		20190518041255 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518041256 4ff27390 system.finalization_root%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-pooglo.ads		20190518041254 ede33ef8 system.pool_global%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20190518041255 b16154c2 system.storage_pools%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+G a e
+G c Z s s [rxunit_optionsIP rxunit__options 24 9 none]
+X 7 rxunit.ads
+22K9*Rxunit 32e11 8|20r6 22r9 28r26 38r5
+X 8 rxunit-options.ads
+22K16*Options 7|22k9 8|38l12 38e19
+24R9*RxUnit_Options 29e14 32r31
+25b7*Global_Timer{boolean} 33m7
+26b7*Test_Case_Timer{boolean} 34m7
+27b7*Report_Successes{boolean} 35m7
+28p7*Filter{9|30P9} 36m7
+32r4*Default_Options{24R9}
+X 9 rxunit-test_filters.ads
+27K16*Test_Filters 8|20w13 28r33 9|65e24
+30P9*Test_Filter_Access(29R9) 8|28r46
+

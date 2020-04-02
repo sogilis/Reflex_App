@@ -1,0 +1,90 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_CALENDAR
+RV NO_DELAY
+RV NO_FIXED_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U rxunit.time_measure%b	rxunit-time_measure.adb	efb2292b NE OO PK
+W rxunit%s		rxunit.adb		rxunit.ali
+
+U rxunit.time_measure%s	rxunit-time_measure.ads	eceb5155 BN EE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
+W rxunit%s		rxunit.adb		rxunit.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-calend.ads		20190518041255 474d9720 ada.calendar%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D rxunit.ads		20200305085644 420f4fb3 rxunit%s
+D rxunit-time_measure.ads  20200305080722 e9a989c6 rxunit.time_measure%s
+D rxunit-time_measure.adb  20200305081838 061ba0ed rxunit.time_measure%b
+D system.ads		20190518041255 4635ec04 system%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+G a e
+G c Z s s [timeIP rxunit__time_measure 24 9 none]
+G c Z s b [start_measure rxunit__time_measure 35 14 none]
+G c Z s b [stop_measure rxunit__time_measure 38 14 none]
+G c Z s b [get_measure rxunit__time_measure 41 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 5|20r6 25r15 26r15 32r16 33r16 6|28r18 37r17 45r16
+X 2 a-calend.ads
+36K13*Calendar 409e17 5|20w10 25r19 26r19 32r20 33r20 6|28r22 37r21 45r20
+42I9*Time<222I9> 5|25r28 26r28 6|45r29
+56V13*Clock{42I9} 6|28s31 37s30
+83V13*Time_Of{42I9} 5|32s29 33s29
+112V14*"-"{duration} 6|47s38
+222I9 Time_Rep<long_long_integer>
+X 4 rxunit.ads
+22K9*Rxunit 32e11 5|22r9 61r5 6|20r14 163r5
+X 5 rxunit-time_measure.ads
+22K16*Time_Measure 4|22k9 5|59E9 61l12 61e24 6|20b21 163l12 163t24
+24R9*Time 27e14 31r25 35r40 38r39 41r30 6|26r40 35r39 44r30
+25i7*Start{2|42I9} 32m7 6|28m9 47r42
+26i7*Stop{2|42I9} 33m7 6|37m9 47r33
+29O9*Rxunit_Duration<duration> 41r43 47r41 53r52 59c9 6|44r43 47r14 54r41
+. 129r52
+31r4*Null_Time{24R9}
+35U14*Start_Measure 35=29 6|26b14 29l8 29t21
+35r29 T{24R9} 6|26b29 28m7
+38U14*Stop_Measure 38=28 6|35b14 38l8 38t20
+38r28 T{24R9} 6|35b28 37m7
+41V13*Get_Measure{29O9} 41>26 6|44b13 48l8 48t19
+41r26 T{24R9} 6|44b26 47r31 47r40
+45U22 Put 45>27 6|72s10 96s10 103s13 115s10
+45i27 I{integer}
+46U22 Put 46>27 6|66s16 97s10 110s10 120s7 122s7
+46a27 S{string}
+47u14*Gen_Put_Measure 47>31 6|54b14 123l8 123t23
+47o31 Measure{29O9} 6|54b31 56r40
+51U22 Put 51>27 6|146s10 156s7
+51i27 I{integer}
+52U22 Put 52>27 6|140s16 158s7 160s7
+52a27 S{string}
+53u14*Gen_Put_Measure_In_Seconds 53>42 6|129b14 161l8 161t34
+53o42 Measure{29O9} 6|129b42 131r34
+X 6 rxunit-time_measure.adb
+55i7 H{integer} 78m10 78r15 95r10 96r15
+55i10 M{integer} 83m10 83r15 101r10 103r18 107r18
+55i13 S{integer} 88m10 88r15 115r15 117r15
+56o7 T{duration} 77r13 79m10 79r15 82r13 84m10 84r15 87r13 89m10 89r15 121r21
+57b7 Force{boolean} 93m7 98m10 101r24 102r17 111m10 114r14
+59U17 Put 59>22 59>35 62b17 73l11 73t14 107s13 117s10 121s7
+59i22 N{integer} 62b22 65r16 72r15
+59i35 Length{integer} 62b35 64r34
+64i14 Dig{integer} 65r24
+130i7 S{integer} 152m10 152r15 156r12
+131o7 T{duration} 151r13 153m10 153r15 159r21
+133U17 Put 133>22 133>35 136b17 147l11 147t14 159s7
+133i22 N{integer} 136b22 139r16 146r15
+133i35 Length{integer} 136b35 138r34
+138i14 Dig{integer} 139r24
+
