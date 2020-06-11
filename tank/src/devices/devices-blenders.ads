@@ -29,20 +29,20 @@ package Devices.Blenders is
       Starting_State,
       Running_V1_State,
       Running_V2_State,
-      Stopping_State,
-      Faulty_State);
+      Stopping_State );
    
    procedure Initialize (This : in out Blender_Record);
+
+   function get_state(This : Blender_Record) return Blender_State;
+
+   procedure set_state (This : in out Blender_Record; S: Blender_State);
    
   
    procedure Cyclic
      (This      : in out Blender_Record;
       Run       : Boolean;
-      CP        : Boolean;
-      Therm     : Boolean;
       Speed_1   : Boolean;
       Speed_2   : Boolean;
-      Acqk      : Boolean;
       Run_Order : out Boolean;
       v2_Order  : out Boolean;
       v1_Order  : out Boolean);

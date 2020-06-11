@@ -1,0 +1,56 @@
+V "GNAT Lib v2019"
+A -O0
+A -O0
+A -gnatA
+A -gnat2012
+A -gnatwa
+A -gnatf
+A -fstack-check=specific
+A -gnatw.X
+A -gnateE
+A -g
+A -gnat2012
+A -gnatwa
+A -gnatf
+A -fstack-check=specific
+A -gnatw.X
+A -gnateE
+A -gnato
+A -g
+A -fcallgraph-info=su,da
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U xreqlib.report%b	xreqlib-report.adb	a36d4ac3 NE OO PK
+W xreqlib%s		xreqlib.ads		xreqlib.ali
+
+U xreqlib.report%s	xreqlib-report.ads	3c5fd0f4 EE NE OO PK
+W xreqlib%s		xreqlib.ads		xreqlib.ali
+
+D system.ads		20190518041255 4635ec04 system%s
+D xreqlib.ads		20200318082638 88a20b05 xreqlib%s
+D xreqlib-report.ads	20200318082638 b4fddbf1 xreqlib.report%s
+D xreqlib-report.adb	20200318082638 17909132 xreqlib.report%b
+G a e
+G c Z s b [status xreqlib__report 37 13 none]
+G c Z s s [report_typeIP xreqlib__report 27 9 none]
+X 2 xreqlib.ads
+20K9*XReqLib 23e12 3|20r9 39r5 4|20r14 33r5
+X 3 xreqlib-report.ads
+20K17*Report 2|20k9 3|39l13 39e19 4|20b22 33l13 33t19
+27R9*Report_Type 34e14 37r30 4|26r30
+28i7*Count_Scenario_Failed{natural} 4|28r21
+29i7*Count_Scenario_Passed{natural}
+30i7*Count_Steps_Failed{natural} 4|29r16
+31i7*Count_Steps_Skipped{natural} 4|30r16
+32i7*Count_Steps_Passed{natural}
+33i7*Num_Steps{natural}
+37V13*Status{boolean} 37>21 4|26b13 31l8 31t14
+37r21 Report{27R9} 4|26b21 28r14 29r9 30r9
+

@@ -30,6 +30,16 @@ package body Devices.Pumps is
    begin
       This := No_Pump_Record;
    end Initialize;
+
+   function get_state (This : Pump_Record) return Pump_State is
+     begin
+	return This.State;
+     end get_state;
+
+   procedure set_state (This : in out Pump_Record; S: Pump_State) is
+     begin
+	 This.State := S;
+     end Set_State;
    
    ------------
    -- Cyclic --

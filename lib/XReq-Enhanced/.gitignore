@@ -1,0 +1,17 @@
+*~
+*.o
+*.ali
+*.gcno
+*.db*
+*.cgpr
+xreq-loc.xml
+*.TMP
+build
+dist
+dist_dev
+reports
+install
+generated
+obj
+bin
+lib

@@ -31,6 +31,36 @@ package body Tank.Mixing is
       This := No_Mixing_Record;
    end Initialize;
    
+   function get_state (This : Mixing_Record) return Mixing_State is
+     begin
+	return This.State;
+     end get_state;
+
+   procedure set_state (This : in out Mixing_Record; S: Mixing_State) is
+   begin
+      This.State := S;
+   end Set_State;
+     
+   -- Get_Counter --
+   -----------------
+   
+   function Get_Counter (This : in out Mixing_Record) return Integer is
+   begin
+      return This.Counter;
+   end Get_Counter;
+   
+   -----------------
+   -- Set_Counter --
+   -----------------
+   
+   procedure Set_Counter
+     (This    : in out Mixing_Record;
+      Counter : Integer) is
+   begin
+      This.Counter := Counter;
+   end Set_Counter;
+   
+     
    ------------
    -- Cyclic --
    ------------
@@ -64,7 +94,7 @@ package body Tank.Mixing is
 	       This.Counter:=This.Counter + 1;
 	    end if;
 	    
-	    if This.Counter = Mixing_Duration then
+	    if This.Counter >= Mixing_Duration then
 	       New_State := End_Mixing_State;
 	    end if;
 

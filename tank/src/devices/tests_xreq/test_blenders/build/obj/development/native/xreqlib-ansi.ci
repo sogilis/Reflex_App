@@ -1,0 +1,10 @@
+graph: { title: "/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-ansi.adb"
+node: { title: "memcpy" label: "builtin_memcpy\n<built-in>" shape : ellipse }
+node: { title: "system__secondary_stack__ss_allocate" label: "Ss_Allocate\n/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adainclude/s-secsta.ads:72:14" shape : ellipse }
+node: { title: "system__concat_2__str_concat_2" label: "Str_Concat_2\n/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adainclude/s-conca2.ads:39:14" shape : ellipse }
+node: { title: "xreqlib__ansi__ansi" label: "ANSI\n/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-ansi.adb:22:4\n112 bytes (dynamic)\n1 dynamic objects\n S6B /home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-ansi.adb:25:33" }
+edge: { sourcename: "xreqlib__ansi__ansi" targetname: "system__secondary_stack__ss_allocate" label: "/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-ansi.adb:27:10" }
+edge: { sourcename: "xreqlib__ansi__ansi" targetname: "memcpy" }
+edge: { sourcename: "xreqlib__ansi__ansi" targetname: "system__secondary_stack__ss_allocate" label: "/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-ansi.adb:25:10" }
+edge: { sourcename: "xreqlib__ansi__ansi" targetname: "system__concat_2__str_concat_2" label: "/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-ansi.adb:25:33" }
+}

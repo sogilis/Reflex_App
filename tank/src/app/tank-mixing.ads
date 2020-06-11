@@ -29,6 +29,17 @@ package Tank.Mixing is
        End_Mixing_State);
    
    procedure Initialize (This : in out Mixing_Record);
+
+   function get_state (This : Mixing_Record) return Mixing_State;
+
+   procedure set_state (This : in out Mixing_Record; S: Mixing_State);
+   
+   --  Added for tests
+   
+   function Get_Counter (This : in out Mixing_Record) return Integer;
+   procedure Set_Counter
+     (This    : in out Mixing_Record;
+      Counter : Integer);
    
    procedure Cyclic
      (This             : in out Mixing_Record;
@@ -50,3 +61,4 @@ private
    No_Mixing_Record : constant Mixing_Record := (State => Init_State, Counter =>0);
    
 end Tank.Mixing;
+

@@ -1,0 +1,25 @@
+library project XReq_Lib extends "settings.gpr" is
+
+   for Library_Name     use "xreq";
+   for Library_Dir      use "build/lib" & "/" & Settings.Build & "/" & Settings.Target;
+   for Library_Kind     use "static";
+   for Languages        use ("Ada", "C");
+   for Externally_Built use "false";
+   for Object_Dir       use "build/obj" & "/" & Settings.Build & "/" & Settings.Target;
+
+   case Settings.Target is
+      when "arm-eabi" =>
+         for Source_Dirs use ("src/xreqlib/common", "src/xreqlib/arm-eabi");
+   
+      when "native" =>
+         for Source_Dirs use ("src/xreqlib/common", "src/xreqlib/x86_64");
+         
+   end case;
+
+   -- This is to override the Linker package defined in settings.gpr
+   -- When building a library the Linker package is not used.
+   package Linker is
+   end Linker;
+
+end XReq_Lib;
+

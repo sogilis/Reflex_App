@@ -1,0 +1,25 @@
+stages:
+  - build
+  - build-tests
+  - run-tests
+  - release
+
+build:
+  stage: build
+  script:
+    - make build
+
+build-tests:
+  stage: build-tests
+  script:
+    - make build-tests
+
+run-tests:
+  stage: run-tests
+  script:
+    - make run-tests
+
+release:
+  stage: release
+  script:
+    - make release

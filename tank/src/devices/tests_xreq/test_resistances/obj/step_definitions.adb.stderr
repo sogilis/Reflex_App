@@ -1,0 +1,1 @@
+step_definitions.adb:9:05: warning: variable "Set_Point" is never read and never assigned

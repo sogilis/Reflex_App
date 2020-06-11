@@ -1,0 +1,6 @@
+with "valves_impl.gpr";
+with "valves_tests.gpr";
+
+project Valves is
+
+end Valves;

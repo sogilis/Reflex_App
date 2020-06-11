@@ -30,7 +30,7 @@ package body Regul.Ramps is
       Tmax        : in Float;
       T_Adjusted  : out Float) is
       
-      Adjust : float;
+      Adjust : float := T_Sensor;
    begin
       if Second and T_Sensor /= Set_Point then
          Adjust := T_Sensor + Gradient / 60.0;

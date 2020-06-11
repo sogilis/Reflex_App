@@ -1,0 +1,21 @@
+with "xreq_lib.gpr";
+
+project XReq_Generator extends "settings.gpr" is
+
+   for Languages   use ("Ada");
+   for Object_Dir  use "build/obj" & "/" & Settings.Build & "/" & Settings.Target;
+   for Exec_Dir    use "build/bin" & "/" & Settings.Build & "/" & Settings.Target;
+   for Source_Dirs use ("src/generator");
+
+   for Main        use ("main.adb");
+
+   package Builder extends Settings.Builder is
+      case Settings.Target is
+         when "arm-eabi" =>
+            for Executable ("main.adb") use "xreq.elf";
+         when "native" =>
+            for Executable ("main.adb") use "xreq";
+      end case;
+   end Builder;
+
+end XReq_Generator;

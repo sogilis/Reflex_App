@@ -1,0 +1,88 @@
+#!/bin/echo This file must be sourced by a shell
+# kate: hl sh;
+
+redo_gprbuild(){
+  if [ -z "$1" ] || [ -z "$2" ]; then
+    echo "redo_gprbuild: must specify a gpr project and an output file (\$3)" >&2
+    return 1
+  elif ! [ -f "$1" ]; then
+    echo "$1: file not found" >&2
+    return 1
+  fi
+  
+  # get absolute paths for arguments
+  local gpr="$(cd "`dirname "$1"`"; pwd)/$(basename "$1")"
+  local out="$(cd "`dirname "$2"`"; pwd)/$(basename "$2")"
+  
+  : ${GPRBUILD:=gprbuild}
+  : ${GPRBUILD_FLAGS:=-p}
+  : ${GPR_FLAGS:=}
+
+  # Warning: gprbuild -o option doesn't handle absolute paths such as $out :/
+  echo PWD=$PWD $GPRBUILD $GPRBUILD_FLAGS -P"$gpr" $GPR_FLAGS -o "$2" >&2
+  $GPRBUILD $GPRBUILD_FLAGS -P"$gpr" $GPR_FLAGS -o "$2" --create-map-file="$out.map" >&2
+
+  if [ -f "$out.map" ]; then
+
+    # extract object files and libraries from map file
+    # FIXME: this is very platform dependant (this is a linker script)
+    #        find a better way to locate object dependancies.
+    local objfiles="$(grep "^LOAD " "$out.map" | cut -c6-)"
+    if [ -z "$objfiles" ]; then
+      objfiles="$(grep -E '^\[...\] .*\.o$' "$out.map" | cut -c7-)"
+    fi
+    
+    # move into object directory
+    local olddir="$(pwd)"
+    local srcfiles=
+    for objdir in $(gnat ls -P"$gpr" $GPR_FLAGS -v | sed -n '/^Object Search Path:$/,/^$/ { /^ / { s/^ *//p } }'); do
+      cd "$objdir"
+    
+      # only keep object files that exists in this directory
+      local objfileshere="$(echo "$objfiles" \
+        | tr \\n \\0 \
+        | xargs -0 -n 1 sh -c 'if [ -e "$0" ]; then echo "$0"; fi' \
+        | grep . )"
+      
+      # Get the lis of source files
+      srcfiles="$(echo "$srcfiles"; echo "$objfileshere" \
+        | grep "\.o$" \
+        | tr \\n \\0 \
+        | xargs -0 -n 1 gnat ls -P"$gpr" $GPR_FLAGS -d -a -s \
+        | grep -v -F "Can't find library info for " \
+        | sed 's/^ *//' )"
+      
+      # mark object files as dependency
+      if [ $(echo "$objfileshere" | wc -l) -gt 0 ]; then
+        echo "$objfileshere" | tr \\n \\0 | xargs -0 redo-ifchange
+      fi
+      
+      # Move back
+      cd "$olddir"
+    done
+    
+    for srcdir in $(gnat ls -P"$gpr" $GPR_FLAGS -v | sed -n '/^Source Search Path:$/,/^$/ { /^ / { s/^ *//p } }'); do
+      cd "$srcdir"
+      
+      # only keep source files that exists in this directory
+      local srcfileshere="$(echo "$srcfiles" \
+        | grep . \
+        | tr \\n \\0 \
+        | xargs -0 -n 1 sh -c 'if [ -e "$0" ]; then echo "$0"; fi' \
+        | grep . )"
+      
+      # mark source files for each object file as dependency
+      if [ $(echo "$srcfileshere" | grep . | wc -l) -gt 0 ]; then
+        echo "$srcfileshere" | tr \\n \\0 | xargs -0 redo-ifchange
+      fi
+      
+      # Move back
+      cd "$olddir"
+    done
+
+    # remove map file
+    rm -f "$out.map"
+
+  fi
+}
+

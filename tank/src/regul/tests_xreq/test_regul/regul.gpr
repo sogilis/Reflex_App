@@ -1,0 +1,6 @@
+with "regul_impl.gpr";
+with "regul_tests.gpr";
+
+project Regul is
+
+end Regul;

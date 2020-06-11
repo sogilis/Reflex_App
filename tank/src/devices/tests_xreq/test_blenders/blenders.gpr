@@ -1,0 +1,6 @@
+with "blenders_impl.gpr";
+with "blenders_tests.gpr";
+
+project Blenders is
+
+end Blenders;

@@ -274,11 +274,8 @@ package body Tank.Main is
      Devices.Blenders.Cyclic
         (This      => Blender,
          Run       => Mixing_Start_Blender,
-         CP        => CP,
-         Therm     => Therm,
          Speed_1   => V1_Speed,
          Speed_2   => V2_Speed,
-         Acqk      => Acqk,
          Run_Order => Blender_Start_Order,
          v1_Order  => V1_Order,
          v2_Order  => V2_Order);

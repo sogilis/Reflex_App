@@ -29,6 +29,10 @@ package Devices.Resistances is
        Running_State );
    
    procedure Initialize (This : in out Resistance_Record);
+
+   function get_state(This : Resistance_Record) return Resistance_State;
+
+   procedure set_state (This : in out Resistance_Record; S: Resistance_State);
    
   
    procedure Cyclic

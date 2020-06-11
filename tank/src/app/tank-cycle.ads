@@ -31,10 +31,14 @@ package Tank.Cycle is
     End_Cycle_State);
    
    procedure Initialize (This : in out Cycle_Record);
+
+
+   function get_state (This : Cycle_Record) return Cycle_State;
+
+   procedure set_state (This : in out Cycle_Record; S: Cycle_State);
    
    procedure Cyclic
      (This             : in out Cycle_Record;
-      Start            : in Boolean;
       End_Filling_P1   : Boolean;
       End_Filling_P2   : Boolean;
       End_Mixing       : Boolean;

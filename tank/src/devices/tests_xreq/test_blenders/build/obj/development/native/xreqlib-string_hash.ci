@@ -1,0 +1,15 @@
+graph: { title: "/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-string_hash.adb"
+node: { title: "_Unwind_Resume" label: "builtin_unwind_resume\n<built-in>" shape : ellipse }
+node: { title: "system__secondary_stack__ss_release" label: "Ss_Release\n/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adainclude/s-secsta.ads:95:14" shape : ellipse }
+node: { title: "ada__strings__unbounded__to_string" label: "To_String\n/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adainclude/a-strunb.ads:116:13" shape : ellipse }
+node: { title: "system__secondary_stack__ss_mark" label: "Ss_Mark\n/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adainclude/s-secsta.ads:92:13" shape : ellipse }
+node: { title: "/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-string_hash.adb:xreqlib__string_hash__B2b___finalizer.4706" label: "B2b\n/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-string_hash.adb:12:4\n32 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-string_hash.adb:xreqlib__string_hash__B2b___finalizer.4706" targetname: "system__secondary_stack__ss_release" label: "/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-string_hash.adb:12:4" }
+node: { title: "_ada_xreqlib__string_hash" label: "String_Hash\n/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-string_hash.adb:5:1\n96 bytes (static)\n0 dynamic objects" }
+edge: { sourcename: "_ada_xreqlib__string_hash" targetname: "_Unwind_Resume" }
+edge: { sourcename: "_ada_xreqlib__string_hash" targetname: "/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-string_hash.adb:xreqlib__string_hash__B2b___finalizer.4706" label: "/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-string_hash.adb:12:0" }
+edge: { sourcename: "_ada_xreqlib__string_hash" targetname: "/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-string_hash.adb:xreqlib__string_hash__hash.4602" label: "/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-string_hash.adb:12:11" }
+edge: { sourcename: "_ada_xreqlib__string_hash" targetname: "ada__strings__unbounded__to_string" label: "/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-string_hash.adb:12:38" }
+edge: { sourcename: "_ada_xreqlib__string_hash" targetname: "system__secondary_stack__ss_mark" label: "/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-string_hash.adb:12:4" }
+node: { title: "/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-string_hash.adb:xreqlib__string_hash__hash.4602" label: "Hash\n/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adainclude/s-strhas.adb:44:4\n16 bytes (static)\n0 dynamic objects" }
+}

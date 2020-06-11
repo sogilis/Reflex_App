@@ -1,0 +1,73 @@
+V "GNAT Lib v2019"
+A -O0
+A -O0
+A -gnatA
+A -gnat2012
+A -gnatwa
+A -gnatf
+A -fstack-check=specific
+A -gnatw.X
+A -gnateE
+A -g
+A -gnat2012
+A -gnatwa
+A -gnatf
+A -fstack-check=specific
+A -gnatw.X
+A -gnateE
+A -gnato
+A -g
+A -fcallgraph-info=su,da
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U xreqlib.asserts%b	xreqlib-asserts.adb	366d6406 NE OO PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z system.concat_8%s	s-conca8.adb		s-conca8.ali
+W xreqlib%s		xreqlib.ads		xreqlib.ali
+
+U xreqlib.asserts%s	xreqlib-asserts.ads	0740edbd EE OO PK
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+W xreqlib%s		xreqlib.ads		xreqlib.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-conca8.ads		20190518041255 e3074dd7 system.concat_8%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D xreqlib.ads		20200318082638 88a20b05 xreqlib%s
+D xreqlib-asserts.ads	20200318082638 8fe2e6b8 xreqlib.asserts%s
+D xreqlib-asserts.adb	20200318082638 b98f82be xreqlib.asserts%b
+G a e
+G c Z s b [assert xreqlib__asserts 24 14 none]
+G c Z s b [equals xreqlib__asserts 26 14 none]
+X 10 xreqlib.ads
+20K9*XReqLib 23e12 11|20r9 28r5 12|20r14 72r5
+X 11 xreqlib-asserts.ads
+20K17*Asserts 10|20k9 11|28l13 28e20 12|20b22 72l13 72t20
+22X4*Error 12|30r19 32r19 45r19 58r19
+24U14*Assert 24>22 24>37 12|26b14 35l8 35t14
+24b22 Cmp{boolean} 12|26b22 28r14
+24a37 Reason{string} 12|26b37 29r13 30r30
+26U14*Equals 26>22 26>26 26>39 12|41b14 70l8 70t14
+26a22 T1{string} 12|41b22 43r10 50r15 61r15
+26a26 T2{string} 12|41b26 43r16 54r15 65r15
+26a39 Reason{string} 12|41b39 44r13 46r20
+

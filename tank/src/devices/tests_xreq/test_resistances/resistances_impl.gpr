@@ -1,0 +1,8 @@
+project Resistances_Impl extends "resistances_settings.gpr" is
+
+   for Languages   use ("Ada");
+   for Source_Dirs use ("../../");
+   for Object_Dir  use "obj";
+
+end Resistances_Impl;
+

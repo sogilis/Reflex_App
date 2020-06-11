@@ -1,0 +1,5 @@
+aggregate project XReq_Tests is
+
+   for Project_Files use ("tests/unit/unit_tests.gpr", "tests/integ/feature_tests.gpr");
+
+end XReq_Tests;

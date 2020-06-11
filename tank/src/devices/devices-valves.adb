@@ -30,6 +30,16 @@ package body Devices.Valves is
    begin
       This := No_Valve_Record;
    end Initialize;
+
+   function get_state (This : Valve_Record) return Valve_State is
+     begin
+	return This.State;
+     end get_state;
+
+   procedure set_state (This : in out Valve_Record; S: Valve_State) is
+     begin
+	 This.State := S;
+     end Set_State;
    
    ------------
    -- Cyclic --
@@ -47,13 +57,15 @@ package body Devices.Valves is
       
       New_State : Valve_State := This.State;
    begin
-      Put_Line ("App_Valves.Cyclic");
+
       case This.State is
 	 when Init_State =>
-	       New_State := Waiting_State;
+	       New_State :=Waiting_State;
 
 	 when Waiting_State =>
-	    if Open then
+	    if Close then
+	       New_State := Closing_State;
+	    elsif Open then
 	       New_State := Opening_State;
 	    end if;
 	    
@@ -64,14 +76,18 @@ package body Devices.Valves is
 	    
 	 when Opened_State =>
 	    if Close then
-	       New_State := Closing_State;
+	       New_State := Waiting_State;
 	    end if;
 	    
 	 when Closing_State =>
 	    if Closed then
-	       New_State := Waiting_State;
+	       New_State := Closed_State;
 	    end if;
 	    
+	 when Closed_State =>
+	    if Open then
+	       New_State := Waiting_State;
+	    end if;
       end case;
       
       This.State := New_State;

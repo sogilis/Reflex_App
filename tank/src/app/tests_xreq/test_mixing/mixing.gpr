@@ -1,0 +1,6 @@
+with "mixing_impl.gpr";
+with "mixing_tests.gpr";
+
+project Mixing is
+
+end Mixing;

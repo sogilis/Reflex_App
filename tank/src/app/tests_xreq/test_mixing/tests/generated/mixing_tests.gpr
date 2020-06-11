@@ -1,0 +1,13 @@
+with "xreqlib";
+
+project mixing_tests is
+   for Languages   use ("Ada");
+   for Main        use ("mixing_tests");
+   for Source_Dirs use (".", "../features/step_definitions");
+   package Compiler is
+      for Default_Switches ("Ada") use ("-gnat05", "-g");
+   end Compiler;
+   package Binder is
+      for Default_Switches ("Ada") use ("-E");
+   end Binder;
+end mixing_tests;

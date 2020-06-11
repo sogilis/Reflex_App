@@ -39,7 +39,10 @@ package Devices.Pumps is
       Run       : Boolean;
       Running   : Boolean;
       Run_Order : out Boolean);
-   
+
+   function get_state(This : Pump_Record) return Pump_State;
+
+   procedure set_state (This : in out Pump_Record; S: Pump_State);
 private
    
    type Pump_Record is new Device_Record with record

@@ -1,0 +1,120 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+
+    // ${workspaceRoot} the path of the folder opened in VS Code
+    // ${file} the current opened file
+    // ${fileBasename} the current opened file's basename
+    // ${fileDirname} the current opened file's dirname
+    // ${fileExtname} the current opened file's extension
+    // ${cwd} the task runner's current working directory on startup
+
+    "version": "2.0.0",
+    "options": {
+        "cwd": "${workspaceRoot}"
+    },
+    "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+    },
+    "tasks": [
+        {
+            "label": "CI - Clean",
+            "type": "shell",
+            "command": "make GNAT_ENV=docker clean"
+        },
+        {
+            "label": "CI - Build",
+            "type": "shell",
+            "command": "make GNAT_ENV=docker build",
+            "problemMatcher": {
+                "base": "$ada",
+                "fileLocation": ["relative", "${workspaceRoot}"],
+                "pattern": {
+                    "regexp": "^\/home/dev\/(.*):(\\d+):(\\d+):\\s+(warning|)(?:\\s+)?(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "label": "CI - Build Tests",
+            "type": "shell",
+            "command": "make GNAT_ENV=docker build-tests",
+            "problemMatcher": {
+                "base": "$ada",
+                "fileLocation": ["relative", "${workspaceRoot}"],
+                "pattern": {
+                    "regexp": "^\/home/dev\/(.*):(\\d+):(\\d+):\\s+(warning|)(?:\\s+)?(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "label": "CI - Run Tests",
+            "type": "shell",
+            "command": "make GNAT_ENV=docker run-tests",
+            "problemMatcher": {
+                "base": "$ada",
+                "fileLocation": ["relative", "${workspaceRoot}"],
+                "pattern": {
+                    "regexp": "^\/home/dev\/(.*):(\\d+):(\\d+):\\s+(warning|)(?:\\s+)?(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "label": "CI - Install",
+            "type": "shell",
+            "command": "make GNAT_ENV=docker install",
+            "problemMatcher": {
+                "base": "$ada",
+                "fileLocation": ["relative", "${workspaceRoot}"],
+                "pattern": {
+                    "regexp": "^\/home/dev\/(.*):(\\d+):(\\d+):\\s+(warning|)(?:\\s+)?(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "label": "DEV - Clean",
+            "type": "shell",
+            "command": "make clean",
+        },
+        {
+            "label": "DEV - Build",
+            "type": "shell",
+            "command": "make build",
+        },
+        {
+            "label": "DEV - Build Tests",
+            "type": "shell",
+            "command": "make build-tests",
+        },
+        {
+            "label": "DEV - Run Tests",
+            "type": "shell",
+            "command": "make run-tests",
+        },
+        {
+            "label": "DEV - Install",
+            "type": "shell",
+            "command": "make install",
+        }
+    ]
+}

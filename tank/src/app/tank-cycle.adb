@@ -28,10 +28,19 @@ package body Tank.Cycle is
    begin
       This := No_Cycle_Record;
    end Initialize;
+
+   function get_state (This : Cycle_Record) return Cycle_State is
+     begin
+	return This.State;
+     end get_state;  
+
+   procedure set_state (This : in out Cycle_Record; S: Cycle_State) is
+     begin
+	 This.State := S;
+     end Set_State;
    
    procedure Cyclic
      (This             : in out Cycle_Record;
-      Start            : in Boolean;
       End_Filling_P1   : Boolean;
       End_Filling_P2   : Boolean;
       End_Mixing       : Boolean;

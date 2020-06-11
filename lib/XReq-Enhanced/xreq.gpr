@@ -1,0 +1,5 @@
+aggregate project XReq is
+
+   for Project_Files use ("xreq_lib.gpr", "xreq_generator.gpr", "xreq_tests.gpr");
+
+end XReq;

@@ -1,0 +1,383 @@
+-------------------------------------------------------------------------------
+--  XReq  --  Behaviour Driven Developpement tool for compiled languages     --
+--  Copyright (c) 2010, SOGILIS <http://sogilis.com>                         --
+--                                                                           --
+--  This program is free software: you can redistribute it and/or modify     --
+--  it under the terms of the GNU Affero General Public License as           --
+--  published by the Free Software Foundation, either version 3 of the       --
+--  License, or (at your option) any later version.                          --
+--                                                                           --
+--  This program is distributed in the hope that it will be useful,          --
+--  but WITHOUT ANY WARRANTY; without even the implied warranty of           --
+--  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            --
+--  GNU Affero General Public License for more details.                      --
+--                                                                           --
+--  You should have received a copy of the GNU Affero General Public License --
+--  along with this program.  If not, see <http://www.gnu.org/licenses/>.    --
+--                                                                           --
+-------------------------------------------------------------------------------
+
+package body XReqLib.String_Tables is
+
+   function Width (T : Table; X : Integer) return Natural is
+      W : Natural := 0;
+   begin
+      for Y in T.First_Y .. T.Last_Y loop
+         W := Natural'Max (W, T.Item (X, Y, "")'Length);
+      end loop;
+      return W;
+   end Width;
+
+   function Item (T : Table; X, Y : Integer) return String is
+   begin
+      return To_String (Item (T, X, Y));
+   end Item;
+
+   function Item (T : Table; X, Y : Integer; Def : String) return String is
+   begin
+      return To_String (Item (T, X, Y));
+   exception
+      when Constraint_Error =>
+         return Def;
+   end Item; --  GCOV_IGNORE
+
+   procedure Put (T : in out Table; X, Y : Integer; Elem : String) is
+   begin
+      Put (T, X, Y, To_Unbounded_String (Elem));
+   end Put;
+
+   function Element (C : Cursor) return String is
+   begin
+      return To_String (Element (C));
+   end Element;
+
+   function Get_Record
+     (T   : Table;
+      Rec : Positive;
+      Set : String) return String
+   is
+   begin
+      return To_String
+          (T.Get_Record (T.Data_Set_For (To_Unbounded_String (Set)), Rec));
+   end Get_Record;
+
+   procedure Compare_With
+     (T                      : Table;
+      Other                  : Table;
+      Ignore_Missing_Headers : Boolean := False)
+   is
+      Result   : Boolean;
+      Reason   : Comparison_Failure_Type;
+      DataSet1 : Table_Data_Set;
+      DataSet2 : Table_Data_Set;
+      Rec      : Natural;
+   begin
+      T.Compare
+      (Other                            =>
+         Other, Ignore_Missing_Headers  =>
+         Ignore_Missing_Headers, Result =>
+         Result, Reason                 =>
+         Reason, DataSet1               =>
+         DataSet1, DataSet2             =>
+         DataSet2, Rec                  =>
+         Rec);
+      if not Result then
+         case Reason is
+            when Fail_Sparse =>
+               raise Comparison_Failed with "Sparse table";
+            when Fail_Num_Records =>
+               raise Comparison_Failed
+                 with "Number of record not identical:" &
+                 T.Records_Count'Img &
+                 " and" &
+                 Other.Records_Count'Img;
+            when Fail_Missing_Header =>
+               if DataSet1 = 0 then
+                  raise Comparison_Failed
+                    with "Missing Header in first table: " &
+                    To_String (Other.Get_Record (DataSet2, 0));
+               else
+                  raise Comparison_Failed
+                    with "Missing Header in second table: " &
+                    To_String (T.Get_Record (DataSet1, 0));
+               end if;
+            when Fail_Cell =>
+               raise Comparison_Failed
+                 with "Record" &
+                 Rec'Img &
+                 " is not identical for data set " &
+                 To_String (T.Get_Record (DataSet1, 0));
+         end case;
+      end if;
+   end Compare_With;
+
+   -----------------------
+   --  Set_Header_Name  --
+   -----------------------
+
+   procedure Set_Header_Name
+     (T                      : in out Table;
+      Old_Header, New_Header :        String)
+   is
+   begin
+      T.Set_Header_Name
+      (To_Unbounded_String (Old_Header), To_Unbounded_String (New_Header));
+   end Set_Header_Name;
+
+   -----------------------
+   --  Import_Data_Set  --
+   -----------------------
+
+   procedure Import_Data_Set
+     (T            : in out Table;
+      Other_Table  :        Table;
+      Other_Header :        String;
+      Rename       :        String)
+   is
+   begin
+      T.Import_Data_Set
+        (Other_Table,
+         To_Unbounded_String (Other_Header),
+         To_Unbounded_String (Rename));
+   end Import_Data_Set;
+
+   --------------------
+   --  Add_Data_Set  --
+   --------------------
+
+   procedure Add_Data_Set (T : in out Table; E : String) is
+   begin
+      if T.Is_Empty then
+         T.Put (0, 0, "#");
+      end if;
+      if T.Header_Kind = None then
+         T.Set_Header_Kind (First_Row);
+      end if;
+
+      T.Set_Record (T.Next_Data_Set, 0, To_Unbounded_String (E));
+   end Add_Data_Set;
+
+   ------------------
+   --  Add_Record  --
+   ------------------
+
+   procedure Add_Record (T : in out Table) is
+      Rec : constant Integer := T.Records_Count + 1;
+      Tmp : constant String  := Rec'Img;
+      Str : constant String  := Tmp (Tmp'First + 1 .. Tmp'Last);
+   begin
+      T.Set_Record (1, Rec, To_Unbounded_String (Str));
+   end Add_Record;
+
+   ----------------
+   --  Add_Data  --
+   ----------------
+
+   procedure Add_Data
+     (T         : in out Table;
+      Data_Set  :        Table_Data_Set;
+      Data      :        String;
+      Auto_Next :        Boolean := True);
+
+   procedure Add_Data
+     (T         : in out Table;
+      Data_Set  :        Table_Data_Set;
+      Data      :        String;
+      Auto_Next :        Boolean := True)
+   is
+      Rec      : Integer;
+      Foo      : Unbounded_String;
+      Has_Elem : Boolean;
+   begin
+      Rec := T.Records_Count;
+
+      if Auto_Next then
+         T.Get_Record (Data_Set, Rec, Foo, Has_Elem);
+         if Has_Elem then
+            T.Add_Record;
+            Rec := T.Records_Count;
+         end if;
+      end if;
+
+      T.Set_Record (Data_Set, Rec, To_Unbounded_String (Data));
+   end Add_Data;
+
+   ----------------
+   --  Add_Data  --
+   ----------------
+
+   procedure Add_Data
+     (T         : in out Table;
+      Data_Set  :        String;
+      Data      :        String;
+      Auto_Next :        Boolean := True)
+   is
+      DS : Table_Data_Set;
+   begin
+      DS := T.Data_Set_For (To_Unbounded_String (Data_Set));
+      Add_Data (T, Data_Set => DS, Data => Data, Auto_Next => Auto_Next);
+   end Add_Data;
+
+   ----------------
+   --  Add_Data  --
+   ----------------
+
+   procedure Add_Data
+     (T         : in out Table;
+      Index     :        Integer;
+      Data      :        String;
+      Auto_Next :        Boolean := True)
+   is
+   begin
+      Add_Data
+        (T,
+         Data_Set  => Table_Data_Set (Index + 1),
+         Data      => Data,
+         Auto_Next => Auto_Next);
+   end Add_Data;
+
+   ----------------------
+   --  Sort_Data_Sets  --
+   ----------------------
+
+   procedure Sort_Data_Sets (T : in out Table; Key : Table_Data_Set) is
+      procedure Swap (T : in out Table; Rec1, Rec2 : Integer);
+      --  Swap two records
+
+      procedure Swap (T : in out Table; Rec1, Rec2 : Integer) is
+         X, Y : Unbounded_String;
+      begin
+         for DS in T.First_Data_Set .. T.Last_Data_Set loop
+            X := T.Get_Record (DS, Rec1, Null_Unbounded_String);
+            Y := T.Get_Record (DS, Rec2, Null_Unbounded_String);
+
+            if T.Has_Record (DS, Rec1) then
+               T.Set_Record (DS, Rec2, X);
+            else
+               T.Remove_Record (DS, Rec2);
+            end if;
+
+            if T.Has_Record (DS, Rec2) then
+               T.Set_Record (DS, Rec1, Y);
+            else
+               T.Remove_Record (DS, Rec1);
+            end if;
+         end loop;
+      end Swap;
+
+      Rec_Min : constant Integer := T.First_Record;
+      Rec_Max : constant Integer := T.Last_Record;
+      Rec_Low : Integer          := Rec_Min;
+      Swapped : Boolean          := True;
+      A, B    : Unbounded_String;
+
+   begin
+      while Swapped loop
+         Swapped := False;
+         for Rec in reverse Rec_Low .. Rec_Max - 1 loop
+            A := T.Get_Record (Key, Rec, Null_Unbounded_String);
+            B := T.Get_Record (Key, Rec + 1, Null_Unbounded_String);
+            if A > B then
+               Swap (T, Rec, Rec + 1);
+               Swapped := True;
+            end if;
+         end loop;
+         Rec_Low := Rec_Low + 1;
+      end loop;
+   end Sort_Data_Sets;
+
+   procedure Sort_Data_Sets (T : in out Table; Key : String) is
+   begin
+      Sort_Data_Sets (T, Data_Set_For (T, Key));
+   end Sort_Data_Sets;
+
+   --------------------
+   --  Data_Set_For  --
+   --------------------
+
+   function Data_Set_For (T : Table; DS : String) return Table_Data_Set is
+   begin
+      return T.Data_Set_For (To_Unbounded_String (DS));
+   end Data_Set_For;
+
+   -----------------
+   --  To_String  --
+   -----------------
+
+   function To_String
+     (T      : Table;
+      Indent : String  := "";
+      Index  : Boolean := True) return String
+   is
+      function Is_Num (S : String) return Boolean;
+      function Img (N : Integer) return String;
+
+      function Is_Num (S : String) return Boolean is
+         I : Integer;
+      begin
+         I := Integer'Value (S);
+         return I = 0 or I /= 0 or True;
+      exception
+         when others =>
+            return False;
+      end Is_Num;
+
+      function Img (N : Integer) return String is
+         S : constant String := N'Img;
+      begin
+         if N >= 0 then
+            return S (S'First + 1 .. S'Last);
+         else
+            return S;
+         end if;
+      end Img;
+
+      Res       : Unbounded_String;
+      Cell      : Unbounded_String;
+      Cell_Ok   : Boolean;
+      Num       : Boolean;
+      Pad       : Integer;
+      Width     : array (T.First_X .. T.Last_X) of Natural;
+      Width_Num : Natural := 2;
+
+      pragma Unreferenced (Num);
+   begin
+      for X in Width'Range loop
+         Width (X) := T.Width (X);
+         Width (X) := Integer'Max (Width (X), Img (X)'Length);
+      end loop;
+      Width_Num := Integer'Max (Width_Num, Img (T.First_Y)'Length);
+      Width_Num := Integer'Max (Width_Num, Img (T.Last_Y)'Length);
+      if Index then
+         Append (Res, Indent & (Width_Num) * " ");
+         for X in T.First_X .. T.Last_X loop
+            Pad := Width (X) - Img (X)'Length;
+            Append (Res, "   " & Img (X) & (Pad * " "));
+         end loop;
+         Append (Res, ASCII.LF);
+      end if;
+      for Y in T.First_Y .. T.Last_Y loop
+         Append (Res, Indent);
+         if Index then
+            Pad := Width_Num - Img (Y)'Length;
+            Append (Res, (Pad * " ") & Img (Y) & " ");
+         end if;
+         Append (Res, "|");
+         for X in T.First_X .. T.Last_X loop
+            T.Item (X, Y, Cell, Cell_Ok);
+            if Cell_Ok then
+               Num := Is_Num (To_String (Cell));
+               Append (Res, " ");
+               Pad := Width (X) - Length (Cell);
+               Append (Res, Cell & (Pad * " ") & " ");
+            else
+               Append (Res, (Width (X) + 2) * "-");
+            end if;
+            Append (Res, "|");
+         end loop;
+         Append (Res, ASCII.LF);
+      end loop;
+      return To_String (Res);
+   end To_String;
+
+end XReqLib.String_Tables;

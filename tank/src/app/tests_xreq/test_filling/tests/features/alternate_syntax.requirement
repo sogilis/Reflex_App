@@ -1,0 +1,25 @@
+Purpose: Eating Oranges - Alternate Syntax Feature
+
+  Background:
+    Given I am hungry
+    Given I want to eat Nb_Oranges=5 oranges
+
+
+  Test Case: Eating 2 oranges
+    Given there are 12 oranges
+    When I eat ${Nb_Oranges} oranges
+    Then I should have 7 oranges
+
+
+  Test Case Template: Checking several conditions when eating oranges
+    Given there are <start> oranges
+    When I eat <eat> oranges
+    Then I should have <left> oranges
+
+    Test Case Data:
+      | start | eat | left   |
+      |  12   |  5  |  7     |
+      |  102  |  4  | 100~2% |
+      |  12   |  4  |  7~1   |
+      |  102  |  2  | <=100  |
+

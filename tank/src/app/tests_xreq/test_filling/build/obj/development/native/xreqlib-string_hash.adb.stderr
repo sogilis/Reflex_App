@@ -1,0 +1,2 @@
+xreqlib-string_hash.adb:1:06: warning: "System.String_Hash" is an internal GNAT unit
+xreqlib-string_hash.adb:1:06: warning: use of this unit is non-portable and version-dependent

@@ -1,0 +1,20 @@
+library project XReqLib is
+
+   type Target_Type is ("native", "arm-eabi");
+   Target : Target_Type := external ("PRJ_TARGET", "native");
+
+   for Library_Name      use "xreq";
+   for Library_Kind      use "static";
+   for Externally_Built  use "true";
+
+   case Target is
+      when "arm-eabi" =>
+         for Library_Dir use "../arm-eabi";
+         for Source_Dirs use ("../../include/arm-eabi");
+      when "native" =>
+         for Library_Dir use "../x86_64";
+         for Source_Dirs use ("../../include/x86_64");
+   end case;
+
+end XReqLib;
+

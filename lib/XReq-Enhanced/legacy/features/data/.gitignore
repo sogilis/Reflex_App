@@ -1,0 +1,4 @@
+tmp-*.feature
+tmp-*.requirement
+/tests/
+*.d

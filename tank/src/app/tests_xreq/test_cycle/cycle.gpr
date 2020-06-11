@@ -1,0 +1,6 @@
+with "cycle_impl.gpr";
+with "cycle_tests.gpr";
+
+project Cycle is
+
+end Cycle;

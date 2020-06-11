@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--  Add support for features files  -->
+<xreq-plugin>
+
+  <action name="XReq">
+    <external>sh -c "xreq --quiet --progress --executable xreq_tests --step features/step_definitions --output features/obj features/*.feature"</external>
+  </action>
+
+  <button action="XReq">
+    <title>XReeq</title>
+    <pixmap>%GPSDATADIR%/icons/24px/xreq.png</pixmap>
+  </button>
+
+</xreq-plugin>

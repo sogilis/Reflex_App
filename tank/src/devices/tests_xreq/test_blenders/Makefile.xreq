@@ -1,0 +1,54 @@
+
+#########################
+##  XReq Project File  ##
+#########################
+
+# SUBDIRS:              Subdirectories to look for subprojects
+# SUBMAKEFILE:          Makefile name: Makefire.xreq
+# FEATURE_DIR:          directory where the .feature files are
+# STEP_DEFINITIONS_DIR: directory where the step definitions are
+# RESULT_DIR:           where to generate the test suite
+# TEST_SUITE:           name of the test suite
+# GENERATED_STEPS:      package name where to put generated steps
+# REPORT_FILE:          where the HTML reports should go
+
+SUBDIRS=
+SUBMAKEFILE=Makefile.xreq
+FEATURE_DIR=features
+STEP_DEFINITIONS_DIR=features/step_definitions
+RESULT_DIR=features/tests
+TEST_SUITE=test_suite
+GENERATED_STEPS=Generated_Steps
+REPORT_FILE=features/tests/xreq-report.html
+
+XREQFLAGS=
+GPRFLAGS=-m
+
+XREQ=xreq
+GPRBUILD=gprbuild
+
+FEATURE_FILES=$(shell find '$(FEATURE_DIR)' -name '*.feature')
+ifeq ($(FEATURE_FILES),)
+MAIN_TARGET=
+else
+MAIN_TARGET=$(RESULT_DIR)/$(TEST_SUITE)
+endif
+
+all: $(MAIN_TARGET)
+	for d in $(SUBDIRS); do $(MAKE) -C "$$d" -f "$(SUBMAKEFILE)" all || exit $$?; done
+.PHONY: all
+
+$(RESULT_DIR)/$(TEST_SUITE): $(RESULT_DIR)/$(TEST_SUITE).gpr
+	$(GPRBUILD) -P$< $(GPRFLAGS)
+.PHONY: $(RESULT_DIR)/$(TEST_SUITE)
+
+$(RESULT_DIR)/$(TEST_SUITE).gpr: $(FEATURE_FILES)
+	$(XREQ) -x '$(TEST_SUITE)' -s '$(STEP_DEFINITIONS_DIR)' $(XREQFLAGS) $+
+
+clean:
+	-$(RM) $(RESULT_DIR)/$(TEST_SUITE).{gpr,adb}
+	-$(RM) $(RESULT_DIR)/feature_*.{ads,adb}
+	-@for d in $(SUBDIRS); do $(MAKE) -C "$$d" -f "$(SUBMAKEFILE)" clean; done
+.PHONY: clean
+
+    

@@ -30,7 +30,16 @@ package body Devices.Resistances is
    begin
       This := No_Resistance_Record;
    end Initialize;
-   
+
+   function get_state (This : Resistance_Record) return Resistance_State is
+     begin
+	return This.State;
+     end get_state;
+
+   procedure Set_State (This : in out Resistance_Record; S: Resistance_State) is
+     begin
+	 This.State := S;
+     end Set_State;
    ------------
    -- Cyclic --
    ------------

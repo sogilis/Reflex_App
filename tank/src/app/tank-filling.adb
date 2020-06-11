@@ -30,6 +30,16 @@ package body Tank.Filling is
    begin
       This := No_Filling_Record;
    end Initialize;
+
+   function get_state (This : Filling_Record) return Filling_State is
+     begin
+	return This.State;
+     end get_state;
+
+   procedure set_state (This : in out Filling_Record; S: Filling_State) is
+     begin
+	 This.State := S;
+     end Set_State;
    
    ------------
    -- Cyclic --
@@ -92,7 +102,7 @@ package body Tank.Filling is
 
       Open_Valves  := (This.State = Openning_Valves_State);
       Start_Pumps  := (This.State = Running_Pumps_State) 
-	and  (This.State = Filling_emptying_State);
+	or  (This.State = Filling_emptying_State);
       Close_Valves := (This.State=Closing_Valves_State);
    end Cyclic;
    

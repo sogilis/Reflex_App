@@ -1,0 +1,4 @@
+graph: { title: "/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-report.adb"
+node: { title: "xreqlib__report__status" label: "Status\n/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-report.adb:26:4\n16 bytes (static)\n0 dynamic objects" }
+node: { title: "xreqlib__report__report_typeIP" label: "Report_Typeip\n/home/sogilis/XReq-Enhanced/src/xreqlib/common/xreqlib-report.ads:27:9\n16 bytes (static)\n0 dynamic objects" }
+}

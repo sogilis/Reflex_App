@@ -1,0 +1,43 @@
+--  To generate the missing step definitions:
+--  Go to component/tests/features
+--      xreq --fill-steps-in step_definitions --output ./generated *.feature
+--
+--  This will create the files:
+--      step_definitions/step_definitions.ad[bs]
+--
+--  Then you can recompile this project
+--      xreq --quiet --progress --executable filling_tests --step ./features/step_definitions --output ./generated ./features/*.feature
+--      gprbuild -p -P filling_tests.gpr
+--
+--  To run tests
+--      ./bin/filling_tests
+--
+with "../../../../../lib/XReq-Enhanced/xreq_lib";
+with "filling_impl.gpr";
+
+project Filling_Tests extends "filling_settings.gpr" is
+
+   for Languages   use ("Ada", "feature");
+   for Main        use ("filling_tests");
+   for Source_Dirs use ("tests/generated", "tests/features", "tests/features/step_definitions");
+   for Object_Dir  use "obj";
+   for Exec_Dir    use "bin";
+
+   package Naming is
+     for Body_Suffix ("feature") use ".cpt";
+   end Naming;
+
+   package Compiler extends filling_Settings.Compiler is
+--      for Default_Switches ("ada") use ("-O0", "-g", "-gnatwa", "-gnatw.X", "-fcallgraph-info=su,da", "-fstack-check", "-gnateE");
+      for Driver ("feature") use "";
+   end Compiler;
+
+   package Builder extends filling_Settings.Builder is
+--      for Default_Switches ("ada") use ("-g", "-fstack-check", "-gnateE");
+      case Target is
+      	when "native" => for Executable ("filling_tests.adb") use "filling_tests";
+         when "arm-eabi" => for Executable ("filling_tests.adb") use "filling_tests.elf";
+      end case;
+   end Builder;
+
+end Filling_Tests;

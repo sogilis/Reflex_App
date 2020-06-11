@@ -89,11 +89,6 @@ package Tank.Variables is
    --  Mising duration in seconds (60mn)
    
    Second : Boolean;
-   -- Raising edge each second
-
-   CP        : Boolean;
-   Therm     : Boolean;
-   Acqk      : Boolean;
    
    --Temperature adjust by regulator
    

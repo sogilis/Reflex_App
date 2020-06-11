@@ -28,7 +28,8 @@ package Devices.Valves is
       Waiting_State,
       Opening_State,
       Opened_State,
-      Closing_State);
+      Closing_State,
+      Closed_State);
    
    procedure Initialize (This : in out Valve_Record);
    
@@ -40,6 +41,10 @@ package Devices.Valves is
       Closed       : Boolean;
       Open_Order   : out Boolean;
       Close_Order  : out Boolean);
+
+   function get_state(This : Valve_Record) return Valve_State;
+
+   procedure set_state (This : in out Valve_Record; S: Valve_State);
    
 private
    

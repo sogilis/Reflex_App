@@ -1,0 +1,126 @@
+-------------------------------------------------------------------------------
+--  XReq  --  Behaviour Driven Developpement tool for compiled languages     --
+--  Copyright (c) 2010, SOGILIS <http://sogilis.com>                         --
+--                                                                           --
+--  This program is free software: you can redistribute it and/or modify     --
+--  it under the terms of the GNU Affero General Public License as           --
+--  published by the Free Software Foundation, either version 3 of the       --
+--  License, or (at your option) any later version.                          --
+--                                                                           --
+--  This program is distributed in the hope that it will be useful,          --
+--  but WITHOUT ANY WARRANTY; without even the implied warranty of           --
+--  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the            --
+--  GNU Affero General Public License for more details.                      --
+--                                                                           --
+--  You should have received a copy of the GNU Affero General Public License --
+--  along with this program.  If not, see <http://www.gnu.org/licenses/>.    --
+--                                                                           --
+-------------------------------------------------------------------------------
+
+with Ada.Strings.Unbounded;
+with Ada.Containers.Vectors;
+with XReqLib.String_Tables;
+
+with XReqLib.Containers;
+
+use Ada.Strings.Unbounded;
+use Ada.Containers;
+use XReqLib.Containers;
+
+
+package XReqLib.Args is
+
+   ----------------
+   --  Arg_Type  --
+   ----------------
+
+   package Table_Pkg renames XReqLib.String_Tables;
+   subtype Table_Type is XReqLib.String_Tables.Table;
+   subtype Table_Cursor is XReqLib.String_Tables.Cursor;
+
+   type Arg_Type is tagged private;
+   Null_Arg : constant Arg_Type;
+
+   type Arg_Element_Type is                                     --  GCOV_IGNORE
+     (Arg_Text, Arg_Table, Arg_Separator, Arg_Paragraph);      --  GCOV_IGNORE
+
+   procedure Make (Self : out Arg_Type; Stanza : String);
+   function Match (Self : Arg_Type; N : Natural) return String;
+   function Match
+     (Self    : Arg_Type;
+      N       : Natural;
+      Replace : Boolean) return String;
+   procedure Match
+     (Self  :     Arg_Type;
+      N     :     Natural;
+      First : out Natural;
+      Last  : out Natural);
+   function Stanza (Self : Arg_Type) return String;
+   function First_Match (Self : Arg_Type) return Natural;
+   function Last_Match (Self : Arg_Type) return Natural;
+   procedure Add_Match
+     (Self  : in out Arg_Type;
+      First :        Natural;
+      Last  :        Natural);
+   --  Text  --
+   function Text (Self : Arg_Type; N : Natural := 0) return String;
+   procedure Add_Text (Self : in out Arg_Type; Text : String);
+   function First_Text (Self : Arg_Type) return Natural;
+   function Last_Text (Self : Arg_Type) return Integer;
+   function Num_Text (Self : Arg_Type) return Natural;
+   --  Table  --
+   function Table (Self : Arg_Type; N : Natural := 0) return Table_Type;
+   procedure Add_Table (Self : in out Arg_Type; Table : Table_Type);
+   function First_Table (Self : Arg_Type) return Natural;
+   function Last_Table (Self : Arg_Type) return Integer;
+   --  Separator  --
+   procedure Add_Sep (Self : in out Arg_Type; N : Natural := 0);
+   --  Paragraph  --
+   function Para (Self : Arg_Type; N : Natural := 0) return String;
+   procedure Add_Para (Self : in out Arg_Type; Text : String);
+   function First_Para (Self : Arg_Type) return Natural;
+   function Last_Para (Self : Arg_Type) return Integer;
+   --  Element  --
+   function First (Self : Arg_Type) return Natural;
+   function Last (Self : Arg_Type) return Integer;
+   function Elem_Type (Self : Arg_Type; N : Natural) return Arg_Element_Type;
+   function Elem_Idx (Self : Arg_Type; N : Natural) return Natural;
+   --  Variables  --
+   function Get_Global (Self : Arg_Type; Name : String) return String;
+   procedure Set_Global (Self : Arg_Type; Name : String; Value : String);
+   procedure Clear_Globals (Self : Arg_Type);
+   function Replace (Self : Arg_Type; Subject : String) return String;
+
+private
+
+   type Match_Type is  --  GCOV_IGNORE
+   record
+      First : Natural;
+      Last  : Natural;
+   end record;
+
+   type Arg_Element_Record is record
+      Element_Type : Arg_Element_Type;
+      Element_Idx  : Natural := 0;
+   end record;
+
+   package Elem_Vectors is new Vectors (Natural, Arg_Element_Record, "=");
+   package Match_Vectors is new Vectors (Positive, Match_Type, "=");
+   -- package String_Vectors is new Vectors (Natural, Unbounded_String, "=");
+   package Table_Vectors is new Vectors
+     (Natural,
+      Table_Type,
+      XReqLib.String_Tables."=");
+
+   type Arg_Type is tagged record
+      Stanza     : Unbounded_String;
+      Matches    : Match_Vectors.Vector;
+      Elems      : Elem_Vectors.Vector;
+      Texts      : XReqLib.Containers.String_Vectors.Vector;
+      Tables     : Table_Vectors.Vector;
+      Paragraphs : XReqLib.Containers.String_Vectors.Vector;
+   end record;
+
+   Null_Arg : constant Arg_Type := (others => <>);
+
+end XReqLib.Args;

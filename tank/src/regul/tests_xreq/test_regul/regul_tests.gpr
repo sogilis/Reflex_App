@@ -1,0 +1,43 @@
+--  To generate the missing step definitions:
+--  Go to component/tests/features
+--      xreq --fill-steps-in step_definitions --output ./generated *.feature
+--
+--  This will create the files:
+--      step_definitions/step_definitions.ad[bs]
+--
+--  Then you can recompile this project
+--      xreq --quiet --progress --executable regul_tests --step ./features/step_definitions --output ./generated ./features/*.feature
+--      gprbuild -p -P regul_tests.gpr
+--
+--  To run tests
+--      ./bin/regul_tests
+--
+with "../../../../../lib/XReq-Enhanced/xreq_lib";
+with "regul_impl.gpr";
+
+project Regul_Tests extends "regul_settings.gpr" is
+
+   for Languages   use ("Ada", "feature");
+   for Main        use ("regul_tests");
+   for Source_Dirs use ("tests/generated", "tests/features", "tests/features/step_definitions");
+   for Object_Dir  use "obj";
+   for Exec_Dir    use "bin";
+
+   package Naming is
+     for Body_Suffix ("feature") use ".cpt";
+   end Naming;
+
+   package Compiler extends regul_Settings.Compiler is
+--      for Default_Switches ("ada") use ("-O0", "-g", "-gnatwa", "-gnatw.X", "-fcallgraph-info=su,da", "-fstack-check", "-gnateE");
+      for Driver ("feature") use "";
+   end Compiler;
+
+   package Builder extends regul_Settings.Builder is
+--      for Default_Switches ("ada") use ("-g", "-fstack-check", "-gnateE");
+      case Target is
+      	when "native" => for Executable ("regul_tests.adb") use "regul_tests";
+         when "arm-eabi" => for Executable ("regul_tests.adb") use "regul_tests.elf";
+      end case;
+   end Builder;
+
+end Regul_Tests;

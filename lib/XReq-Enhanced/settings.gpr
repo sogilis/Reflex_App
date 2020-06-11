@@ -1,0 +1,223 @@
+-------------------------------------------------------------------------------
+--  Copyright (c) 2017, SOGILIS <http://www.sogilis.com>                     --
+--                                                                           --
+-------------------------------------------------------------------------------
+abstract project Settings is
+
+   type Build_Type is ("analyze", "development", "production");
+   Build : Build_Type := external ("PRJ_BUILD_TYPE", "development");
+
+   type Target_Type is ("native", "arm-eabi");
+   Target : Target_Type := external ("PRJ_TARGET", "native");
+
+   type Runtime_Type is (
+      "ravenscar-full-stm32f4",
+      "ravenscar-sfp-stm32f4"
+   );
+   Runtime : Runtime_Type := external ("PRJ_RUNTIME", "ravenscar-full-stm32f4");
+
+   case Build is
+      when "analyze" =>
+         null;
+      when others =>
+         case Target is
+            when "arm-eabi" =>
+               for Runtime ("ada") use Runtime;
+               for Target use "arm-eabi";
+
+            when "native" =>
+               for Runtime ("ada") use "default";
+         end case;
+   end case;
+
+   Project_Root_Dir := ".";
+
+   ----------------------------------------------------------------------------
+   -- Switches                                                               --
+   ----------------------------------------------------------------------------
+   Ada_Switches := (
+      "-gnat2012"                   -- Ada 2012
+      ,"-gnatwa"                    -- All warnings
+      ,"-gnatf"                     -- Full errors
+      ,"-fstack-check"              -- Generate checks for exceeding the stack
+      ,"-gnatw.X"
+      ,"-gnateE"                    -- Put extra info in exception messages
+      ,"-gnato"                     -- Enable overflow checking for numerics
+--      ,"-gnatwe"                  -- Warnings as error
+--      ,"-gnato"                   -- Enable overflow checking for numerics
+--      ,"-gnatg"                   -- Check Ada Language standard
+--      ,"-nostdinc"
+--      ,"-cargs"
+--      ,"-ffunction-sections"
+--      ,"-fdata-sections"
+--      ,"-gnatQ"
+--      ,"-gnatn"
+--      ,"-gnatVa",                 -- Validity checking
+--      ,"-gnata",                  -- Enable pre and post conditions
+      );
+
+   Ada_Switches_Builder_Analyze := ();
+   Ada_Switches_Builder_Development := ();
+   Ada_Switches_Builder_Production := ();
+
+   Ada_Switches_Compiler_Analyze := Ada_Switches & (
+      "-O0"                         -- No optimization
+      ,"-g"                         -- Debug
+      ,"-fcallgraph-info=su,da"     -- Genereate .ci for gnatstack analysis
+      );
+
+   Ada_Switches_Compiler_Development := Ada_Switches & (
+      "-O0"                         -- No optimization
+      ,"-g"                         -- Debug
+      ,"-fcallgraph-info=su,da"     -- Genereate .ci for gnatstack analysis
+--      ,"-fprofile-arcs"             -- To use gnatcoverage
+--      ,"-ftest-coverage"            -- To use gnatcoverage
+--      ,"-fpreserve-control-flow"    -- To use gnatcoverage
+--      ,"-fdump-scos"                -- To use gnatcoverage
+      );
+
+   Ada_Switches_Compiler_Production := Ada_Switches & (
+      "-O2"                         -- Optimization
+      ,"-gnatp"
+      ,"-gnatn2"
+      ,"-fcallgraph-info=su,da"     -- Genereate .ci for gnatstack analysis
+      );
+
+   Ada_Switches_Binder_Development :=  (
+      "-E"                          -- Store traceback in exceptions
+      );
+
+   Ada_Switches_Binder_Production :=  (
+      "-E"                          -- Store traceback in exceptions
+      );
+
+   Ada_Switches_Linker_Development :=  (
+      "-Wl,--print-memory-usage"
+--      ,"-fprofile-arcs"             -- To use gnatcoverage
+--      ,"-fprofile-generate"         -- To use gnatcoverage
+      ,"-Wl,--gc-sections"
+      );
+
+   Ada_Switches_Linker_Production :=  (
+      "-Wl,--print-memory-usage"
+      ,"-Wl,--gc-sections"
+      );
+
+   Ada_Switches_Check :=  (
+      "-rules"
+      ,"-from=./src/coding_standard"
+      );
+
+   ----------------------------------------------------------------------------
+   -- Builder: Default Options                                               --
+   ----------------------------------------------------------------------------
+   package Builder is
+      case Build is
+         when "development" =>
+            for Default_Switches ("Ada") use Ada_Switches_Builder_Development;
+
+         when "production" =>
+            for Default_Switches ("Ada") use Ada_Switches_Builder_Production;
+
+         when "analyze" =>
+            for Default_Switches ("Ada") use Ada_Switches_Builder_Analyze;
+      end case;
+   end Builder;
+
+   ----------------------------------------------------------------------------
+   -- Compiler: Default Options                                              --
+   ----------------------------------------------------------------------------
+   package Compiler is
+      case Build is
+         when "development" =>
+            for Default_Switches ("Ada") use Ada_Switches_Compiler_Development;
+
+         when "production" =>
+            for Default_Switches ("Ada") use Ada_Switches_Compiler_Production;
+
+         when "analyze" =>
+            for Default_Switches ("Ada") use Ada_Switches_Compiler_Analyze;
+      end case;
+   end Compiler;
+
+   ----------------------------------------------------------------------------
+   -- Binder: Default Options                                                --
+   ----------------------------------------------------------------------------
+   package Binder is
+      case Build is
+         when "development" =>
+            for Default_Switches ("Ada") use Ada_Switches_Binder_Development;
+
+         when "production" =>
+            for Default_Switches ("Ada") use Ada_Switches_Binder_Production;
+
+         when "analyze" =>
+            null;
+      end case;
+   end Binder;
+
+   ----------------------------------------------------------------------------
+   -- Linker: Default Options                                                --
+   ----------------------------------------------------------------------------
+   package Linker is
+      case Build is
+         when "development" =>
+            for Default_Switches ("Ada") use Ada_Switches_Linker_Development;
+
+         when "production" =>
+            for Default_Switches ("Ada") use Ada_Switches_Linker_Production;
+
+         when "analyze" =>
+            null;
+      end case;
+   end Linker;
+
+   ----------------------------------------------------------------------------
+   -- Prove: Default Options                                                 --
+   ----------------------------------------------------------------------------
+   package Prove is
+      for Switches use ("-q", "--codepeer=on", "--report=all");
+   end Prove;
+
+   ----------------------------------------------------------------------------
+   -- Check: Default Options                                                 --
+   ----------------------------------------------------------------------------
+   package Check is
+       for Default_Switches ("Ada") use Ada_Switches_Check;
+   end Check;
+
+   ----------------------------------------------------------------------------
+   -- CodePeer: Default Options                                                 --
+   ----------------------------------------------------------------------------
+   package CodePeer is
+      for Switches use ("-no-preconditions");
+   end CodePeer;
+
+   ----------------------------------------------------------------------------
+   -- Stack: Default Options                                                 --
+   ----------------------------------------------------------------------------
+   package Stack is
+      for Switches use ("-p", "-k", "-ca", "-Wa");
+   end Stack;
+
+   ----------------------------------------------------------------------------
+   -- Ide: Default Options                                                   --
+   ----------------------------------------------------------------------------
+   package Ide is
+      for VCS_Kind use "Git";
+
+      case Target is
+         when "native" =>
+            null;
+
+         when "arm-eabi" =>
+            for Connection_Tool use "openocd";
+            for Program_Host use "localhost:3333";
+            for Communication_Protocol use "remote";
+            for Gnatlist use "arm-eabi-gnatls";
+            for Debugger_Command use "arm-eabi-gdb";
+            for Compiler_Command ("ada") use "arm-eabi-gnatls";
+      end case;
+   end Ide;
+
+end Settings;

@@ -32,6 +32,10 @@ package Tank.Filling is
        Waiting_State);
    
    procedure Initialize (This : in out Filling_Record);
+
+   function get_state (This : Filling_Record) return Filling_State ;
+
+   procedure set_state (This : in out Filling_Record; S: Filling_State);
    
    procedure Cyclic
      (This           : in out Filling_Record;

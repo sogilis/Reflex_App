@@ -1,0 +1,26 @@
+with "../../xreq_lib.gpr";
+
+project Feature_Tests extends "../../settings.gpr" is
+
+   for Languages   use ("Ada", "feature");
+   for Main        use ("feature_tests.adb");
+   for Source_Dirs use ("src/generated", "src/features", "src/features/step_definitions");
+   for Object_Dir  use "obj";
+   for Exec_Dir    use "bin";
+
+   package Naming is
+     for Body_Suffix ("feature") use ".feature";
+   end Naming;
+
+   package Compiler extends Settings.Compiler is
+      for Driver ("feature") use "";
+   end Compiler;
+
+   package Builder extends Settings.Builder is
+      case Target is
+      	 when "native" => for Executable ("feature_tests.adb") use "feature_tests";
+         when "arm-eabi" => for Executable ("feature_tests.adb") use "feature_tests.elf";
+      end case;
+   end Builder;
+
+end Feature_Tests;

@@ -1,0 +1,23 @@
+-- -ALL
++RBoolean_Relational_Operators
+
+-- +RExceptions_As_Control_Flow
+-- ideally, exception should not serve as control flow, but in fact it does
+-- detect constructions that to me seems perfectly fine.
+
+-- +RImproper_Returns
+-- Should be ok but when there is a return in an exception block, it detect two
+-- return in the same function body, but how can you avoid that?
+
++REXIT_Statements_With_No_Loop_Name
++RExpanded_Loop_Exit_Names
++RGOTO_Statements
+-- +RImplicit_IN_Mode_Parameters -- Nobody uses that anyway, difficult to share code
+-- +RLocal_Packages
++RMisnamed_Identifiers
+-- +RName_Clashes
++RNon_Visible_Exceptions
++ROuter_Loop_Exits
+-- +ROverloaded_Operators  --  We need to overload operators sometimes
++RUnassigned_OUT_Parameters
++RUncommented_BEGIN_In_Package_Bodies
