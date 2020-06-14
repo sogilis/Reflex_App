@@ -1,4 +1,4 @@
-Feature: test-state Feature
+Feature: Resistances tests
 
 Background:
 Given resistance component is initialized

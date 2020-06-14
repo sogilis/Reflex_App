@@ -58,7 +58,7 @@ private
       Counter : Integer;
    end record;
    
-   No_Mixing_Record : constant Mixing_Record := (State => Init_State, Counter =>0);
+   No_Mixing_Record : constant Mixing_Record := (State => Init_State, Counter => 0);
    
 end Tank.Mixing;
 

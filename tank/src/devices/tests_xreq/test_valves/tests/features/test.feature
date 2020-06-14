@@ -1,4 +1,4 @@
-Feature: test-state Feature
+Feature: Valves tests
 
 Background:
 Given valve component is initialized

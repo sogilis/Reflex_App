@@ -41,6 +41,7 @@ package body Tank.Mixing is
       This.State := S;
    end Set_State;
      
+   -----------------  
    -- Get_Counter --
    -----------------
    
@@ -85,8 +86,8 @@ package body Tank.Mixing is
     	    end if;
 
 	 when Mix_State =>
-	    if Blender_Started then
-	       New_State :=It_Mixes_State;
+	    if  Blender_Started then
+	       New_State := It_Mixes_State;
     	    end if;
 
 	 when It_Mixes_State =>

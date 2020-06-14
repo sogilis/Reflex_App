@@ -1,4 +1,4 @@
-Feature: test-state Feature
+Feature: Blenders tests
 
 Background:
 Given blender component is initialized

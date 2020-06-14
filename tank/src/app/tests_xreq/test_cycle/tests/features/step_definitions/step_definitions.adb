@@ -45,7 +45,7 @@ package body step_definitions is
    end Given_State_N;
 
 
-   --  @when ^End_Filling_P1 is (TRUE|FALSE) $
+
    procedure When_End_Filling_P1_is_N (Args : in out Arg_Type) is
    End_Filling_P1_s : constant String := Args.Match (1);
    begin
@@ -55,7 +55,7 @@ package body step_definitions is
    end When_End_Filling_P1_is_N;
 
 
-   --  @when ^End_Filling_P2 is (TRUE|FALSE) $
+
    procedure When_End_Filling_P2_is_N (Args : in out Arg_Type) is
    End_Filling_P2_s : constant String := Args.Match (1);
    begin
@@ -64,7 +64,7 @@ package body step_definitions is
 
    end When_End_Filling_P2_is_N;
 
-   --  @when ^End_Mixing is (TRUE|FALSE) $
+
    procedure When_End_Mixing_is_N (Args : in out Arg_Type) is
    End_Mixing_s : constant String := Args.Match (1);
    begin
@@ -73,15 +73,15 @@ package body step_definitions is
 
    end When_End_Mixing_is_N;
 
-   --  @when ^End_Emptying is (TRUE|FALSE)$
+
    procedure When_End_Emptying_is_N (Args : in out Arg_Type) is
       End_Emptying   : constant String := Args.Match (1);
    begin
 
       Cycle.Cyclic 
-                (End_Filling_P1   => End_Filling_P1;
-     		 End_Filling_P2   => End_Filling_P2;
-     		 End_Mixing       => End_Mixing;
+                (End_Filling_P1   => End_Filling_P1,
+     		 End_Filling_P2   => End_Filling_P2,
+     		 End_Mixing       => End_Mixing,
      		 End_Emptying     => Boolean'value(End_Emptying),
      		 Filling_P1_Order => Filling_P1_Order,
       	 	 Filling_P2_Order => Filling_P2_Order,
@@ -104,12 +104,9 @@ package body step_definitions is
 
    end Then_New_state_N;
 
-   procedure Then_Commands_N(Args : in out Arg_Type) is
+
+   procedure Then_Filling_P1_Order_is_N (Args : in out Arg_Type) is
      Expected_Filling_P1_Order : constant String := Args.Match (1);
-     Expected_Filling_P2_Order : constant String := Args.Match (2);
-     Expected_Mixing_Order     : constant String := Args.Match (3);
-     Expected_Emptying_Order   : constant String := Args.Match (4);
-     Expected_End_Cycle        : constant String := Args.Match (5);
    begin
      Assert
        (Cmp    => Filling_P1_Order = Boolean'Value (Expected_Filling_P1_Order),
@@ -117,11 +114,26 @@ package body step_definitions is
           "Wrong Filling_P1_Order : Actual =>'" & Filling_P1_Order'Img & "' Expected =>'"
           & Expected_Filling_P1_Order & "'");
 
+   end Then_Filling_P1_Order_is_N;
+
+
+
+   procedure Then_Filling_P2_Order_is_N (Args : in out Arg_Type) is
+     Expected_Filling_P2_Order : constant String := Args.Match (1);
+   begin
+
      Assert
        (Cmp    => Filling_P2_Order = Boolean'Value (Expected_Filling_P2_Order),
         Reason =>
           "Wrong Filling_P2_Order : Actual =>'" & Filling_P2_Order'Img & "' Expected =>'"
           & Expected_Filling_P2_Order & "'");
+
+   end Then_Filling_P2_Order_is_N;
+
+
+   procedure Then_Mixing_Order_is_N (Args : in out Arg_Type) is
+     Expected_Mixing_Order : constant String := Args.Match (1);
+   begin
 
      Assert
        (Cmp    => Mixing_Order = Boolean'Value (Expected_Mixing_Order),
@@ -129,11 +141,25 @@ package body step_definitions is
           "Wrong Mixing_Order : Actual =>'" & Mixing_Order'Img & "' Expected =>'"
           & Expected_Mixing_Order & "'");
 
+   end Then_Mixing_Order_is_N;
+
+
+   procedure Then_Emptying_Order_is_N (Args : in out Arg_Type) is
+     Expected_Emptying_Order : constant String := Args.Match (1);
+   begin
+
      Assert
        (Cmp    => Emptying_Order = Boolean'Value (Expected_Emptying_Order),
         Reason =>
           "Wrong Emptying_Order : Actual =>'" & Emptying_Order'Img & "' Expected =>'"
           & Expected_Emptying_Order & "'");
+
+   end Then_Emptying_Order_is_N;
+
+
+   procedure Then_End_Cycle_is_N (Args : in out Arg_Type) is
+     Expected_End_Cycle : constant String := Args.Match (1);
+   begin
 
      Assert
        (Cmp    => End_Cycle = Boolean'Value (Expected_End_Cycle),
@@ -141,7 +167,7 @@ package body step_definitions is
           "Wrong End_Cycle : Actual =>'" & End_Cycle'Img & "' Expected =>'"
           & Expected_End_Cycle & "'");
 
+   end Then_End_Cycle_is_N;
 
-   end Then_Commands_N;
 
 end step_definitions;

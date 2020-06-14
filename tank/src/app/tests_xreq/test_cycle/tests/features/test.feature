@@ -1,4 +1,4 @@
-Feature: test-state Feature
+Feature: Cycle tests
 
 Background:
 Given Cycle is initialized

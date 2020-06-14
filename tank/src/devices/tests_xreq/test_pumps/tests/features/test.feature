@@ -1,4 +1,4 @@
-Feature: test-state Feature
+Feature: Pumps tests
 
 Background:
 Given Pump component is initialized

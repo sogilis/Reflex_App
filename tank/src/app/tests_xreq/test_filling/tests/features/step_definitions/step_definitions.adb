@@ -30,13 +30,13 @@ package body step_definitions is
 
    end Tear_Down;
 
-   procedure Given_filling_component_is_initialized (Args : in out Arg_Type) is
+   procedure Given_filling_app_is_initialized (Args : in out Arg_Type) is
       pragma Unreferenced (Args);
    begin
 
       Filling.Initialize;
 
-   end Given_filling_component_is_initialized;
+   end Given_filling_app_is_initialized;
 
    procedure Given_State_N (Args : in out Arg_Type) is
       filling_Status   : constant String := Args.Match (1);

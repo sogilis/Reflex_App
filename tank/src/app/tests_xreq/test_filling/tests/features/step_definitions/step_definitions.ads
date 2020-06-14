@@ -10,8 +10,8 @@ package step_definitions is
 
    procedure Tear_Down (Feature_File : in String);
 
-   --  @given ^filling component is initialized$
-   procedure Given_filling_component_is_initialized (Args : in out Arg_Type);
+   --  @given ^Filling app is initialized$
+   procedure Given_filling_app_is_initialized (Args : in out Arg_Type);
 
    --  @given ^State is (Init_State|Openning_Valves_State|Running_Pumps_State|Filling_emptying_State|Closing_Valves_State|Stopping_Pumps_State|Waiting_State)$
    procedure Given_State_N (Args : in out Arg_Type);

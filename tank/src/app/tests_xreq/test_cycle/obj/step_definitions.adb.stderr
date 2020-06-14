@@ -1,8 +1,0 @@
-step_definitions.adb:4:14: missing body for "Then_Filling_P1_Order_is_N" declared at step_definitions.ads:33
-step_definitions.adb:4:14: missing body for "Then_Filling_P2_Order_is_N" declared at step_definitions.ads:36
-step_definitions.adb:4:14: missing body for "Then_Mixing_Order_is_N" declared at step_definitions.ads:39
-step_definitions.adb:4:14: missing body for "Then_Emptying_Order_is_N" declared at step_definitions.ads:42
-step_definitions.adb:4:14: missing body for "Then_End_Cycle_is_N" declared at step_definitions.ads:45
-step_definitions.adb:82:52: ";" should be ","
-step_definitions.adb:83:52: ";" should be ","
-step_definitions.adb:84:48: ";" should be ","

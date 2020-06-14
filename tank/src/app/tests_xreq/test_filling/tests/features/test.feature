@@ -1,7 +1,7 @@
-Feature: test-state Feature
+Feature: Filling tests
 
 Background:
-Given filling component is initialized
+Given Filling app is initialized
 
   Scenario Outline: state
     Given State is <State>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {
+				font: 100% verdana, arial, sans-serif;
+				background-color: #fff;
+			}
+
+			ul#tabnav {
+				text-align: left;
+				margin: 8px 0 0 0;
+				font: bold 11px verdana, arial, sans-serif;
+				border-bottom: 1px solid #6c6;
+				list-style-type: none;
+				padding: 3px 10px 3px 10px;
+			}
+
+			ul#tabnav li {
+				display: inline;
+			}
+
+			ul#tabnav li.active {
+				border-bottom: 1px solid #fff;
+				background-color: #fff;
+			}
+
+			ul#tabnav li {
+				padding: 3px 4px;
+				border: 1px solid #6c6;
+				background-color: #cfc;
+				color: #666;
+				margin-right: 0px;
+				text-decoration: none;
+				border-bottom: none;
+				cursor: pointer;
+			}
+
+			ul#tabnav li:hover {
+				background: #afa;
+			}
+
+			html, body, div, iframe {
+				margin:0;
+				padding:0;
+			}
+
+			iframe {
+				display:block;
+				width:100%;
+				border:none;
+			}
+
+			h1 {
+				display: inline;
+				float: left;
+				font-size: small;
+				margin: 0;
+				padding: 0 10px;
+			}
+
+			h2 {
+				display: inline;
+				float: right;
+				font-size: small;
+				margin: 0;
+				padding: 0 10px;
+			}
+		</style>
+
+		<script type="text/javascript">
+			function updateBody(tabId, page) {
+				document.getElementById(selectedTab).setAttribute("class", "inactive");
+				tab = document.getElementById(tabId)
+				tab.setAttribute("class", "active");
+				selectedTab = tabId;
+				iframe = document.getElementById("myframe");
+				iframe.src = tab.getAttribute("value");
+			}
+
+			function updateViewport() {
+				var viewportheight;
+
+				// the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+				if (typeof window.innerWidth != 'undefined')
+				{
+					viewportheight = window.innerHeight
+				}
+				// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+				else if (typeof document.documentElement != 'undefined'
+					&& typeof document.documentElement.clientWidth !=
+					'undefined' && document.documentElement.clientWidth != 0)
+				{
+					viewportheight = document.documentElement.clientHeight
+				}
+				// older versions of IE
+				else
+				{
+					viewportheight = document.getElementsByTagName('body')[0].clientHeight
+				}
+
+				iframe = document.getElementById("myframe");
+				iframe.style.height = (viewportheight - 50) + 'px';
+			}
+
+			function init(tabId) {
+				updateBody(tabId);
+				updateViewport();
+				window.onresize = updateViewport;
+			}
+
+			var selectedTab = "tab1"
+		</script>
+
+	</head>
+
+	<body onload="init('tab1');">
+		<ul id="tabnav">
+			<li id="tab1"  class="active" onclick="updateBody('tab1')" value="pumps/report.html">Pumps</li>
+			<li id="tab2"  onclick="updateBody('tab2')"  value="blenders/report.html">Blenders</li>
+			<li id="tab3"  onclick="updateBody('tab3')"  value="resistances/report.html">Resistances</li>
+			<li id="tab4"  onclick="updateBody('tab4')"  value="valves/report.html">Valves</li>
+			<li id="tab5"  onclick="updateBody('tab5')"  value="mixing/report.html">Mixing</li>
+			<li id="tab6"  onclick="updateBody('tab6')"  value="filling/report.html">Filling</li>
+			<li id="tab7"  onclick="updateBody('tab7')"  value="cycle/report.html">Cycle</li>
+		</ul>
+
+		<div>
+			<iframe id="myframe" height="100%" width="100%" frameborder="0"></iframe>
+		</div>
+	</body>
+</html>
