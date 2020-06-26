@@ -36,17 +36,17 @@ package body Ios is
       --  Valve V2_R1
       
       V2_R1_Opened := Ext_V2_R1_Opened;
-      V2_R1_Closed := Ext_V2_R1_Opened;
+      V2_R1_Closed := Ext_V2_R1_Closed;
       
       --  Valve V1_R2
       
       V1_R2_Opened := Ext_V1_R2_Opened;
-      V1_R2_Closed := Ext_V1_R2_Opened;
+      V1_R2_Closed := Ext_V1_R2_Closed;
       
       --  Valve V2_R2
       
       V2_R2_Opened := Ext_V2_R2_Opened;
-      V2_R2_Closed := Ext_V1_R2_Opened;
+      V2_R2_Closed := Ext_V1_R2_Closed;
       
       --  ¨Pump P1
       

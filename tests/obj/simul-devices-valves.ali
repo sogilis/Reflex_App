@@ -1,0 +1,105 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnat2012
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U simul.devices.valves%b  simul-devices-valves.adb  03d4e5aa OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z interfaces%s		interfac.ads		interfac.ali
+W simul.devices%s	simul-devices.adb	simul-devices.ali
+
+U simul.devices.valves%s  simul-devices-valves.ads  63986fa5 EE OO PF PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W simul.devices%s	simul-devices.adb	simul-devices.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-ioexce.ads		20190518041254 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D simul.ads		20200313140915 eccef7fa simul%s
+D simul-devices.ads	20200313105214 440da83d simul.devices%s
+D simul-devices-valves.ads  20200313161934 2795c798 simul.devices.valves%s
+D simul-devices-valves.adb  20200316132314 8ab5f75f simul.devices.valves%b
+D system.ads		20190518041255 4635ec04 system%s
+D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041255 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041255 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [initialize simul__devices__valves 33 14 none]
+G c Z s b [cyclic simul__devices__valves 36 14 none]
+G c Z s s [valve_recordDA simul__devices__valves 46 9 none]
+G c Z s s [valve_recordDF simul__devices__valves 46 9 none]
+G c Z s s [valve_recordIP simul__devices__valves 46 9 none]
+G r s device_record [valve_recordIP simul__devices__valves 46 9 none] [device_recordIP simul__devices 32 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 13|21r6 21r23
+X 6 a-textio.ads
+57K13*Text_IO 727e16 13|21w10 21r27
+508U14*Put_Line 13|48s7
+X 10 simul.ads
+21K9*Simul 24e10 12|21r9 54r5 13|23r14 90r5
+X 11 simul-devices.ads
+21K15*Devices 10|21k9 11|39e18 12|21r15 54r11 13|23r20 90r11
+23R9*Device_Record 34e14 12|24r29 46r29
+25V13*Fault{boolean}
+26U14*Set_Fault
+36r4 No_Device_Record{23R9} 12|51r7
+X 12 simul-devices-valves.ads
+21K23*Valves 11|21k15 12|46E9 54l19 54e25 13|23b28 90l19 90t25
+24R9*Valve_Record<11|23R9> 11|25p13 26p14 12|33p14 33r40 36p14 37r33 46c9
+. 48e14 50r31 13|29r40 39r32
+26E9*Valve_State 31e20 47r22 13|46r19
+27n7*Waiting_State{26E9} 52r23 13|51r15 70r29 75r29
+28n7*Opening_State{26E9} 13|55r29 58r15
+29n7*Opened_State{26E9} 13|60r27 68r15 86r30
+30n7*Closing_State{26E9} 13|53r29 63r15
+31n7*Closed_State{26E9} 13|65r26 73r15 87r30
+33U14*Initialize 33=26 13|29b14 32l8 32t18
+33r26 This{24R9} 13|29b26 31m7
+36U14*Cyclic 37=10 38>10 39>10 40>10 41<10 42<10 13|38b14 88l8 88t14
+37r10 This{24R9} 13|39b10 46r34 49r12 80m7 86r18 87r18
+38b10 Second{boolean} 13|40b10 59r15 64r14
+39b10 Open_Order{boolean} 13|41b10 54r19 74r16
+40b10 Close_Order{boolean} 13|42b10 52r16 69r16
+41b10 Opened{boolean} 13|43b10 86m7
+42b10 Closed{boolean} 13|44b10 87m7
+47e7 State{26E9} 52m7 13|46r39 49r17 80m12 86r23 87r23
+50r4 No_Valve_Record{24R9} 13|31r15
+X 13 simul-devices-valves.adb
+46e7 New_State{12|26E9} 53m16 55m16 60m14 65m13 70m16 75m16 80r21
+

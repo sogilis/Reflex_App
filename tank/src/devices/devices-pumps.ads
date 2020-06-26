@@ -30,7 +30,7 @@ package Devices.Pumps is
       stop_State,
       Run_State,
       Running_State,
-      stopping_State);
+      Stopping_State);
 
    procedure Initialize (This : in out Pump_Record);
    

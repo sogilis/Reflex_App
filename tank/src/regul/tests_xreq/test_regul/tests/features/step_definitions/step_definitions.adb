@@ -1,12 +1,14 @@
 with XReqLib.Asserts; use XReqLib.Asserts;
-with devices.blenders; use devices.blenders;
+with regul.ramps; use regul.ramps;
+with XReqLib.Asserts.Float; use XReqLib.Asserts.Float;
 
 package body step_definitions is 
 
-    blender   : Blender_Record;
-    Run_Order :  Boolean;
-    v2_Order  :  Boolean;
-    v1_Order  :  Boolean;
+      T_sensor    :  Float;
+      Gradient    :  Float;
+      Tmax        :  Float;
+      T_Adjusted  :  Float;
+   
 
    procedure Set_Up (Feature_File : in String) is
 
@@ -24,102 +26,57 @@ package body step_definitions is
 
    end Tear_Down;
 
-   procedure Given_Blender_component_is_initialized (Args : in out Arg_Type) is
-      pragma Unreferenced (Args);
+   --  @given ^Gradient is (?:\d+(?:\.\d*)?|\.\d+)$
+   procedure Given_Gradient_is_N (Args : in out Arg_Type) is
+	Gradient_s   : constant String := Args.Match (1);
    begin
 
-      Blender.Initialize;
+	Gradient := float'value(Gradient_s);  
 
-   end Given_Blender_component_is_initialized;
+   end Given_Gradient_is_N;
 
-   procedure Given_State_N (Args : in out Arg_Type) is
-      Blender_Status   : constant String := Args.Match (1);
+   --  @given ^Tmax is (?:\d+(?:\.\d*)?|\.\d+)$
+   procedure Given_Tmax_is_N (Args : in out Arg_Type) is
+	Tmax_s   : constant String := Args.Match (1);
    begin
 
-      Blender.Set_State(Blender_State'Value(Blender_Status));
+	Tmax := float'value(Tmax_s);  
 
-   end Given_State_N;
+   end Given_Tmax_is_N;
 
-   procedure When_Transition_N (Args : in out Arg_Type) is
-      Run        : constant String := Args.Match (1);
-      Speed_1       : constant String := Args.Match (2);
-      Speed_2      : constant String := Args.Match (3);
+     --  @when ^T_sensor is (?:\d+(?:\.\d*)?|\.\d+)$
+   procedure When_T_sensor_is_N (Args : in out Arg_Type) is
+	T_sensor_s   : constant String := Args.Match (1);
    begin
 
-      Blender.Cyclic 
-      		(Run       => Boolean'value(Run),
-      		 Speed_1   => Boolean'value(Speed_1),
-     		 Speed_2   => Boolean'value(Speed_2),
-     		 Run_Order => Run_Order,
-     		 v2_Order  => v2_Order,
-     		 v1_Order  => v1_Order);  
+	T_sensor := float'value(T_sensor_s);  
 
+   end When_T_sensor_is_N;
 
-   end When_Transition_N;
+   --  @when ^Set_Point is (?:\d+(?:\.\d*)?|\.\d+)$
+   procedure When_Set_Point_is_N (Args : in out Arg_Type) is
+	Set_Point_s   : constant String := Args.Match (1);
+   begin
 
-   procedure Then_New_state_N(Args : in out Arg_Type) is
-     Expected_State     : constant String        := Args.Match (1);
-     Expected_Run_Order : constant String        := Args.Match (2);
-     Expected_v1_Order  : constant String        := Args.Match (3);
-     Expected_v2_Order  : constant String        := Args.Match (4);
-     Actual_Result      : constant Blender_State := Blender.Get_State;  
+     ramp (Second      => TRUE,
+           T_sensor    => T_sensor,
+           Set_Point   => float'value(Set_Point_s),
+           Gradient    => Gradient,
+           Tmax        => Tmax,
+           T_Adjusted  => T_Adjusted);
+
+   end When_Set_Point_is_N;
+
+   procedure Then_T_Adjusted_is_N (Args : in out Arg_Type) is 
+     Expected_T_Adjusted : constant String := Args.Match (1);
    begin
 
      Assert
-       (Cmp    => Actual_Result = Blender_State'Value (Expected_State),
+       (Cmp    => T_Adjusted = float'Value (Expected_T_Adjusted),
         Reason =>
-          "Wrong Blender_State : Actual =>'" & Actual_Result'Img & "' Expected =>'"
-           & Expected_State & "'");
+          "Wrong T_Adjusted : Actual =>'" & T_Adjusted'Img & "' Expected =>'"
+          & Expected_T_Adjusted & "'");
 
-     Assert
-       (Cmp    => Run_Order = Boolean'Value (Expected_Run_Order),
-        Reason =>
-          "Wrong Run_Order : Actual =>'" & Run_Order'Img & "' Expected =>'"
-          & Expected_Run_Order & "'");
-
-     Assert
-       (Cmp    => v2_Order = Boolean'Value ( Expected_v2_Order ),
-        Reason =>
-          "Wrong v2_Order : Actual =>'" & v2_Order'Img & "' Expected =>'"
-          &  Expected_v2_Order  & "'");
-
-     Assert
-       (Cmp    => v1_Order = Boolean'Value ( Expected_v1_Order ),
-        Reason =>
-          "Wrong v1_Order : Actual =>'" & v1_Order'Img & "' Expected =>'"
-          &  Expected_v1_Order  & "'");
-
-   end Then_New_state_N;
-
-
-   procedure When_T_sensor_is_20_And_Set_Point_is_40 (Args : in out Arg_Type) is
-      Not_Yet_Implemented : exception;
-   begin
-      raise Not_Yet_Implemented;
-   end When_T_sensor_is_20_And_Set_Point_is_40;
-
-   procedure Then_T_Adjusted_is_52_5 (Args : in out Arg_Type) is
-      Not_Yet_Implemented : exception;
-   begin
-      raise Not_Yet_Implemented;
-   end Then_T_Adjusted_is_52_5;
-
-   procedure Given_second_is_TRUE_Gradient_is_60_Tmax_is_80 (Args : in out Arg_Type) is
-      Not_Yet_Implemented : exception;
-   begin
-      raise Not_Yet_Implemented;
-   end Given_second_is_TRUE_Gradient_is_60_Tmax_is_80;
-
-   procedure Then_T_Adjusted_is_52_5_2 (Args : in out Arg_Type) is
-      Not_Yet_Implemented : exception;
-   begin
-      raise Not_Yet_Implemented;
-   end Then_T_Adjusted_is_52_5_2;
-
-   procedure Then_T_Adjusted_is_52_5_2 (Args : in out Arg_Type) is
-      Not_Yet_Implemented : exception;
-   begin
-      raise Not_Yet_Implemented;
-   end Then_T_Adjusted_is_52_5_2;
+   end Then_T_Adjusted_is_N;
 
 end step_definitions;

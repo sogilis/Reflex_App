@@ -63,15 +63,15 @@ package body Main is
       
       -- The Simulation Task
       
-      (Name          => new String'("simul"),
-       Inputs        => Ios_Simul.Acquire_Inputs'Address,
-       Outputs       => Ios.Set_Outputs'Address,
-       Data_Register => System.Null_Address,
-       Initialize    => Simul_Tank.Main.Initialize'Address,
-       Main          => Simul_Tank.Main.Cyclic'Address,
-       Task_Kind     => Periodic_Task,
+     (Name          => new String'("simul"),
+      Inputs        => Ios_Simul.Acquire_Inputs'Address,
+      Outputs       => Ios_Simul.Set_Outputs'Address,
+      Data_Register => System.Null_Address,
+      Initialize    => Simul_Tank.Main.Initialize'Address,
+      Main          => Simul_Tank.Main.Cyclic'Address,
+      Task_Kind     => Periodic_Task,
        Period        => 0.1,
-       Run_Condition => null),
+      Run_Condition => null),
 
       -- The User Task
       

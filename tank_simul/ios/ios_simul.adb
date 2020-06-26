@@ -36,17 +36,17 @@ package body Ios_Simul is
       --  Valve V2_R1
       
       Ext_V2_R1_Opened := V2_R1_Opened_Simul;
-      Ext_V2_R1_Opened := V2_R1_Closed_Simul ;
+      Ext_V2_R1_Closed := V2_R1_Closed_Simul;
       
       --  Valve V1_R2
       
      Ext_V1_R2_Opened := V1_R2_Opened_Simul;
-     Ext_V1_R2_Opened := V1_R2_Closed_Simul;
+     Ext_V1_R2_Closed := V1_R2_Closed_Simul;
       
       --  Valve V2_R2
       
       Ext_V2_R2_Opened := V2_R2_Opened_Simul;
-      Ext_V1_R2_Opened := V2_R2_Closed_Simul;
+      Ext_V1_R2_Closed:= V2_R2_Closed_Simul;
       
       --  ¨Pump P1
       

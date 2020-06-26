@@ -1,0 +1,99 @@
+V "GNAT Lib v2019"
+M P W=b
+A -gnatA
+A -gnatp
+A -gnatVn
+A -gnat12
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U compil_tank%b		compil_tank.adb		80d35b22 NE OO SU
+W devices%s		devices.adb		devices.ali
+W devices.blenders%s	devices-blenders.adb	devices-blenders.ali
+W devices.pumps%s	devices-pumps.adb	devices-pumps.ali
+W devices.resistances%s	devices-resistances.adb	devices-resistances.ali
+W devices.valves%s	devices-valves.adb	devices-valves.ali
+W ios%s			ios.adb			ios.ali
+W regul%s		regul.ads		regul.ali
+W regul.ramps%s		regul-ramps.adb		regul-ramps.ali
+W tank%s		tank.ads		tank.ali
+W tank.cycle%s		tank-cycle.adb		tank-cycle.ali
+W tank.filling%s	tank-filling.adb	tank-filling.ali
+W tank.main%s		tank-main.adb		tank-main.ali
+W tank.mixing%s		tank-mixing.adb		tank-mixing.ali
+W tank.variables%s	tank-variables.ads	tank-variables.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041255 bf4f806b ada.finalization%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D compil_tank.adb	20200312090220 e0229053 compil_tank%b
+D devices.ads		20200313104344 fb10b7fe devices%s
+D devices-blenders.ads	20200414124123 116baff2 devices.blenders%s
+D devices-pumps.ads	20200409153112 b4689a1c devices.pumps%s
+D devices-resistances.ads  20200414141956 6592bc04 devices.resistances%s
+D devices-valves.ads	20200414095738 85ef14ee devices.valves%s
+D ios.ads		20200313133021 d18bd128 ios%s
+D regul.ads		20200310105152 e0e0ca3a regul%s
+D regul-ramps.ads	20200310110216 3b7065ed regul.ramps%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-finmas.ads		20190518041255 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518041256 4ff27390 system.finalization_root%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-pooglo.ads		20190518041254 ede33ef8 system.pool_global%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20190518041255 b16154c2 system.storage_pools%s
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D tank.ads		20200312090552 d54e66a4 tank%s
+D tank-cycle.ads	20200423095810 96ee0de8 tank.cycle%s
+D tank-filling.ads	20200422105513 d0102331 tank.filling%s
+D tank-main.ads		20200312090037 9aec358e tank.main%s
+D tank-mixing.ads	20200614150051 ee838dcf tank.mixing%s
+D tank-variables.ads	20200422142237 e61509ec tank.variables%s
+G a e
+G c Z b b [compil_tank standard 35 11 none]
+X 7 compil_tank.adb
+35U11*Compil_Tank 35b11 38l5 38t16
+X 8 devices.ads
+21K9*Devices 7|21w6 21r28 22r6 22r29 23r6 23r29 24r6 24r29 25r6 25r31 8|39e12
+X 9 devices-blenders.ads
+21K17*Blenders 7|22w14 22r37 9|61e21
+X 10 devices-pumps.ads
+21K17*Pumps 7|24w14 24r37 10|56e18
+X 11 devices-resistances.ads
+21K17*Resistances 7|25w14 25r39 11|53e24
+X 12 devices-valves.ads
+21K17*Valves 7|23w14 23r37 12|59e19
+X 13 ios.ads
+21K9*Ios 7|28w6 28r15 13|122e8
+X 14 regul.ads
+21K9*Regul 7|26w6 26r17 27r6 27r23 14|23e10
+X 15 regul-ramps.ads
+21K15*Ramps 7|27w12 27r29 15|31e16
+X 31 tank.ads
+21K9*Tank 7|29r6 29r22 30r6 30r24 31r6 31r23 32r6 32r21 33r6 33r26 31|25e9
+X 32 tank-cycle.ads
+21K14*Cycle 7|29w11 29r27 32|60e15
+X 33 tank-filling.ads
+21K14*Filling 7|30w11 30r29 33|59e17
+X 34 tank-main.ads
+21K14*Main 7|32w11 32r26 34|28e14
+X 35 tank-mixing.ads
+21K14*Mixing 7|31w11 31r28 35|63e16
+X 36 tank-variables.ads
+29K14*Variables 7|33w11 33r31 36|98e19
+

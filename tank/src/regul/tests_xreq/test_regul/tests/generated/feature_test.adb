@@ -47,7 +47,7 @@ package body feature_test is
    begin
       if Count_Mode then
          Background (Format, Report, Stop, True);
-         Report.Num_Steps := Report.Num_Steps + 3;
+         Report.Num_Steps := Report.Num_Steps + 5;
       else
          Format.Start_Scenario ("regul (1/1)", "./features/test.feature:5", Tags);
          Format.Enter_Scenario;
@@ -73,18 +73,16 @@ package body feature_test is
 
          Format.Begin_Scenario;
          --
-         -- Given second is TRUE Gradient is 60 Tmax is 80
+         -- Given Gradient is 60
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Given;
-            Stanza : constant String    := "second is TRUE Gradient is 60 Tmax is 80";
+            Stanza : constant String    := "Gradient is 60";
             Pos    : constant String    := "./features/test.feature:6";
          begin
-            Make (Args, "second is TRUE Gradient is 60 Tmax is 80");
-            Add_Match (Args, 11, 14);
-            Add_Match (Args, 28, 29);
-            Add_Match (Args, 39, 40);
+            Make (Args, "Gradient is 60");
+            Add_Match (Args, 13, 14);
             Add_Sep   (Args, 1);
             Format.Start_Step (Prefix, Stanza, Pos);
             Format.Begin_Step;
@@ -93,7 +91,7 @@ package body feature_test is
                Format.Put_Step  (Args, Status_Skipped);
             else
                Call_Hook (Hook_Begin, Hook_Step);
-               Given_second_is_TRUE_Gradient_is_60_Tmax_is_80 (Args);
+               Given_Gradient_is_N (Args);
                Call_Hook (Hook_End, Hook_Step);
                Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
                Format.Put_Step (Args, Status_Passed);
@@ -109,17 +107,50 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- When T_sensor is 20 And Set_Point is 40 
+         -- Given Tmax is 80
+         --
+         declare
+            Args   : Arg_Type;
+            Prefix : constant Step_Kind := Step_Given;
+            Stanza : constant String    := "Tmax is 80";
+            Pos    : constant String    := "./features/test.feature:7";
+         begin
+            Make (Args, "Tmax is 80");
+            Add_Match (Args, 9, 10);
+            Add_Sep   (Args, 1);
+            Format.Start_Step (Prefix, Stanza, Pos);
+            Format.Begin_Step;
+            if Fail then
+               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
+               Format.Put_Step  (Args, Status_Skipped);
+            else
+               Call_Hook (Hook_Begin, Hook_Step);
+               Given_Tmax_is_N (Args);
+               Call_Hook (Hook_End, Hook_Step);
+               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
+               Format.Put_Step (Args, Status_Passed);
+            end if;
+         exception
+            when Err : others =>
+              Call_Hook (Hook_End, Hook_Step);
+              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
+              Fail := True;
+              Format.Put_Step  (Args, Status_Failed);
+              Format.Put_Error (Err);
+         end;
+         Format.End_Step;
+         Format.Stop_Step;
+         --
+         -- When T_sensor is 20
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "T_sensor is 20 And Set_Point is 40 ";
-            Pos    : constant String    := "./features/test.feature:7";
+            Stanza : constant String    := "T_sensor is 20";
+            Pos    : constant String    := "./features/test.feature:9";
          begin
-            Make (Args, "T_sensor is 20 And Set_Point is 40 ");
+            Make (Args, "T_sensor is 20");
             Add_Match (Args, 13, 14);
-            Add_Match (Args, 33, 34);
             Add_Sep   (Args, 1);
             Format.Start_Step (Prefix, Stanza, Pos);
             Format.Begin_Step;
@@ -128,7 +159,7 @@ package body feature_test is
                Format.Put_Step  (Args, Status_Skipped);
             else
                Call_Hook (Hook_Begin, Hook_Step);
-               When_T_sensor_is_20_And_Set_Point_is_40 (Args);
+               When_T_sensor_is_N (Args);
                Call_Hook (Hook_End, Hook_Step);
                Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
                Format.Put_Step (Args, Status_Passed);
@@ -144,15 +175,16 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- Then T_Adjusted is 52,5  
+         -- When Set_Point is 40
          --
          declare
             Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "T_Adjusted is 52,5  ";
-            Pos    : constant String    := "./features/test.feature:8";
+            Prefix : constant Step_Kind := Step_When;
+            Stanza : constant String    := "Set_Point is 40";
+            Pos    : constant String    := "./features/test.feature:10";
          begin
-            Make (Args, "T_Adjusted is 52,5  ");
+            Make (Args, "Set_Point is 40");
+            Add_Match (Args, 14, 15);
             Add_Sep   (Args, 1);
             Format.Start_Step (Prefix, Stanza, Pos);
             Format.Begin_Step;
@@ -161,7 +193,43 @@ package body feature_test is
                Format.Put_Step  (Args, Status_Skipped);
             else
                Call_Hook (Hook_Begin, Hook_Step);
-               Then_T_Adjusted_is_52_5_2 (Args);
+               When_Set_Point_is_N (Args);
+               Call_Hook (Hook_End, Hook_Step);
+               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
+               Format.Put_Step (Args, Status_Passed);
+            end if;
+         exception
+            when Err : others =>
+              Call_Hook (Hook_End, Hook_Step);
+              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
+              Fail := True;
+              Format.Put_Step  (Args, Status_Failed);
+              Format.Put_Error (Err);
+         end;
+         Format.End_Step;
+         Format.Stop_Step;
+         --
+         -- Then T_Adjusted is 5.25000E+01
+         --
+         declare
+            Args   : Arg_Type;
+            Prefix : constant Step_Kind := Step_Then;
+            Stanza : constant String    := "T_Adjusted is 5.25000E+01";
+            Pos    : constant String    := "./features/test.feature:12";
+         begin
+            Make (Args, "T_Adjusted is 5.25000E+01");
+            Add_Match (Args, 15, 25);
+            Add_Match (Args, 15, 16);
+            Add_Match (Args, 22, 25);
+            Add_Sep   (Args, 1);
+            Format.Start_Step (Prefix, Stanza, Pos);
+            Format.Begin_Step;
+            if Fail then
+               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
+               Format.Put_Step  (Args, Status_Skipped);
+            else
+               Call_Hook (Hook_Begin, Hook_Step);
+               Then_T_Adjusted_is_N (Args);
                Call_Hook (Hook_End, Hook_Step);
                Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
                Format.Put_Step (Args, Status_Passed);

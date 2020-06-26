@@ -1,0 +1,33 @@
+V "GNAT Lib v2019"
+A -O0
+A -O0
+A -gnatA
+A -gnat2012
+A -gnatwa
+A -gnatf
+A -fstack-check=specific
+A -gnatw.X
+A -gnateE
+A -g
+A -gnat2012
+A -gnatwa
+A -gnatf
+A -fstack-check=specific
+A -gnatw.X
+A -gnateE
+A -g
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U regul%s		regul.ads		e0e0ca3a NE OO PK
+
+D regul.ads		20200310105152 e0e0ca3a regul%s
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+X 1 regul.ads
+21K9*Regul 23l5 23e10
+

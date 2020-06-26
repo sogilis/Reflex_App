@@ -35,8 +35,6 @@ configure:
 	if test -f src/app/tests_xreq/test_mixing/Makefile; then $(MAKE) -C src/app/tests_xreq/test_mixing configure; fi
 	if test -f src/app/tests_xreq/test_cycle/Makefile; then $(MAKE) -C src/app/tests_xreq/test_cycle configure; fi
 
-
-
 # --------------------------------------------------------------------------- #
 # TARGET: build-tests
 # --------------------------------------------------------------------------- #

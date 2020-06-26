@@ -1,0 +1,44 @@
+[GENERATED OBJECT FILE]
+b__main_tests.o
+[PROJECT FILES]
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/main_tests.gpr
+20200615085626
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/main_impl.gpr
+20200615084003
+/home/sogilis/sb/reflex_software/lib/XReq-Enhanced/xreq_lib.gpr
+20200318082638
+[BOUND OBJECT FILES]
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/devices.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/devices-blenders.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/devices-pumps.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/devices-resistances.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/devices-valves.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/ext_ios.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/ios.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/regul.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/regul-ramps.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/tank.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/tank-cycle.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/tank-filling.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/tank-mixing.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/tank-variables.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/tank-main.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/step_definitions.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/feature_test.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/main_tests.o
+[GENERATED SOURCE FILES]
+b__main_tests.ads
+b__main_tests.adb
+b__main_tests.ali
+[RESULTING OPTIONS]
+-L/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/
+-L/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_main/obj/
+-L/home/sogilis/sb/reflex_software/lib/XReq-Enhanced/build/lib/development/native/
+-L/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/
+-static
+-static-libgcc
+/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/libgnarl.a
+/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/libgnat.a
+-lrt
+-lpthread
+-ldl

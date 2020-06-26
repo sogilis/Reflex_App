@@ -68,12 +68,12 @@ package body Devices.Pumps is
 	    end if;
 	    
 	 when Running_State =>
-	    if not Run then
+	    if not Running then
 	       New_State := Stopping_State;
 	    end if;
 	    
 	 when Stopping_State =>
-	    if not Running then
+	    if not Run then
 	       New_State := Stop_State;
 	    end if;	
       end case;
@@ -82,7 +82,7 @@ package body Devices.Pumps is
 
      -- Commandes
 
-	Run_Order := (This.State = Run_State) or (This.State = Running_State);
+	Run_Order := (This.State = Run_State);
    end Cyclic;
    
 end Devices.Pumps;

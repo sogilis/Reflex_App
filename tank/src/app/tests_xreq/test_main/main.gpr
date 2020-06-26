@@ -1,0 +1,6 @@
+with "main_impl.gpr";
+with "main_tests.gpr";
+
+project Main is
+
+end Main;

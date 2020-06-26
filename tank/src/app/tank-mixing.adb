@@ -107,8 +107,8 @@ package body Tank.Mixing is
 
       -- Commandes
       
-      Start_Blender    := (This.State = It_Mixes_State);
-      Start_Resistance := (This.State = It_Mixes_State);
+      Start_Blender    := (This.State = Mix_State);
+      Start_Resistance := (This.State = Mix_State);
       End_Mixing       := (This.State = End_Mixing_State);
    end Cyclic;
    

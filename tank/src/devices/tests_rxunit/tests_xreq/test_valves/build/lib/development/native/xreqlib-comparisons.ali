@@ -1,0 +1,39 @@
+V "GNAT Lib v2019"
+A -O0
+A -O0
+A -gnatA
+A -gnat2012
+A -gnatwa
+A -gnatf
+A -fstack-check=specific
+A -gnatw.X
+A -gnateE
+A -g
+A -gnat2012
+A -gnatwa
+A -gnatf
+A -fstack-check=specific
+A -gnatw.X
+A -gnateE
+A -gnato
+A -g
+A -fcallgraph-info=su,da
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U xreqlib.comparisons%s	xreqlib-comparisons.ads	05512278 NE OO PK
+W xreqlib%s		xreqlib.ads		xreqlib.ali
+
+D system.ads		20190518041255 4635ec04 system%s
+D xreqlib.ads		20200318082638 88a20b05 xreqlib%s
+D xreqlib-comparisons.ads  20200318082638 8df3297d xreqlib.comparisons%s
+G a e
+X 2 xreqlib.ads
+20K9*XReqLib 23e12 3|20r9 22r5
+X 3 xreqlib-comparisons.ads
+20K17*Comparisons 2|20k9 3|22l13 22e24
+

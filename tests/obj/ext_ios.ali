@@ -1,0 +1,55 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnat2012
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ext_ios%s		ext_ios.ads		0fae9ef2 NE OO PK
+
+D ext_ios.ads		20200313133059 0fae9ef2 ext_ios%s
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+X 1 ext_ios.ads
+21K10*Ext_Ios 126l5 126e12
+28b9*Ext_V1_R1_Opened{boolean}
+29b9*Ext_V1_R1_Closed{boolean}
+33b9*Ext_V2_R1_Opened{boolean}
+34b9*Ext_V2_R1_Closed{boolean}
+38b9*Ext_V1_R2_Opened{boolean}
+39b9*Ext_V1_R2_Closed{boolean}
+43b9*Ext_V2_R2_Opened{boolean}
+44b9*Ext_V2_R2_Closed{boolean}
+48b9*Ext_P1_Started{boolean}
+52b9*Ext_P2_Started{boolean}
+56b9*Ext_Tank_Low_Level{boolean}
+57b9*Ext_Tank_Medium_Level{boolean}
+58b9*Ext_Tank_High_Level{boolean}
+62f9*Ext_Resistance_SetPoint{float}
+63f9*Ext_Gradient{float}
+64f9*Ext_Tmax{float}
+69b9*Ext_Blender_Started{boolean}
+73b9*Ext_Start_Cycle{boolean}
+81b9*Ext_V1_R1_Open_Order{boolean}
+82b9*Ext_V1_R1_Close_Order{boolean}
+86b9*Ext_V2_R1_Open_Order{boolean}
+87b9*Ext_V2_R1_Close_Order{boolean}
+91b9*Ext_V1_R2_Open_Order{boolean}
+92b11*Ext_V1_R2_Close_Order{boolean}
+96b9*Ext_V2_R2_Open_Order{boolean}
+97b9*Ext_V2_R2_Close_Order{boolean}
+101b9*Ext_P1_Start_Order{boolean}
+105b9*Ext_P2_Start_Order{boolean}
+109f9*Ext_T_Measured{float}
+114b8*Ext_Blender_Start{boolean}
+115b8*Ext_V1_Speed{boolean}
+116b8*Ext_V2_Speed{boolean}
+117b8*Ext_V1_Order{boolean}
+118b8*Ext_V2_Order{boolean}
+119b8*Ext_Blender_Start_Order{boolean}
+124b9*Ext_End_Cycle{boolean}
+

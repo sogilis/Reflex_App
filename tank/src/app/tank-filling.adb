@@ -87,7 +87,7 @@ package body Tank.Filling is
 
 	 when Closing_Valves_State =>
 	    if Valves_Closed then
-	       New_State := Waiting_State;
+	       New_State := Init_state;
 	    end if;
 
 	 when Waiting_State =>
@@ -101,9 +101,8 @@ package body Tank.Filling is
       -- Commandes
 
       Open_Valves  := (This.State = Openning_Valves_State);
-      Start_Pumps  := (This.State = Running_Pumps_State) 
-	or  (This.State = Filling_emptying_State);
-      Close_Valves := (This.State=Closing_Valves_State);
+      Start_Pumps  := (This.State = Running_Pumps_State) ;
+      Close_Valves := (This.State = Closing_Valves_State);
    end Cyclic;
    
 end Tank.Filling;

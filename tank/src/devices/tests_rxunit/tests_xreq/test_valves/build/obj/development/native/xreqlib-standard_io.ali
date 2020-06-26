@@ -1,0 +1,206 @@
+V "GNAT Lib v2019"
+A -O0
+A -O0
+A -gnatA
+A -gnat2012
+A -gnatwa
+A -gnatf
+A -fstack-check=specific
+A -gnatw.X
+A -gnateE
+A -g
+A -gnat2012
+A -gnatwa
+A -gnatf
+A -fstack-check=specific
+A -gnatw.X
+A -gnateE
+A -gnato
+A -g
+A -fcallgraph-info=su,da
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_FINALIZATION
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U xreqlib.standard_io%b	xreqlib-standard_io.adb	55a13880 OO PK
+W ada%s			ada.ads			ada.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.unchecked_deallocation%s
+W xreqlib%s		xreqlib.ads		xreqlib.ali
+
+U xreqlib.standard_io%s	xreqlib-standard_io.ads	1abf910c EE OO PF PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization%s	a-finali.ads		a-finali.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system%s		system.ads		system.ali
+Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+Z system.strings.stream_ops%s  s-ststop.adb	s-ststop.ali
+W xreqlib%s		xreqlib.ads		xreqlib.ali
+W xreqlib.io%s		xreqlib-io.ads		xreqlib-io.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-charac.ads		20190518041255 2d3ec45b ada.characters%s
+D a-chlat1.ads		20190518041255 66457d31 ada.characters.latin_1%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041255 bf4f806b ada.finalization%s
+D a-ioexce.ads		20190518041254 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-string.ads		20190518041255 90ac6797 ada.strings%s
+D a-strmap.ads		20190518041255 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20190518041255 1656705b ada.strings.unbounded%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20190518041255 eff36322 ada.unchecked_deallocation%s
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-atocou.ads		20190518041256 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
+D s-finmas.ads		20190518041255 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518041256 4ff27390 system.finalization_root%s
+D s-memory.ads		20190518041255 597d6634 system.memory%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-pooglo.ads		20190518041254 ede33ef8 system.pool_global%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stalib.adb		20190518041254 f2fe2716 system.standard_library%b
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041255 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20190518041255 b16154c2 system.storage_pools%s
+D s-stposu.ads		20190518041254 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-string.ads		20190518041255 8fe54fb7 system.strings%s
+D s-ststop.ads		20190518041254 5fbf1b38 system.strings.stream_ops%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041255 1b7d22d2 system.wch_con%s
+D xreqlib.ads		20200318082638 88a20b05 xreqlib%s
+D xreqlib-io.ads	20200318082638 7ed22d2f xreqlib.io%s
+D xreqlib-standard_io.ads  20200318082638 eb22927b xreqlib.standard_io%s
+D xreqlib-standard_io.adb  20200318082638 5170c9d9 xreqlib.standard_io%b
+G a e
+G c Z s b [put xreqlib__standard_io 26 25 none]
+G c Z s b [put xreqlib__standard_io 28 25 none]
+G c Z s b [put_line xreqlib__standard_io 30 25 none]
+G c Z s b [new_line xreqlib__standard_io 32 25 none]
+G c Z s b [finalize xreqlib__standard_io 34 25 none]
+G c Z s b [create xreqlib__standard_io 36 14 none]
+G c Z s b [close xreqlib__standard_io 41 14 none]
+G c Z s s [t_standard_ioDA xreqlib__standard_io 44 9 none]
+G c Z s s [t_standard_ioDF xreqlib__standard_io 44 9 none]
+G c Z s s [t_standard_ioDI xreqlib__standard_io 44 9 none]
+G c Z s s [t_standard_ioIP xreqlib__standard_io 44 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 44|1r6 2r6 3r6 10r10 14r34 16r25 44r30 48r57 49r26 49r53 51r26
+. 45|1r6 37r10 39r10 54r10 56r10 66r10 68r10 80r7 85r10 86r10 91r29 92r10
+X 5 a-finali.ads
+40K13*Finalization 68e21 44|3w10 10r14 44r34
+43H9*Controlled<23|40R9> 59e72 44|10r27 44r47
+46U14*Initialize<23|44p14>
+47U14*Adjust<23|42p14>
+X 8 a-string.ads
+16K13*Strings 35e16 44|2r10 51r30
+X 10 a-strunb.ads
+82K21*Unbounded 756e26 44|2w18 51r38
+87R9*Unbounded_String<5|43R9> 739e14 44|51r48
+X 12 a-textio.ads
+57K13*Text_IO 727e16 44|1w10 14r38 16r29 48r61 49r30 49r57 45|37r14 39r14
+. 54r14 56r14 66r14 68r14 80r11 85r14 86r14 92r14
+64P9*File_Type 44|14r46 48r69 45|92r22
+66E9*File_Mode 66e54 44|16r37
+99U14*Create 45|80s19
+129U14*Close 45|86s22
+166V13*Is_Open{boolean} 45|85s22
+185P9*File_Access(64P9) 44|49r38
+192V13*Current_Output{185P9} 44|49s65
+258U14*New_Line 45|66s22 68s22
+459U14*Put 45|37s22 39s22
+498U14*Put_Line 45|54s22 56s22
+X 14 a-uncdea.ads
+20u15*Unchecked_Deallocation 45|1w10 91r33
+X 17 system.ads
+67M9*Address
+X 24 s-memory.ads
+53V13*Alloc{17|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{17|67M9} 105i<c,__gnat_realloc>22
+X 31 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+X 42 xreqlib.ads
+20K9*XReqLib 23e12 44|5r6 7r9 10r42 45r6 54r5 45|4r14 101r5
+X 43 xreqlib-io.ads
+1K17*IO 19e15 44|5w14 10r50 45r14
+3h9*T_Output 44|10r53 45r17
+X 44 xreqlib-standard_io.ads
+7K17*Standard_IO 42|20k9 44|44E9 54l13 54e24 45|4b22 101l13 101t24
+9R9*T_Standard_IO<5|43R9><43|3R9> 5|46P14 47P14 44|12r46 26P25 26r44 28P25
+. 28r44 30P25 30r49 32P25 32r49 34P25 34r49 36p14 37r21 41p14 41r35 44c9
+. 52e14 45|31r33 43r33 48r38 60r38 73r21 83r35 90r38
+12P9*T_Standard_IO_Class_Access(9R9)
+14P9*Local_File_Ptr(12|64P9) 48r26 45|93r10
+16E12*File_Mode{12|66E9} 38r21 45|74r21
+26U25*Put<43|7p14> 26=30 26>59 45|31b14 41l8 41t11 45s12
+26r30 This{9R9} 45|31b19 36r10 37r27 39r27
+26a59 Item{string} 45|31b48 37r48 39r51
+28U25*Put<43|9p14> 28=30 28>59 45|43b14 46l8 46t11
+28r30 This{9R9} 45|43b19 45m7 45r7
+28e59 Item{character} 45|43b48 45r22
+30U25*Put_Line<43|11p14> 30=35 30>64 45|48b14 58l8 58t16
+30r35 This{9R9} 45|48b24 53r10 54r32 56r32
+30a64 Item{string} 45|48b53 54r53 56r56
+32U25*New_Line<43|13p14> 32=35 45|60b14 70l8 70t16
+32r35 This{9R9} 45|60b24 65r10 66r32 68r32
+34U25*Finalize<5|48p14> 34=35 45|90b14 99l8 99t16
+34r35 This{9R9} 45|90b24 95r10 96m10 96r10 97m16 97r16
+36U14*Create 37=7 38>7 39>7 45|72b14 81l8 81t14
+37r7 This{9R9} 45|73b7 78m7 78r7 79m7 80r27
+38e7 Mode{16E12} 45|74b7 80r48
+39a7 Name{string} 45|75b7 80r54
+41U14*Close 41=21 45|78s12 83b14 88l8 88t13 96s15
+41r21 This{9R9} 45|83b21 85r31 86r29
+47b7 Output_Ownership{boolean} 45|36r15 53r15 65r15 79m12
+48p7 Output_Ptr{14P9} 45|37r32 54r37 66r37 80r32 85r36 86r34 95r15 97m21
+49p7 Output_Access{12|185P9} 45|39r32 56r37 68r37
+50b7 Buffering{boolean}
+51r7 Buffer{10|87R9}
+X 45 xreqlib-standard_io.adb
+91U17 Free[14|20] 97s10
+

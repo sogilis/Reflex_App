@@ -1,0 +1,298 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnatp
+A -gnatVn
+A -gnat12
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U tank.main%b		tank-main.adb		630f28b1 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W devices%s		devices.adb		devices.ali
+W devices.blenders%s	devices-blenders.adb	devices-blenders.ali
+W devices.pumps%s	devices-pumps.adb	devices-pumps.ali
+W devices.resistances%s	devices-resistances.adb	devices-resistances.ali
+W devices.valves%s	devices-valves.adb	devices-valves.ali
+W ios%s			ios.adb			ios.ali
+W regul%s		regul.ads		regul.ali
+W regul.ramps%s		regul-ramps.adb		regul-ramps.ali
+W tank%s		tank.ads		tank.ali
+W tank.cycle%s		tank-cycle.adb		tank-cycle.ali
+W tank.filling%s	tank-filling.adb	tank-filling.ali
+W tank.mixing%s		tank-mixing.adb		tank-mixing.ali
+W tank.variables%s	tank-variables.ads	tank-variables.ali
+
+U tank.main%s		tank-main.ads		4fa2532a EE NE OO PK
+W tank%s		tank.ads		tank.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-finali.ads		20190518041255 bf4f806b ada.finalization%s
+D a-ioexce.ads		20190518041254 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D devices.ads		20200313104344 fb10b7fe devices%s
+D devices-blenders.ads	20200414124123 116baff2 devices.blenders%s
+D devices-pumps.ads	20200409153112 b4689a1c devices.pumps%s
+D devices-resistances.ads  20200414141956 6592bc04 devices.resistances%s
+D devices-valves.ads	20200414095738 85ef14ee devices.valves%s
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D ios.ads		20200313133021 d18bd128 ios%s
+D regul.ads		20200310105152 e0e0ca3a regul%s
+D regul-ramps.ads	20200310110216 3b7065ed regul.ramps%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
+D s-finmas.ads		20190518041255 7811a767 system.finalization_masters%s
+D s-finroo.ads		20190518041256 4ff27390 system.finalization_root%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-pooglo.ads		20190518041254 ede33ef8 system.pool_global%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20190518041255 b16154c2 system.storage_pools%s
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041255 1b7d22d2 system.wch_con%s
+D tank.ads		20200312090552 d54e66a4 tank%s
+D tank-cycle.ads	20200423095810 96ee0de8 tank.cycle%s
+D tank-filling.ads	20200422105513 d0102331 tank.filling%s
+D tank-main.ads		20200312090037 9aec358e tank.main%s
+D tank-main.adb		20200625171300 28784093 tank.main%b
+D tank-mixing.ads	20200614150051 ee838dcf tank.mixing%s
+D tank-variables.ads	20200422142237 e61509ec tank.variables%s
+G a e
+G c Z s b [initialize tank__main 23 14 none]
+G c Z s b [cyclic tank__main 24 14 none]
+G c Z s b [pre tank__main 25 14 none]
+G c Z s b [post tank__main 26 14 none]
+G r c none [initialize tank__main 23 14 none] [initialize devices__valves 34 14 none]
+G r c none [initialize tank__main 23 14 none] [initialize devices__pumps 35 14 none]
+G r c none [initialize tank__main 23 14 none] [initialize devices__blenders 34 14 none]
+G r c none [initialize tank__main 23 14 none] [initialize devices__resistances 31 14 none]
+G r c none [initialize tank__main 23 14 none] [initialize tank__mixing 31 14 none]
+G r c none [initialize tank__main 23 14 none] [initialize tank__filling 34 14 none]
+G r c none [cyclic tank__main 24 14 none] [cyclic tank__cycle 40 14 none]
+G r c none [cyclic tank__main 24 14 none] [cyclic tank__filling 40 14 none]
+G r c none [cyclic tank__main 24 14 none] [cyclic tank__mixing 44 14 none]
+G r c none [cyclic tank__main 24 14 none] [cyclic devices__valves 36 14 none]
+G r c none [cyclic tank__main 24 14 none] [cyclic devices__pumps 37 14 none]
+G r c none [cyclic tank__main 24 14 none] [cyclic devices__blenders 41 14 none]
+G r c none [cyclic tank__main 24 14 none] [ramp regul__ramps 23 14 none]
+G r c none [cyclic tank__main 24 14 none] [cyclic devices__resistances 38 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 41|21r6 21r23
+X 7 a-textio.ads
+57K13*Text_IO 727e16 41|21w10 21r27
+508U14*Put_Line 41|72s13 73s7 74s7 75s7 76s7 77s7 78s7 79s7 80s7 81s7 82s7
+. 83s7 84s7 85s7 86s7 87s7 88s7 89s7 129s7 135s13 136s7 137s7 138s7 139s7
+. 140s7 141s7 142s7 143s7 144s7 145s7 146s7 147s7 148s7 149s7 150s7 151s7
+. 152s7 153s7 154s7 155s7 156s7 157s7
+X 9 devices.ads
+21K9*Devices 39e12 41|22w6 22r19 23r6 23r26 24r6 24r25 25r6 25r28 26r6 26r31
+. 32r6 32r31 224r7 235r7 246r7 257r7 268r7 279r7 290r6 298r6 306r6 314r6
+. 331r6
+X 10 devices-blenders.ads
+21K17*Blenders 61e21 41|25w14 25r36 314r14
+34U14*Initialize 41|56s14
+41U14*Cyclic 41|314s23
+42r7 This{24R9} 41|315r10
+43b7 Run{boolean} 41|316r10
+44b7 Speed_1{boolean} 41|317r10
+45b7 Speed_2{boolean} 41|318r10
+46b7 Run_Order{boolean} 41|319r10
+47b7 v2_Order{boolean} 41|321r10
+48b7 v1_Order{boolean} 41|320r10
+X 11 devices-pumps.ads
+21K17*Pumps 56e18 41|24w14 24r33 290r14 298r14 306r14
+35U14*Initialize 41|52s9 53s9 54s9
+37U14*Cyclic 41|290s20 298s20 306s20
+38r7 This{24R9} 41|291r10 299r10 307r10
+39b7 Run{boolean} 41|292r10 300r10 308r10
+40b7 Running{boolean} 41|293r10 301r10 309r10
+41b7 Run_Order{boolean} 41|294r10 302r10 310r10
+X 12 devices-resistances.ads
+21K17*Resistances 53e24 41|26w14 26r39 32w14 32r39 331r14
+31U14*Initialize 41|57s17
+38U14*Cyclic 41|331s26
+39r7 This{24R9} 41|332r7
+40b7 Run{boolean} 41|333r7
+41f7 T_Regul{float} 41|334r7
+42f7 Set_Point{float} 41|335r7
+X 13 devices-valves.ads
+21K17*Valves 59e19 41|23w14 23r34 224r15 235r15 246r15 257r15 268r15 279r15
+34U14*Initialize 41|46s12 47s12 48s12 49s12 50s12 51s12
+36U14*Cyclic 41|224s22 235s22 246s22 257s22 268s22 279s22
+37r7 This{24R9} 41|225r10 236r10 247r10 258r10 269r10 280r10
+38b7 Open{boolean} 41|226r10 237r10 248r10 259r10 270r10 281r10
+39b7 Close{boolean} 41|227r10 238r10 249r10 260r10 271r10 282r10
+40b7 Opened{boolean} 41|228r10 239r10 250r10 261r10 272r10 283r10
+41b7 Closed{boolean} 41|229r10 240r10 251r10 262r10 273r10 284r10
+42b7 Open_Order{boolean} 41|230r10 241r10 252r10 263r10 274r10 285r10
+43b7 Close_Order{boolean} 41|231r10 242r10 253r10 264r10 275r10 286r10
+X 16 ios.ads
+21K9*Ios 122e8 41|35w6 35r15
+28b4*V1_R1_Opened{boolean} 41|93r9 228r26
+29b4*V1_R1_Closed{boolean} 41|96r9 229r26
+30b4*V1_R1_Open_Order{boolean} 41|230m26
+31b4*V1_R1_Close_Order{boolean} 41|231m26
+35b4*V2_R1_Opened{boolean} 41|93r26 239r25
+36b4*V2_R1_Closed{boolean} 41|96r26 240r25
+37b4*V2_R1_Open_Order{boolean} 41|241m25
+38b4*V2_R1_Close_Order{boolean} 41|242m25
+42b4*V1_R2_Opened{boolean} 41|99r9 250r26
+43b4*V1_R2_Closed{boolean} 41|102r9 251r26
+44b4*V1_R2_Open_Order{boolean} 41|252m26
+45b4*V1_R2_Close_Order{boolean} 41|253m26
+49b4*V2_R2_Opened{boolean} 41|99r26 261r26
+50b4*V2_R2_Closed{boolean} 41|102r26 262r26
+51b4*V2_R2_Open_Order{boolean} 41|263m26
+52b4*V2_R2_Close_Order{boolean} 41|264m26
+59b4*V1_R3_Opened{boolean} 41|105r9 272r26
+60b4*V1_R3_Closed{boolean} 41|108r9 273r26
+61b4*V1_R3_Open_Order{boolean} 41|274m26
+62b4*V1_R3_Close_Order{boolean} 41|275m26
+66b4*V2_R3_Opened{boolean} 41|105r26 283r26
+67b4*V2_R3_Closed{boolean} 41|108r26 284r26
+68b4*V2_R3_Open_Order{boolean} 41|285m26
+69b4*V2_R3_Close_Order{boolean} 41|286m26
+74b4*P1_Started{boolean} 41|179r28 293r23
+75b4*P1_Start_Order{boolean} 41|294m23
+79b4*P2_Started{boolean} 41|190r28 301r23
+80b4*P2_Start_Order{boolean} 41|302m23
+84b4*P3_Started{boolean} 41|215r28 309r23
+85b4*P3_Start_Order{boolean} 41|310m23
+89b4*Tank_Low_Level{boolean} 41|216r28
+90b4*Tank_Medium_Level{boolean} 41|180r28
+91b4*Tank_High_Level{boolean} 41|191r28
+95f4*T_Measured{float} 41|325r21 329m21
+99f4*Gradient{float} 41|327r21
+100f4*Tmax{float} 41|328r21
+104f4*Resistance_SetPoint{float} 41|326r21 335r21
+109b4*V1_Speed{boolean} 41|201r30 317r23
+110b4*V2_Speed{boolean} 41|318r23
+111b4*Blender_Start_Order{boolean} 41|319m23
+112b4*V1_Order{boolean} 41|320m23
+113b4*V2_Order{boolean} 41|321m23
+X 17 regul.ads
+21K9*Regul 23e10 41|31r6 31r24 323r6
+X 18 regul-ramps.ads
+21K15*Ramps 31e16 41|31w12 31r30 323r12
+23U14*Ramp 41|323s18
+24b7 Second{boolean} 41|324r7
+25f7 T_sensor{float} 41|325r7
+26f7 Set_Point{float} 41|326r7
+27f7 Gradient{float} 41|327r7
+28f7 Tmax{float} 41|328r7
+29f7 T_Adjusted{float} 41|329r7
+X 37 tank.ads
+21K9*Tank 25e9 40|21r9 28r5 41|27r6 27r24 28r6 28r23 29r6 29r22 34r6 34r26
+. 38r14 160r7 174r7 185r7 198r7 210r10 346r5
+X 38 tank-cycle.ads
+21K14*Cycle 60e15 41|29w11 29r27 160r12
+40U14*Cyclic 41|160s18
+41r7 This{23R9} 41|161r10
+42b7 End_Filling_P1{boolean} 41|162r10
+43b7 End_Filling_P2{boolean} 41|163r10
+44b7 End_Mixing{boolean} 41|164r10
+45b7 End_Emptying{boolean} 41|165r10
+46b7 Filling_P1_Order{boolean} 41|166r10
+47b7 Filling_P2_Order{boolean} 41|167r10
+48b7 Mixing_Order{boolean} 41|168r10
+49b7 Emptying_Order{boolean} 41|169r10
+50b7 End_Cycle{boolean} 41|170r10
+X 39 tank-filling.ads
+21K14*Filling 59e17 41|27w11 27r29 174r12 185r12 210r15
+34U14*Initialize 41|60s22 61s22 62s20
+40U14*Cyclic 41|174s20 185s20 210s23
+41r7 This{23R9} 41|175r10 186r10 211r10
+42b7 Start_Filling{boolean} 41|176r10 187r10 212r10
+43b7 Valves_Opened{boolean} 41|177r10 188r10 213r10
+44b7 Valves_Closed{boolean} 41|178r10 189r10 214r10
+45b7 Pumps_Started{boolean} 41|179r10 190r10 215r10
+46b7 Level_P{boolean} 41|180r10 191r10 216r10
+47b7 Open_Valves{boolean} 41|181r10 192r10 217r10
+48b7 Start_Pumps{boolean} 41|182r10 193r10 218r10
+49b7 Close_Valves{boolean} 41|183r10 194r10 219r10
+X 40 tank-main.ads
+21K14*Main 37|21k9 40|28l10 28e14 41|38b19 346l10 346t14
+23U14*Initialize 41|44b14 64l8 64t18
+24U14*Cyclic 41|126b14 344l8 344t14
+25U14*Pre 41|70b14 111l8 111t11 134s7
+26U14*Post 41|117b14 120l8 120t12
+X 42 tank-mixing.ads
+21K14*Mixing 41|28w11 28r28 198r12 42|63e16
+31U14*Initialize 41|59s18
+44U14*Cyclic 41|198s19
+45r7 This{23R9} 41|199r10
+46b7 Start_Mixing{boolean} 41|200r10
+47b7 Blender_Started{boolean} 41|201r10
+48i7 Mixing_Duration{integer} 41|202r10
+49b7 Second{boolean} 41|203r10
+50b7 Start_Blender{boolean} 41|204r10
+51b7 Start_Resistance{boolean} 41|205r10
+52b7 End_Mixing{boolean} 41|206r10
+X 43 tank-variables.ads
+29K14*Variables 41|34w11 34r31 43|98e19
+31r4*Mixing_Graf{42|23R9} 41|59m6 59r6 199m30 199r30
+32r4*Filling_P1_Graf{39|23R9} 41|60m6 60r6 175m28 175r28
+33r4*Filling_P2_Graf{39|23R9} 41|61m6 61r6 186m28 186r28
+34r4*Emptying_Graf{39|23R9} 41|62m6 62r6 211m28 211r28
+35r4*Cycle_Graf{38|23R9} 41|161m30 161r30
+38r4*V1_R1{13|24R9} 41|46m6 46r6 225m26 225r26
+39r4*V2_R1{13|24R9} 41|47m6 47r6 236m25 236r25
+40r4*V1_R2{13|24R9} 41|48m6 48r6 247m26 247r26
+41r4*V2_R2{13|24R9} 41|49m6 49r6 258m26 258r26 280m26 280r26
+42r4*V1_R3{13|24R9} 41|50m6 50r6 269m26 269r26
+43r4*V2_R3{13|24R9} 41|51m6 51r6
+45r4*P1{11|24R9} 41|52m6 52r6 291m23 291r23
+46r4*P2{11|24R9} 41|53m6 53r6 299m23 299r23
+47r4*P3{11|24R9} 41|54m6 54r6 307m23 307r23
+49r4*Blender{10|24R9} 41|56m6 56r6 315m23 315r23
+51r4*Resistance{12|24R9} 41|57m6 57r6 332m21 332r21
+53b4*End_Filling_P1{boolean} 41|162r30
+54b4*End_Filling_P2{boolean} 41|163r30
+55b4*End_Mixing{boolean} 41|164r30 206m30
+56b4*End_Emptying{boolean} 41|165r30
+57b4*Filling_P1_Order{boolean} 41|166m30 176r28
+58b4*Filling_P2_Order{boolean} 41|167m30 187r28
+59b4*Mixing_Order{boolean} 41|168m30 200r30
+60b4*Emptying_Order{boolean} 41|169m30 212r28
+61b4*End_Cycle{boolean} 41|170m30
+63b4*Filling_V_R1_Opened{boolean} 41|92m7 177r28
+64b4*Filling_V_R1_Closed{boolean} 41|95m7 101m7 178r28
+66b4*Filling_Open_V_R1{boolean} 41|181m28 226r26 237r25
+67b4*Filling_Start_P1{boolean} 41|182m28 292r23
+68b4*Filling_Close_V_R1{boolean} 41|183m28 227r26 238r25
+70b4*Filling_V_R2_Opened{boolean} 41|98m7 188r28
+71b4*Filling_V_R2_Closed{boolean} 41|189r28
+73b4*Filling_Open_V_R2{boolean} 41|192m28 248r26 259r26
+74b4*Filling_Start_P2{boolean} 41|193m28 300r23
+75b4*Filling_Close_V_R2{boolean} 41|194m28 249r26 260r26
+77b4*Emptying_V_R3_Opened{boolean} 41|104m7 213r28
+78b4*Emptying_V_R3_Closed{boolean} 41|107m7 214r28
+80b4*Emptying_Open_V_R3{boolean} 41|217m28 270r26 281r26
+81b4*Emptying_Start_P3{boolean} 41|218m28 308r23
+82b4*Emptying_Close_V_R3{boolean} 41|219m28 271r26 282r26
+84b4*Mixing_Start_Blender{boolean} 41|204m30 316r23 333r21
+85b4*Mixing_Start_Resistance{boolean} 41|205m30
+88i4*Mixing_Duration{integer} 41|202r30
+91b4*Second{boolean} 41|203r30 324r21
+95f4*T_Adjusted{float} 41|334r21
+
