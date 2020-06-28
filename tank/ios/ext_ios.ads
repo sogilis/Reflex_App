@@ -41,7 +41,20 @@ package  Ext_Ios is
       --  Valve V2_R2
       
 	Ext_V2_R2_Opened : Boolean;
-	Ext_V2_R2_Closed : Boolean;
+        Ext_V2_R2_Closed : Boolean;
+
+      --  Valve V1_R3
+      
+	Ext_V1_R3_Opened : Boolean;
+        Ext_V1_R3_Closed : Boolean;
+   
+         --  Valve V2_R3
+      
+	Ext_V2_R3_Opened : Boolean;
+	Ext_V2_R3_Closed : Boolean;
+      
+
+         
       
       --  ¨Pump P1
       
@@ -49,7 +62,11 @@ package  Ext_Ios is
       
       --  Pump P2
       
-	Ext_P2_Started : Boolean;
+        Ext_P2_Started : Boolean;
+
+      --  Pump P3
+   
+        Ext_P3_Started : Boolean;
       
       --  Bac
       
@@ -94,7 +111,17 @@ package  Ext_Ios is
       --  Valve V2_R2
       
 	Ext_V2_R2_Open_Order  : Boolean;
-	Ext_V2_R2_Close_Order : Boolean;
+        Ext_V2_R2_Close_Order : Boolean;
+   
+      --  Valve V1_R3
+      
+	Ext_V1_R3_Open_Order  : Boolean;
+	Ext_V1_R3_Close_Order : Boolean;
+      
+      --  Valve V2_R3
+      
+	Ext_V2_R3_Open_Order  : Boolean;
+	Ext_V2_R3_Close_Order : Boolean;   
       
       --  ¨Pump P1
       
@@ -102,7 +129,11 @@ package  Ext_Ios is
       
       --  Pump P2
       
-	Ext_P2_Start_Order : Boolean;
+        Ext_P2_Start_Order : Boolean;
+   
+      --  Pump P3
+      
+	Ext_P3_Start_Order : Boolean;   
       
       --  Resistance Marche
       

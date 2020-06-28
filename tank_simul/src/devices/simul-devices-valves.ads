@@ -31,24 +31,30 @@ package Simul.Devices.Valves is
       Closed_State);
    
    procedure Initialize (This : in out Valve_Record);
+
+   function Get_Counter (This : in out Valve_Record) return Integer;
+   procedure Set_Counter
+     (This    : in out Valve_Record;
+      Counter : Integer);
    
   
    procedure Cyclic 
-	(This         : In Out  Valve_Record;
-         Second       : Boolean;
-         Open_Order   : Boolean;
-         Close_Order : Boolean;
-         Opened       : Out Boolean;
-         Closed       : Out Boolean);
+	(This                      : In Out  Valve_Record;
+         Openning_Closing_Duration : integer;
+         Open_Order                : Boolean;
+         Close_Order               : Boolean;
+         Opened                    : Out Boolean;
+         Closed                    : Out Boolean);
    
 private
    
    type Valve_Record is new Device_Record with record
       State        : Valve_State;
+      Counter : Integer;
    end record;
    
    No_Valve_Record : constant Valve_Record :=
      (No_Device_Record with
-      State        => Waiting_State);
+      State        => Waiting_State, Counter => 0);
    
 end Simul.Devices.Valves;

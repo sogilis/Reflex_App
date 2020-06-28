@@ -46,7 +46,17 @@ package body Ios_Simul is
       --  Valve V2_R2
       
       Ext_V2_R2_Opened := V2_R2_Opened_Simul;
-      Ext_V1_R2_Closed:= V2_R2_Closed_Simul;
+      Ext_V2_R2_Closed := V2_R2_Closed_Simul;
+      
+      --  Valve V1_R3
+      
+      Ext_V1_R3_Opened := V1_R3_Opened_Simul;
+      Ext_V1_R3_Closed := V1_R3_Closed_Simul;
+      
+      --  Valve V2_R3
+      
+      Ext_V2_R3_Opened := V2_R3_Opened_Simul;
+      Ext_V2_R3_Closed := V2_R3_Closed_Simul;
       
       --  ¨Pump P1
       
@@ -56,22 +66,15 @@ package body Ios_Simul is
       
       Ext_P2_Started := P2_Started_Simul;
       
+      --  Pump P3
+      
+      Ext_P3_Started := P3_Started_Simul;
+      
       --  Bac
       
       Ext_Tank_Low_Level    := Tank_Low_Level_Simul;
       Ext_Tank_Medium_Level := Tank_Medium_Level_Simul;
       Ext_Tank_High_Level   := Tank_High_Level_Simul;
-      
-      --  Resistance Marche
-      
-      Ext_Resistance_SetPoint := Resistance_SetPoint_Simul;
-      
-      --Regulator
-      
-      Ext_Gradient := Gradient_Simul;
-      Ext_Tmax     := Tmax_Simul;
-
-
       
       --  Blinder
     
@@ -108,6 +111,16 @@ package body Ios_Simul is
       V2_R2_Open_Order_Simul  := Ext_V2_R2_Open_Order;
       V2_R2_Close_Order_Simul := Ext_V2_R2_Close_Order;
       
+            --  Valve V1_R3
+      
+      V1_R3_Open_Order_Simul  := Ext_V1_R3_Open_Order;
+      V1_R3_Close_Order_Simul := Ext_V1_R3_Close_Order;
+      
+            --  Valve V2_R3
+      
+      V2_R3_Open_Order_Simul  := Ext_V2_R3_Open_Order;
+      V2_R3_Close_Order_Simul := Ext_V2_R3_Close_Order;
+      
       --  ¨Pump P1
       
       P1_Start_Order_Simul := Ext_P1_Start_Order;
@@ -116,9 +129,9 @@ package body Ios_Simul is
       
       P2_Start_Order_Simul := Ext_P2_Start_Order;
       
-      --  Resistance Marche
+      --  Pump P3
       
-      T_Measured_Simul := Ext_T_Measured;
+      P3_Start_Order_Simul := Ext_P3_Start_Order;        
    
       --  Blender
       

@@ -106,13 +106,7 @@ Count_Sec : Natural := 0;
       end loop;
       
       Put_Line ("Run_Tasks Goto Run");
-      loop
-         if Count_Sec >= 60 then
-            Count_Sec  := 0;
-         else
-            Count_Sec  := Count_Sec +1;
-         end if;
-         Second := (Count_Sec  = 60);
+      loop        
          
          Run;
          

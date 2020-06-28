@@ -81,18 +81,17 @@ package Tank.Variables is
    Emptying_Start_P3     : Boolean;
    Emptying_Close_V_R3   : Boolean; 
    
+   Blender_Started         : Boolean;
    Mixing_Start_Blender    : Boolean;
    Mixing_Start_Resistance : Boolean;
    Mixing_End              : Boolean;
    
-   Mixing_Duration : constant Integer := 60 * 60;
+   Mixing_Duration : constant Integer := 3;--60 * 60;
    --  Mising duration in seconds (60mn)
    
    Second : Boolean;
    
    --Temperature adjust by regulator
    
-   T_Adjusted : Float;   
-
    
 end Tank.Variables;

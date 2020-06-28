@@ -73,14 +73,13 @@ package body Devices.Blenders is
 	    end if;
 	    
 	 when Running_v1_State =>
-	    if not Run  then
-	       New_State := Stopping_State;
-            elsif Speed_2 then
+            if Speed_2 then
 	       New_State := Running_V2_State;
-	    end if;
-	    
+            else  New_State := stopping_state;
+	    end if;	    
+
 	 when Stopping_State =>
-	    if not speed_1 then
+	    if not run then
 	       New_State := Stop_State;
 	    end if;
 	    
@@ -88,6 +87,8 @@ package body Devices.Blenders is
 	    if Speed_1 then
 	       New_State := Running_V1_State;
             end if;
+
+
 
       end case;
       

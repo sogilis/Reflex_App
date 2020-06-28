@@ -90,18 +90,20 @@ package Ios is
    Tank_Medium_Level : Boolean;
    Tank_High_Level   : Boolean;
    
-   --ptemperature measured by the sensor
+   --temperature measured by the sensor
    
-   T_Measured           : float;
-   
+   T_Measured           : Float := 20.0;
+   T_Adjusted           : Float;
+ 
    --  Resistance Marche
    
-   Gradient             : float;
-   Tmax                 : float;
+   Gradient             : Float := 20.0;
+   Tmax                 : Float := 100.0;
+   
    
    --  Resistance Marche
     
-   Resistance_SetPoint  : float;
+   Resistance_SetPoint  : Float := 80.0;
    
    --  Blender
 

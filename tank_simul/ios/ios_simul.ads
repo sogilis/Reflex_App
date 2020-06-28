@@ -23,8 +23,10 @@ package Ios_Simul is
    -- Valves for Filling --
    ------------------------
    
-   --  Valve V1_R1 
+   Openning_Closing_Duration : Integer := 3;
    
+     --  Valve V1_R1 
+ 
    V1_R1_Opened_Simul      : Boolean;
    V1_R1_Closed_Simul      : Boolean;
    V1_R1_Open_Order_Simul  : Boolean;
@@ -39,9 +41,9 @@ package Ios_Simul is
    
    --  Valve V1_R2
    
-   V1_R2_Opened_Simul : Boolean;
-   V1_R2_Closed_Simul : Boolean;
-   V1_R2_Open_Order_Simul : Boolean;
+   V1_R2_Opened_Simul      : Boolean;
+   V1_R2_Closed_Simul      : Boolean;
+   V1_R2_Open_Order_Simul  : Boolean;
    V1_R2_Close_Order_Simul : Boolean;
    
    --  Valve V2_R2
@@ -90,15 +92,6 @@ package Ios_Simul is
    Tank_Medium_Level_Simul : Boolean;
    Tank_High_Level_Simul   : Boolean;
    
-   --ptemperature measured by the sensor
-   
-   T_Measured_Simul : float;
-   
-   --  Resistance Marche
-   
-   Gradient_Simul             : float;
-   Tmax_Simul                 : float;
-   Resistance_SetPoint_Simul  : float;
 
    --  Blender
    

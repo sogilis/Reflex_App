@@ -49,24 +49,29 @@ package body Simul.Devices.Blenders is
 
        case This.State is
 	 when Init_State =>
-	       New_State := Stop_State;
-
+               New_State := Stop_State;
+         
 	 when Stop_State =>
-	    if Run_Order then
+	    if Run_Order  then
 	       New_State := Running_V1_State;
 	    end if;
 	    
-	 when Running_V1_State =>
-	    if V2_Order then
+	 when Running_v1_State =>
+	    if not V2_Order  then
+	       New_State := Stopping_State;
+            elsif V1_Order then
 	       New_State := Running_V2_State;
-	    elsif not Run_Order then
+	    end if;
+	    
+	 when Stopping_State =>
+	    if not Run_Order then
 	       New_State := Stop_State;
 	    end if;
 	    
 	 when Running_V2_State =>
-	    if V1_Order  then
+	    if V2_Order then
 	       New_State := Running_V1_State;
-	    end if;
+            end if;
     
       end case;
       

@@ -71,7 +71,6 @@ package body Tank.Mixing is
       Start_Mixing     : Boolean;
       Blender_Started  : Boolean;
       Mixing_Duration  : Integer;
-      Second           : boolean;
       Start_Blender    : out Boolean;
       Start_Resistance : out Boolean;
       End_Mixing       : out Boolean) is
@@ -91,12 +90,14 @@ package body Tank.Mixing is
     	    end if;
 
 	 when It_Mixes_State =>
-	    if Second then
+	    if This.Counter < Mixing_Duration then
+
 	       This.Counter:=This.Counter + 1;
-	    end if;
 	    
-	    if This.Counter >= Mixing_Duration then
+	    elsif This.Counter >= Mixing_Duration then
+
 	       New_State := End_Mixing_State;
+
 	    end if;
 
 	 when End_Mixing_State =>

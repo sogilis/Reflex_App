@@ -60,15 +60,15 @@ package body Simul_Tank.Main is
       --  Valve V1_R1 
       
       Simul.Devices.Valves.Cyclic
-        (This         => V1_R1_Simul,
-         Second       => true,
-	 Open_Order   => V1_R1_Open_Order_Simul,
-	 Close_Order  => V1_R1_Close_Order_Simul,
-	 Opened       => V1_R1_Opened_Simul,
-	 Closed       => V1_R1_Closed_Simul);
+        (This                       => V1_R1_Simul,
+         Openning_Closing_Duration  => Openning_Closing_Duration,
+	 Open_Order                 => V1_R1_Open_Order_Simul,
+	 Close_Order                => V1_R1_Close_Order_Simul,
+	 Opened                     => V1_R1_Opened_Simul,
+	 Closed                     => V1_R1_Closed_Simul);
 
       Put_Line("IN Simul_Valve V1_R1  :");
-      Put_Line("IN Second_3  "&Boolean'Image(Second_3));
+      Put_Line("IN Openning_Closing_Duration  "&Integer'Image(Openning_Closing_Duration));
       Put_Line("IN V1_R1_Open_Order_Simul  "&Boolean'Image(V1_R1_Open_Order_Simul));
       Put_Line("IN V1_R1_Close_Order_Simul  "&Boolean'Image(V1_R1_Close_Order_Simul));
       Put_Line("OUT Simul_Valve V1_R1 :");
@@ -80,18 +80,18 @@ package body Simul_Tank.Main is
       --  Valve V2_R1 
       
       Simul.Devices.Valves.Cyclic
-        (This         => V2_R1_Simul,
-         Second       => True,--est un boolean qui prend True apres 3 seceondes
-	 Open_Order   => V2_R1_Open_Order_Simul,
-	 Close_Order  => V2_R1_Close_Order_Simul,
-	 Opened       => V2_R1_Opened_Simul,
-	 Closed       => V2_R1_Closed_Simul);
+        (This                       => V2_R1_Simul,
+         Openning_Closing_Duration  => Openning_Closing_Duration,         
+	 Open_Order                 => V2_R1_Open_Order_Simul,
+	 Close_Order                => V2_R1_Close_Order_Simul,
+	 Opened                     => V2_R1_Opened_Simul,
+	 Closed                     => V2_R1_Closed_Simul);
 
-      Put_Line("IN Simul_Valve V1_R1  :");
-      --  Put_Line("IN Second_3  "&Boolean'Image(Second_3));
+      Put_Line("IN Simul_Valve V2_R1  :");
+      Put_Line("IN Openning_Closing_Duration  "&Integer'Image(Openning_Closing_Duration));
       Put_Line("IN V2_R1_Open_Order_Simul  "&Boolean'Image(V2_R1_Open_Order_Simul));
       Put_Line("IN V2_R1_Close_Order_Simul  "&Boolean'Image(V2_R1_Close_Order_Simul));
-      Put_Line("OUT Simul_Valve V1_R1 :");
+      Put_Line("OUT Simul_Valve V2_R1 :");
       Put_Line("OUT V2_R1_Opened_Simul  "&Boolean'Image(V2_R1_Opened_Simul));
       Put_Line("OUT V2_R1_Closed_Simul  "&Boolean'Image(V2_R1_Closed_Simul));
       Put_Line("  ");
@@ -100,15 +100,15 @@ package body Simul_Tank.Main is
       --  Valve V1_R2
       
       Simul.Devices.Valves.Cyclic
-        (This         => V1_R2_Simul,
-         Second       => True,
-	 Open_Order   => V1_R2_Open_Order_Simul,
-	 Close_Order  => V1_R2_Close_Order_Simul,
-	 Opened       => V1_R2_Opened_Simul,
-	 Closed       => V1_R2_Closed_Simul);
+        (This                       => V1_R2_Simul,
+         Openning_Closing_Duration  => Openning_Closing_Duration,         
+	 Open_Order                 => V1_R2_Open_Order_Simul,
+	 Close_Order                => V1_R2_Close_Order_Simul,
+	 Opened                     => V1_R2_Opened_Simul,
+	 Closed                     => V1_R2_Closed_Simul);
 
       Put_Line("IN Simul_Valve V1_R2  :");
-      Put_Line("IN Second_3  "&Boolean'Image(Second_3));
+      Put_Line("IN Openning_Closing_Duration  "&Integer'Image(Openning_Closing_Duration));
       Put_Line("IN V1_R2_Open_Order_Simul  "&Boolean'Image(V1_R2_Open_Order_Simul));
       Put_Line("IN V1_R2_Close_Order_Simul  "&Boolean'Image(V1_R2_Close_Order_Simul));
       Put_Line("OUT Simul_Valve V1_R2 :");
@@ -120,15 +120,15 @@ package body Simul_Tank.Main is
       --  Valve V2_R2 
       
       Simul.Devices.Valves.Cyclic
-        (This         => V2_R2_Simul,
-         Second       => True,
-	 Open_Order   => V2_R2_Open_Order_Simul,
-	 Close_Order  => V2_R2_Close_Order_Simul,
-	 Opened       => V2_R2_Opened_Simul,
-	 Closed       => V2_R2_Closed_Simul);
+        (This                       => V2_R2_Simul,
+         Openning_Closing_Duration  => Openning_Closing_Duration,         
+	 Open_Order                 => V2_R2_Open_Order_Simul,
+	 Close_Order                => V2_R2_Close_Order_Simul,
+	 Opened                     => V2_R2_Opened_Simul,
+	 Closed                     => V2_R2_Closed_Simul);
 
       Put_Line("IN Simul_Valve V2_R2  :");
-      Put_Line("IN Second_3  "&Boolean'Image(Second_3));
+      Put_Line("IN Openning_Closing_Duration  "&Integer'Image(Openning_Closing_Duration));
       Put_Line("IN V2_R2_Open_Order_Simul  "&Boolean'Image(V2_R2_Open_Order_Simul));
       Put_Line("IN V2_R2_Close_Order_Simul  "&Boolean'Image(V2_R2_Close_Order_Simul));
       Put_Line("OUT Simul_Valve V2_R2 :");
@@ -141,15 +141,15 @@ package body Simul_Tank.Main is
       --  Valve V1_R3
       
       Simul.Devices.Valves.Cyclic
-        (This         => V1_R3_Simul,
-         Second       => True,
-	 Open_Order   => V1_R3_Open_Order_Simul,
-	 Close_Order  => V1_R3_Close_Order_Simul,
-	 Opened       => V1_R3_Opened_Simul,
-	 Closed       => V1_R3_Closed_Simul);
+        (This                       => V1_R3_Simul,
+         Openning_Closing_Duration  => Openning_Closing_Duration,         
+	 Open_Order                 => V1_R3_Open_Order_Simul,
+	 Close_Order                => V1_R3_Close_Order_Simul,
+	 Opened                     => V1_R3_Opened_Simul,
+	 Closed                     => V1_R3_Closed_Simul);
 
       Put_Line("IN Simul_Valve V1_R3  :");
-      Put_Line("IN Second_3  "&Boolean'Image(Second_3));
+      Put_Line("IN Openning_Closing_Duration  "&Integer'Image(Openning_Closing_Duration));
       Put_Line("IN V1_R3_Open_Order_Simul  "&Boolean'Image(V1_R3_Open_Order_Simul));
       Put_Line("IN V1_R3_Close_Order_Simul  "&Boolean'Image(V1_R3_Close_Order_Simul));
       Put_Line("OUT Simul_Valve V1_R3 :");
@@ -162,18 +162,18 @@ package body Simul_Tank.Main is
       --  Valve V2_R2 
       
       Simul.Devices.Valves.Cyclic
-        (This         => V2_R2_Simul,
-         Second       => True,
-	 Open_Order   => V2_R3_Open_Order_Simul,
-	 Close_Order  => V2_R3_Close_Order_Simul,
-	 Opened       => V2_R3_Opened_Simul,
-	 Closed       => V2_R3_Closed_Simul);
+        (This                       => V2_R3_Simul,
+         Openning_Closing_Duration  => Openning_Closing_Duration,         
+	 Open_Order                 => V2_R3_Open_Order_Simul,
+	 Close_Order                => V2_R3_Close_Order_Simul,
+	 Opened                     => V2_R3_Opened_Simul,
+	 Closed                     => V2_R3_Closed_Simul);
 
-      Put_Line("IN Simul_Valve V2_R2  :");
-      Put_Line("IN Second_3  "&Boolean'Image(Second_3));
+      Put_Line("IN Simul_Valve V2_R3  :");
+      Put_Line("IN Openning_Closing_Duration  "&Integer'Image(Openning_Closing_Duration));
       Put_Line("IN V2_R3_Open_Order_Simul  "&Boolean'Image(V2_R3_Open_Order_Simul));
       Put_Line("IN V2_R3_Close_Order_Simul  "&Boolean'Image(V2_R3_Close_Order_Simul));
-      Put_Line("OUT Simul_Valve V2_R2 :");
+      Put_Line("OUT Simul_Valve V2_R3 :");
       Put_Line("OUT V2_R3_Opened_Simul  "&Boolean'Image(V2_R3_Opened_Simul));
       Put_Line("OUT V2_R3_Closed_Simul  "&Boolean'Image(V2_R3_Closed_Simul));
       Put_Line("  ");

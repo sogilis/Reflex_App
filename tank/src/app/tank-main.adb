@@ -94,7 +94,7 @@ package body Tank.Main is
       Emptying_V_R3_Closed  :=
         V1_R3_Closed and V2_R3_Closed;
       
-      
+      Blender_Started :=V1_Speed or V2_Speed;
    end Pre;
    
    ----------
@@ -137,7 +137,7 @@ package body Tank.Main is
 	 End_Filling_P1   => Filling_V_R1_Closed,
 	 End_Filling_P2   => Filling_V_R2_Closed,
 	 End_Mixing       => End_Mixing,
-	 End_Emptying     => End_Emptying,
+	 End_Emptying     => Emptying_V_R3_Closed,
 	 Filling_P1_Order => Filling_P1_Order,--out
 	 Filling_P2_Order => Filling_P2_Order,--out
 	 Mixing_Order     => Mixing_Order,--out
@@ -147,7 +147,7 @@ package body Tank.Main is
       Put_Line("IN Filling_V_R1_Closed  "&Boolean'Image(Filling_V_R1_Closed));
       Put_Line("IN Filling_V_R2_Closed  "&Boolean'Image(Filling_V_R2_Closed));
       Put_Line("IN End_Mixing  "&Boolean'Image(End_Mixing));
-      Put_Line("IN End_Emptying  "&Boolean'Image(End_Emptying));
+      Put_Line("IN Emptying_V_R3_Closed  "&Boolean'Image(Emptying_V_R3_Closed));
       Put_Line("OUT Cycle.Cyclic :");
       Put_Line("OUT Filling_P1_Order  "&Boolean'Image(Filling_P1_Order));
       Put_Line("OUT Filling_P2_Order  "&Boolean'Image(Filling_P2_Order));
@@ -212,18 +212,16 @@ package body Tank.Main is
       Tank.Mixing.Cyclic
 	(This             => Mixing_Graf,
 	 Start_Mixing     => Mixing_Order,
-         Blender_Started  => V1_Speed,
+         Blender_Started  => Blender_Started,
 	 Mixing_Duration  => Mixing_Duration,
-	 Second           => Second,
 	 Start_Blender    => Mixing_Start_Blender,--on met des variable intermédiaire pour pour les sorties pour plus d'option sur  la fonction post
 	 Start_Resistance => Mixing_Start_Resistance,--out
 	 End_Mixing       => End_Mixing);--out
 
       Put_Line("IN Mixing :");
       Put_Line("IN Mixing_Order  "&Boolean'Image(Mixing_Order));
-      Put_Line("IN V1_Speed  "&Boolean'Image(V1_Speed));
+      Put_Line("IN Blender_Started  "&Boolean'Image(Blender_Started));
       Put_Line("IN Mixing_Duration  "&Integer'Image(Mixing_Duration));
-      Put_Line("IN Second  "&Boolean'Image(Second));
       Put_Line("OUT Mixing :");
       Put_Line("OUT Mixing_Start_Blender  "&Boolean'Image(Mixing_Start_Blender));
       Put_Line("OUT Mixing_Start_Resistance  "&Boolean'Image(Mixing_Start_Resistance));
@@ -469,7 +467,7 @@ package body Tank.Main is
       Set_Point  => Resistance_SetPoint,
       Gradient   => Gradient, --Per minute
       Tmax       => Tmax,
-      T_Adjusted => T_Measured);
+      T_Adjusted => T_Adjusted);
       
       Put_Line("IN Regulateur :");
       Put_Line("IN T_Measured  "&Float'Image(T_Measured));

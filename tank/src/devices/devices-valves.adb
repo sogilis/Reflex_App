@@ -63,6 +63,9 @@ package body Devices.Valves is
       case This.State is
 
 	 when init_State =>
+	       New_State := Waiting_State;
+
+	 when Waiting_State =>
 	    if Close then
 	       New_State := Closing_State;
 	    elsif Open then
@@ -76,7 +79,7 @@ package body Devices.Valves is
 	    
 	 when Opened_State =>
 	    if Close then
-	       New_State := init_State;
+	       New_State := Waiting_State;
 	    end if;
 	    
 	 when Closing_State =>
@@ -86,7 +89,7 @@ package body Devices.Valves is
 	    
 	 when Closed_State =>
 	    if Open then
-	       New_State := init_State;
+	       New_State := Waiting_State;
 	    end if;
       end case;
       

@@ -27,7 +27,8 @@ package Simul.Devices.Blenders is
      (Init_State,
       Stop_State,
       Running_V1_State,
-      Running_V2_State);
+      Running_V2_State,
+      Stopping_State);
    
    procedure Initialize (This : in out Blender_Record);
    

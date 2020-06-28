@@ -30,18 +30,39 @@ package body Simul.Devices.Valves is
    begin
       This := No_Valve_Record;
    end Initialize;
+
+  -----------------  
+   -- Get_Counter --
+   -----------------
+   
+   function Get_Counter (This : in out Valve_Record) return Integer is
+   begin
+      return This.Counter;
+   end Get_Counter;
+   
+   -----------------
+   -- Set_Counter --
+   -----------------
+   
+   procedure Set_Counter
+     (This    : in out Valve_Record;
+      Counter : Integer) is
+   begin
+      This.Counter := Counter;
+   end Set_Counter;
+   
    
    ------------
    -- Cyclic --
    ------------
    
    procedure Cyclic 
-	(This         : In Out Valve_Record;
-         Second       : Boolean;
-         Open_Order   : Boolean;
-         Close_Order  : Boolean;
-         Opened       : out Boolean;
-         Closed       : out Boolean) is
+	(This                      : In Out Valve_Record;
+         Openning_Closing_Duration : integer;
+         Open_Order                : Boolean;
+         Close_Order               : Boolean;
+         Opened                    : out Boolean;
+         Closed                    : out Boolean) is
       
       New_State : Valve_State := This.State;
    begin
@@ -56,13 +77,27 @@ package body Simul.Devices.Valves is
 	    end if;
 	    
 	 when Opening_State =>
-	   if Second then
+
+	    if This.Counter < Openning_Closing_Duration then
+
+	       This.Counter:=This.Counter + 1;
+	    
+	    elsif This.Counter >= Openning_Closing_Duration then
+
 	     New_State := Opened_State;
+
 	  end if;
 
 	 when Closing_State =>
-	  if Second then
+
+	    if This.Counter < Openning_Closing_Duration then
+
+	       This.Counter:=This.Counter + 1;
+	    
+	    elsif This.Counter >= Openning_Closing_Duration then
+
 	    New_State := Closed_State;
+
 	  end if;
 	    
 	 when Opened_State =>

@@ -25,6 +25,7 @@ package Devices.Valves is
    
    type Valve_State is 
      (Init_State,
+      Waiting_State,
       Opening_State,
       Opened_State,
       Closing_State,

@@ -46,7 +46,17 @@ package body Ios is
       --  Valve V2_R2
       
       V2_R2_Opened := Ext_V2_R2_Opened;
-      V2_R2_Closed := Ext_V1_R2_Closed;
+      V2_R2_Closed := Ext_V2_R2_Closed;
+
+      --  Valve V1_R3
+      
+      V1_R3_Opened := Ext_V1_R3_Opened;
+      V1_R3_Closed := Ext_V1_R3_Closed;
+      
+      --  Valve V2_R3
+      
+     V2_R3_Opened :=  Ext_V2_R3_Opened;
+     V2_R3_Closed :=  Ext_V2_R3_Closed;
       
       --  ¨Pump P1
       
@@ -55,6 +65,10 @@ package body Ios is
       --  Pump P2
       
       P2_Started := Ext_P2_Started;
+      
+      --  Pump P3
+      
+      P3_Started := Ext_P3_Started;
       
       --  Bac
       
@@ -108,6 +122,16 @@ package body Ios is
       Ext_V2_R2_Open_Order := V2_R2_Open_Order;
       Ext_V2_R2_Close_Order := V2_R2_Close_Order;
       
+      --  Valve V1_R3
+      
+      Ext_V1_R3_Open_Order  := V1_R3_Open_Order;
+      Ext_V1_R3_Close_Order := V1_R3_Close_Order;
+      
+      --  Valve V2_R3
+      
+      Ext_V2_R3_Open_Order := V2_R3_Open_Order;
+      Ext_V2_R3_Close_Order := V2_R3_Close_Order;      
+      
       --  ¨Pump P1
       
       Ext_P1_Start_Order := P1_Start_Order;
@@ -115,6 +139,10 @@ package body Ios is
       --  Pump P2
       
       Ext_P2_Start_Order := P2_Start_Order;
+      
+       --  Pump P3
+      
+      Ext_P3_Start_Order := P3_Start_Order;     
       
       --  Resistance Marche
       

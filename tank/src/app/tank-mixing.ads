@@ -46,7 +46,6 @@ package Tank.Mixing is
       Start_Mixing     : Boolean;
       Blender_Started  : Boolean;
       Mixing_Duration  : Integer;
-      Second           : boolean;
       Start_Blender    : out Boolean;
       Start_Resistance : out Boolean;
       End_Mixing       : out Boolean);
