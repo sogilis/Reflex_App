@@ -1,0 +1,75 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnatp
+A -gnatVn
+A -gnat12
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_FIXED_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U rxclock%b		rxclock.adb		8f774dfa NE OO PK
+
+U rxclock%s		rxclock.ads		c8008bbb EE NE OO PK
+
+D rxclock.ads		20200630084834 c8008bbb rxclock%s
+D rxclock.adb		20200630085542 4777c641 rxclock%b
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+G c Z s b [clock rxclock 45 13 none]
+G c Z s b [set_clock rxclock 46 14 none]
+G c Z s b [tick rxclock 51 13 none]
+G c Z s b [set_tick rxclock 52 14 none]
+G c Z s b [initialize_clock rxclock 55 14 none]
+G c Z s b [update_periodic_flags rxclock 58 14 none]
+G c Z s b [update_clock rxclock 60 14 none]
+X 1 rxclock.ads
+31K9*RxClock 86E4 120l5 120e12 2|31b14 196l5 196t12
+33o4*Tick_Unit{duration} 34r24 36r28 39r42 55r51 2|73r51 130r44
+36o4*The_Tick{duration} 37m24 37r24 60r47 2|57r14 66m7 77m7 170r47
+39o4*Hundredth_Unit{duration} 40r42 2|137r45
+40o4*Second_Unit{duration} 41r42 2|144r43
+41o4*Minute_Unit{duration} 42r42 2|151r43
+42o4*Hour_Unit{duration} 2|158r41
+45V13*Clock{duration} 101r24 2|37b13 40l8 40t13 173s25
+46U14*Set_Clock 46>25 102r24 2|46b14 49l8 49t17
+46o25 C{duration} 2|46b25 48r20
+51V13*Tick{duration} 103r24 2|55b13 58l8 58t12
+52U14*Set_Tick 52>24 104r24 2|64b14 67l8 67t16
+52o24 T{duration} 2|64b24 66r19
+55U14*Initialize_Clock 55>32 105r24 2|73b14 103l8 103t24
+55o32 Tick{duration} 2|73b32 77r20
+58U14*Update_Periodic_Flags 2|109b14 164l8 164t29 175s7
+60U14*Update_Clock 60>28 106r24 2|170b14 176l8 176t20
+60o28 Tick{duration} 2|170b28 172r37
+72b4*Tick_10_Msec{boolean} 108m24 108r24 2|79m7 111m7 134m10
+73b4*Tick_100_Msec{boolean} 109m24 109r24 2|80m7 112m7 141m10
+74b4*Tick_Second{boolean} 110m24 110r24 2|81m7 113m7 148m10
+75b4*Tick_Minute{boolean} 111m24 111r24 2|82m7 114m7 155m10
+76b4*Tick_Hour{boolean} 112m24 112r24 2|83m7 115m7 162m10
+78b4*BT_10_Msec{boolean} 114m24 114r24 2|85m7 133m10 133r30
+79b4*BT_100_Msec{boolean} 115m24 115r24 2|86m7 140m10 140r31
+80b4*BT_Second{boolean} 116m24 116r24 2|87m7 147m10 147r29
+81b4*BT_Minute{boolean} 117m24 117r24 2|88m7 154m10 154r27
+82b4*BT_Hour{boolean} 118m24 118r24 2|89m7 161m10 161r25
+86o4 The_Clock{duration} 2|39r14 48m7 76m7 97r30 98r30 99r30 100r30 101r30
+. 130r10 131r32 137r10 138r33 144r10 145r31 151r10 152r31 158r10 159r29 172m7
+87o4 Previous_Clock{duration} 2|75m7 172r20 173m7
+89b4 Previous_BT_10_Msec{boolean} 2|91m7
+90b4 Previous_BT_100_Msec{boolean} 2|92m7
+91b4 Previous_BT_Second{boolean} 2|93m7
+92b4 Previous_BT_Minute{boolean} 2|94m7
+93b4 Previous_BT_Hour{boolean} 2|95m7
+95o4 Counter_BT_10_Msec{duration} 2|97m7 130r22 131m10
+96o4 Counter_BT_100_Msec{duration} 2|98m7 137r22 138m10
+97o4 Counter_BT_Second{duration} 2|99m7 144r22 145m10
+98o4 Counter_BT_Minute{duration} 2|100m7 151r22 152m10
+99o4 Counter_BT_Hour{duration} 2|101m7 158r22 159m10
+X 2 rxclock.adb
+182U14 Pre_Cycle 182b14 185l8 185t17
+191U14 Post_Cycle 191b14 194l8 194t18
+

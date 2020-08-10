@@ -1,0 +1,98 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnatp
+A -gnatVn
+A -gnat12
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U tank.cycle%b		tank-cycle.adb		1330db11 NE OO PK
+W tank%s		tank.ads		tank.ali
+
+U tank.cycle%s		tank-cycle.ads		d07e96f5 EE OO PF PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+W tank%s		tank.ads		tank.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041255 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D tank.ads		20200312090552 d54e66a4 tank%s
+D tank-cycle.ads	20200702112230 0530f051 tank.cycle%s
+D tank-cycle.adb	20200702112158 16002b40 tank.cycle%b
+G a e
+G c Z s b [initialize tank__cycle 33 14 none]
+G c Z s b [get_state tank__cycle 36 13 none]
+G c Z s b [set_state tank__cycle 38 14 none]
+G c Z s b [cyclic tank__cycle 40 14 none]
+G c Z s s [cycle_recordDA tank__cycle 55 9 none]
+G c Z s s [cycle_recordDF tank__cycle 55 9 none]
+G c Z s s [cycle_recordIP tank__cycle 55 9 none]
+X 18 tank.ads
+21K9*Tank 25e9 19|21r9 61r5 20|21r14 103r5
+X 19 tank-cycle.ads
+21K14*Cycle 18|21k9 19|55E9 61l10 61e15 20|21b19 103l10 103t15
+23R9*Cycle_Record 33p14 33r40 36p13 36r31 38p14 38r39 40p14 41r33 55c9 57e14
+. 59r31 20|27r40 32r31 37r39 43r33
+25E9*Cycle_State 31e21 36r52 38r56 56r15 20|32r52 37r56 55r19
+26n5*Init_State{25E9} 59r57 20|58r15 85r29
+27n5*Filling_P1_State{25E9} 20|60r29 63r15 95r42
+28n5*Filling_P2_State{25E9} 20|65r29 68r15 96r42
+29n5*Mixing_State{25E9} 20|70r29 73r15 97r42
+30n5*Emptying_State{25E9} 20|75r29 78r15 98r42
+31n5*End_Cycle_State{25E9} 20|80r29 83r15 99r42
+33U14*Initialize 33=26 20|27b14 30l8 30t18
+33r26 This{23R9} 20|27b26 29m7
+36V13*get_state{25E9} 36>24 20|32b13 35l10 35t19
+36r24 This{23R9} 20|32b24 34r16
+38U14*set_state 38=25 38>53 20|37b14 40l10 40t19
+38r25 This{23R9} 20|37b25 39m10
+38e53 S{25E9} 20|37b53 39r24
+40U14*Cyclic 41=7 42>7 43>7 44>7 45>7 46>7 47<7 48<7 49<7 50<7 51<7 20|42b14
+. 101l8 101t14
+41r7 This{23R9} 20|43b7 55r34 57r12 90m7 95r31 96r31 97r31 98r31 99r31
+42b7 Start_Cycle{boolean} 20|44b7 59r16 84r20
+43b7 End_Filling_P1{boolean} 20|45b7 64r16
+44b7 End_Filling_P2{boolean} 20|46b7 69r16
+45b7 End_Mixing{boolean} 20|47b7 74r16
+46b7 End_Emptying{boolean} 20|48b7 79r16
+47b7 Filling_P1_Order{boolean} 20|49b7 95m9
+48b7 Filling_P2_Order{boolean} 20|50b7 96m9
+49b7 Mixing_Order{boolean} 20|51b7 97m9
+50b7 Emptying_Order{boolean} 20|52b7 98m9
+51b7 End_Cycle{boolean} 20|53b7 99m9
+56e7*State{25E9} 59m48 20|34r21 39m15 55r39 57r17 90m12 95r36 96r36 97r36
+. 98r36 99r36
+59r4 No_Cycle_Record{23R9} 20|29r15
+X 20 tank-cycle.adb
+55e7 New_State{19|25E9} 60m16 65m16 70m16 75m16 80m16 85m16 90r21
+

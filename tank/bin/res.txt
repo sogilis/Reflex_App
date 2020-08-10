@@ -1,0 +1,2790 @@
+==========> Clock :  0.000000000
+  
+   
+ 
+  START CYCLE 
+Cycle.Cyclic
+IN Cycle.Cyclic :
+IN Start_Cycle  FALSE
+IN End_Filling_P1  FALSE
+IN End_Filling_P2  FALSE
+IN End_Mixing  FALSE
+IN End_Emptying  FALSE
+OUT Cycle.Cyclic :
+OUT Filling_P1_Order  TRUE
+OUT Filling_P2_Order  FALSE
+OUT Emptying_Order  FALSE
+OUT End_Cycle  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P1 :
+IN Filling_P1_Order  TRUE
+IN Filling_V_R1_Opened  FALSE
+IN Filling_V_R1_Closed  FALSE
+IN P1_Started  FALSE
+OUT Filling_P1 :
+OUT Filling_Open_V_R1  TRUE
+OUT Filling_Start_P1  FALSE
+OUT Filling_Close_V_R1  FALSE
+OUT End_Filling_P1  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P2 :
+IN Filling_P2_Order  FALSE
+IN Filling_V_R2_Opened  FALSE
+IN Filling_V_R2_Closed  FALSE
+IN P2_Started  FALSE
+OUT Filling_P2 :
+OUT Filling_Open_V_R2  FALSE
+OUT Filling_Start_P2  FALSE
+OUT Filling_Close_V_R2  FALSE
+OUT End_Filling_P2  FALSE
+  
+  
+App_Mixing.Cyclic
+IN Mixing :
+IN Mixing_Order  FALSE
+IN Blender_Started  FALSE
+IN Mixing_Duration   3
+OUT Mixing :
+OUT Mixing_Start_Blender  FALSE
+OUT Mixing_Start_Resistance  FALSE
+OUT End_Mixing  FALSE
+  
+  
+App_Filling.Cyclic
+IN Emptyin :
+IN Emptying_Order  FALSE
+IN Emptying_V_R3_Opened  FALSE
+IN Emptying_V_R3_Closed  FALSE
+IN P3_Started  FALSE
+OUT Emptyin :
+OUT Emptying_Open_V_R3  FALSE
+OUT Emptying_Start_P3  FALSE
+OUT Emptying_Close_V_R3  FALSE
+OUT End_Emptying  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V1_R1_Opened  FALSE
+IN V1_R1_Closed  FALSE
+OUT Valve V1_R1 :
+OUT V1_R1_Open_Order  FALSE
+OUT V1_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V2_R1_Opened  FALSE
+IN V2_R1_Closed  FALSE
+OUT Valve V2_R1 :
+OUT V2_R1_Open_Order  FALSE
+OUT V2_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V1_R2_Opened  FALSE
+IN V1_R2_Closed  FALSE
+OUT Valve V1_R2 :
+OUT V1_R2_Open_Order  FALSE
+OUT V1_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V2_R2_Opened  FALSE
+IN V2_R2_Closed  FALSE
+OUT Valve V2_R2 :
+OUT V2_R2_Open_Order  FALSE
+OUT V2_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V1_R3_Opened  FALSE
+IN V1_R3_Closed  FALSE
+OUT Valve V1_R3 :
+OUT V1_R3_Open_Order  FALSE
+OUT V1_R3_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V2_R3_Opened  FALSE
+IN V2_R3_Closed  FALSE
+OUT Valve V2_R3 :
+OUT V2_R3_Open_Order  FALSE
+OUT V2_R3_Close_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P1  FALSE
+IN P1_Started  FALSE
+OUT Pump P1  :
+OUT P1_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P2  FALSE
+IN P2_Started  FALSE
+OUT Pump P1  :
+OUT P2_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P3  :
+IN Emptying_Start_P3  FALSE
+IN P3_Started  FALSE
+OUT Pump P1  :
+OUT P3_Start_Order  FALSE
+  
+  
+app_Blenders.Cyclic
+IN Blender :
+IN Mixing_Start_Blender  FALSE
+IN V1_Speed  FALSE
+IN V2_Speed  FALSE
+OUT Blender  :
+OUT Blender_Start_Order  FALSE
+OUT V1_Order  FALSE
+OUT V2_Order  FALSE
+  
+  
+IN Regulateur :
+IN Second  FALSE
+IN T_Measured   2.00000E+01
+IN Resistance_SetPoint   8.00000E+01
+IN Gradient   2.00000E+01
+IN Tmax   1.00000E+02
+OUT Regulateur  :
+OUT T_Adjusted   0.00000E+00
+  
+  
+IN Resistance :
+IN Mixing_Start_Blender  FALSE
+IN T_Adjusted   0.00000E+00
+IN Resistance_SetPoint   0.00000E+00
+  
+  
+==========> Clock :  0.100000000
+  
+   
+ 
+  START CYCLE 
+Cycle.Cyclic
+IN Cycle.Cyclic :
+IN Start_Cycle  FALSE
+IN End_Filling_P1  FALSE
+IN End_Filling_P2  FALSE
+IN End_Mixing  FALSE
+IN End_Emptying  FALSE
+OUT Cycle.Cyclic :
+OUT Filling_P1_Order  TRUE
+OUT Filling_P2_Order  FALSE
+OUT Emptying_Order  FALSE
+OUT End_Cycle  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P1 :
+IN Filling_P1_Order  TRUE
+IN Filling_V_R1_Opened  FALSE
+IN Filling_V_R1_Closed  FALSE
+IN P1_Started  FALSE
+OUT Filling_P1 :
+OUT Filling_Open_V_R1  TRUE
+OUT Filling_Start_P1  FALSE
+OUT Filling_Close_V_R1  FALSE
+OUT End_Filling_P1  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P2 :
+IN Filling_P2_Order  FALSE
+IN Filling_V_R2_Opened  FALSE
+IN Filling_V_R2_Closed  FALSE
+IN P2_Started  FALSE
+OUT Filling_P2 :
+OUT Filling_Open_V_R2  FALSE
+OUT Filling_Start_P2  FALSE
+OUT Filling_Close_V_R2  FALSE
+OUT End_Filling_P2  FALSE
+  
+  
+App_Mixing.Cyclic
+IN Mixing :
+IN Mixing_Order  FALSE
+IN Blender_Started  FALSE
+IN Mixing_Duration   3
+OUT Mixing :
+OUT Mixing_Start_Blender  FALSE
+OUT Mixing_Start_Resistance  FALSE
+OUT End_Mixing  FALSE
+  
+  
+App_Filling.Cyclic
+IN Emptyin :
+IN Emptying_Order  FALSE
+IN Emptying_V_R3_Opened  FALSE
+IN Emptying_V_R3_Closed  FALSE
+IN P3_Started  FALSE
+OUT Emptyin :
+OUT Emptying_Open_V_R3  FALSE
+OUT Emptying_Start_P3  FALSE
+OUT Emptying_Close_V_R3  FALSE
+OUT End_Emptying  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V1_R1_Opened  FALSE
+IN V1_R1_Closed  FALSE
+OUT Valve V1_R1 :
+OUT V1_R1_Open_Order  TRUE
+OUT V1_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V2_R1_Opened  FALSE
+IN V2_R1_Closed  FALSE
+OUT Valve V2_R1 :
+OUT V2_R1_Open_Order  TRUE
+OUT V2_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V1_R2_Opened  FALSE
+IN V1_R2_Closed  FALSE
+OUT Valve V1_R2 :
+OUT V1_R2_Open_Order  FALSE
+OUT V1_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V2_R2_Opened  FALSE
+IN V2_R2_Closed  FALSE
+OUT Valve V2_R2 :
+OUT V2_R2_Open_Order  FALSE
+OUT V2_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V1_R3_Opened  FALSE
+IN V1_R3_Closed  FALSE
+OUT Valve V1_R3 :
+OUT V1_R3_Open_Order  FALSE
+OUT V1_R3_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V2_R3_Opened  FALSE
+IN V2_R3_Closed  FALSE
+OUT Valve V2_R3 :
+OUT V2_R3_Open_Order  FALSE
+OUT V2_R3_Close_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P1  FALSE
+IN P1_Started  FALSE
+OUT Pump P1  :
+OUT P1_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P2  FALSE
+IN P2_Started  FALSE
+OUT Pump P1  :
+OUT P2_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P3  :
+IN Emptying_Start_P3  FALSE
+IN P3_Started  FALSE
+OUT Pump P1  :
+OUT P3_Start_Order  FALSE
+  
+  
+app_Blenders.Cyclic
+IN Blender :
+IN Mixing_Start_Blender  FALSE
+IN V1_Speed  FALSE
+IN V2_Speed  FALSE
+OUT Blender  :
+OUT Blender_Start_Order  FALSE
+OUT V1_Order  FALSE
+OUT V2_Order  FALSE
+  
+  
+IN Regulateur :
+IN Second  FALSE
+IN T_Measured   2.00000E+01
+IN Resistance_SetPoint   8.00000E+01
+IN Gradient   2.00000E+01
+IN Tmax   1.00000E+02
+OUT Regulateur  :
+OUT T_Adjusted   0.00000E+00
+  
+  
+IN Resistance :
+IN Mixing_Start_Blender  FALSE
+IN T_Adjusted   0.00000E+00
+IN Resistance_SetPoint   0.00000E+00
+  
+  
+==========> Clock :  0.200000000
+  
+   
+ 
+  START CYCLE 
+Cycle.Cyclic
+IN Cycle.Cyclic :
+IN Start_Cycle  FALSE
+IN End_Filling_P1  FALSE
+IN End_Filling_P2  FALSE
+IN End_Mixing  FALSE
+IN End_Emptying  FALSE
+OUT Cycle.Cyclic :
+OUT Filling_P1_Order  TRUE
+OUT Filling_P2_Order  FALSE
+OUT Emptying_Order  FALSE
+OUT End_Cycle  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P1 :
+IN Filling_P1_Order  TRUE
+IN Filling_V_R1_Opened  FALSE
+IN Filling_V_R1_Closed  FALSE
+IN P1_Started  FALSE
+OUT Filling_P1 :
+OUT Filling_Open_V_R1  TRUE
+OUT Filling_Start_P1  FALSE
+OUT Filling_Close_V_R1  FALSE
+OUT End_Filling_P1  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P2 :
+IN Filling_P2_Order  FALSE
+IN Filling_V_R2_Opened  FALSE
+IN Filling_V_R2_Closed  FALSE
+IN P2_Started  FALSE
+OUT Filling_P2 :
+OUT Filling_Open_V_R2  FALSE
+OUT Filling_Start_P2  FALSE
+OUT Filling_Close_V_R2  FALSE
+OUT End_Filling_P2  FALSE
+  
+  
+App_Mixing.Cyclic
+IN Mixing :
+IN Mixing_Order  FALSE
+IN Blender_Started  FALSE
+IN Mixing_Duration   3
+OUT Mixing :
+OUT Mixing_Start_Blender  FALSE
+OUT Mixing_Start_Resistance  FALSE
+OUT End_Mixing  FALSE
+  
+  
+App_Filling.Cyclic
+IN Emptyin :
+IN Emptying_Order  FALSE
+IN Emptying_V_R3_Opened  FALSE
+IN Emptying_V_R3_Closed  FALSE
+IN P3_Started  FALSE
+OUT Emptyin :
+OUT Emptying_Open_V_R3  FALSE
+OUT Emptying_Start_P3  FALSE
+OUT Emptying_Close_V_R3  FALSE
+OUT End_Emptying  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V1_R1_Opened  FALSE
+IN V1_R1_Closed  FALSE
+OUT Valve V1_R1 :
+OUT V1_R1_Open_Order  TRUE
+OUT V1_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V2_R1_Opened  FALSE
+IN V2_R1_Closed  FALSE
+OUT Valve V2_R1 :
+OUT V2_R1_Open_Order  TRUE
+OUT V2_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V1_R2_Opened  FALSE
+IN V1_R2_Closed  FALSE
+OUT Valve V1_R2 :
+OUT V1_R2_Open_Order  FALSE
+OUT V1_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V2_R2_Opened  FALSE
+IN V2_R2_Closed  FALSE
+OUT Valve V2_R2 :
+OUT V2_R2_Open_Order  FALSE
+OUT V2_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V1_R3_Opened  FALSE
+IN V1_R3_Closed  FALSE
+OUT Valve V1_R3 :
+OUT V1_R3_Open_Order  FALSE
+OUT V1_R3_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V2_R3_Opened  FALSE
+IN V2_R3_Closed  FALSE
+OUT Valve V2_R3 :
+OUT V2_R3_Open_Order  FALSE
+OUT V2_R3_Close_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P1  FALSE
+IN P1_Started  FALSE
+OUT Pump P1  :
+OUT P1_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P2  FALSE
+IN P2_Started  FALSE
+OUT Pump P1  :
+OUT P2_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P3  :
+IN Emptying_Start_P3  FALSE
+IN P3_Started  FALSE
+OUT Pump P1  :
+OUT P3_Start_Order  FALSE
+  
+  
+app_Blenders.Cyclic
+IN Blender :
+IN Mixing_Start_Blender  FALSE
+IN V1_Speed  FALSE
+IN V2_Speed  FALSE
+OUT Blender  :
+OUT Blender_Start_Order  FALSE
+OUT V1_Order  FALSE
+OUT V2_Order  FALSE
+  
+  
+IN Regulateur :
+IN Second  FALSE
+IN T_Measured   2.00000E+01
+IN Resistance_SetPoint   8.00000E+01
+IN Gradient   2.00000E+01
+IN Tmax   1.00000E+02
+OUT Regulateur  :
+OUT T_Adjusted   0.00000E+00
+  
+  
+IN Resistance :
+IN Mixing_Start_Blender  FALSE
+IN T_Adjusted   0.00000E+00
+IN Resistance_SetPoint   0.00000E+00
+  
+  
+==========> Clock :  0.300000000
+  
+   
+ 
+  START CYCLE 
+Cycle.Cyclic
+IN Cycle.Cyclic :
+IN Start_Cycle  FALSE
+IN End_Filling_P1  FALSE
+IN End_Filling_P2  FALSE
+IN End_Mixing  FALSE
+IN End_Emptying  FALSE
+OUT Cycle.Cyclic :
+OUT Filling_P1_Order  TRUE
+OUT Filling_P2_Order  FALSE
+OUT Emptying_Order  FALSE
+OUT End_Cycle  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P1 :
+IN Filling_P1_Order  TRUE
+IN Filling_V_R1_Opened  FALSE
+IN Filling_V_R1_Closed  FALSE
+IN P1_Started  FALSE
+OUT Filling_P1 :
+OUT Filling_Open_V_R1  TRUE
+OUT Filling_Start_P1  FALSE
+OUT Filling_Close_V_R1  FALSE
+OUT End_Filling_P1  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P2 :
+IN Filling_P2_Order  FALSE
+IN Filling_V_R2_Opened  FALSE
+IN Filling_V_R2_Closed  FALSE
+IN P2_Started  FALSE
+OUT Filling_P2 :
+OUT Filling_Open_V_R2  FALSE
+OUT Filling_Start_P2  FALSE
+OUT Filling_Close_V_R2  FALSE
+OUT End_Filling_P2  FALSE
+  
+  
+App_Mixing.Cyclic
+IN Mixing :
+IN Mixing_Order  FALSE
+IN Blender_Started  FALSE
+IN Mixing_Duration   3
+OUT Mixing :
+OUT Mixing_Start_Blender  FALSE
+OUT Mixing_Start_Resistance  FALSE
+OUT End_Mixing  FALSE
+  
+  
+App_Filling.Cyclic
+IN Emptyin :
+IN Emptying_Order  FALSE
+IN Emptying_V_R3_Opened  FALSE
+IN Emptying_V_R3_Closed  FALSE
+IN P3_Started  FALSE
+OUT Emptyin :
+OUT Emptying_Open_V_R3  FALSE
+OUT Emptying_Start_P3  FALSE
+OUT Emptying_Close_V_R3  FALSE
+OUT End_Emptying  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V1_R1_Opened  FALSE
+IN V1_R1_Closed  FALSE
+OUT Valve V1_R1 :
+OUT V1_R1_Open_Order  TRUE
+OUT V1_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V2_R1_Opened  FALSE
+IN V2_R1_Closed  FALSE
+OUT Valve V2_R1 :
+OUT V2_R1_Open_Order  TRUE
+OUT V2_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V1_R2_Opened  FALSE
+IN V1_R2_Closed  FALSE
+OUT Valve V1_R2 :
+OUT V1_R2_Open_Order  FALSE
+OUT V1_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V2_R2_Opened  FALSE
+IN V2_R2_Closed  FALSE
+OUT Valve V2_R2 :
+OUT V2_R2_Open_Order  FALSE
+OUT V2_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V1_R3_Opened  FALSE
+IN V1_R3_Closed  FALSE
+OUT Valve V1_R3 :
+OUT V1_R3_Open_Order  FALSE
+OUT V1_R3_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V2_R3_Opened  FALSE
+IN V2_R3_Closed  FALSE
+OUT Valve V2_R3 :
+OUT V2_R3_Open_Order  FALSE
+OUT V2_R3_Close_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P1  FALSE
+IN P1_Started  FALSE
+OUT Pump P1  :
+OUT P1_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P2  FALSE
+IN P2_Started  FALSE
+OUT Pump P1  :
+OUT P2_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P3  :
+IN Emptying_Start_P3  FALSE
+IN P3_Started  FALSE
+OUT Pump P1  :
+OUT P3_Start_Order  FALSE
+  
+  
+app_Blenders.Cyclic
+IN Blender :
+IN Mixing_Start_Blender  FALSE
+IN V1_Speed  FALSE
+IN V2_Speed  FALSE
+OUT Blender  :
+OUT Blender_Start_Order  FALSE
+OUT V1_Order  FALSE
+OUT V2_Order  FALSE
+  
+  
+IN Regulateur :
+IN Second  FALSE
+IN T_Measured   2.00000E+01
+IN Resistance_SetPoint   8.00000E+01
+IN Gradient   2.00000E+01
+IN Tmax   1.00000E+02
+OUT Regulateur  :
+OUT T_Adjusted   0.00000E+00
+  
+  
+IN Resistance :
+IN Mixing_Start_Blender  FALSE
+IN T_Adjusted   0.00000E+00
+IN Resistance_SetPoint   0.00000E+00
+  
+  
+==========> Clock :  0.400000000
+  
+   
+ 
+  START CYCLE 
+Cycle.Cyclic
+IN Cycle.Cyclic :
+IN Start_Cycle  FALSE
+IN End_Filling_P1  FALSE
+IN End_Filling_P2  FALSE
+IN End_Mixing  FALSE
+IN End_Emptying  FALSE
+OUT Cycle.Cyclic :
+OUT Filling_P1_Order  TRUE
+OUT Filling_P2_Order  FALSE
+OUT Emptying_Order  FALSE
+OUT End_Cycle  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P1 :
+IN Filling_P1_Order  TRUE
+IN Filling_V_R1_Opened  FALSE
+IN Filling_V_R1_Closed  FALSE
+IN P1_Started  FALSE
+OUT Filling_P1 :
+OUT Filling_Open_V_R1  TRUE
+OUT Filling_Start_P1  FALSE
+OUT Filling_Close_V_R1  FALSE
+OUT End_Filling_P1  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P2 :
+IN Filling_P2_Order  FALSE
+IN Filling_V_R2_Opened  FALSE
+IN Filling_V_R2_Closed  FALSE
+IN P2_Started  FALSE
+OUT Filling_P2 :
+OUT Filling_Open_V_R2  FALSE
+OUT Filling_Start_P2  FALSE
+OUT Filling_Close_V_R2  FALSE
+OUT End_Filling_P2  FALSE
+  
+  
+App_Mixing.Cyclic
+IN Mixing :
+IN Mixing_Order  FALSE
+IN Blender_Started  FALSE
+IN Mixing_Duration   3
+OUT Mixing :
+OUT Mixing_Start_Blender  FALSE
+OUT Mixing_Start_Resistance  FALSE
+OUT End_Mixing  FALSE
+  
+  
+App_Filling.Cyclic
+IN Emptyin :
+IN Emptying_Order  FALSE
+IN Emptying_V_R3_Opened  FALSE
+IN Emptying_V_R3_Closed  FALSE
+IN P3_Started  FALSE
+OUT Emptyin :
+OUT Emptying_Open_V_R3  FALSE
+OUT Emptying_Start_P3  FALSE
+OUT Emptying_Close_V_R3  FALSE
+OUT End_Emptying  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V1_R1_Opened  FALSE
+IN V1_R1_Closed  FALSE
+OUT Valve V1_R1 :
+OUT V1_R1_Open_Order  TRUE
+OUT V1_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V2_R1_Opened  FALSE
+IN V2_R1_Closed  FALSE
+OUT Valve V2_R1 :
+OUT V2_R1_Open_Order  TRUE
+OUT V2_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V1_R2_Opened  FALSE
+IN V1_R2_Closed  FALSE
+OUT Valve V1_R2 :
+OUT V1_R2_Open_Order  FALSE
+OUT V1_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V2_R2_Opened  FALSE
+IN V2_R2_Closed  FALSE
+OUT Valve V2_R2 :
+OUT V2_R2_Open_Order  FALSE
+OUT V2_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V1_R3_Opened  FALSE
+IN V1_R3_Closed  FALSE
+OUT Valve V1_R3 :
+OUT V1_R3_Open_Order  FALSE
+OUT V1_R3_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V2_R3_Opened  FALSE
+IN V2_R3_Closed  FALSE
+OUT Valve V2_R3 :
+OUT V2_R3_Open_Order  FALSE
+OUT V2_R3_Close_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P1  FALSE
+IN P1_Started  FALSE
+OUT Pump P1  :
+OUT P1_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P2  FALSE
+IN P2_Started  FALSE
+OUT Pump P1  :
+OUT P2_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P3  :
+IN Emptying_Start_P3  FALSE
+IN P3_Started  FALSE
+OUT Pump P1  :
+OUT P3_Start_Order  FALSE
+  
+  
+app_Blenders.Cyclic
+IN Blender :
+IN Mixing_Start_Blender  FALSE
+IN V1_Speed  FALSE
+IN V2_Speed  FALSE
+OUT Blender  :
+OUT Blender_Start_Order  FALSE
+OUT V1_Order  FALSE
+OUT V2_Order  FALSE
+  
+  
+IN Regulateur :
+IN Second  FALSE
+IN T_Measured   2.00000E+01
+IN Resistance_SetPoint   8.00000E+01
+IN Gradient   2.00000E+01
+IN Tmax   1.00000E+02
+OUT Regulateur  :
+OUT T_Adjusted   0.00000E+00
+  
+  
+IN Resistance :
+IN Mixing_Start_Blender  FALSE
+IN T_Adjusted   0.00000E+00
+IN Resistance_SetPoint   0.00000E+00
+  
+  
+==========> Clock :  0.500000000
+  
+   
+ 
+  START CYCLE 
+Cycle.Cyclic
+IN Cycle.Cyclic :
+IN Start_Cycle  FALSE
+IN End_Filling_P1  FALSE
+IN End_Filling_P2  FALSE
+IN End_Mixing  FALSE
+IN End_Emptying  FALSE
+OUT Cycle.Cyclic :
+OUT Filling_P1_Order  TRUE
+OUT Filling_P2_Order  FALSE
+OUT Emptying_Order  FALSE
+OUT End_Cycle  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P1 :
+IN Filling_P1_Order  TRUE
+IN Filling_V_R1_Opened  FALSE
+IN Filling_V_R1_Closed  FALSE
+IN P1_Started  FALSE
+OUT Filling_P1 :
+OUT Filling_Open_V_R1  TRUE
+OUT Filling_Start_P1  FALSE
+OUT Filling_Close_V_R1  FALSE
+OUT End_Filling_P1  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P2 :
+IN Filling_P2_Order  FALSE
+IN Filling_V_R2_Opened  FALSE
+IN Filling_V_R2_Closed  FALSE
+IN P2_Started  FALSE
+OUT Filling_P2 :
+OUT Filling_Open_V_R2  FALSE
+OUT Filling_Start_P2  FALSE
+OUT Filling_Close_V_R2  FALSE
+OUT End_Filling_P2  FALSE
+  
+  
+App_Mixing.Cyclic
+IN Mixing :
+IN Mixing_Order  FALSE
+IN Blender_Started  FALSE
+IN Mixing_Duration   3
+OUT Mixing :
+OUT Mixing_Start_Blender  FALSE
+OUT Mixing_Start_Resistance  FALSE
+OUT End_Mixing  FALSE
+  
+  
+App_Filling.Cyclic
+IN Emptyin :
+IN Emptying_Order  FALSE
+IN Emptying_V_R3_Opened  FALSE
+IN Emptying_V_R3_Closed  FALSE
+IN P3_Started  FALSE
+OUT Emptyin :
+OUT Emptying_Open_V_R3  FALSE
+OUT Emptying_Start_P3  FALSE
+OUT Emptying_Close_V_R3  FALSE
+OUT End_Emptying  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V1_R1_Opened  FALSE
+IN V1_R1_Closed  FALSE
+OUT Valve V1_R1 :
+OUT V1_R1_Open_Order  TRUE
+OUT V1_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V2_R1_Opened  FALSE
+IN V2_R1_Closed  FALSE
+OUT Valve V2_R1 :
+OUT V2_R1_Open_Order  TRUE
+OUT V2_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V1_R2_Opened  FALSE
+IN V1_R2_Closed  FALSE
+OUT Valve V1_R2 :
+OUT V1_R2_Open_Order  FALSE
+OUT V1_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V2_R2_Opened  FALSE
+IN V2_R2_Closed  FALSE
+OUT Valve V2_R2 :
+OUT V2_R2_Open_Order  FALSE
+OUT V2_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V1_R3_Opened  FALSE
+IN V1_R3_Closed  FALSE
+OUT Valve V1_R3 :
+OUT V1_R3_Open_Order  FALSE
+OUT V1_R3_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V2_R3_Opened  FALSE
+IN V2_R3_Closed  FALSE
+OUT Valve V2_R3 :
+OUT V2_R3_Open_Order  FALSE
+OUT V2_R3_Close_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P1  FALSE
+IN P1_Started  FALSE
+OUT Pump P1  :
+OUT P1_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P2  FALSE
+IN P2_Started  FALSE
+OUT Pump P1  :
+OUT P2_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P3  :
+IN Emptying_Start_P3  FALSE
+IN P3_Started  FALSE
+OUT Pump P1  :
+OUT P3_Start_Order  FALSE
+  
+  
+app_Blenders.Cyclic
+IN Blender :
+IN Mixing_Start_Blender  FALSE
+IN V1_Speed  FALSE
+IN V2_Speed  FALSE
+OUT Blender  :
+OUT Blender_Start_Order  FALSE
+OUT V1_Order  FALSE
+OUT V2_Order  FALSE
+  
+  
+IN Regulateur :
+IN Second  FALSE
+IN T_Measured   2.00000E+01
+IN Resistance_SetPoint   8.00000E+01
+IN Gradient   2.00000E+01
+IN Tmax   1.00000E+02
+OUT Regulateur  :
+OUT T_Adjusted   0.00000E+00
+  
+  
+IN Resistance :
+IN Mixing_Start_Blender  FALSE
+IN T_Adjusted   0.00000E+00
+IN Resistance_SetPoint   0.00000E+00
+  
+  
+==========> Clock :  0.600000000
+  
+   
+ 
+  START CYCLE 
+Cycle.Cyclic
+IN Cycle.Cyclic :
+IN Start_Cycle  FALSE
+IN End_Filling_P1  FALSE
+IN End_Filling_P2  FALSE
+IN End_Mixing  FALSE
+IN End_Emptying  FALSE
+OUT Cycle.Cyclic :
+OUT Filling_P1_Order  TRUE
+OUT Filling_P2_Order  FALSE
+OUT Emptying_Order  FALSE
+OUT End_Cycle  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P1 :
+IN Filling_P1_Order  TRUE
+IN Filling_V_R1_Opened  FALSE
+IN Filling_V_R1_Closed  FALSE
+IN P1_Started  FALSE
+OUT Filling_P1 :
+OUT Filling_Open_V_R1  TRUE
+OUT Filling_Start_P1  FALSE
+OUT Filling_Close_V_R1  FALSE
+OUT End_Filling_P1  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P2 :
+IN Filling_P2_Order  FALSE
+IN Filling_V_R2_Opened  FALSE
+IN Filling_V_R2_Closed  FALSE
+IN P2_Started  FALSE
+OUT Filling_P2 :
+OUT Filling_Open_V_R2  FALSE
+OUT Filling_Start_P2  FALSE
+OUT Filling_Close_V_R2  FALSE
+OUT End_Filling_P2  FALSE
+  
+  
+App_Mixing.Cyclic
+IN Mixing :
+IN Mixing_Order  FALSE
+IN Blender_Started  FALSE
+IN Mixing_Duration   3
+OUT Mixing :
+OUT Mixing_Start_Blender  FALSE
+OUT Mixing_Start_Resistance  FALSE
+OUT End_Mixing  FALSE
+  
+  
+App_Filling.Cyclic
+IN Emptyin :
+IN Emptying_Order  FALSE
+IN Emptying_V_R3_Opened  FALSE
+IN Emptying_V_R3_Closed  FALSE
+IN P3_Started  FALSE
+OUT Emptyin :
+OUT Emptying_Open_V_R3  FALSE
+OUT Emptying_Start_P3  FALSE
+OUT Emptying_Close_V_R3  FALSE
+OUT End_Emptying  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V1_R1_Opened  FALSE
+IN V1_R1_Closed  FALSE
+OUT Valve V1_R1 :
+OUT V1_R1_Open_Order  TRUE
+OUT V1_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V2_R1_Opened  FALSE
+IN V2_R1_Closed  FALSE
+OUT Valve V2_R1 :
+OUT V2_R1_Open_Order  TRUE
+OUT V2_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V1_R2_Opened  FALSE
+IN V1_R2_Closed  FALSE
+OUT Valve V1_R2 :
+OUT V1_R2_Open_Order  FALSE
+OUT V1_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V2_R2_Opened  FALSE
+IN V2_R2_Closed  FALSE
+OUT Valve V2_R2 :
+OUT V2_R2_Open_Order  FALSE
+OUT V2_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V1_R3_Opened  FALSE
+IN V1_R3_Closed  FALSE
+OUT Valve V1_R3 :
+OUT V1_R3_Open_Order  FALSE
+OUT V1_R3_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V2_R3_Opened  FALSE
+IN V2_R3_Closed  FALSE
+OUT Valve V2_R3 :
+OUT V2_R3_Open_Order  FALSE
+OUT V2_R3_Close_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P1  FALSE
+IN P1_Started  FALSE
+OUT Pump P1  :
+OUT P1_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P2  FALSE
+IN P2_Started  FALSE
+OUT Pump P1  :
+OUT P2_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P3  :
+IN Emptying_Start_P3  FALSE
+IN P3_Started  FALSE
+OUT Pump P1  :
+OUT P3_Start_Order  FALSE
+  
+  
+app_Blenders.Cyclic
+IN Blender :
+IN Mixing_Start_Blender  FALSE
+IN V1_Speed  FALSE
+IN V2_Speed  FALSE
+OUT Blender  :
+OUT Blender_Start_Order  FALSE
+OUT V1_Order  FALSE
+OUT V2_Order  FALSE
+  
+  
+IN Regulateur :
+IN Second  FALSE
+IN T_Measured   2.00000E+01
+IN Resistance_SetPoint   8.00000E+01
+IN Gradient   2.00000E+01
+IN Tmax   1.00000E+02
+OUT Regulateur  :
+OUT T_Adjusted   0.00000E+00
+  
+  
+IN Resistance :
+IN Mixing_Start_Blender  FALSE
+IN T_Adjusted   0.00000E+00
+IN Resistance_SetPoint   0.00000E+00
+  
+  
+==========> Clock :  0.700000000
+  
+   
+ 
+  START CYCLE 
+Cycle.Cyclic
+IN Cycle.Cyclic :
+IN Start_Cycle  FALSE
+IN End_Filling_P1  FALSE
+IN End_Filling_P2  FALSE
+IN End_Mixing  FALSE
+IN End_Emptying  FALSE
+OUT Cycle.Cyclic :
+OUT Filling_P1_Order  TRUE
+OUT Filling_P2_Order  FALSE
+OUT Emptying_Order  FALSE
+OUT End_Cycle  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P1 :
+IN Filling_P1_Order  TRUE
+IN Filling_V_R1_Opened  FALSE
+IN Filling_V_R1_Closed  FALSE
+IN P1_Started  FALSE
+OUT Filling_P1 :
+OUT Filling_Open_V_R1  TRUE
+OUT Filling_Start_P1  FALSE
+OUT Filling_Close_V_R1  FALSE
+OUT End_Filling_P1  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P2 :
+IN Filling_P2_Order  FALSE
+IN Filling_V_R2_Opened  FALSE
+IN Filling_V_R2_Closed  FALSE
+IN P2_Started  FALSE
+OUT Filling_P2 :
+OUT Filling_Open_V_R2  FALSE
+OUT Filling_Start_P2  FALSE
+OUT Filling_Close_V_R2  FALSE
+OUT End_Filling_P2  FALSE
+  
+  
+App_Mixing.Cyclic
+IN Mixing :
+IN Mixing_Order  FALSE
+IN Blender_Started  FALSE
+IN Mixing_Duration   3
+OUT Mixing :
+OUT Mixing_Start_Blender  FALSE
+OUT Mixing_Start_Resistance  FALSE
+OUT End_Mixing  FALSE
+  
+  
+App_Filling.Cyclic
+IN Emptyin :
+IN Emptying_Order  FALSE
+IN Emptying_V_R3_Opened  FALSE
+IN Emptying_V_R3_Closed  FALSE
+IN P3_Started  FALSE
+OUT Emptyin :
+OUT Emptying_Open_V_R3  FALSE
+OUT Emptying_Start_P3  FALSE
+OUT Emptying_Close_V_R3  FALSE
+OUT End_Emptying  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V1_R1_Opened  FALSE
+IN V1_R1_Closed  FALSE
+OUT Valve V1_R1 :
+OUT V1_R1_Open_Order  TRUE
+OUT V1_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V2_R1_Opened  FALSE
+IN V2_R1_Closed  FALSE
+OUT Valve V2_R1 :
+OUT V2_R1_Open_Order  TRUE
+OUT V2_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V1_R2_Opened  FALSE
+IN V1_R2_Closed  FALSE
+OUT Valve V1_R2 :
+OUT V1_R2_Open_Order  FALSE
+OUT V1_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V2_R2_Opened  FALSE
+IN V2_R2_Closed  FALSE
+OUT Valve V2_R2 :
+OUT V2_R2_Open_Order  FALSE
+OUT V2_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V1_R3_Opened  FALSE
+IN V1_R3_Closed  FALSE
+OUT Valve V1_R3 :
+OUT V1_R3_Open_Order  FALSE
+OUT V1_R3_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V2_R3_Opened  FALSE
+IN V2_R3_Closed  FALSE
+OUT Valve V2_R3 :
+OUT V2_R3_Open_Order  FALSE
+OUT V2_R3_Close_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P1  FALSE
+IN P1_Started  FALSE
+OUT Pump P1  :
+OUT P1_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P2  FALSE
+IN P2_Started  FALSE
+OUT Pump P1  :
+OUT P2_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P3  :
+IN Emptying_Start_P3  FALSE
+IN P3_Started  FALSE
+OUT Pump P1  :
+OUT P3_Start_Order  FALSE
+  
+  
+app_Blenders.Cyclic
+IN Blender :
+IN Mixing_Start_Blender  FALSE
+IN V1_Speed  FALSE
+IN V2_Speed  FALSE
+OUT Blender  :
+OUT Blender_Start_Order  FALSE
+OUT V1_Order  FALSE
+OUT V2_Order  FALSE
+  
+  
+IN Regulateur :
+IN Second  FALSE
+IN T_Measured   2.00000E+01
+IN Resistance_SetPoint   8.00000E+01
+IN Gradient   2.00000E+01
+IN Tmax   1.00000E+02
+OUT Regulateur  :
+OUT T_Adjusted   0.00000E+00
+  
+  
+IN Resistance :
+IN Mixing_Start_Blender  FALSE
+IN T_Adjusted   0.00000E+00
+IN Resistance_SetPoint   0.00000E+00
+  
+  
+==========> Clock :  0.800000000
+  
+   
+ 
+  START CYCLE 
+Cycle.Cyclic
+IN Cycle.Cyclic :
+IN Start_Cycle  FALSE
+IN End_Filling_P1  FALSE
+IN End_Filling_P2  FALSE
+IN End_Mixing  FALSE
+IN End_Emptying  FALSE
+OUT Cycle.Cyclic :
+OUT Filling_P1_Order  TRUE
+OUT Filling_P2_Order  FALSE
+OUT Emptying_Order  FALSE
+OUT End_Cycle  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P1 :
+IN Filling_P1_Order  TRUE
+IN Filling_V_R1_Opened  FALSE
+IN Filling_V_R1_Closed  FALSE
+IN P1_Started  FALSE
+OUT Filling_P1 :
+OUT Filling_Open_V_R1  TRUE
+OUT Filling_Start_P1  FALSE
+OUT Filling_Close_V_R1  FALSE
+OUT End_Filling_P1  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P2 :
+IN Filling_P2_Order  FALSE
+IN Filling_V_R2_Opened  FALSE
+IN Filling_V_R2_Closed  FALSE
+IN P2_Started  FALSE
+OUT Filling_P2 :
+OUT Filling_Open_V_R2  FALSE
+OUT Filling_Start_P2  FALSE
+OUT Filling_Close_V_R2  FALSE
+OUT End_Filling_P2  FALSE
+  
+  
+App_Mixing.Cyclic
+IN Mixing :
+IN Mixing_Order  FALSE
+IN Blender_Started  FALSE
+IN Mixing_Duration   3
+OUT Mixing :
+OUT Mixing_Start_Blender  FALSE
+OUT Mixing_Start_Resistance  FALSE
+OUT End_Mixing  FALSE
+  
+  
+App_Filling.Cyclic
+IN Emptyin :
+IN Emptying_Order  FALSE
+IN Emptying_V_R3_Opened  FALSE
+IN Emptying_V_R3_Closed  FALSE
+IN P3_Started  FALSE
+OUT Emptyin :
+OUT Emptying_Open_V_R3  FALSE
+OUT Emptying_Start_P3  FALSE
+OUT Emptying_Close_V_R3  FALSE
+OUT End_Emptying  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V1_R1_Opened  FALSE
+IN V1_R1_Closed  FALSE
+OUT Valve V1_R1 :
+OUT V1_R1_Open_Order  TRUE
+OUT V1_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V2_R1_Opened  FALSE
+IN V2_R1_Closed  FALSE
+OUT Valve V2_R1 :
+OUT V2_R1_Open_Order  TRUE
+OUT V2_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V1_R2_Opened  FALSE
+IN V1_R2_Closed  FALSE
+OUT Valve V1_R2 :
+OUT V1_R2_Open_Order  FALSE
+OUT V1_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V2_R2_Opened  FALSE
+IN V2_R2_Closed  FALSE
+OUT Valve V2_R2 :
+OUT V2_R2_Open_Order  FALSE
+OUT V2_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V1_R3_Opened  FALSE
+IN V1_R3_Closed  FALSE
+OUT Valve V1_R3 :
+OUT V1_R3_Open_Order  FALSE
+OUT V1_R3_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V2_R3_Opened  FALSE
+IN V2_R3_Closed  FALSE
+OUT Valve V2_R3 :
+OUT V2_R3_Open_Order  FALSE
+OUT V2_R3_Close_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P1  FALSE
+IN P1_Started  FALSE
+OUT Pump P1  :
+OUT P1_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P2  FALSE
+IN P2_Started  FALSE
+OUT Pump P1  :
+OUT P2_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P3  :
+IN Emptying_Start_P3  FALSE
+IN P3_Started  FALSE
+OUT Pump P1  :
+OUT P3_Start_Order  FALSE
+  
+  
+app_Blenders.Cyclic
+IN Blender :
+IN Mixing_Start_Blender  FALSE
+IN V1_Speed  FALSE
+IN V2_Speed  FALSE
+OUT Blender  :
+OUT Blender_Start_Order  FALSE
+OUT V1_Order  FALSE
+OUT V2_Order  FALSE
+  
+  
+IN Regulateur :
+IN Second  FALSE
+IN T_Measured   2.00000E+01
+IN Resistance_SetPoint   8.00000E+01
+IN Gradient   2.00000E+01
+IN Tmax   1.00000E+02
+OUT Regulateur  :
+OUT T_Adjusted   0.00000E+00
+  
+  
+IN Resistance :
+IN Mixing_Start_Blender  FALSE
+IN T_Adjusted   0.00000E+00
+IN Resistance_SetPoint   0.00000E+00
+  
+  
+==========> Clock :  0.900000000
+  
+   
+ 
+  START CYCLE 
+Cycle.Cyclic
+IN Cycle.Cyclic :
+IN Start_Cycle  FALSE
+IN End_Filling_P1  FALSE
+IN End_Filling_P2  FALSE
+IN End_Mixing  FALSE
+IN End_Emptying  FALSE
+OUT Cycle.Cyclic :
+OUT Filling_P1_Order  TRUE
+OUT Filling_P2_Order  FALSE
+OUT Emptying_Order  FALSE
+OUT End_Cycle  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P1 :
+IN Filling_P1_Order  TRUE
+IN Filling_V_R1_Opened  FALSE
+IN Filling_V_R1_Closed  FALSE
+IN P1_Started  FALSE
+OUT Filling_P1 :
+OUT Filling_Open_V_R1  TRUE
+OUT Filling_Start_P1  FALSE
+OUT Filling_Close_V_R1  FALSE
+OUT End_Filling_P1  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P2 :
+IN Filling_P2_Order  FALSE
+IN Filling_V_R2_Opened  FALSE
+IN Filling_V_R2_Closed  FALSE
+IN P2_Started  FALSE
+OUT Filling_P2 :
+OUT Filling_Open_V_R2  FALSE
+OUT Filling_Start_P2  FALSE
+OUT Filling_Close_V_R2  FALSE
+OUT End_Filling_P2  FALSE
+  
+  
+App_Mixing.Cyclic
+IN Mixing :
+IN Mixing_Order  FALSE
+IN Blender_Started  FALSE
+IN Mixing_Duration   3
+OUT Mixing :
+OUT Mixing_Start_Blender  FALSE
+OUT Mixing_Start_Resistance  FALSE
+OUT End_Mixing  FALSE
+  
+  
+App_Filling.Cyclic
+IN Emptyin :
+IN Emptying_Order  FALSE
+IN Emptying_V_R3_Opened  FALSE
+IN Emptying_V_R3_Closed  FALSE
+IN P3_Started  FALSE
+OUT Emptyin :
+OUT Emptying_Open_V_R3  FALSE
+OUT Emptying_Start_P3  FALSE
+OUT Emptying_Close_V_R3  FALSE
+OUT End_Emptying  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V1_R1_Opened  FALSE
+IN V1_R1_Closed  FALSE
+OUT Valve V1_R1 :
+OUT V1_R1_Open_Order  TRUE
+OUT V1_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V2_R1_Opened  FALSE
+IN V2_R1_Closed  FALSE
+OUT Valve V2_R1 :
+OUT V2_R1_Open_Order  TRUE
+OUT V2_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V1_R2_Opened  FALSE
+IN V1_R2_Closed  FALSE
+OUT Valve V1_R2 :
+OUT V1_R2_Open_Order  FALSE
+OUT V1_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V2_R2_Opened  FALSE
+IN V2_R2_Closed  FALSE
+OUT Valve V2_R2 :
+OUT V2_R2_Open_Order  FALSE
+OUT V2_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V1_R3_Opened  FALSE
+IN V1_R3_Closed  FALSE
+OUT Valve V1_R3 :
+OUT V1_R3_Open_Order  FALSE
+OUT V1_R3_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V2_R3_Opened  FALSE
+IN V2_R3_Closed  FALSE
+OUT Valve V2_R3 :
+OUT V2_R3_Open_Order  FALSE
+OUT V2_R3_Close_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P1  FALSE
+IN P1_Started  FALSE
+OUT Pump P1  :
+OUT P1_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P2  FALSE
+IN P2_Started  FALSE
+OUT Pump P1  :
+OUT P2_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P3  :
+IN Emptying_Start_P3  FALSE
+IN P3_Started  FALSE
+OUT Pump P1  :
+OUT P3_Start_Order  FALSE
+  
+  
+app_Blenders.Cyclic
+IN Blender :
+IN Mixing_Start_Blender  FALSE
+IN V1_Speed  FALSE
+IN V2_Speed  FALSE
+OUT Blender  :
+OUT Blender_Start_Order  FALSE
+OUT V1_Order  FALSE
+OUT V2_Order  FALSE
+  
+  
+IN Regulateur :
+IN Second  FALSE
+IN T_Measured   2.00000E+01
+IN Resistance_SetPoint   8.00000E+01
+IN Gradient   2.00000E+01
+IN Tmax   1.00000E+02
+OUT Regulateur  :
+OUT T_Adjusted   0.00000E+00
+  
+  
+IN Resistance :
+IN Mixing_Start_Blender  FALSE
+IN T_Adjusted   0.00000E+00
+IN Resistance_SetPoint   0.00000E+00
+  
+  
+==========> Clock :  1.000000000
+  
+   
+ 
+  START CYCLE 
+Cycle.Cyclic
+IN Cycle.Cyclic :
+IN Start_Cycle  FALSE
+IN End_Filling_P1  FALSE
+IN End_Filling_P2  FALSE
+IN End_Mixing  FALSE
+IN End_Emptying  FALSE
+OUT Cycle.Cyclic :
+OUT Filling_P1_Order  TRUE
+OUT Filling_P2_Order  FALSE
+OUT Emptying_Order  FALSE
+OUT End_Cycle  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P1 :
+IN Filling_P1_Order  TRUE
+IN Filling_V_R1_Opened  FALSE
+IN Filling_V_R1_Closed  FALSE
+IN P1_Started  FALSE
+OUT Filling_P1 :
+OUT Filling_Open_V_R1  TRUE
+OUT Filling_Start_P1  FALSE
+OUT Filling_Close_V_R1  FALSE
+OUT End_Filling_P1  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P2 :
+IN Filling_P2_Order  FALSE
+IN Filling_V_R2_Opened  FALSE
+IN Filling_V_R2_Closed  FALSE
+IN P2_Started  FALSE
+OUT Filling_P2 :
+OUT Filling_Open_V_R2  FALSE
+OUT Filling_Start_P2  FALSE
+OUT Filling_Close_V_R2  FALSE
+OUT End_Filling_P2  FALSE
+  
+  
+App_Mixing.Cyclic
+IN Mixing :
+IN Mixing_Order  FALSE
+IN Blender_Started  FALSE
+IN Mixing_Duration   3
+OUT Mixing :
+OUT Mixing_Start_Blender  FALSE
+OUT Mixing_Start_Resistance  FALSE
+OUT End_Mixing  FALSE
+  
+  
+App_Filling.Cyclic
+IN Emptyin :
+IN Emptying_Order  FALSE
+IN Emptying_V_R3_Opened  FALSE
+IN Emptying_V_R3_Closed  FALSE
+IN P3_Started  FALSE
+OUT Emptyin :
+OUT Emptying_Open_V_R3  FALSE
+OUT Emptying_Start_P3  FALSE
+OUT Emptying_Close_V_R3  FALSE
+OUT End_Emptying  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V1_R1_Opened  FALSE
+IN V1_R1_Closed  FALSE
+OUT Valve V1_R1 :
+OUT V1_R1_Open_Order  TRUE
+OUT V1_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V2_R1_Opened  FALSE
+IN V2_R1_Closed  FALSE
+OUT Valve V2_R1 :
+OUT V2_R1_Open_Order  TRUE
+OUT V2_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V1_R2_Opened  FALSE
+IN V1_R2_Closed  FALSE
+OUT Valve V1_R2 :
+OUT V1_R2_Open_Order  FALSE
+OUT V1_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V2_R2_Opened  FALSE
+IN V2_R2_Closed  FALSE
+OUT Valve V2_R2 :
+OUT V2_R2_Open_Order  FALSE
+OUT V2_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V1_R3_Opened  FALSE
+IN V1_R3_Closed  FALSE
+OUT Valve V1_R3 :
+OUT V1_R3_Open_Order  FALSE
+OUT V1_R3_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V2_R3_Opened  FALSE
+IN V2_R3_Closed  FALSE
+OUT Valve V2_R3 :
+OUT V2_R3_Open_Order  FALSE
+OUT V2_R3_Close_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P1  FALSE
+IN P1_Started  FALSE
+OUT Pump P1  :
+OUT P1_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P2  FALSE
+IN P2_Started  FALSE
+OUT Pump P1  :
+OUT P2_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P3  :
+IN Emptying_Start_P3  FALSE
+IN P3_Started  FALSE
+OUT Pump P1  :
+OUT P3_Start_Order  FALSE
+  
+  
+app_Blenders.Cyclic
+IN Blender :
+IN Mixing_Start_Blender  FALSE
+IN V1_Speed  FALSE
+IN V2_Speed  FALSE
+OUT Blender  :
+OUT Blender_Start_Order  FALSE
+OUT V1_Order  FALSE
+OUT V2_Order  FALSE
+  
+  
+IN Regulateur :
+IN Second  FALSE
+IN T_Measured   2.00000E+01
+IN Resistance_SetPoint   8.00000E+01
+IN Gradient   2.00000E+01
+IN Tmax   1.00000E+02
+OUT Regulateur  :
+OUT T_Adjusted   0.00000E+00
+  
+  
+IN Resistance :
+IN Mixing_Start_Blender  FALSE
+IN T_Adjusted   0.00000E+00
+IN Resistance_SetPoint   0.00000E+00
+  
+  
+==========> Clock :  1.100000000
+  
+   
+ 
+  START CYCLE 
+Cycle.Cyclic
+IN Cycle.Cyclic :
+IN Start_Cycle  FALSE
+IN End_Filling_P1  FALSE
+IN End_Filling_P2  FALSE
+IN End_Mixing  FALSE
+IN End_Emptying  FALSE
+OUT Cycle.Cyclic :
+OUT Filling_P1_Order  TRUE
+OUT Filling_P2_Order  FALSE
+OUT Emptying_Order  FALSE
+OUT End_Cycle  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P1 :
+IN Filling_P1_Order  TRUE
+IN Filling_V_R1_Opened  FALSE
+IN Filling_V_R1_Closed  FALSE
+IN P1_Started  FALSE
+OUT Filling_P1 :
+OUT Filling_Open_V_R1  TRUE
+OUT Filling_Start_P1  FALSE
+OUT Filling_Close_V_R1  FALSE
+OUT End_Filling_P1  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P2 :
+IN Filling_P2_Order  FALSE
+IN Filling_V_R2_Opened  FALSE
+IN Filling_V_R2_Closed  FALSE
+IN P2_Started  FALSE
+OUT Filling_P2 :
+OUT Filling_Open_V_R2  FALSE
+OUT Filling_Start_P2  FALSE
+OUT Filling_Close_V_R2  FALSE
+OUT End_Filling_P2  FALSE
+  
+  
+App_Mixing.Cyclic
+IN Mixing :
+IN Mixing_Order  FALSE
+IN Blender_Started  FALSE
+IN Mixing_Duration   3
+OUT Mixing :
+OUT Mixing_Start_Blender  FALSE
+OUT Mixing_Start_Resistance  FALSE
+OUT End_Mixing  FALSE
+  
+  
+App_Filling.Cyclic
+IN Emptyin :
+IN Emptying_Order  FALSE
+IN Emptying_V_R3_Opened  FALSE
+IN Emptying_V_R3_Closed  FALSE
+IN P3_Started  FALSE
+OUT Emptyin :
+OUT Emptying_Open_V_R3  FALSE
+OUT Emptying_Start_P3  FALSE
+OUT Emptying_Close_V_R3  FALSE
+OUT End_Emptying  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V1_R1_Opened  FALSE
+IN V1_R1_Closed  FALSE
+OUT Valve V1_R1 :
+OUT V1_R1_Open_Order  TRUE
+OUT V1_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V2_R1_Opened  FALSE
+IN V2_R1_Closed  FALSE
+OUT Valve V2_R1 :
+OUT V2_R1_Open_Order  TRUE
+OUT V2_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V1_R2_Opened  FALSE
+IN V1_R2_Closed  FALSE
+OUT Valve V1_R2 :
+OUT V1_R2_Open_Order  FALSE
+OUT V1_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V2_R2_Opened  FALSE
+IN V2_R2_Closed  FALSE
+OUT Valve V2_R2 :
+OUT V2_R2_Open_Order  FALSE
+OUT V2_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V1_R3_Opened  FALSE
+IN V1_R3_Closed  FALSE
+OUT Valve V1_R3 :
+OUT V1_R3_Open_Order  FALSE
+OUT V1_R3_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V2_R3_Opened  FALSE
+IN V2_R3_Closed  FALSE
+OUT Valve V2_R3 :
+OUT V2_R3_Open_Order  FALSE
+OUT V2_R3_Close_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P1  FALSE
+IN P1_Started  FALSE
+OUT Pump P1  :
+OUT P1_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P2  FALSE
+IN P2_Started  FALSE
+OUT Pump P1  :
+OUT P2_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P3  :
+IN Emptying_Start_P3  FALSE
+IN P3_Started  FALSE
+OUT Pump P1  :
+OUT P3_Start_Order  FALSE
+  
+  
+app_Blenders.Cyclic
+IN Blender :
+IN Mixing_Start_Blender  FALSE
+IN V1_Speed  FALSE
+IN V2_Speed  FALSE
+OUT Blender  :
+OUT Blender_Start_Order  FALSE
+OUT V1_Order  FALSE
+OUT V2_Order  FALSE
+  
+  
+IN Regulateur :
+IN Second  FALSE
+IN T_Measured   2.00000E+01
+IN Resistance_SetPoint   8.00000E+01
+IN Gradient   2.00000E+01
+IN Tmax   1.00000E+02
+OUT Regulateur  :
+OUT T_Adjusted   0.00000E+00
+  
+  
+IN Resistance :
+IN Mixing_Start_Blender  FALSE
+IN T_Adjusted   0.00000E+00
+IN Resistance_SetPoint   0.00000E+00
+  
+  
+==========> Clock :  1.200000000
+  
+   
+ 
+  START CYCLE 
+Cycle.Cyclic
+IN Cycle.Cyclic :
+IN Start_Cycle  FALSE
+IN End_Filling_P1  FALSE
+IN End_Filling_P2  FALSE
+IN End_Mixing  FALSE
+IN End_Emptying  FALSE
+OUT Cycle.Cyclic :
+OUT Filling_P1_Order  TRUE
+OUT Filling_P2_Order  FALSE
+OUT Emptying_Order  FALSE
+OUT End_Cycle  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P1 :
+IN Filling_P1_Order  TRUE
+IN Filling_V_R1_Opened  FALSE
+IN Filling_V_R1_Closed  FALSE
+IN P1_Started  FALSE
+OUT Filling_P1 :
+OUT Filling_Open_V_R1  TRUE
+OUT Filling_Start_P1  FALSE
+OUT Filling_Close_V_R1  FALSE
+OUT End_Filling_P1  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P2 :
+IN Filling_P2_Order  FALSE
+IN Filling_V_R2_Opened  FALSE
+IN Filling_V_R2_Closed  FALSE
+IN P2_Started  FALSE
+OUT Filling_P2 :
+OUT Filling_Open_V_R2  FALSE
+OUT Filling_Start_P2  FALSE
+OUT Filling_Close_V_R2  FALSE
+OUT End_Filling_P2  FALSE
+  
+  
+App_Mixing.Cyclic
+IN Mixing :
+IN Mixing_Order  FALSE
+IN Blender_Started  FALSE
+IN Mixing_Duration   3
+OUT Mixing :
+OUT Mixing_Start_Blender  FALSE
+OUT Mixing_Start_Resistance  FALSE
+OUT End_Mixing  FALSE
+  
+  
+App_Filling.Cyclic
+IN Emptyin :
+IN Emptying_Order  FALSE
+IN Emptying_V_R3_Opened  FALSE
+IN Emptying_V_R3_Closed  FALSE
+IN P3_Started  FALSE
+OUT Emptyin :
+OUT Emptying_Open_V_R3  FALSE
+OUT Emptying_Start_P3  FALSE
+OUT Emptying_Close_V_R3  FALSE
+OUT End_Emptying  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V1_R1_Opened  FALSE
+IN V1_R1_Closed  FALSE
+OUT Valve V1_R1 :
+OUT V1_R1_Open_Order  TRUE
+OUT V1_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V2_R1_Opened  FALSE
+IN V2_R1_Closed  FALSE
+OUT Valve V2_R1 :
+OUT V2_R1_Open_Order  TRUE
+OUT V2_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V1_R2_Opened  FALSE
+IN V1_R2_Closed  FALSE
+OUT Valve V1_R2 :
+OUT V1_R2_Open_Order  FALSE
+OUT V1_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V2_R2_Opened  FALSE
+IN V2_R2_Closed  FALSE
+OUT Valve V2_R2 :
+OUT V2_R2_Open_Order  FALSE
+OUT V2_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V1_R3_Opened  FALSE
+IN V1_R3_Closed  FALSE
+OUT Valve V1_R3 :
+OUT V1_R3_Open_Order  FALSE
+OUT V1_R3_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V2_R3_Opened  FALSE
+IN V2_R3_Closed  FALSE
+OUT Valve V2_R3 :
+OUT V2_R3_Open_Order  FALSE
+OUT V2_R3_Close_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P1  FALSE
+IN P1_Started  FALSE
+OUT Pump P1  :
+OUT P1_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P2  FALSE
+IN P2_Started  FALSE
+OUT Pump P1  :
+OUT P2_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P3  :
+IN Emptying_Start_P3  FALSE
+IN P3_Started  FALSE
+OUT Pump P1  :
+OUT P3_Start_Order  FALSE
+  
+  
+app_Blenders.Cyclic
+IN Blender :
+IN Mixing_Start_Blender  FALSE
+IN V1_Speed  FALSE
+IN V2_Speed  FALSE
+OUT Blender  :
+OUT Blender_Start_Order  FALSE
+OUT V1_Order  FALSE
+OUT V2_Order  FALSE
+  
+  
+IN Regulateur :
+IN Second  FALSE
+IN T_Measured   2.00000E+01
+IN Resistance_SetPoint   8.00000E+01
+IN Gradient   2.00000E+01
+IN Tmax   1.00000E+02
+OUT Regulateur  :
+OUT T_Adjusted   0.00000E+00
+  
+  
+IN Resistance :
+IN Mixing_Start_Blender  FALSE
+IN T_Adjusted   0.00000E+00
+IN Resistance_SetPoint   0.00000E+00
+  
+  
+==========> Clock :  1.300000000
+  
+   
+ 
+  START CYCLE 
+Cycle.Cyclic
+IN Cycle.Cyclic :
+IN Start_Cycle  FALSE
+IN End_Filling_P1  FALSE
+IN End_Filling_P2  FALSE
+IN End_Mixing  FALSE
+IN End_Emptying  FALSE
+OUT Cycle.Cyclic :
+OUT Filling_P1_Order  TRUE
+OUT Filling_P2_Order  FALSE
+OUT Emptying_Order  FALSE
+OUT End_Cycle  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P1 :
+IN Filling_P1_Order  TRUE
+IN Filling_V_R1_Opened  FALSE
+IN Filling_V_R1_Closed  FALSE
+IN P1_Started  FALSE
+OUT Filling_P1 :
+OUT Filling_Open_V_R1  TRUE
+OUT Filling_Start_P1  FALSE
+OUT Filling_Close_V_R1  FALSE
+OUT End_Filling_P1  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P2 :
+IN Filling_P2_Order  FALSE
+IN Filling_V_R2_Opened  FALSE
+IN Filling_V_R2_Closed  FALSE
+IN P2_Started  FALSE
+OUT Filling_P2 :
+OUT Filling_Open_V_R2  FALSE
+OUT Filling_Start_P2  FALSE
+OUT Filling_Close_V_R2  FALSE
+OUT End_Filling_P2  FALSE
+  
+  
+App_Mixing.Cyclic
+IN Mixing :
+IN Mixing_Order  FALSE
+IN Blender_Started  FALSE
+IN Mixing_Duration   3
+OUT Mixing :
+OUT Mixing_Start_Blender  FALSE
+OUT Mixing_Start_Resistance  FALSE
+OUT End_Mixing  FALSE
+  
+  
+App_Filling.Cyclic
+IN Emptyin :
+IN Emptying_Order  FALSE
+IN Emptying_V_R3_Opened  FALSE
+IN Emptying_V_R3_Closed  FALSE
+IN P3_Started  FALSE
+OUT Emptyin :
+OUT Emptying_Open_V_R3  FALSE
+OUT Emptying_Start_P3  FALSE
+OUT Emptying_Close_V_R3  FALSE
+OUT End_Emptying  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V1_R1_Opened  FALSE
+IN V1_R1_Closed  FALSE
+OUT Valve V1_R1 :
+OUT V1_R1_Open_Order  TRUE
+OUT V1_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V2_R1_Opened  FALSE
+IN V2_R1_Closed  FALSE
+OUT Valve V2_R1 :
+OUT V2_R1_Open_Order  TRUE
+OUT V2_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V1_R2_Opened  FALSE
+IN V1_R2_Closed  FALSE
+OUT Valve V1_R2 :
+OUT V1_R2_Open_Order  FALSE
+OUT V1_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V2_R2_Opened  FALSE
+IN V2_R2_Closed  FALSE
+OUT Valve V2_R2 :
+OUT V2_R2_Open_Order  FALSE
+OUT V2_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V1_R3_Opened  FALSE
+IN V1_R3_Closed  FALSE
+OUT Valve V1_R3 :
+OUT V1_R3_Open_Order  FALSE
+OUT V1_R3_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V2_R3_Opened  FALSE
+IN V2_R3_Closed  FALSE
+OUT Valve V2_R3 :
+OUT V2_R3_Open_Order  FALSE
+OUT V2_R3_Close_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P1  FALSE
+IN P1_Started  FALSE
+OUT Pump P1  :
+OUT P1_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P2  FALSE
+IN P2_Started  FALSE
+OUT Pump P1  :
+OUT P2_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P3  :
+IN Emptying_Start_P3  FALSE
+IN P3_Started  FALSE
+OUT Pump P1  :
+OUT P3_Start_Order  FALSE
+  
+  
+app_Blenders.Cyclic
+IN Blender :
+IN Mixing_Start_Blender  FALSE
+IN V1_Speed  FALSE
+IN V2_Speed  FALSE
+OUT Blender  :
+OUT Blender_Start_Order  FALSE
+OUT V1_Order  FALSE
+OUT V2_Order  FALSE
+  
+  
+IN Regulateur :
+IN Second  FALSE
+IN T_Measured   2.00000E+01
+IN Resistance_SetPoint   8.00000E+01
+IN Gradient   2.00000E+01
+IN Tmax   1.00000E+02
+OUT Regulateur  :
+OUT T_Adjusted   0.00000E+00
+  
+  
+IN Resistance :
+IN Mixing_Start_Blender  FALSE
+IN T_Adjusted   0.00000E+00
+IN Resistance_SetPoint   0.00000E+00
+  
+  
+==========> Clock :  1.400000000
+  
+   
+ 
+  START CYCLE 
+Cycle.Cyclic
+IN Cycle.Cyclic :
+IN Start_Cycle  FALSE
+IN End_Filling_P1  FALSE
+IN End_Filling_P2  FALSE
+IN End_Mixing  FALSE
+IN End_Emptying  FALSE
+OUT Cycle.Cyclic :
+OUT Filling_P1_Order  TRUE
+OUT Filling_P2_Order  FALSE
+OUT Emptying_Order  FALSE
+OUT End_Cycle  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P1 :
+IN Filling_P1_Order  TRUE
+IN Filling_V_R1_Opened  FALSE
+IN Filling_V_R1_Closed  FALSE
+IN P1_Started  FALSE
+OUT Filling_P1 :
+OUT Filling_Open_V_R1  TRUE
+OUT Filling_Start_P1  FALSE
+OUT Filling_Close_V_R1  FALSE
+OUT End_Filling_P1  FALSE
+  
+  
+App_Filling.Cyclic
+IN Filling_P2 :
+IN Filling_P2_Order  FALSE
+IN Filling_V_R2_Opened  FALSE
+IN Filling_V_R2_Closed  FALSE
+IN P2_Started  FALSE
+OUT Filling_P2 :
+OUT Filling_Open_V_R2  FALSE
+OUT Filling_Start_P2  FALSE
+OUT Filling_Close_V_R2  FALSE
+OUT End_Filling_P2  FALSE
+  
+  
+App_Mixing.Cyclic
+IN Mixing :
+IN Mixing_Order  FALSE
+IN Blender_Started  FALSE
+IN Mixing_Duration   3
+OUT Mixing :
+OUT Mixing_Start_Blender  FALSE
+OUT Mixing_Start_Resistance  FALSE
+OUT End_Mixing  FALSE
+  
+  
+App_Filling.Cyclic
+IN Emptyin :
+IN Emptying_Order  FALSE
+IN Emptying_V_R3_Opened  FALSE
+IN Emptying_V_R3_Closed  FALSE
+IN P3_Started  FALSE
+OUT Emptyin :
+OUT Emptying_Open_V_R3  FALSE
+OUT Emptying_Start_P3  FALSE
+OUT Emptying_Close_V_R3  FALSE
+OUT End_Emptying  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V1_R1_Opened  FALSE
+IN V1_R1_Closed  FALSE
+OUT Valve V1_R1 :
+OUT V1_R1_Open_Order  TRUE
+OUT V1_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R1  :
+IN Filling_Open_V_R1  TRUE
+IN Filling_Close_V_R1  FALSE
+IN V2_R1_Opened  FALSE
+IN V2_R1_Closed  FALSE
+OUT Valve V2_R1 :
+OUT V2_R1_Open_Order  TRUE
+OUT V2_R1_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V1_R2_Opened  FALSE
+IN V1_R2_Closed  FALSE
+OUT Valve V1_R2 :
+OUT V1_R2_Open_Order  FALSE
+OUT V1_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R2  :
+IN Filling_Open_V_R2  FALSE
+IN Filling_Close_V_R2  FALSE
+IN V2_R2_Opened  FALSE
+IN V2_R2_Closed  FALSE
+OUT Valve V2_R2 :
+OUT V2_R2_Open_Order  FALSE
+OUT V2_R2_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V1_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V1_R3_Opened  FALSE
+IN V1_R3_Closed  FALSE
+OUT Valve V1_R3 :
+OUT V1_R3_Open_Order  FALSE
+OUT V1_R3_Close_Order  FALSE
+  
+  
+Valve.Cyclic
+IN Valve V2_R3  :
+IN Emptying_Open_V_R3  FALSE
+IN Emptying_Close_V_R3  FALSE
+IN V2_R3_Opened  FALSE
+IN V2_R3_Closed  FALSE
+OUT Valve V2_R3 :
+OUT V2_R3_Open_Order  FALSE
+OUT V2_R3_Close_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P1  FALSE
+IN P1_Started  FALSE
+OUT Pump P1  :
+OUT P1_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P1  :
+IN Filling_Start_P2  FALSE
+IN P2_Started  FALSE
+OUT Pump P1  :
+OUT P2_Start_Order  FALSE
+  
+  
+app_Pump.Cyclic
+IN Pump P3  :
+IN Emptying_Start_P3  FALSE
+IN P3_Started  FALSE
+OUT Pump P1  :
+OUT P3_Start_Order  FALSE
+  
+  
+app_Blenders.Cyclic
+IN Blender :
+IN Mixing_Start_Blender  FALSE
+IN V1_Speed  FALSE
+IN V2_Speed  FALSE
+OUT Blender  :
+OUT Blender_Start_Order  FALSE
+OUT V1_Order  FALSE
+OUT V2_Order  FALSE
+  
+  
+IN Regulateur :
+IN Second  FALSE
+IN T_Measured   2.00000E+01
+IN Resistance_SetPoint   8.00000E+01
+IN Gradient   2.00000E+01
+IN Tmax   1.00000E+02
+OUT Regulateur  :
+OUT T_Adjusted   0.00000E+00
+  
+  
+IN Resistance :
+IN Mixing_Start_Blender  FALSE
+IN T_Adjusted   0.00000E+00
+IN Resistance_SetPoint   0.00000E+00
+  
+  

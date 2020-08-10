@@ -1,0 +1,114 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnatp
+A -gnatVn
+A -gnat12
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U tank.mixing%b		tank-mixing.adb		e037a928 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W tank%s		tank.ads		tank.ali
+
+U tank.mixing%s		tank-mixing.ads		3baa2910 EE OO PF PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+W tank%s		tank.ads		tank.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-ioexce.ads		20190518041254 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041255 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041255 1b7d22d2 system.wch_con%s
+D tank.ads		20200312090552 d54e66a4 tank%s
+D tank-mixing.ads	20200628134350 eee44fb4 tank.mixing%s
+D tank-mixing.adb	20200702093938 a02733f1 tank.mixing%b
+G a e
+G c Z s b [initialize tank__mixing 31 14 none]
+G c Z s b [get_state tank__mixing 33 13 none]
+G c Z s b [set_state tank__mixing 35 14 none]
+G c Z s b [get_counter tank__mixing 39 13 none]
+G c Z s b [set_counter tank__mixing 40 14 none]
+G c Z s b [cyclic tank__mixing 44 14 none]
+G c Z s s [mixing_recordDA tank__mixing 55 9 none]
+G c Z s s [mixing_recordDF tank__mixing 55 9 none]
+G c Z s s [mixing_recordIP tank__mixing 55 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 27|21r6 21r23
+X 6 a-textio.ads
+57K13*Text_IO 727e16 27|21w10 21r27
+508U14*Put_Line 27|80s7
+X 25 tank.ads
+21K9*Tank 25e9 26|21r9 62r5 27|23r14 119r5
+X 26 tank-mixing.ads
+21K14*Mixing 25|21k9 26|55E9 62l10 62e16 27|23b19 119l10 119t16
+23R9*Mixing_Record 31p14 31r40 33p13 33r31 35p14 35r39 39p13 39r40 40p14
+. 41r24 44p14 45r33 55c9 58e14 60r32 27|29r40 34r31 39r39 48r40 58r24 70r33
+25E9*Mixing_State 29e25 33r53 35r57 56r17 27|34r53 39r57 78r19
+26n8*Init_State{25E9} 60r59 27|82r15 105r29
+27n8*Mix_State{25E9} 27|84r29 87r15 114r41 115r41
+28n8*It_Mixes_State{25E9} 27|89r29 92r15
+29n8*End_Mixing_State{25E9} 27|99r29 103r15 116r41
+31U14*Initialize 31=26 27|29b14 32l8 32t18
+31r26 This{23R9} 27|29b26 31m7
+33V13*get_state{25E9} 33>24 27|34b13 37l10 37t19
+33r24 This{23R9} 27|34b24 36r16
+35U14*set_state 35=25 35>54 27|39b14 42l8 42t17
+35r25 This{23R9} 27|39b25 41m7
+35e54 S{25E9} 27|39b54 41r21
+39V13*Get_Counter{integer} 39=26 27|48b13 51l8 51t19
+39r26 This{23R9} 27|48b26 50r14
+40U14*Set_Counter 41=7 42>7 27|57b14 62l8 62t19
+41r7 This{23R9} 27|58b7 61m7
+42i7 Counter{integer} 27|59b7 61r23
+44U14*Cyclic 45=7 46>7 47>7 48>7 49<7 50<7 51<7 27|69b14 117l8 117t14
+45r7 This{23R9} 27|70b7 78r35 81r13 93r16 95m16 95r30 97r19 110m7 114r28
+. 115r28 116r28
+46b7 Start_Mixing{boolean} 27|71b7 83r16 104r16
+47b7 Blender_Started{boolean} 27|72b7 88r17
+48i7 Mixing_Duration{integer} 27|73b7 93r31 97r35
+49b7 Start_Blender{boolean} 27|74b7 114m7
+50b7 Start_Resistance{boolean} 27|75b7 115m7
+51b7 End_Mixing{boolean} 27|76b7 116m7
+56e7*State{25E9} 60m50 27|36r21 41m12 78r40 81r18 110m12 114r33 115r33 116r33
+57i7*Counter{integer} 60m71 27|50r19 61m12 93r21 95m21 95r35 97r24
+60r4 No_Mixing_Record{23R9} 27|31r15
+X 27 tank-mixing.adb
+78e7 New_State{26|25E9} 84m16 89m16 99m16 105m16 110r21
+

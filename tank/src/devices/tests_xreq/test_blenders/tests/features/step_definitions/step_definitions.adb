@@ -5,11 +5,9 @@ package body step_definitions is
 
     blender   : Blender_Record;
     Run       : Boolean;
-    Speed_1   : Boolean;
     Speed_2   : Boolean;
     Run_Order :  Boolean;
     v2_Order  :  Boolean;
-    v1_Order  :  Boolean;
 
    procedure Set_Up (Feature_File : in String) is
 
@@ -53,17 +51,6 @@ package body step_definitions is
    
    end When_Run_is_N;
 
-
-   procedure When_Speed_1_is_N (Args : in out Arg_Type) is
-
-   Speed_1_s : constant String := Args.Match (1);
-
-   begin
-
-       Speed_1 := Boolean'value(Speed_1_s);
-   
-   end When_Speed_1_is_N;
-
    procedure When_Speed_2_is_N (Args : in out Arg_Type) is
 
       Speed_2_s      : constant String := Args.Match (1);
@@ -72,11 +59,9 @@ package body step_definitions is
 
       Blender.Cyclic 
       		(Run       => Run,
-      		 Speed_1   => Speed_1,
      		 Speed_2   => Boolean'value(Speed_2_s),
      		 Run_Order => Run_Order,
-     		 v2_Order  => v2_Order,
-     		 v1_Order  => v1_Order);  
+     		 v2_Order  => v2_Order);
 
 
    end When_Speed_2_is_N;
@@ -108,20 +93,6 @@ package body step_definitions is
 
    end Then_Run_Order_is_N;
 
-
-   procedure Then_v1_Order_is_N (Args : in out Arg_Type) is
-     Expected_v1_Order  : constant String      := Args.Match (1);
-   begin
-
-     Assert
-       (Cmp    => v1_Order = Boolean'Value (Expected_v1_Order),
-        Reason =>
-          "Wrong v1_Order : Actual =>'" & v1_Order'Img & "' Expected =>'"
-          & Expected_v1_Order & "'");
-
-   end Then_v1_Order_is_N;
-
-
    procedure Then_v2_Order_is_N (Args : in out Arg_Type)is
      Expected_v2_Order  : constant String := Args.Match (1);
    begin
@@ -133,5 +104,53 @@ package body step_definitions is
           & Expected_v2_Order & "'");
 
    end Then_v2_Order_is_N;
+
+   procedure Then_New_state_is_Stopping_State (Args : in out Arg_Type) is
+      Not_Yet_Implemented : exception;
+   begin
+      raise Not_Yet_Implemented;
+   end Then_New_state_is_Stopping_State;
+
+   procedure Then_v1_Order_is_TRUE (Args : in out Arg_Type) is
+      Not_Yet_Implemented : exception;
+   begin
+      raise Not_Yet_Implemented;
+   end Then_v1_Order_is_TRUE;
+
+   procedure Given_State_is_Stopping_State (Args : in out Arg_Type) is
+      Not_Yet_Implemented : exception;
+   begin
+      raise Not_Yet_Implemented;
+   end Given_State_is_Stopping_State;
+
+   procedure Then_New_state_is_Starting_State (Args : in out Arg_Type) is
+      Not_Yet_Implemented : exception;
+   begin
+      raise Not_Yet_Implemented;
+   end Then_New_state_is_Starting_State;
+
+   procedure When_Speed_1_is_TRUE (Args : in out Arg_Type) is
+      Not_Yet_Implemented : exception;
+   begin
+      raise Not_Yet_Implemented;
+   end When_Speed_1_is_TRUE;
+
+   procedure When_Speed_1_is_FALSE (Args : in out Arg_Type) is
+      Not_Yet_Implemented : exception;
+   begin
+      raise Not_Yet_Implemented;
+   end When_Speed_1_is_FALSE;
+
+   procedure Then_v1_Order_is_FALSE (Args : in out Arg_Type) is
+      Not_Yet_Implemented : exception;
+   begin
+      raise Not_Yet_Implemented;
+   end Then_v1_Order_is_FALSE;
+
+   procedure Given_State_is_Starting_State (Args : in out Arg_Type) is
+      Not_Yet_Implemented : exception;
+   begin
+      raise Not_Yet_Implemented;
+   end Given_State_is_Starting_State;
 
 end step_definitions;

@@ -1,0 +1,119 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnatp
+A -gnatVn
+A -gnat12
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U ios%b			ios.adb			ce949d71 NE OO PK
+W ext_ios%s		ext_ios.ads		ext_ios.ali
+
+U ios%s			ios.ads			545d1be0 EE NE OO PK
+
+D ext_ios.ads		20200628124123 3c293ae6 ext_ios%s
+D ios.ads		20200702121941 545d1be0 ios%s
+D ios.adb		20200628165745 a6e0bc77 ios%b
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+G c Z s b [acquire_inputs ios 124 14 none]
+G c Z s b [set_outputs ios 125 14 none]
+X 1 ext_ios.ads
+21K10*Ext_Ios 157e12 3|21w6 21r19
+28b9*Ext_V1_R1_Opened{boolean} 3|33r23
+29b9*Ext_V1_R1_Closed{boolean} 3|34r23
+33b9*Ext_V2_R1_Opened{boolean} 3|38r23
+34b9*Ext_V2_R1_Closed{boolean} 3|39r23
+38b9*Ext_V1_R2_Opened{boolean} 3|43r23
+39b9*Ext_V1_R2_Closed{boolean} 3|44r23
+43b9*Ext_V2_R2_Opened{boolean} 3|48r23
+44b9*Ext_V2_R2_Closed{boolean} 3|49r23
+48b9*Ext_V1_R3_Opened{boolean} 3|53r23
+49b9*Ext_V1_R3_Closed{boolean} 3|54r23
+53b9*Ext_V2_R3_Opened{boolean} 3|58r23
+54b9*Ext_V2_R3_Closed{boolean} 3|59r23
+61b9*Ext_P1_Started{boolean} 3|63r21
+65b9*Ext_P2_Started{boolean} 3|67r21
+69b9*Ext_P3_Started{boolean} 3|71r21
+73b9*Ext_Tank_Low_Level{boolean} 3|75r25
+74b9*Ext_Tank_Medium_Level{boolean} 3|76r28
+75b9*Ext_Tank_High_Level{boolean} 3|77r26
+90b9*Ext_Start_Cycle{boolean} 3|87r22 151m7
+98b9*Ext_V1_R1_Open_Order{boolean} 3|99m7
+99b9*Ext_V1_R1_Close_Order{boolean} 3|100m7
+103b9*Ext_V2_R1_Open_Order{boolean} 3|104m7
+104b9*Ext_V2_R1_Close_Order{boolean} 3|105m7
+108b9*Ext_V1_R2_Open_Order{boolean} 3|109m7
+109b11*Ext_V1_R2_Close_Order{boolean} 3|110m7
+113b9*Ext_V2_R2_Open_Order{boolean} 3|114m7
+114b9*Ext_V2_R2_Close_Order{boolean} 3|115m7
+118b9*Ext_V1_R3_Open_Order{boolean} 3|119m7
+119b9*Ext_V1_R3_Close_Order{boolean} 3|120m7
+123b9*Ext_V2_R3_Open_Order{boolean} 3|124m7
+124b9*Ext_V2_R3_Close_Order{boolean} 3|125m7
+128b9*Ext_P1_Start_Order{boolean} 3|129m7
+132b9*Ext_P2_Start_Order{boolean} 3|133m7
+136b9*Ext_P3_Start_Order{boolean} 3|137m7
+140f9*Ext_T_Measured{float} 3|141m7
+146b8*Ext_V1_Speed{boolean} 3|82r19
+147b8*Ext_V2_Speed{boolean} 3|83r19
+148b8*Ext_V1_Order{boolean} 3|147m7
+149b8*Ext_V2_Order{boolean} 3|146m7
+150b8*Ext_Blender_Start_Order{boolean} 3|145m7
+X 2 ios.ads
+21K9*Ios 127l5 127e8 3|23b14 155l5 155t8
+26i7*Mixing_Duration{integer}
+31b4*V1_R1_Opened{boolean} 3|33m7
+32b4*V1_R1_Closed{boolean} 3|34m7
+33b4*V1_R1_Open_Order{boolean} 3|99r31
+34b4*V1_R1_Close_Order{boolean} 3|100r32
+38b4*V2_R1_Opened{boolean} 3|38m7
+39b4*V2_R1_Closed{boolean} 3|39m7
+40b4*V2_R1_Open_Order{boolean} 3|104r31
+41b4*V2_R1_Close_Order{boolean} 3|105r32
+45b4*V1_R2_Opened{boolean} 3|43m7
+46b4*V1_R2_Closed{boolean} 3|44m7
+47b4*V1_R2_Open_Order{boolean} 3|109r31
+48b4*V1_R2_Close_Order{boolean} 3|110r32
+52b4*V2_R2_Opened{boolean} 3|48m7
+53b4*V2_R2_Closed{boolean} 3|49m7
+54b4*V2_R2_Open_Order{boolean} 3|114r31
+55b4*V2_R2_Close_Order{boolean} 3|115r32
+62b4*V1_R3_Opened{boolean} 3|53m7
+63b4*V1_R3_Closed{boolean} 3|54m7
+64b4*V1_R3_Open_Order{boolean} 3|119r32
+65b4*V1_R3_Close_Order{boolean} 3|120r32
+69b4*V2_R3_Opened{boolean} 3|58m6
+70b4*V2_R3_Closed{boolean} 3|59m6
+71b4*V2_R3_Open_Order{boolean} 3|124r31
+72b4*V2_R3_Close_Order{boolean} 3|125r32
+77b4*P1_Started{boolean} 3|63m7
+78b4*P1_Start_Order{boolean} 3|129r29
+82b4*P2_Started{boolean} 3|67m7
+83b4*P2_Start_Order{boolean} 3|133r29
+87b4*P3_Started{boolean} 3|71m7
+88b4*P3_Start_Order{boolean} 3|137r29
+92b4*Tank_Low_Level{boolean} 3|75m7
+93b4*Tank_Medium_Level{boolean} 3|76m7
+94b4*Tank_High_Level{boolean} 3|77m7
+97i4*Regul_Duration{integer}
+98f4*T_Measured{float} 3|141r25
+99f4*T_Adjusted{float}
+103f4*Gradient{float}
+104f4*Tmax{float}
+109f4*Resistance_SetPoint{float}
+114b4*V1_Speed{boolean} 3|82m7
+115b4*V2_Speed{boolean} 3|83m7
+116b4*Blender_Start_Order{boolean} 3|145r34
+117b4*V1_Order{boolean} 3|147r25
+118b4*V2_Order{boolean} 3|146r25
+122b4*Start_Cycle{boolean} 3|87m7 151r26
+124U14*Acquire_Inputs 3|29b14 89l8 89t22
+125U14*Set_Outputs 3|95b14 153l8 153t19
+

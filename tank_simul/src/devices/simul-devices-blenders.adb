@@ -37,10 +37,8 @@ package body Simul.Devices.Blenders is
    
    procedure Cyclic
     (This      : in out Blender_Record;
-      V1_Order  : Boolean;
       V2_Order  : Boolean;
       Run_Order : Boolean;
-      Speed_1   : out Boolean;
       Speed_2   : out Boolean) is
       
       New_State : Blender_State := This.State;
@@ -53,25 +51,13 @@ package body Simul.Devices.Blenders is
          
 	 when Stop_State =>
 	    if Run_Order  then
-	       New_State := Running_V1_State;
-	    end if;
-	    
-	 when Running_v1_State =>
-	    if not V2_Order  then
-	       New_State := Stopping_State;
-            elsif V1_Order then
 	       New_State := Running_V2_State;
 	    end if;
 	    
-	 when Stopping_State =>
-	    if not Run_Order then
+	 when Running_v2_State =>
+	    if  V2_Order  then
 	       New_State := Stop_State;
 	    end if;
-	    
-	 when Running_V2_State =>
-	    if V2_Order then
-	       New_State := Running_V1_State;
-            end if;
     
       end case;
       
@@ -81,7 +67,6 @@ package body Simul.Devices.Blenders is
    --Commande--
    ------------
 
-      Speed_1 := (This.State = Running_V1_State); 
       Speed_2 := (This.State = Running_V2_State);
 
    end Cyclic;

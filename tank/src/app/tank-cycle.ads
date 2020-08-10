@@ -39,6 +39,7 @@ package Tank.Cycle is
    
    procedure Cyclic
      (This             : in out Cycle_Record;
+      Start_Cycle      : Boolean;
       End_Filling_P1   : Boolean;
       End_Filling_P2   : Boolean;
       End_Mixing       : Boolean;

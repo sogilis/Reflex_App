@@ -23,6 +23,9 @@ package Ios is
    -- Valves for Filling --
    ------------------------
    
+      Mixing_Duration : constant Integer := 3;--60 * 60;
+   --  Mixing duration in seconds (60mn)
+  
    --  Valve V1_R1 
    
    V1_R1_Opened      : Boolean;
@@ -91,7 +94,7 @@ package Ios is
    Tank_High_Level   : Boolean;
    
    --temperature measured by the sensor
-   
+   Regul_Duration       : Integer := 20;
    T_Measured           : Float := 20.0;
    T_Adjusted           : Float;
  
@@ -116,7 +119,7 @@ package Ios is
 
    --  Hmi
    
-   Start_Cycle : Boolean;
+   Start_Cycle : Boolean ;
    
    procedure Acquire_Inputs;
    procedure Set_Outputs;

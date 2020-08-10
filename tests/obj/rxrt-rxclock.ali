@@ -1,0 +1,34 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnat2012
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_FIXED_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U rxrt.rxclock%s	rxrt-rxclock.ads	6eba6925 NE OO PK
+W rxrt%s		rxrt.adb		rxrt.ali
+
+D rxrt.ads		20171213094156 032df926 rxrt%s
+D rxrt-rxclock.ads	20171213094216 6d979003 rxrt.rxclock%s
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+G c Z s s [clock rxrt__rxclock 33 13 none]
+G c Z s s [set_clock rxrt__rxclock 34 14 none]
+G c Z s s [tick rxrt__rxclock 41 13 none]
+G c Z s s [set_tick rxrt__rxclock 42 14 none]
+X 1 rxrt.ads
+32K9*Rxrt 120e9 2|31r9 47r5
+X 2 rxrt-rxclock.ads
+31K14*RxClock 1|32k9 2|47l10 47e17
+33V13*Clock{duration} 35b<ada,Rxrt_Clock>24
+34U14*Set_Clock 34>25 36b<ada,Rxrt_Set_Clock>24
+34o25 C{duration}
+41V13*Tick{duration} 43b<ada,Rxrt_Tick>24
+42U14*Set_Tick 42>24 44b<ada,Rxrt_Set_Tick>24
+42o24 T{duration}
+

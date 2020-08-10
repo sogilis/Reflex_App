@@ -1,0 +1,90 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnat2012
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_FLOATING_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U rx.library.analogs%b	rx-library-analogs.adb	aa9da292 NE OO PK
+W rx.library%s		rx-library.ads		rx-library.ali
+Z system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
+
+U rx.library.analogs%s	rx-library-analogs.ads	b36520f6 EE NE OO PK
+W rx.library%s		rx-library.ads		rx-library.ali
+
+D rx.ads		20200325182532 6a2e3279 rx%s
+D rx-library.ads	20200325182506 a121873e rx.library%s
+D rx-library-analogs.ads  20200710090008 1244a7c8 rx.library.analogs%s
+D rx-library-analogs.adb  20200710090256 b8d9055a rx.library.analogs%b
+D system.ads		20190518041255 4635ec04 system%s
+D s-fatflt.ads		20190518041255 11beb392 system.fat_flt%s
+D s-fatgen.ads		20190518041256 49cbaf86 system.fat_gen%s
+G a e
+G c Z s b [epsilon_equal rx__library__analogs 40 13 none]
+G c Z s b [scale_in rx__library__analogs 44 13 none]
+G c Z s b [scale_out rx__library__analogs 53 13 none]
+G c Z s b [limits rx__library__analogs 62 13 none]
+G c Z s b [dead_band rx__library__analogs 68 14 none]
+G c Z s b [max_of rx__library__analogs 74 13 none]
+G c Z s b [min_of rx__library__analogs 78 13 none]
+G c Z s b [min_limitation rx__library__analogs 82 14 none]
+G c Z s b [max_limitation rx__library__analogs 86 14 none]
+G c Z s b [ramp rx__library__analogs 92 14 none]
+X 1 rx.ads
+29K9*Rx 31e7 3|36r9 99r5 4|29r14 186r5
+X 2 rx-library.ads
+29K12*Library 1|29k9 2|31e15 3|36r12 99r8 4|29r17 186r8
+X 3 rx-library-analogs.ads
+36K20*Analogs 2|29k12 3|99l16 99e23 4|29b25 186l16 186t23
+38f4*Epsilon{float} 4|39r30
+40V13*Epsilon_Equal{boolean} 41>7 42>7 4|35b13 40l8 40t21
+41f7 V1{float} 4|36b7 39r23
+42f7 V2{float} 4|37b7 39r20
+44V13*Scale_In{float} 45>7 46>7 47>7 48>7 49>7 4|46b13 54l8 54t16
+45i7 X{integer} 4|47b7 53r30
+46i7 Xmin{integer} 4|48b7 53r73
+47i7 Xmax{integer} 4|49b7 53r34 53r66
+48f7 Ymin{float} 4|50b7 53r50
+49f7 Ymax{float} 4|51b7 53r14 53r43
+53V13*Scale_Out{integer} 54>7 55>7 56>7 57>7 58>7 4|60b13 69l8 69t17
+54f7 X{float} 4|61b7 68r11
+55f7 Xmin{float} 4|62b7 68r54
+56f7 Xmax{float} 4|63b7 68r15 68r47
+57i7 Ymin{integer} 4|64b7 68r37
+58i7 Ymax{integer} 4|65b7 67r14 68r30
+62V13*Limits{float} 63>7 64>7 65>7 4|75b13 87l8 87t14
+63f7 X{float} 4|76b7 80r10 82r13 85r17
+64f7 Ymin{float} 4|77b7 80r14 81r17
+65f7 Ymax{float} 4|78b7 82r17 83r17
+68U14*Dead_Band 69>7 70<7 71>7 72>7 4|93b14 104l8 104t17
+69f7 In_Value{float} 4|94b7 99r10 99r39 102r23
+70f7 Out_Value{float} 4|95b7 100m10 102m10
+71f7 Dead_Band_High{float} 4|96b7 99r50
+72f7 Dead_Band_Low{float} 4|97b7 99r21
+74V13*Max_Of{float} 75>7 76>7 4|110b13 122l8 122t14
+75f7 Val1{float} 4|111b7 116r10 117r17
+76f7 Val2{float} 4|112b7 116r17 119r17
+78V13*Min_Of{float} 79>7 80>7 4|128b13 140l8 140t14
+79f7 Val1{float} 4|129b7 134r10 135r17
+80f7 Val2{float} 4|130b7 134r17 137r17
+82U14*Min_Limitation 83=7 84>7 4|146b14 153l8 153t22
+83f7 Value{float} 4|147b7 150r10 151m10
+84f7 Mini{float} 4|148b7 150r18 151r19
+86U14*Max_Limitation 87=7 88>7 4|159b14 166l8 166t22
+87f7 Value{float} 4|160b7 163r10 164m10
+88f7 Maxi{float} 4|161b7 163r18 164r19
+90F12*Gradient_Type{float} 94r22 4|174r22
+92U14*Ramp 93>7 94>7 95=7 4|172b14 184l8 184t12
+93f7 Value_In{float} 4|173b7 177r11 179r15 182r23
+94f7 Gradient{90F12} 4|174b7 177r42 178r42 179r46 180r42
+95f7 Value_Out{float} 4|175b7 177r22 178m10 178r23 179r26 180m10 180r23 182m10
+X 4 rx-library-analogs.adb
+114f7 Val{float} 117m10 119m10 121r14
+132f7 Val{float} 135m10 137m10 139r14
+

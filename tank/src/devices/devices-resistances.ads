@@ -18,36 +18,34 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
+with Rx.Library.Analogs.PID;
+
 package Devices.Resistances is
-   
-   
-   type Resistance_Record is new Device_Record with private;
-   
-   type Resistance_State is 
-     ( Init_State,
-       Waiting_State,
-       Running_State );
-   
-   procedure Initialize (This : in out Resistance_Record);
-
-   function get_state(This : Resistance_Record) return Resistance_State;
-
-   procedure set_state (This : in out Resistance_Record; S: Resistance_State);
-   
   
-   procedure Cyclic
-     (This       : in out Resistance_Record;
-      Run        : Boolean;
-      T_Regul    : Float;
-      Set_Point  : Float);
-   
+  
+   type Resistance_Record is tagged private;
+
+  procedure Initialize
+    (This             : in out Resistance_Record;
+     Kp               : Float;
+     Ki               : Float;
+     Kd               : Float;
+     Temperature_High : Float;
+     Period           : Duration);
+    
+  procedure Cyclic
+    (This     : in out Resistance_Record;
+     Run      : Boolean;
+     Setpoint : Float;
+     Meas     : Float;
+     Cmd      : in out Float);
+  
 private
    
-   type Resistance_Record is new Device_Record with record
-      State        : Resistance_State;
+   type Resistance_Record is tagged record
+      Temperature_Scale_High : Float;
+      
+      Pid : Rx.Library.Analogs.Pid.Pid_Record;
    end record;
-   
-   No_Resistance_Record : constant Resistance_Record :=
-     (No_Device_Record with
-      State        => Init_State);
+     
 end Devices.Resistances;

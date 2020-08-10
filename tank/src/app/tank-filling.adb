@@ -54,7 +54,8 @@ package body Tank.Filling is
       Level_P        : Boolean;
       Open_Valves    : out Boolean;
       Start_Pumps    : out Boolean;
-      Close_Valves   : out Boolean) is
+      Close_Valves   : out Boolean;
+      End_Filling    : out Boolean) is
       
       New_State : Filling_State := This.State;
    begin
@@ -87,10 +88,10 @@ package body Tank.Filling is
 
 	 when Closing_Valves_State =>
 	    if Valves_Closed then
-	       New_State := Init_state;
+	       New_State := End_Filling_State;
 	    end if;
 
-	 when Waiting_State =>
+	 when End_Filling_State =>
 	    if not Start_Filling then
 	       New_State := Init_state;
 	    end if;
@@ -103,6 +104,7 @@ package body Tank.Filling is
       Open_Valves  := (This.State = Openning_Valves_State);
       Start_Pumps  := (This.State = Running_Pumps_State) ;
       Close_Valves := (This.State = Closing_Valves_State);
+      End_Filling := (This.State = End_Filling_State);
    end Cyclic;
    
 end Tank.Filling;

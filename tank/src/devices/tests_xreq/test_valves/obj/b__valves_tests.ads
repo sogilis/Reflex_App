@@ -371,7 +371,7 @@ package ada_main is
    pragma Export (C, u00166, "devicesB");
    u00167 : constant Version_32 := 16#fb10b7fe#;
    pragma Export (C, u00167, "devicesS");
-   u00168 : constant Version_32 := 16#74f74263#;
+   u00168 : constant Version_32 := 16#ed267c5d#;
    pragma Export (C, u00168, "devices__valvesB");
    u00169 : constant Version_32 := 16#7effa310#;
    pragma Export (C, u00169, "devices__valvesS");

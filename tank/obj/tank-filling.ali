@@ -1,0 +1,113 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnatp
+A -gnatVn
+A -gnat12
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U tank.filling%b	tank-filling.adb	eaa04eeb NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W tank%s		tank.ads		tank.ali
+
+U tank.filling%s	tank-filling.ads	f84e4e6c EE OO PF PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+W tank%s		tank.ads		tank.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-ioexce.ads		20190518041254 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041255 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041255 1b7d22d2 system.wch_con%s
+D tank.ads		20200312090552 d54e66a4 tank%s
+D tank-filling.ads	20200702112920 2d0028c8 tank.filling%s
+D tank-filling.adb	20200702112931 6954b34e tank.filling%b
+G a e
+G c Z s b [initialize tank__filling 34 14 none]
+G c Z s b [get_state tank__filling 36 13 none]
+G c Z s b [set_state tank__filling 38 14 none]
+G c Z s b [cyclic tank__filling 40 14 none]
+G c Z s s [filling_recordDA tank__filling 54 9 none]
+G c Z s s [filling_recordDF tank__filling 54 9 none]
+G c Z s s [filling_recordIP tank__filling 54 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 27|21r6 21r23
+X 6 a-textio.ads
+57K13*Text_IO 727e16 27|21w10 21r27
+508U14*Put_Line 27|62s7
+X 25 tank.ads
+21K9*Tank 25e9 26|21r9 60r5 27|23r14 110r5
+X 26 tank-filling.ads
+21K14*Filling 25|21k9 26|54E9 60l10 60e17 27|23b19 110l10 110t17
+23R9*Filling_Record 34p14 34r40 36p13 36r31 38p14 38r39 40p14 41r31 54c9
+. 56e14 58r33 27|29r40 34r31 39r39 49r30
+25E9*Filling_State 32e26 36r54 38r58 55r25 27|34r54 39r58 60r19
+26n8*Init_State{25E9} 58r61 27|64r15 96r29
+27n8*Openning_Valves_State{25E9} 27|66r29 69r15 104r37
+28n8*Running_Pumps_State{25E9} 27|71r29 74r15 105r37
+29n8*Filling_emptying_State{25E9} 27|76r29 79r15
+30n8*Closing_Valves_State{25E9} 27|86r29 89r15 106r37
+31n8*Stopping_Pumps_State{25E9} 27|81r29 84r15
+32n8*End_Filling_State{25E9} 27|91r29 94r15 107r36
+34U14*Initialize 34=26 27|29b14 32l8 32t18
+34r26 This{23R9} 27|29b26 31m7
+36V13*get_state{25E9} 36>24 27|34b13 37l10 37t19
+36r24 This{23R9} 27|34b24 36r16
+38U14*set_state 38=25 38>55 27|39b14 42l10 42t19
+38r25 This{23R9} 27|39b25 41m10
+38e55 S{25E9} 27|39b55 41r24
+40U14*Cyclic 41=7 42>7 43>7 44>7 45>7 46>7 47<7 48<7 49<7 50<7 27|48b14 108l8
+. 108t14
+41r7 This{23R9} 27|49b7 60r36 63r13 100m7 104r24 105r24 106r24 107r23
+42b7 Start_Filling{boolean} 27|50b7 65r16 95r20
+43b7 Valves_Opened{boolean} 27|51b7 70r16
+44b7 Valves_Closed{boolean} 27|52b7 90r16
+45b7 Pumps_Started{boolean} 27|53b7 75r16 85r20
+46b7 Level_P{boolean} 27|54b7 80r16
+47b7 Open_Valves{boolean} 27|55b7 104m7
+48b7 Start_Pumps{boolean} 27|56b7 105m7
+49b7 Close_Valves{boolean} 27|57b7 106m7
+50b7 End_Filling{boolean} 27|58b7 107m7
+55e8*State{25E9} 58m52 27|36r21 41m15 60r41 63r18 100m12 104r29 105r29 106r29
+. 107r28
+58r4 No_Filling_Record{23R9} 27|31r15
+X 27 tank-filling.adb
+60e7 New_State{26|25E9} 66m16 71m16 76m16 81m16 86m16 91m16 96m16 100r21
+

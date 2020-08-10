@@ -52,6 +52,7 @@ package Tank.Variables is
    
    End_Filling_P1   : Boolean;
    End_Filling_P2   : Boolean;
+   End_Filling      : Boolean;
    End_Mixing       : Boolean;
    End_Emptying     : Boolean;
    Filling_P1_Order : Boolean;
@@ -86,12 +87,23 @@ package Tank.Variables is
    Mixing_Start_Resistance : Boolean;
    Mixing_End              : Boolean;
    
-   Mixing_Duration : constant Integer := 3;--60 * 60;
-   --  Mising duration in seconds (60mn)
    
    Second : Boolean;
    
    --Temperature adjust by regulator
    
+   Pid_Temp_Adjust : Float;
+   Temp_Meas   : Float;
    
+   --  Pid Parameters
+   
+   Temperature_Scale_High : Float := 80.0;
+   
+   Kp         : Float := 0.5;
+   Ki         : Float := 0.001;
+   Kd         : Float := 0.0;
+   Period     : Duration := 1.0;
+   Limit_High : Float := 1.0;
+   Limit_Low  : Float := 0.0;
+
 end Tank.Variables;

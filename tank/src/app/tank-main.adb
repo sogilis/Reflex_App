@@ -58,7 +58,13 @@ package body Tank.Main is
      P3.Initialize;
      
      Blender.Initialize;
-     Resistance.Initialize;
+     Resistances.Initialize
+       (This             => Tank.Variables.Resistance,
+	Kp               => Tank.Variables.Kp,
+	Ki               => Tank.Variables.Ki,
+	Kd               => Tank.Variables.Kd,
+	Temperature_High => Tank.Variables.Temperature_Scale_High,
+	Period           => Tank.Variables.Period);
      
      Mixing_Graf.Initialize;
      Filling_P1_Graf.Initialize;
@@ -111,6 +117,7 @@ package body Tank.Main is
    ------------
    
    procedure Cyclic is
+      
    begin
 
 
@@ -133,21 +140,23 @@ package body Tank.Main is
       Put_line("Cycle.Cyclic");
       
       Tank.Cycle.Cyclic
-	(This             => Cycle_Graf,
-	 End_Filling_P1   => Filling_V_R1_Closed,
-	 End_Filling_P2   => Filling_V_R2_Closed,
+        (This             => Cycle_Graf,
+         Start_Cycle      => True,
+	 End_Filling_P1   => End_Filling_P1,
+	 End_Filling_P2   => End_Filling_P2,
 	 End_Mixing       => End_Mixing,
-	 End_Emptying     => Emptying_V_R3_Closed,
+	 End_Emptying     => End_Emptying,
 	 Filling_P1_Order => Filling_P1_Order,--out
 	 Filling_P2_Order => Filling_P2_Order,--out
 	 Mixing_Order     => Mixing_Order,--out
 	 Emptying_Order   => Emptying_Order,--out
          End_Cycle        => End_Cycle);--out
       Put_Line("IN Cycle.Cyclic :");
-      Put_Line("IN Filling_V_R1_Closed  "&Boolean'Image(Filling_V_R1_Closed));
-      Put_Line("IN Filling_V_R2_Closed  "&Boolean'Image(Filling_V_R2_Closed));
+      Put_Line("IN Start_Cycle  "&Boolean'Image(Start_Cycle));
+      Put_Line("IN End_Filling_P1  "&Boolean'Image(End_Filling_P1));
+      Put_Line("IN End_Filling_P2  "&Boolean'Image(End_Filling_P2));
       Put_Line("IN End_Mixing  "&Boolean'Image(End_Mixing));
-      Put_Line("IN Emptying_V_R3_Closed  "&Boolean'Image(Emptying_V_R3_Closed));
+      Put_Line("IN End_Emptying  "&Boolean'Image(End_Emptying));
       Put_Line("OUT Cycle.Cyclic :");
       Put_Line("OUT Filling_P1_Order  "&Boolean'Image(Filling_P1_Order));
       Put_Line("OUT Filling_P2_Order  "&Boolean'Image(Filling_P2_Order));
@@ -168,7 +177,8 @@ package body Tank.Main is
 	 Level_P        => True, -- Level_P        => Tank_Medium_Level,
 	 Open_Valves    => Filling_Open_V_R1,--out
 	 Start_Pumps    => Filling_Start_P1,--out
-         Close_Valves   => Filling_Close_V_R1);--out
+         Close_Valves   => Filling_Close_V_R1,
+ 	 End_Filling    => End_Filling_P1);--out
       
       Put_Line("IN Filling_P1 :");
       Put_Line("IN Filling_P1_Order  "&Boolean'Image(Filling_P1_Order));
@@ -180,6 +190,8 @@ package body Tank.Main is
       Put_Line("OUT Filling_Open_V_R1  "&Boolean'Image(Filling_Open_V_R1));
       Put_Line("OUT Filling_Start_P1  "&Boolean'Image(Filling_Start_P1));
       Put_Line("OUT Filling_Close_V_R1  "&Boolean'Image(Filling_Close_V_R1));
+      Put_Line("OUT End_Filling_P1  "&Boolean'Image(End_Filling_P1));
+
       Put_Line("  ");
       Put_Line("  ");
       
@@ -192,7 +204,8 @@ package body Tank.Main is
 	 Level_P        => True, --Tank_High_Level,
 	 Open_Valves    => Filling_Open_V_R2,--out
 	 Start_Pumps    => Filling_Start_P2,--out
-         Close_Valves   => Filling_Close_V_R2);--out
+         Close_Valves   => Filling_Close_V_R2,
+         End_Filling    => End_Filling_P2);--out
       
       Put_Line("IN Filling_P2 :");
       Put_Line("IN Filling_P2_Order  "&Boolean'Image(Filling_P2_Order));
@@ -204,6 +217,8 @@ package body Tank.Main is
       Put_Line("OUT Filling_Open_V_R2  "&Boolean'Image(Filling_Open_V_R2));
       Put_Line("OUT Filling_Start_P2  "&Boolean'Image(Filling_Start_P2));
       Put_Line("OUT Filling_Close_V_R2  "&Boolean'Image(Filling_Close_V_R2));
+      Put_Line("OUT End_Filling_P2  "&Boolean'Image(End_Filling_P2));
+
       Put_Line("  ");
       Put_Line("  ");
       
@@ -239,8 +254,9 @@ package body Tank.Main is
 	 Level_P        => True,--Tank_Low_Level,
 	 Open_Valves    => Emptying_Open_V_R3,--out
 	 Start_Pumps    => Emptying_Start_P3,--out
-         Close_Valves   => Emptying_Close_V_R3);--out
- 
+         Close_Valves   => Emptying_Close_V_R3,--out
+         End_Filling    => End_Emptying);
+      
       Put_Line("IN Emptyin :");
       Put_Line("IN Emptying_Order  "&Boolean'Image(Emptying_Order));
       Put_Line("IN Emptying_V_R3_Opened  "&Boolean'Image(Emptying_V_R3_Opened));
@@ -251,6 +267,8 @@ package body Tank.Main is
       Put_Line("OUT Emptying_Open_V_R3  "&Boolean'Image(Emptying_Open_V_R3));
       Put_Line("OUT Emptying_Start_P3  "&Boolean'Image(Emptying_Start_P3));
       Put_Line("OUT Emptying_Close_V_R3  "&Boolean'Image(Emptying_Close_V_R3));
+      Put_Line("OUT End_Emptying  "&Boolean'Image(End_Emptying));
+
       Put_Line("  ");
       Put_Line("  ");
       
@@ -442,10 +460,8 @@ package body Tank.Main is
      Devices.Blenders.Cyclic
         (This      => Blender,
          Run       => Mixing_Start_Blender,
-         Speed_1   => V1_Speed,
          Speed_2   => V2_Speed,
          Run_Order => Blender_Start_Order,
-         v1_Order  => V1_Order,
          v2_Order  => V2_Order);
       
       Put_Line("IN Blender :");
@@ -462,35 +478,38 @@ package body Tank.Main is
       --Regulateur
       
      Regul.Ramps.Ramp
-     (Second     => Second,
-      T_sensor   => T_Measured,
-      Set_Point  => Resistance_SetPoint,
-      Gradient   => Gradient, --Per minute
-      Tmax       => Tmax,
-      T_Adjusted => T_Adjusted);
+        (Second     =>  Second,
+         T_sensor   => T_Measured,
+         Set_Point  => Resistance_SetPoint,
+         Gradient   => Gradient, --Per minute
+         Tmax       => Tmax,
+         T_Adjusted => T_Adjusted);
       
       Put_Line("IN Regulateur :");
+      Put_Line("IN Second  "&Boolean'Image(Second));
       Put_Line("IN T_Measured  "&Float'Image(T_Measured));
       Put_Line("IN Resistance_SetPoint  "&Float'Image(Resistance_SetPoint));
       Put_Line("IN Gradient  "&Float'Image(Gradient));
       Put_Line("IN Tmax  "&Float'Image(Tmax));
       Put_Line("OUT Regulateur  :");
-      Put_Line("OUT T_Measured  "&Float'Image(T_Measured));
+      Put_Line("OUT T_Adjusted  "&Float'Image(T_Adjusted));
       Put_Line("  ");
       Put_Line("  ");
       
       --Resistance
    
+   
      Devices.Resistances.Cyclic
      (This       => Resistance,
       Run        => Mixing_Start_Blender,
-      T_Regul    => T_Adjusted,
-      Set_Point  => Resistance_SetPoint);
+      Setpoint   => T_Adjusted,
+      Meas       => Temp_Meas,
+      Cmd        => Pid_Temp_Adjust);
 
       Put_Line("IN Resistance :");
       Put_Line("IN Mixing_Start_Blender  "&Boolean'Image(Mixing_Start_Blender));
       Put_Line("IN T_Adjusted  "&Float'Image(T_Adjusted));
-      Put_Line("IN Resistance_SetPoint  "&Float'Image(Resistance_SetPoint));
+      Put_Line("IN Pid_Temp_Adjust  "&Float'Image(Pid_Temp_Adjust));
       Put_Line("  ");
       Put_Line("  ");
 

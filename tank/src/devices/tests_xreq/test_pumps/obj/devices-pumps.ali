@@ -63,8 +63,8 @@ D a-tags.ads		20190518041256 491b781d ada.tags%s
 D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
 D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
 D devices.ads		20200313104344 fb10b7fe devices%s
-D devices-pumps.ads	20200409153112 b4689a1c devices.pumps%s
-D devices-pumps.adb	20200409153119 6186dda1 devices.pumps%b
+D devices-pumps.ads	20200626172401 b4689a1c devices.pumps%s
+D devices-pumps.adb	20200628110811 6186dda1 devices.pumps%b
 D interfac.ads		20190518041254 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
 D system.ads		20190518041255 4635ec04 system%s
@@ -119,7 +119,7 @@ X 10 devices-pumps.ads
 30n7*stop_State{28E9} 54r24 11|59r29 60r15 77r29
 31n7*Run_State{28E9} 11|62r26 65r15 85r36
 32n7*Running_State{28E9} 11|67r29 70r15 85r64
-33n7*stopping_State{28E9} 11|72r29 75r15
+33n7*Stopping_State{28E9} 11|72r29 75r15
 35U14*Initialize 35=26 11|29b14 32l8 32t18
 35r26 This{24R9} 11|29b26 31m7
 37U14*Cyclic 38=7 39>7 40>7 41<7 11|48b14 86l8 86t14

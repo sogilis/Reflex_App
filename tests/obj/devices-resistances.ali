@@ -1,0 +1,122 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnat2012
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_FIXED_POINT
+RV NO_FLOATING_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U devices.resistances%b	devices-resistances.adb	7887848a OO PK
+W devices%s		devices.adb		devices.ali
+W rxclock%s		rxclock.adb		rxclock.ali
+
+U devices.resistances%s	devices-resistances.ads	f428a47e EE OO PF PK
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W devices%s		devices.adb		devices.ali
+W rx%s			rx.ads			rx.ali
+W rx.library%s		rx-library.ads		rx-library.ali
+W rx.library.analogs%s	rx-library-analogs.adb	rx-library-analogs.ali
+W rx.library.analogs.pid%s  rx-library-analogs-pid.adb  rx-library-analogs-pid.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+Z system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D devices.ads		20200313104344 fb10b7fe devices%s
+D devices-resistances.ads  20200715074134 c682db82 devices.resistances%s
+D devices-resistances.adb  20200715074133 7605d4b3 devices.resistances%b
+D rx.ads		20200325182532 6a2e3279 rx%s
+D rx-library.ads	20200325182506 a121873e rx.library%s
+D rx-library-analogs.ads  20200710090008 1244a7c8 rx.library.analogs%s
+D rx-library-analogs-pid.ads  20200710091128 c9bac802 rx.library.analogs.pid%s
+D rxclock.ads		20200630084834 c8008bbb rxclock%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041255 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+G a e
+G c Z s b [initialize devices__resistances 28 13 none]
+G c Z s b [cyclic devices__resistances 36 13 none]
+G c Z s s [resistance_recordDA devices__resistances 45 9 none]
+G c Z s s [resistance_recordDF devices__resistances 45 9 none]
+G c Z s s [resistance_recordIP devices__resistances 45 9 none]
+G r c none [initialize devices__resistances 28 13 none] [initialize rx__library__analogs__pid 35 14 none]
+G r c none [cyclic devices__resistances 36 13 none] [clock rxclock 45 13 none]
+G r c none [cyclic devices__resistances 36 13 none] [cyclic rx__library__analogs__pid 44 14 none]
+G r s pid_record [resistance_recordIP devices__resistances 45 9 none] [pid_recordIP rx__library__analogs__pid 54 9 none]
+X 6 devices.ads
+21K9*Devices 39e12 7|23r9 51r5 8|23r14 79r5
+X 7 devices-resistances.ads
+23K17*Resistances 6|21k9 7|45E9 51l13 51e24 8|23b22 79l13 79t24
+26R9*Resistance_Record 28p13 29r32 36p13 37r24 45c9 49e14 8|30r32 55r24
+28U13*Initialize 29=6 30>6 31>6 32>6 33>6 34>6 8|29b13 48l7 48t17
+29r6 This{26R9} 8|30b6 39m24 39r24 47m6
+30f6 Kp{float} 8|31b6 40r24
+31f6 Ki{float} 8|32b6 41r24
+32f6 Kd{float} 8|33b6 42r24
+33f6 Temperature_High{float} 8|34b6 44r24 47r37
+34o6 Period{duration} 8|35b6 43r24
+36U13*Cyclic 37=6 38>6 39>6 40>6 41=6 8|54b13 77l7 77t13
+37r6 This{26R9} 8|55b6 65r37 66r33 69m27 69r27 76r14
+38b6 Run{boolean} 8|56b6 71r27
+39f6 Setpoint{float} 8|57b6 65r26
+40f6 Meas{float} 8|58b6 66r26
+41f6 Cmd{float} 8|59b6 76m7
+46f7*Temperature_Scale_High{float} 8|47m11 65r42 66r38 76r19
+48r7*Pid{12|33R9} 8|39m29 69m32
+X 8 devices-resistances.adb
+61f6 Setpoint_Percent{float} 65m6 72r27
+62f6 Meas_Percent{float} 66m6 73r27
+63f6 Cmd_Percent{float} 74m27 74r27 76r44
+X 9 rx.ads
+29K9*Rx 7|21r6 48r13 8|38r6 68r7 9|31e7
+X 10 rx-library.ads
+29K12*Library 7|21r9 48r16 8|38r9 68r10 10|31e15
+X 11 rx-library-analogs.ads
+36K20*Analogs 7|21r17 48r24 8|38r17 68r18 11|99e23
+X 12 rx-library-analogs-pid.ads
+31K28*PID 7|21w25 48r32 8|38r25 68r26 12|68e27
+33R9*Pid_Record 7|48r36 12|66e14
+35U14*Initialize 8|38s29
+36r7 This{33R9} 8|39r9
+37f7 Kp{float} 8|40r9
+38f7 Ki{float} 8|41r9
+39f7 Kd{float} 8|42r9
+40o7 Period{duration} 8|43r9
+41f7 Limit_High{float} 8|44r9
+42f7 Limit_Low{float} 8|45r9
+44U14*Cyclic 8|68s30
+45r7 This{33R9} 8|69r10
+46o7 Clock{duration} 8|70r10
+47b7 Run{boolean} 8|71r10
+48f7 Set_Point{float} 8|72r10
+49f7 Process_Value{float} 8|73r10
+50f7 Out_Value{float} 8|74r10
+X 13 rxclock.ads
+31K9*RxClock 8|21w6 70r27 13|120e12
+45V13*Clock{duration} 8|70s35
+

@@ -69,9 +69,9 @@ D a-strunb.ads		20190518041255 1656705b ada.strings.unbounded%s
 D a-tags.ads		20190518041256 491b781d ada.tags%s
 D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20190518041255 eff36322 ada.unchecked_deallocation%s
-D feature_test.ads	20200623140039 bc011e82 feature_test%s
-D feature_test.adb	20200623140039 93646930 feature_test%b
-D step_definitions.ads	20200623140039 d6c0aa6b step_definitions%s
+D feature_test.ads	20200810082309 bc011e82 feature_test%s
+D feature_test.adb	20200810082309 93646930 feature_test%b
+D step_definitions.ads	20200810082309 d6c0aa6b step_definitions%s
 D system.ads		20190518041255 4635ec04 system%s
 D s-atocou.ads		20190518041256 b45c2d8d system.atomic_counters%s
 D s-exctab.ads		20190518041255 54135002 system.exception_table%s

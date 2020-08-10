@@ -224,9 +224,7 @@ package body Simul_Tank.Main is
      Simul.Devices.Blenders.Cyclic
        (This      => Blender_Simul,
         Run_Order => Blender_Start_Order_Simul,
-        V1_Order  => V1_Order_Simul,
         V2_Order  => V2_Order_Simul,
-        Speed_1   => V1_Speed_Simul,
         Speed_2   => V2_Speed_Simul);
 
       Put_Line("IN Simul_Blender  :");

@@ -67,8 +67,8 @@ D a-strunb.ads		20190518041255 1656705b ada.strings.unbounded%s
 D a-tags.ads		20190518041256 491b781d ada.tags%s
 D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20190518041255 eff36322 ada.unchecked_deallocation%s
-D blenders_tests.adb	20200623140039 649626a9 blenders_tests%b
-D feature_test.ads	20200623140039 bc011e82 feature_test%s
+D blenders_tests.adb	20200810084345 649626a9 blenders_tests%b
+D feature_test.ads	20200810084345 bc011e82 feature_test%s
 D gnat.ads		20190518041256 b5988c27 gnat%s
 D g-os_lib.ads		20190518041254 0db74523 gnat.os_lib%s
 D interfac.ads		20190518041254 5ab55268 interfaces%s

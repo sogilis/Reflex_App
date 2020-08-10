@@ -18,64 +18,62 @@
 --                                                                          --
 ------------------------------------------------------------------------------
 
-with Ada.Text_IO; use Ada.Text_IO;
+with RxClock;
 
 package body Devices.Resistances is
-   
-   ----------------
-   -- Initialize --
-   ----------------
-   
-   procedure Initialize (This : in out Resistance_Record) is
-   begin
-      This := No_Resistance_Record;
-   end Initialize;
-
-   function get_state (This : Resistance_Record) return Resistance_State is
-     begin
-	return This.State;
-     end get_state;
-
-   procedure Set_State (This : in out Resistance_Record; S: Resistance_State) is
-     begin
-	 This.State := S;
-     end Set_State;
-   ------------
-   -- Cyclic --
-   ------------
-   
-   procedure Cyclic
-       (This       : in out Resistance_Record;
-        Run        : Boolean;
-        T_Regul    : Float;
-        Set_Point  : Float) is
+  
+  ----------------
+  -- Initialize --
+  ----------------
+  
+  procedure Initialize
+    (This             : in out Resistance_Record;
+     Kp               : Float;
+     Ki               : Float;
+     Kd               : Float;
+     Temperature_High : Float;
+     Period           : Duration) is
+     
+  begin
+     Rx.Library.Analogs.Pid.Initialize
+       (This        => This.Pid,
+	Kp          => Kp,
+	Ki          => Ki,
+	Kd          => Kd,
+	Period      => Period,
+	Limit_High  => Temperature_High,
+	Limit_Low   => 0.0);
+     
+     This.Temperature_Scale_High := Temperature_High;
+  end Initialize;
+    
+  ------------
+  -- Cyclic --
+  ------------
+  
+  procedure Cyclic
+    (This     : in out Resistance_Record;
+     Run      : Boolean;
+     Setpoint : Float;
+     Meas     : Float;
+     Cmd      : in out Float) is
+     
+     Setpoint_Percent : Float;
+     Meas_Percent     : Float;
+     Cmd_Percent      : Float := 0.0;
+  begin
+     Setpoint_Percent := Setpoint / This.Temperature_Scale_High;
+     Meas_Percent     := Meas / This.Temperature_Scale_High;
+     
+      Rx.Library.Analogs.Pid.Cyclic
+	(This          => This.Pid,
+	 Clock         => Rxclock.Clock,
+	 Run           => Run,
+	 Set_Point     => Setpoint_Percent,
+	 Process_Value => Meas_Percent,
+	 Out_Value     => Cmd_Percent);
       
-      New_State : Resistance_State := This.State;
-   begin
-      Put_Line ("Resistances.Cyclic");
-      case This.State is
-         when Init_State =>
-	       New_State := Waiting_State;
-
-	 when Waiting_State =>
-	    if Run then
-	       New_State := Running_State;
-	    end if;
-	    
-	 when Running_State =>
-	    if T_Regul /= Set_Point then
-	       New_State := Running_State;
-            elsif not Run then
-	       New_State := Init_State;
-	    end if;
-	    
-      end case;
-      
-      This.State := New_State;
-      
-      --Commande
-      
-
-   end Cyclic;
-   
+      Cmd := This.Temperature_Scale_High * Cmd_Percent;
+  end Cyclic;
+	
 end Devices.Resistances;

@@ -83,9 +83,9 @@ package body feature_test is
    begin
       if Count_Mode then
          Background (Format, Report, Stop, True);
-         Report.Num_Steps := Report.Num_Steps + 8;
+         Report.Num_Steps := Report.Num_Steps + 6;
       else
-         Format.Start_Scenario ("state (1/9)", "./features/test.feature:6", Tags);
+         Format.Start_Scenario ("state (1/6)", "./features/test.feature:6", Tags);
          Format.Enter_Scenario;
          Call_Hook (Hook_Begin, Hook_Scenario);
 
@@ -177,47 +177,13 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- When Speed_1 is FALSE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Speed_1 is FALSE ";
-            Pos    : constant String    := "./features/test.feature:10";
-         begin
-            Make (Args, "Speed_1 is FALSE ");
-            Add_Match (Args, 12, 16);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               When_Speed_1_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
          -- When Speed_2 is FALSE 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_When;
             Stanza : constant String    := "Speed_2 is FALSE ";
-            Pos    : constant String    := "./features/test.feature:11";
+            Pos    : constant String    := "./features/test.feature:10";
          begin
             Make (Args, "Speed_2 is FALSE ");
             Add_Match (Args, 12, 16);
@@ -251,7 +217,7 @@ package body feature_test is
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
             Stanza : constant String    := "New_state is Stop_State ";
-            Pos    : constant String    := "./features/test.feature:13";
+            Pos    : constant String    := "./features/test.feature:12";
          begin
             Make (Args, "New_state is Stop_State ");
             Add_Match (Args, 14, 23);
@@ -285,7 +251,7 @@ package body feature_test is
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
             Stanza : constant String    := "Run_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:14";
+            Pos    : constant String    := "./features/test.feature:13";
          begin
             Make (Args, "Run_Order is FALSE ");
             Add_Match (Args, 14, 18);
@@ -313,47 +279,13 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- Then v1_Order is FALSE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "v1_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:15";
-         begin
-            Make (Args, "v1_Order is FALSE ");
-            Add_Match (Args, 13, 17);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_v1_Order_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
          -- Then v2_Order is FALSE 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
             Stanza : constant String    := "v2_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:16";
+            Pos    : constant String    := "./features/test.feature:14";
          begin
             Make (Args, "v2_Order is FALSE ");
             Add_Match (Args, 13, 17);
@@ -415,9 +347,9 @@ package body feature_test is
    begin
       if Count_Mode then
          Background (Format, Report, Stop, True);
-         Report.Num_Steps := Report.Num_Steps + 8;
+         Report.Num_Steps := Report.Num_Steps + 6;
       else
-         Format.Start_Scenario ("state (2/9)", "./features/test.feature:6", Tags);
+         Format.Start_Scenario ("state (2/6)", "./features/test.feature:6", Tags);
          Format.Enter_Scenario;
          Call_Hook (Hook_Begin, Hook_Scenario);
 
@@ -509,47 +441,13 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- When Speed_1 is FALSE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Speed_1 is FALSE ";
-            Pos    : constant String    := "./features/test.feature:10";
-         begin
-            Make (Args, "Speed_1 is FALSE ");
-            Add_Match (Args, 12, 16);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               When_Speed_1_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
          -- When Speed_2 is FALSE 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_When;
             Stanza : constant String    := "Speed_2 is FALSE ";
-            Pos    : constant String    := "./features/test.feature:11";
+            Pos    : constant String    := "./features/test.feature:10";
          begin
             Make (Args, "Speed_2 is FALSE ");
             Add_Match (Args, 12, 16);
@@ -577,16 +475,16 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- Then New_state is Starting_State 
+         -- Then New_state is Running_V1_State 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "New_state is Starting_State ";
-            Pos    : constant String    := "./features/test.feature:13";
+            Stanza : constant String    := "New_state is Running_V1_State ";
+            Pos    : constant String    := "./features/test.feature:12";
          begin
-            Make (Args, "New_state is Starting_State ");
-            Add_Match (Args, 14, 27);
+            Make (Args, "New_state is Running_V1_State ");
+            Add_Match (Args, 14, 29);
             Add_Sep   (Args, 1);
             Format.Start_Step (Prefix, Stanza, Pos);
             Format.Begin_Step;
@@ -617,7 +515,7 @@ package body feature_test is
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
             Stanza : constant String    := "Run_Order is TRUE ";
-            Pos    : constant String    := "./features/test.feature:14";
+            Pos    : constant String    := "./features/test.feature:13";
          begin
             Make (Args, "Run_Order is TRUE ");
             Add_Match (Args, 14, 17);
@@ -645,47 +543,13 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- Then v1_Order is FALSE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "v1_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:15";
-         begin
-            Make (Args, "v1_Order is FALSE ");
-            Add_Match (Args, 13, 17);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_v1_Order_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
          -- Then v2_Order is FALSE 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
             Stanza : constant String    := "v2_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:16";
+            Pos    : constant String    := "./features/test.feature:14";
          begin
             Make (Args, "v2_Order is FALSE ");
             Add_Match (Args, 13, 17);
@@ -747,9 +611,9 @@ package body feature_test is
    begin
       if Count_Mode then
          Background (Format, Report, Stop, True);
-         Report.Num_Steps := Report.Num_Steps + 8;
+         Report.Num_Steps := Report.Num_Steps + 6;
       else
-         Format.Start_Scenario ("state (3/9)", "./features/test.feature:6", Tags);
+         Format.Start_Scenario ("state (3/6)", "./features/test.feature:6", Tags);
          Format.Enter_Scenario;
          Call_Hook (Hook_Begin, Hook_Scenario);
 
@@ -773,16 +637,16 @@ package body feature_test is
 
          Format.Begin_Scenario;
          --
-         -- Given State is Starting_State
+         -- Given State is Running_V1_State
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Given;
-            Stanza : constant String    := "State is Starting_State";
+            Stanza : constant String    := "State is Running_V1_State";
             Pos    : constant String    := "./features/test.feature:7";
          begin
-            Make (Args, "State is Starting_State");
-            Add_Match (Args, 10, 23);
+            Make (Args, "State is Running_V1_State");
+            Add_Match (Args, 10, 25);
             Add_Sep   (Args, 1);
             Format.Start_Step (Prefix, Stanza, Pos);
             Format.Begin_Step;
@@ -807,16 +671,16 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- When Run is TRUE 
+         -- When Run is FALSE 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Run is TRUE ";
+            Stanza : constant String    := "Run is FALSE ";
             Pos    : constant String    := "./features/test.feature:9";
          begin
-            Make (Args, "Run is TRUE ");
-            Add_Match (Args, 8, 11);
+            Make (Args, "Run is FALSE ");
+            Add_Match (Args, 8, 12);
             Add_Sep   (Args, 1);
             Format.Start_Step (Prefix, Stanza, Pos);
             Format.Begin_Step;
@@ -841,47 +705,13 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- When Speed_1 is TRUE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Speed_1 is TRUE ";
-            Pos    : constant String    := "./features/test.feature:10";
-         begin
-            Make (Args, "Speed_1 is TRUE ");
-            Add_Match (Args, 12, 15);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               When_Speed_1_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
          -- When Speed_2 is FALSE 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_When;
             Stanza : constant String    := "Speed_2 is FALSE ";
-            Pos    : constant String    := "./features/test.feature:11";
+            Pos    : constant String    := "./features/test.feature:10";
          begin
             Make (Args, "Speed_2 is FALSE ");
             Add_Match (Args, 12, 16);
@@ -909,16 +739,16 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- Then New_state is Running_V1_State 
+         -- Then New_state is Stop_State 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "New_state is Running_V1_State ";
-            Pos    : constant String    := "./features/test.feature:13";
+            Stanza : constant String    := "New_state is Stop_State ";
+            Pos    : constant String    := "./features/test.feature:12";
          begin
-            Make (Args, "New_state is Running_V1_State ");
-            Add_Match (Args, 14, 29);
+            Make (Args, "New_state is Stop_State ");
+            Add_Match (Args, 14, 23);
             Add_Sep   (Args, 1);
             Format.Start_Step (Prefix, Stanza, Pos);
             Format.Begin_Step;
@@ -943,16 +773,16 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- Then Run_Order is TRUE 
+         -- Then Run_Order is FALSE 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "Run_Order is TRUE ";
-            Pos    : constant String    := "./features/test.feature:14";
+            Stanza : constant String    := "Run_Order is FALSE ";
+            Pos    : constant String    := "./features/test.feature:13";
          begin
-            Make (Args, "Run_Order is TRUE ");
-            Add_Match (Args, 14, 17);
+            Make (Args, "Run_Order is FALSE ");
+            Add_Match (Args, 14, 18);
             Add_Sep   (Args, 1);
             Format.Start_Step (Prefix, Stanza, Pos);
             Format.Begin_Step;
@@ -977,47 +807,13 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- Then v1_Order is TRUE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "v1_Order is TRUE ";
-            Pos    : constant String    := "./features/test.feature:15";
-         begin
-            Make (Args, "v1_Order is TRUE ");
-            Add_Match (Args, 13, 16);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_v1_Order_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
          -- Then v2_Order is FALSE 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
             Stanza : constant String    := "v2_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:16";
+            Pos    : constant String    := "./features/test.feature:14";
          begin
             Make (Args, "v2_Order is FALSE ");
             Add_Match (Args, 13, 17);
@@ -1079,9 +875,9 @@ package body feature_test is
    begin
       if Count_Mode then
          Background (Format, Report, Stop, True);
-         Report.Num_Steps := Report.Num_Steps + 8;
+         Report.Num_Steps := Report.Num_Steps + 6;
       else
-         Format.Start_Scenario ("state (4/9)", "./features/test.feature:6", Tags);
+         Format.Start_Scenario ("state (4/6)", "./features/test.feature:6", Tags);
          Format.Enter_Scenario;
          Call_Hook (Hook_Begin, Hook_Scenario);
 
@@ -1139,16 +935,16 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- When Run is FALSE 
+         -- When Run is TRUE 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Run is FALSE ";
+            Stanza : constant String    := "Run is TRUE ";
             Pos    : constant String    := "./features/test.feature:9";
          begin
-            Make (Args, "Run is FALSE ");
-            Add_Match (Args, 8, 12);
+            Make (Args, "Run is TRUE ");
+            Add_Match (Args, 8, 11);
             Add_Sep   (Args, 1);
             Format.Start_Step (Prefix, Stanza, Pos);
             Format.Begin_Step;
@@ -1173,50 +969,16 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- When Speed_1 is TRUE 
+         -- When Speed_2 is TRUE 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Speed_1 is TRUE ";
+            Stanza : constant String    := "Speed_2 is TRUE ";
             Pos    : constant String    := "./features/test.feature:10";
          begin
-            Make (Args, "Speed_1 is TRUE ");
+            Make (Args, "Speed_2 is TRUE ");
             Add_Match (Args, 12, 15);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               When_Speed_1_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- When Speed_2 is FALSE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Speed_2 is FALSE ";
-            Pos    : constant String    := "./features/test.feature:11";
-         begin
-            Make (Args, "Speed_2 is FALSE ");
-            Add_Match (Args, 12, 16);
             Add_Sep   (Args, 1);
             Format.Start_Step (Prefix, Stanza, Pos);
             Format.Begin_Step;
@@ -1241,16 +1003,16 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- Then New_state is Stopping_State 
+         -- Then New_state is Running_V2_State 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "New_state is Stopping_State ";
-            Pos    : constant String    := "./features/test.feature:13";
+            Stanza : constant String    := "New_state is Running_V2_State ";
+            Pos    : constant String    := "./features/test.feature:12";
          begin
-            Make (Args, "New_state is Stopping_State ");
-            Add_Match (Args, 14, 27);
+            Make (Args, "New_state is Running_V2_State ");
+            Add_Match (Args, 14, 29);
             Add_Sep   (Args, 1);
             Format.Start_Step (Prefix, Stanza, Pos);
             Format.Begin_Step;
@@ -1275,16 +1037,16 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- Then Run_Order is FALSE 
+         -- Then Run_Order is TRUE 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "Run_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:14";
+            Stanza : constant String    := "Run_Order is TRUE ";
+            Pos    : constant String    := "./features/test.feature:13";
          begin
-            Make (Args, "Run_Order is FALSE ");
-            Add_Match (Args, 14, 18);
+            Make (Args, "Run_Order is TRUE ");
+            Add_Match (Args, 14, 17);
             Add_Sep   (Args, 1);
             Format.Start_Step (Prefix, Stanza, Pos);
             Format.Begin_Step;
@@ -1309,50 +1071,16 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- Then v1_Order is FALSE 
+         -- Then v2_Order is TRUE 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "v1_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:15";
+            Stanza : constant String    := "v2_Order is TRUE ";
+            Pos    : constant String    := "./features/test.feature:14";
          begin
-            Make (Args, "v1_Order is FALSE ");
-            Add_Match (Args, 13, 17);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_v1_Order_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- Then v2_Order is FALSE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "v2_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:16";
-         begin
-            Make (Args, "v2_Order is FALSE ");
-            Add_Match (Args, 13, 17);
+            Make (Args, "v2_Order is TRUE ");
+            Add_Match (Args, 13, 16);
             Add_Sep   (Args, 1);
             Format.Start_Step (Prefix, Stanza, Pos);
             Format.Begin_Step;
@@ -1411,1005 +1139,9 @@ package body feature_test is
    begin
       if Count_Mode then
          Background (Format, Report, Stop, True);
-         Report.Num_Steps := Report.Num_Steps + 8;
+         Report.Num_Steps := Report.Num_Steps + 6;
       else
-         Format.Start_Scenario ("state (5/9)", "./features/test.feature:6", Tags);
-         Format.Enter_Scenario;
-         Call_Hook (Hook_Begin, Hook_Scenario);
-
-         --------------
-         --  Set_Up  --
-         --------------
-
-         Set_Up ("./features/test.feature");
-         Fail := Stop;
-
-         ------------------
-         --  Background  --
-         ------------------
-
-         Background (Format, Report, Stop, Count_Mode);
-         Fail := Stop;
-
-         ----------------
-         --  Scenario  --
-         ----------------
-
-         Format.Begin_Scenario;
-         --
-         -- Given State is Running_V1_State
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Given;
-            Stanza : constant String    := "State is Running_V1_State";
-            Pos    : constant String    := "./features/test.feature:7";
-         begin
-            Make (Args, "State is Running_V1_State");
-            Add_Match (Args, 10, 25);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Given_State_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- When Run is TRUE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Run is TRUE ";
-            Pos    : constant String    := "./features/test.feature:9";
-         begin
-            Make (Args, "Run is TRUE ");
-            Add_Match (Args, 8, 11);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               When_Run_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- When Speed_1 is FALSE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Speed_1 is FALSE ";
-            Pos    : constant String    := "./features/test.feature:10";
-         begin
-            Make (Args, "Speed_1 is FALSE ");
-            Add_Match (Args, 12, 16);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               When_Speed_1_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- When Speed_2 is TRUE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Speed_2 is TRUE ";
-            Pos    : constant String    := "./features/test.feature:11";
-         begin
-            Make (Args, "Speed_2 is TRUE ");
-            Add_Match (Args, 12, 15);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               When_Speed_2_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- Then New_state is Running_V2_State 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "New_state is Running_V2_State ";
-            Pos    : constant String    := "./features/test.feature:13";
-         begin
-            Make (Args, "New_state is Running_V2_State ");
-            Add_Match (Args, 14, 29);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_New_state_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- Then Run_Order is TRUE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "Run_Order is TRUE ";
-            Pos    : constant String    := "./features/test.feature:14";
-         begin
-            Make (Args, "Run_Order is TRUE ");
-            Add_Match (Args, 14, 17);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_Run_Order_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- Then v1_Order is FALSE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "v1_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:15";
-         begin
-            Make (Args, "v1_Order is FALSE ");
-            Add_Match (Args, 13, 17);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_v1_Order_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- Then v2_Order is TRUE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "v2_Order is TRUE ";
-            Pos    : constant String    := "./features/test.feature:16";
-         begin
-            Make (Args, "v2_Order is TRUE ");
-            Add_Match (Args, 13, 16);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_v2_Order_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-
-         --------------------
-         --  Finalization  --
-         --------------------
-
-         Call_Hook (Hook_End, Hook_Scenario);
-         if Fail then
-            Report.Count_Scenario_Failed := Report.Count_Scenario_Failed + 1;
-         Format.End_Scenario (Status_Failed);
-         else
-            Report.Count_Scenario_Passed := Report.Count_Scenario_Passed + 1;
-         Format.End_Scenario (Status_Passed);
-         end if;
-
-         -----------------
-         --  Tear_Down  --
-         -----------------
-
-         Tear_Down ("./features/test.feature");
-         Fail := Stop;
-         Format.Stop_Scenario;
-      end if;
-   end Scenario_state_TC_5;
-
-   procedure Scenario_state_TC_6 (Format     : in     Format_Ptr;
-                                  Report     : in out Report_Type;
-                                  Stop       : in out Boolean;
-                                  Tags       : in XReqLib.Format.Tag_Array_Type;
-                                  Fail       : in out Boolean;
-                                  Count_Mode : in     Boolean := False)
-
-   is
-   begin
-      if Count_Mode then
-         Background (Format, Report, Stop, True);
-         Report.Num_Steps := Report.Num_Steps + 8;
-      else
-         Format.Start_Scenario ("state (6/9)", "./features/test.feature:6", Tags);
-         Format.Enter_Scenario;
-         Call_Hook (Hook_Begin, Hook_Scenario);
-
-         --------------
-         --  Set_Up  --
-         --------------
-
-         Set_Up ("./features/test.feature");
-         Fail := Stop;
-
-         ------------------
-         --  Background  --
-         ------------------
-
-         Background (Format, Report, Stop, Count_Mode);
-         Fail := Stop;
-
-         ----------------
-         --  Scenario  --
-         ----------------
-
-         Format.Begin_Scenario;
-         --
-         -- Given State is Running_V1_State
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Given;
-            Stanza : constant String    := "State is Running_V1_State";
-            Pos    : constant String    := "./features/test.feature:7";
-         begin
-            Make (Args, "State is Running_V1_State");
-            Add_Match (Args, 10, 25);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Given_State_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- When Run is FALSE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Run is FALSE ";
-            Pos    : constant String    := "./features/test.feature:9";
-         begin
-            Make (Args, "Run is FALSE ");
-            Add_Match (Args, 8, 12);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               When_Run_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- When Speed_1 is TRUE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Speed_1 is TRUE ";
-            Pos    : constant String    := "./features/test.feature:10";
-         begin
-            Make (Args, "Speed_1 is TRUE ");
-            Add_Match (Args, 12, 15);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               When_Speed_1_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- When Speed_2 is FALSE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Speed_2 is FALSE ";
-            Pos    : constant String    := "./features/test.feature:11";
-         begin
-            Make (Args, "Speed_2 is FALSE ");
-            Add_Match (Args, 12, 16);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               When_Speed_2_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- Then New_state is Stopping_State 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "New_state is Stopping_State ";
-            Pos    : constant String    := "./features/test.feature:13";
-         begin
-            Make (Args, "New_state is Stopping_State ");
-            Add_Match (Args, 14, 27);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_New_state_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- Then Run_Order is FALSE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "Run_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:14";
-         begin
-            Make (Args, "Run_Order is FALSE ");
-            Add_Match (Args, 14, 18);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_Run_Order_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- Then v1_Order is FALSE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "v1_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:15";
-         begin
-            Make (Args, "v1_Order is FALSE ");
-            Add_Match (Args, 13, 17);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_v1_Order_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- Then v2_Order is FALSE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "v2_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:16";
-         begin
-            Make (Args, "v2_Order is FALSE ");
-            Add_Match (Args, 13, 17);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_v2_Order_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-
-         --------------------
-         --  Finalization  --
-         --------------------
-
-         Call_Hook (Hook_End, Hook_Scenario);
-         if Fail then
-            Report.Count_Scenario_Failed := Report.Count_Scenario_Failed + 1;
-         Format.End_Scenario (Status_Failed);
-         else
-            Report.Count_Scenario_Passed := Report.Count_Scenario_Passed + 1;
-         Format.End_Scenario (Status_Passed);
-         end if;
-
-         -----------------
-         --  Tear_Down  --
-         -----------------
-
-         Tear_Down ("./features/test.feature");
-         Fail := Stop;
-         Format.Stop_Scenario;
-      end if;
-   end Scenario_state_TC_6;
-
-   procedure Scenario_state_TC_7 (Format     : in     Format_Ptr;
-                                  Report     : in out Report_Type;
-                                  Stop       : in out Boolean;
-                                  Tags       : in XReqLib.Format.Tag_Array_Type;
-                                  Fail       : in out Boolean;
-                                  Count_Mode : in     Boolean := False)
-
-   is
-   begin
-      if Count_Mode then
-         Background (Format, Report, Stop, True);
-         Report.Num_Steps := Report.Num_Steps + 8;
-      else
-         Format.Start_Scenario ("state (7/9)", "./features/test.feature:6", Tags);
-         Format.Enter_Scenario;
-         Call_Hook (Hook_Begin, Hook_Scenario);
-
-         --------------
-         --  Set_Up  --
-         --------------
-
-         Set_Up ("./features/test.feature");
-         Fail := Stop;
-
-         ------------------
-         --  Background  --
-         ------------------
-
-         Background (Format, Report, Stop, Count_Mode);
-         Fail := Stop;
-
-         ----------------
-         --  Scenario  --
-         ----------------
-
-         Format.Begin_Scenario;
-         --
-         -- Given State is Running_V1_State
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Given;
-            Stanza : constant String    := "State is Running_V1_State";
-            Pos    : constant String    := "./features/test.feature:7";
-         begin
-            Make (Args, "State is Running_V1_State");
-            Add_Match (Args, 10, 25);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Given_State_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- When Run is TRUE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Run is TRUE ";
-            Pos    : constant String    := "./features/test.feature:9";
-         begin
-            Make (Args, "Run is TRUE ");
-            Add_Match (Args, 8, 11);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               When_Run_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- When Speed_1 is TRUE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Speed_1 is TRUE ";
-            Pos    : constant String    := "./features/test.feature:10";
-         begin
-            Make (Args, "Speed_1 is TRUE ");
-            Add_Match (Args, 12, 15);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               When_Speed_1_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- When Speed_2 is TRUE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Speed_2 is TRUE ";
-            Pos    : constant String    := "./features/test.feature:11";
-         begin
-            Make (Args, "Speed_2 is TRUE ");
-            Add_Match (Args, 12, 15);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               When_Speed_2_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- Then New_state is Running_V2_State 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "New_state is Running_V2_State ";
-            Pos    : constant String    := "./features/test.feature:13";
-         begin
-            Make (Args, "New_state is Running_V2_State ");
-            Add_Match (Args, 14, 29);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_New_state_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- Then Run_Order is TRUE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "Run_Order is TRUE ";
-            Pos    : constant String    := "./features/test.feature:14";
-         begin
-            Make (Args, "Run_Order is TRUE ");
-            Add_Match (Args, 14, 17);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_Run_Order_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- Then v1_Order is FALSE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "v1_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:15";
-         begin
-            Make (Args, "v1_Order is FALSE ");
-            Add_Match (Args, 13, 17);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_v1_Order_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- Then v2_Order is TRUE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "v2_Order is TRUE ";
-            Pos    : constant String    := "./features/test.feature:16";
-         begin
-            Make (Args, "v2_Order is TRUE ");
-            Add_Match (Args, 13, 16);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_v2_Order_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-
-         --------------------
-         --  Finalization  --
-         --------------------
-
-         Call_Hook (Hook_End, Hook_Scenario);
-         if Fail then
-            Report.Count_Scenario_Failed := Report.Count_Scenario_Failed + 1;
-         Format.End_Scenario (Status_Failed);
-         else
-            Report.Count_Scenario_Passed := Report.Count_Scenario_Passed + 1;
-         Format.End_Scenario (Status_Passed);
-         end if;
-
-         -----------------
-         --  Tear_Down  --
-         -----------------
-
-         Tear_Down ("./features/test.feature");
-         Fail := Stop;
-         Format.Stop_Scenario;
-      end if;
-   end Scenario_state_TC_7;
-
-   procedure Scenario_state_TC_8 (Format     : in     Format_Ptr;
-                                  Report     : in out Report_Type;
-                                  Stop       : in out Boolean;
-                                  Tags       : in XReqLib.Format.Tag_Array_Type;
-                                  Fail       : in out Boolean;
-                                  Count_Mode : in     Boolean := False)
-
-   is
-   begin
-      if Count_Mode then
-         Background (Format, Report, Stop, True);
-         Report.Num_Steps := Report.Num_Steps + 8;
-      else
-         Format.Start_Scenario ("state (8/9)", "./features/test.feature:6", Tags);
+         Format.Start_Scenario ("state (5/6)", "./features/test.feature:6", Tags);
          Format.Enter_Scenario;
          Call_Hook (Hook_Begin, Hook_Scenario);
 
@@ -2501,47 +1233,13 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- When Speed_1 is TRUE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Speed_1 is TRUE ";
-            Pos    : constant String    := "./features/test.feature:10";
-         begin
-            Make (Args, "Speed_1 is TRUE ");
-            Add_Match (Args, 12, 15);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               When_Speed_1_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
          -- When Speed_2 is FALSE 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_When;
             Stanza : constant String    := "Speed_2 is FALSE ";
-            Pos    : constant String    := "./features/test.feature:11";
+            Pos    : constant String    := "./features/test.feature:10";
          begin
             Make (Args, "Speed_2 is FALSE ");
             Add_Match (Args, 12, 16);
@@ -2575,7 +1273,7 @@ package body feature_test is
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
             Stanza : constant String    := "New_state is Running_V1_State ";
-            Pos    : constant String    := "./features/test.feature:13";
+            Pos    : constant String    := "./features/test.feature:12";
          begin
             Make (Args, "New_state is Running_V1_State ");
             Add_Match (Args, 14, 29);
@@ -2609,7 +1307,7 @@ package body feature_test is
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
             Stanza : constant String    := "Run_Order is TRUE ";
-            Pos    : constant String    := "./features/test.feature:14";
+            Pos    : constant String    := "./features/test.feature:13";
          begin
             Make (Args, "Run_Order is TRUE ");
             Add_Match (Args, 14, 17);
@@ -2637,47 +1335,13 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- Then v1_Order is TRUE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "v1_Order is TRUE ";
-            Pos    : constant String    := "./features/test.feature:15";
-         begin
-            Make (Args, "v1_Order is TRUE ");
-            Add_Match (Args, 13, 16);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_v1_Order_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
          -- Then v2_Order is FALSE 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
             Stanza : constant String    := "v2_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:16";
+            Pos    : constant String    := "./features/test.feature:14";
          begin
             Make (Args, "v2_Order is FALSE ");
             Add_Match (Args, 13, 17);
@@ -2726,9 +1390,9 @@ package body feature_test is
          Fail := Stop;
          Format.Stop_Scenario;
       end if;
-   end Scenario_state_TC_8;
+   end Scenario_state_TC_5;
 
-   procedure Scenario_state_TC_9 (Format     : in     Format_Ptr;
+   procedure Scenario_state_TC_6 (Format     : in     Format_Ptr;
                                   Report     : in out Report_Type;
                                   Stop       : in out Boolean;
                                   Tags       : in XReqLib.Format.Tag_Array_Type;
@@ -2739,9 +1403,9 @@ package body feature_test is
    begin
       if Count_Mode then
          Background (Format, Report, Stop, True);
-         Report.Num_Steps := Report.Num_Steps + 8;
+         Report.Num_Steps := Report.Num_Steps + 6;
       else
-         Format.Start_Scenario ("state (9/9)", "./features/test.feature:6", Tags);
+         Format.Start_Scenario ("state (6/6)", "./features/test.feature:6", Tags);
          Format.Enter_Scenario;
          Call_Hook (Hook_Begin, Hook_Scenario);
 
@@ -2765,16 +1429,16 @@ package body feature_test is
 
          Format.Begin_Scenario;
          --
-         -- Given State is Stopping_State
+         -- Given State is Running_V2_State
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Given;
-            Stanza : constant String    := "State is Stopping_State";
+            Stanza : constant String    := "State is Running_V2_State";
             Pos    : constant String    := "./features/test.feature:7";
          begin
-            Make (Args, "State is Stopping_State");
-            Add_Match (Args, 10, 23);
+            Make (Args, "State is Running_V2_State");
+            Add_Match (Args, 10, 25);
             Add_Sep   (Args, 1);
             Format.Start_Step (Prefix, Stanza, Pos);
             Format.Begin_Step;
@@ -2833,50 +1497,16 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- When Speed_1 is FALSE 
+         -- When Speed_2 is TRUE 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Speed_1 is FALSE ";
+            Stanza : constant String    := "Speed_2 is TRUE ";
             Pos    : constant String    := "./features/test.feature:10";
          begin
-            Make (Args, "Speed_1 is FALSE ");
-            Add_Match (Args, 12, 16);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               When_Speed_1_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
-         -- When Speed_2 is FALSE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_When;
-            Stanza : constant String    := "Speed_2 is FALSE ";
-            Pos    : constant String    := "./features/test.feature:11";
-         begin
-            Make (Args, "Speed_2 is FALSE ");
-            Add_Match (Args, 12, 16);
+            Make (Args, "Speed_2 is TRUE ");
+            Add_Match (Args, 12, 15);
             Add_Sep   (Args, 1);
             Format.Start_Step (Prefix, Stanza, Pos);
             Format.Begin_Step;
@@ -2907,7 +1537,7 @@ package body feature_test is
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
             Stanza : constant String    := "New_state is Stop_State ";
-            Pos    : constant String    := "./features/test.feature:13";
+            Pos    : constant String    := "./features/test.feature:12";
          begin
             Make (Args, "New_state is Stop_State ");
             Add_Match (Args, 14, 23);
@@ -2941,7 +1571,7 @@ package body feature_test is
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
             Stanza : constant String    := "Run_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:14";
+            Pos    : constant String    := "./features/test.feature:13";
          begin
             Make (Args, "Run_Order is FALSE ");
             Add_Match (Args, 14, 18);
@@ -2969,47 +1599,13 @@ package body feature_test is
          Format.End_Step;
          Format.Stop_Step;
          --
-         -- Then v1_Order is FALSE 
-         --
-         declare
-            Args   : Arg_Type;
-            Prefix : constant Step_Kind := Step_Then;
-            Stanza : constant String    := "v1_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:15";
-         begin
-            Make (Args, "v1_Order is FALSE ");
-            Add_Match (Args, 13, 17);
-            Add_Sep   (Args, 1);
-            Format.Start_Step (Prefix, Stanza, Pos);
-            Format.Begin_Step;
-            if Fail then
-               Report.Count_Steps_Skipped := Report.Count_Steps_Skipped + 1;
-               Format.Put_Step  (Args, Status_Skipped);
-            else
-               Call_Hook (Hook_Begin, Hook_Step);
-               Then_v1_Order_is_N (Args);
-               Call_Hook (Hook_End, Hook_Step);
-               Report.Count_Steps_Passed := Report.Count_Steps_Passed + 1;
-               Format.Put_Step (Args, Status_Passed);
-            end if;
-         exception
-            when Err : others =>
-              Call_Hook (Hook_End, Hook_Step);
-              Report.Count_Steps_Failed := Report.Count_Steps_Failed + 1;
-              Fail := True;
-              Format.Put_Step  (Args, Status_Failed);
-              Format.Put_Error (Err);
-         end;
-         Format.End_Step;
-         Format.Stop_Step;
-         --
          -- Then v2_Order is FALSE 
          --
          declare
             Args   : Arg_Type;
             Prefix : constant Step_Kind := Step_Then;
             Stanza : constant String    := "v2_Order is FALSE ";
-            Pos    : constant String    := "./features/test.feature:16";
+            Pos    : constant String    := "./features/test.feature:14";
          begin
             Make (Args, "v2_Order is FALSE ");
             Add_Match (Args, 13, 17);
@@ -3058,7 +1654,7 @@ package body feature_test is
          Fail := Stop;
          Format.Stop_Scenario;
       end if;
-   end Scenario_state_TC_9;
+   end Scenario_state_TC_6;
 
    procedure Scenario_state (Format     : in     Format_Ptr;
                              Report     : in out Report_Type;
@@ -3134,39 +1730,6 @@ package body feature_test is
          --------------------
          if TC_Num = -1 or TC_Num = 6 then
             Scenario_state_TC_6 (Format     => Format,
-                                 Report     => Report,
-                                 Stop       => Stop,
-                                 Fail       => Fail,
-                                 Tags       => Tags,
-                                 Count_Mode => Count_Mode);
-         end if;
-         --------------------
-         --  Test Case 7
-         --------------------
-         if TC_Num = -1 or TC_Num = 7 then
-            Scenario_state_TC_7 (Format     => Format,
-                                 Report     => Report,
-                                 Stop       => Stop,
-                                 Fail       => Fail,
-                                 Tags       => Tags,
-                                 Count_Mode => Count_Mode);
-         end if;
-         --------------------
-         --  Test Case 8
-         --------------------
-         if TC_Num = -1 or TC_Num = 8 then
-            Scenario_state_TC_8 (Format     => Format,
-                                 Report     => Report,
-                                 Stop       => Stop,
-                                 Fail       => Fail,
-                                 Tags       => Tags,
-                                 Count_Mode => Count_Mode);
-         end if;
-         --------------------
-         --  Test Case 9
-         --------------------
-         if TC_Num = -1 or TC_Num = 9 then
-            Scenario_state_TC_9 (Format     => Format,
                                  Report     => Report,
                                  Stop       => Stop,
                                  Fail       => Fail,

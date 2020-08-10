@@ -1,0 +1,57 @@
+[GENERATED OBJECT FILE]
+b__test_rxrt.o
+[PROJECT FILES]
+/home/sogilis/sb/reflex_software/tests/gpr/build_rxrt.gpr
+20200327104832
+/home/sogilis/sb/reflex_software/lib/runtime/reflex/emu/gpr/erxrt_shared.gpr
+20171212151034
+[BOUND OBJECT FILES]
+/home/sogilis/sb/reflex_software/tests/obj/devices.o
+/home/sogilis/sb/reflex_software/tests/obj/devices-blenders.o
+/home/sogilis/sb/reflex_software/tests/obj/devices-pumps.o
+/home/sogilis/sb/reflex_software/tests/obj/devices-valves.o
+/home/sogilis/sb/reflex_software/tests/obj/ext_ios.o
+/home/sogilis/sb/reflex_software/tests/obj/ios.o
+/home/sogilis/sb/reflex_software/tests/obj/ios_simul.o
+/home/sogilis/sb/reflex_software/tests/obj/regul.o
+/home/sogilis/sb/reflex_software/tests/obj/regul-ramps.o
+/home/sogilis/sb/reflex_software/tests/obj/rx.o
+/home/sogilis/sb/reflex_software/tests/obj/rx-library.o
+/home/sogilis/sb/reflex_software/tests/obj/rx-library-analogs.o
+/home/sogilis/sb/reflex_software/tests/obj/rx-library-analogs-pid.o
+/home/sogilis/sb/reflex_software/tests/obj/rxclock.o
+/home/sogilis/sb/reflex_software/tests/obj/devices-resistances.o
+/home/sogilis/sb/reflex_software/tests/obj/rxrt.o
+/home/sogilis/sb/reflex_software/tests/obj/rxrt-rxclock.o
+/home/sogilis/sb/reflex_software/tests/obj/rxrt-tasks.o
+/home/sogilis/sb/reflex_software/tests/obj/simul.o
+/home/sogilis/sb/reflex_software/tests/obj/simul-devices.o
+/home/sogilis/sb/reflex_software/tests/obj/simul-devices-blenders.o
+/home/sogilis/sb/reflex_software/tests/obj/simul-devices-pumps.o
+/home/sogilis/sb/reflex_software/tests/obj/simul-devices-valves.o
+/home/sogilis/sb/reflex_software/tests/obj/simul_tank.o
+/home/sogilis/sb/reflex_software/tests/obj/simul_tank-main.o
+/home/sogilis/sb/reflex_software/tests/obj/tank.o
+/home/sogilis/sb/reflex_software/tests/obj/tank-cycle.o
+/home/sogilis/sb/reflex_software/tests/obj/tank-filling.o
+/home/sogilis/sb/reflex_software/tests/obj/tank-mixing.o
+/home/sogilis/sb/reflex_software/tests/obj/tank-variables.o
+/home/sogilis/sb/reflex_software/tests/obj/tank-main.o
+/home/sogilis/sb/reflex_software/tests/obj/main.o
+/home/sogilis/sb/reflex_software/tests/obj/test_rxrt.o
+[GENERATED SOURCE FILES]
+b__test_rxrt.ads
+b__test_rxrt.adb
+b__test_rxrt.ali
+[RESULTING OPTIONS]
+-L/home/sogilis/sb/reflex_software/tests/obj/
+-L/home/sogilis/sb/reflex_software/tests/obj/
+-L/home/sogilis/sb/reflex_software/lib/runtime/reflex/emu/lib/release/relocatable/
+-L/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/
+-shared
+-shared-libgcc
+-lgnat-2019
+-ldl
+[RUN PATH OPTION]
+/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/
+/home/sogilis/opt/GNAT/2019/lib

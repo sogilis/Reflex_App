@@ -101,7 +101,10 @@ package body Tank.Mixing is
 	    end if;
 
 	 when End_Mixing_State =>
-	    null;
+	    if Start_Mixing then
+	       New_State := Init_State;
+    	    end if;
+
       end case;
       
       This.State := New_State;

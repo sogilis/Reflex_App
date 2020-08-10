@@ -1,0 +1,22 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnat2012
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U rx.library%s		rx-library.ads		cb0fb547 NE OO PK
+W rx%s			rx.ads			rx.ali
+
+D rx.ads		20200325182532 6a2e3279 rx%s
+D rx-library.ads	20200325182506 a121873e rx.library%s
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+X 1 rx.ads
+29K9*Rx 31e7 2|29r9 31r5
+X 2 rx-library.ads
+29K12*Library 1|29k9 2|31l8 31e15
+

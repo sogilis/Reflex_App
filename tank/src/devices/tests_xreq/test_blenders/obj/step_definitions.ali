@@ -22,6 +22,8 @@ P ZX
 
 RN
 RV NO_ENUMERATION_MAPS
+RV NO_EXCEPTIONS
+RV NO_IMPLICIT_CONDITIONALS
 RV NO_SECONDARY_STACK
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
@@ -31,22 +33,25 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U step_definitions%b	step_definitions.adb	2ba234ba OO PK IL
+U step_definitions%b	step_definitions.adb	12b9c3a8 OO PK IL
+Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W devices%s		devices.adb		devices.ali
 W devices.blenders%s	devices-blenders.adb	devices-blenders.ali
 Z interfaces%s		interfac.ads		interfac.ali
 Z system%s		system.ads		system.ali
 Z system.concat_5%s	s-conca5.adb		s-conca5.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
 Z system.img_bool%s	s-imgboo.adb		s-imgboo.ali
 Z system.img_enum_new%s	s-imenne.adb		s-imenne.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 Z system.val_bool%s	s-valboo.adb		s-valboo.ali
 Z system.val_enum%s	s-valenu.adb		s-valenu.ali
 W xreqlib%s		xreqlib.ads		xreqlib.ali
 W xreqlib.asserts%s	xreqlib-asserts.adb	xreqlib-asserts.ali
 
-U step_definitions%s	step_definitions.ads	ff0c7e2b EE NE OO PK IL
+U step_definitions%s	step_definitions.ads	48917d93 EE NE OO PK IL
 W xreqlib%s		xreqlib.ads		xreqlib.ali
 W xreqlib.args%s	xreqlib-args.adb	xreqlib-args.ali
 
@@ -69,10 +74,10 @@ D a-tags.ads		20190518041256 491b781d ada.tags%s
 D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20190518041255 eff36322 ada.unchecked_deallocation%s
 D devices.ads		20200313104344 fb10b7fe devices%s
-D devices-blenders.ads	20200414124123 116baff2 devices.blenders%s
+D devices-blenders.ads	20200702112123 83b5634d devices.blenders%s
 D interfac.ads		20190518041254 5ab55268 interfaces%s
-D step_definitions.ads	20200623140039 5549e610 step_definitions%s
-D step_definitions.adb	20200623140039 e0629be0 step_definitions%b
+D step_definitions.ads	20200810084345 e2d4e5a8 step_definitions%s
+D step_definitions.adb	20200810084345 fc3aa3f5 step_definitions%b
 D system.ads		20190518041255 4635ec04 system%s
 D s-atocou.ads		20190518041256 b45c2d8d system.atomic_counters%s
 D s-conca5.ads		20190518041254 875e432e system.concat_5%s
@@ -110,101 +115,119 @@ G c Z s b [tear_down step_definitions 11 14 none]
 G c Z s b [given_blender_component_is_initialized step_definitions 14 14 none]
 G c Z s b [given_state_n step_definitions 17 14 none]
 G c Z s b [when_run_is_n step_definitions 20 14 none]
-G c Z s b [when_speed_1_is_n step_definitions 23 14 none]
-G c Z s b [when_speed_2_is_n step_definitions 26 14 none]
-G c Z s b [then_new_state_is_n step_definitions 29 14 none]
-G c Z s b [then_run_order_is_n step_definitions 32 14 none]
-G c Z s b [then_v1_order_is_n step_definitions 35 14 none]
-G c Z s b [then_v2_order_is_n step_definitions 38 14 none]
-G r s blender_record [b step_definitions 4 1 none] [blender_recordIP devices__blenders 52 9 none]
-G r c none [given_blender_component_is_initialized step_definitions 14 14 none] [initialize devices__blenders 34 14 none]
+G c Z s b [when_speed_2_is_n step_definitions 23 14 none]
+G c Z s b [then_new_state_is_n step_definitions 26 14 none]
+G c Z s b [then_run_order_is_n step_definitions 29 14 none]
+G c Z s b [then_v2_order_is_n step_definitions 32 14 none]
+G c Z s b [then_new_state_is_stopping_state step_definitions 35 14 none]
+G c Z s b [then_v1_order_is_true step_definitions 38 14 none]
+G c Z s b [given_state_is_stopping_state step_definitions 41 14 none]
+G c Z s b [then_new_state_is_starting_state step_definitions 44 14 none]
+G c Z s b [when_speed_1_is_true step_definitions 47 14 none]
+G c Z s b [when_speed_1_is_false step_definitions 50 14 none]
+G c Z s b [then_v1_order_is_false step_definitions 53 14 none]
+G c Z s b [given_state_is_starting_state step_definitions 56 14 none]
+G r s blender_record [b step_definitions 4 1 none] [blender_recordIP devices__blenders 48 9 none]
+G r c none [given_blender_component_is_initialized step_definitions 14 14 none] [initialize devices__blenders 32 14 none]
 G r c none [given_state_n step_definitions 17 14 none] [match xreqlib__args 48 13 none]
-G r c none [given_state_n step_definitions 17 14 none] [set_state devices__blenders 38 14 none]
+G r c none [given_state_n step_definitions 17 14 none] [set_state devices__blenders 36 14 none]
 G r c none [when_run_is_n step_definitions 20 14 none] [match xreqlib__args 48 13 none]
-G r c none [when_speed_1_is_n step_definitions 23 14 none] [match xreqlib__args 48 13 none]
-G r c none [when_speed_2_is_n step_definitions 26 14 none] [match xreqlib__args 48 13 none]
-G r c none [when_speed_2_is_n step_definitions 26 14 none] [cyclic devices__blenders 41 14 none]
-G r c none [then_new_state_is_n step_definitions 29 14 none] [match xreqlib__args 48 13 none]
-G r c none [then_new_state_is_n step_definitions 29 14 none] [get_state devices__blenders 36 13 none]
-G r c none [then_new_state_is_n step_definitions 29 14 none] [assert xreqlib__asserts 24 14 none]
-G r c none [then_run_order_is_n step_definitions 32 14 none] [match xreqlib__args 48 13 none]
-G r c none [then_run_order_is_n step_definitions 32 14 none] [assert xreqlib__asserts 24 14 none]
-G r c none [then_v1_order_is_n step_definitions 35 14 none] [match xreqlib__args 48 13 none]
-G r c none [then_v1_order_is_n step_definitions 35 14 none] [assert xreqlib__asserts 24 14 none]
-G r c none [then_v2_order_is_n step_definitions 38 14 none] [match xreqlib__args 48 13 none]
-G r c none [then_v2_order_is_n step_definitions 38 14 none] [assert xreqlib__asserts 24 14 none]
+G r c none [when_speed_2_is_n step_definitions 23 14 none] [match xreqlib__args 48 13 none]
+G r c none [when_speed_2_is_n step_definitions 23 14 none] [cyclic devices__blenders 39 14 none]
+G r c none [then_new_state_is_n step_definitions 26 14 none] [match xreqlib__args 48 13 none]
+G r c none [then_new_state_is_n step_definitions 26 14 none] [get_state devices__blenders 34 13 none]
+G r c none [then_new_state_is_n step_definitions 26 14 none] [assert xreqlib__asserts 24 14 none]
+G r c none [then_run_order_is_n step_definitions 29 14 none] [match xreqlib__args 48 13 none]
+G r c none [then_run_order_is_n step_definitions 29 14 none] [assert xreqlib__asserts 24 14 none]
+G r c none [then_v2_order_is_n step_definitions 32 14 none] [match xreqlib__args 48 13 none]
+G r c none [then_v2_order_is_n step_definitions 32 14 none] [assert xreqlib__asserts 24 14 none]
 X 11 a-iteint.ads
 24h9 Forward_Iterator
-32h9 Reversible_Iterator<24R9[6|69]>
+32h9 Reversible_Iterator<24R9[8|111]>
 X 19 devices.ads
 21K9*Devices 39e12 23|2r6 2r28
 X 20 devices-blenders.ads
-21K17*Blenders 61e21 23|2w14 2r36
-24R9*Blender_Record<19|23R9> 54e14 23|6r17
-26E9*Blender_State 32e23 23|42r25 87r38 91r35
-34U14*Initialize 23|34s15
-36V13*get_state{26E9} 23|87s63
-38U14*set_state 23|42s15
-41U14*Cyclic 23|73s15
-43b7 Run{boolean} 23|74r18
-44b7 Speed_1{boolean} 23|75r18
-45b7 Speed_2{boolean} 23|76r18
-46b7 Run_Order{boolean} 23|77r18
-47b7 v2_Order{boolean} 23|78r18
-48b7 v1_Order{boolean} 23|79r18
+21K17*Blenders 57e21 23|2w14 2r36
+24R9*Blender_Record<19|23R9> 50e14 23|6r17
+26E9*Blender_State 30e24 23|40r25 72r38 76r35
+32U14*Initialize 23|32s15
+34V13*get_state{26E9} 23|72s63
+36U14*set_state 23|40s15
+39U14*Cyclic 23|60s15
+41b7 Run{boolean} 23|61r18
+42b7 Speed_2{boolean} 23|62r18
+43b7 Run_Order{boolean} 23|63r18
+44b7 v2_Order{boolean} 23|64r18
 X 22 step_definitions.ads
-7K9*step_definitions 40l5 40e21 23|4b14 137l5 137t21
-9U14*Set_Up 9>22 23|14b14 20l8 20t14
-9a22 Feature_File{string} 23|14b22
-11U14*Tear_Down 11>25 23|22b14 28l8 28t17
-11a25 Feature_File{string} 23|22b25
-14U14*Given_blender_component_is_initialized 14=54 23|30b14 36l8 36t46
-14r54 Args{49|41R9} 23|30b54 31r28
-17U14*Given_State_N 17=28 23|38b14 44l8 44t21
-17r28 Args{49|41R9} 23|38b29 39r45
-20U14*When_Run_is_N 20=29 23|46b14 54l8 54t21
-20r29 Args{49|41R9} 23|46b29 48r31
-23U14*When_Speed_1_is_N 23=33 23|57b14 65l8 65t25
-23r33 Args{49|41R9} 23|57b33 59r35
-26U14*When_Speed_2_is_N 26=33 23|67b14 82l8 82t25
-26r33 Args{49|41R9} 23|67b33 69r43
-29U14*Then_New_state_is_N 29=35 23|85b14 96l8 96t27
-29r35 Args{49|41R9} 23|85b35 86r53
-32U14*Then_Run_Order_is_N 32=35 23|99b14 109l8 109t27
-32r35 Args{49|41R9} 23|99b35 100r52
-35U14*Then_v1_Order_is_N 35=34 23|112b14 122l8 122t26
-35r34 Args{49|41R9} 23|112b34 113r51
-38U14*Then_v2_Order_is_N 38=34 23|125b14 135l8 135t26
-38r34 Args{49|41R9} 23|125b34 126r46
+7K9*step_definitions 58l5 58e21 23|4b14 156l5 156t21
+9U14*Set_Up 9>22 23|12b14 18l8 18t14
+9a22 Feature_File{string} 23|12b22
+11U14*Tear_Down 11>25 23|20b14 26l8 26t17
+11a25 Feature_File{string} 23|20b25
+14U14*Given_blender_component_is_initialized 14=54 23|28b14 34l8 34t46
+14r54 Args{49|41R9} 23|28b54 29r28
+17U14*Given_State_N 17=28 23|36b14 42l8 42t21
+17r28 Args{49|41R9} 23|36b29 37r45
+20U14*When_Run_is_N 20=29 23|44b14 52l8 52t21
+20r29 Args{49|41R9} 23|44b29 46r31
+23U14*When_Speed_2_is_N 23=33 23|54b14 67l8 67t25
+23r33 Args{49|41R9} 23|54b33 56r43
+26U14*Then_New_state_is_N 26=35 23|70b14 81l8 81t27
+26r35 Args{49|41R9} 23|70b35 71r53
+29U14*Then_Run_Order_is_N 29=35 23|84b14 94l8 94t27
+29r35 Args{49|41R9} 23|84b35 85r52
+32U14*Then_v2_Order_is_N 32=34 23|96b14 106l8 106t26
+32r34 Args{49|41R9} 23|96b34 97r46
+35U14*Then_New_state_is_Stopping_State 35=48 23|108b14 112l8 112t40
+35r48 Args{49|41R9} 23|108b48
+38U14*Then_v1_Order_is_TRUE 38=37 23|114b14 118l8 118t29
+38r37 Args{49|41R9} 23|114b37
+41U14*Given_State_is_Stopping_State 41=45 23|120b14 124l8 124t37
+41r45 Args{49|41R9} 23|120b45
+44U14*Then_New_state_is_Starting_State 44=48 23|126b14 130l8 130t40
+44r48 Args{49|41R9} 23|126b48
+47U14*When_Speed_1_is_TRUE 47=36 23|132b14 136l8 136t28
+47r36 Args{49|41R9} 23|132b36
+50U14*When_Speed_1_is_FALSE 50=37 23|138b14 142l8 142t29
+50r37 Args{49|41R9} 23|138b37
+53U14*Then_v1_Order_is_FALSE 53=38 23|144b14 148l8 148t30
+53r38 Args{49|41R9} 23|144b38
+56U14*Given_State_is_Starting_State 56=45 23|150b14 154l8 154t37
+56r45 Args{49|41R9} 23|150b45
 X 23 step_definitions.adb
-6r5 blender{20|24R9} 34m7 34r7 42m7 42r7 73m7 73r7 87r55
-7b5 Run{boolean} 52m8 74r31
-8b5 Speed_1{boolean} 63m8 75r31
-9b5 Speed_2{boolean}
-10b5 Run_Order{boolean} 77m31 104r19 106r44
-11b5 v2_Order{boolean} 78m31 130r19 132r43
-12b5 v1_Order{boolean} 79m31 117r19 119r43
-39a7 Blender_Status{string} 42r45
-48a4 Run_s{string} 52r29
-59a4 Speed_1_s{string} 63r33
-69a7 Speed_2_s{string} 76r45
-86a6 Expected_State{string} 91r56 94r14
-87e6 Actual_Result{20|26E9} 91r19 93r48
-100a6 Expected_Run_Order{string} 104r46 107r13
-113a6 Expected_v1_Order{string} 117r45 120r13
-126a6 Expected_v2_Order{string} 130r45 133r13
+6r5 blender{20|24R9} 32m7 32r7 40m7 40r7 60m7 60r7 72r55
+7b5 Run{boolean} 50m8 61r31
+8b5 Speed_2{boolean}
+9b5 Run_Order{boolean} 63m31 89r19 91r44
+10b5 v2_Order{boolean} 64m31 101r19 103r43
+37a7 Blender_Status{string} 40r45
+46a4 Run_s{string} 50r29
+56a7 Speed_2_s{string} 62r45
+71a6 Expected_State{string} 76r56 79r14
+72e6 Actual_Result{20|26E9} 76r19 78r48
+85a6 Expected_Run_Order{string} 89r46 92r13
+97a6 Expected_v2_Order{string} 101r45 104r13
+109X7 Not_Yet_Implemented 111r13
+115X7 Not_Yet_Implemented 117r13
+121X7 Not_Yet_Implemented 123r13
+127X7 Not_Yet_Implemented 129r13
+133X7 Not_Yet_Implemented 135r13
+139X7 Not_Yet_Implemented 141r13
+145X7 Not_Yet_Implemented 147r13
+151X7 Not_Yet_Implemented 153r13
 X 48 xreqlib.ads
 20K9*XReqLib 22|3r6 5r5 23|1r6 1r27 48|23e12
 X 49 xreqlib-args.ads
 31K17*Args 22|3w14 5r13 49|126e17
-41R9*Arg_Type 22|14r68 17r42 20r43 23r47 26r47 29r49 32r49 35r48 38r48 23|30r68
-. 38r43 46r43 57r47 67r47 85r49 99r49 112r48 125r48 49|122e14
-48V13*Match{string} 23|39s50 48s36 59s40 69s48 86s58 100s57 113s56 126s51
+41R9*Arg_Type 22|14r68 17r42 20r43 23r47 26r49 29r49 32r48 35r62 38r51 41r59
+. 44r62 47r50 50r51 53r52 56r59 23|28r68 36r43 44r43 54r47 70r49 84r49 96r48
+. 108r62 114r51 120r59 126r62 132r50 138r51 144r52 150r59 49|122e14
+48V13*Match{string} 23|37s50 46s36 56s48 71s58 85s57 97s51
 X 50 xreqlib-asserts.ads
 20K17*Asserts 23|1w14 1r35 50|28e20
-24U14*Assert 23|90s6 103s6 116s6 129s6
-24b22 Cmp{boolean} 23|91r9 104r9 117r9 130r9
-24a37 Reason{string} 23|92r9 105r9 118r9 131r9
+24U14*Assert 23|75s6 88s6 100s6
+24b22 Cmp{boolean} 23|76r9 89r9 101r9
+24a37 Reason{string} 23|77r9 90r9 102r9
 X 53 xreqlib-tables.ads
 45R9*Table
 

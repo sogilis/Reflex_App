@@ -48,11 +48,9 @@ package body Devices.Blenders is
    procedure Cyclic
      (This      : in out Blender_Record;
       Run       : Boolean;
-      Speed_1   : Boolean;
       Speed_2   : Boolean;
       Run_Order : out Boolean;
-      v2_Order  : out Boolean;
-      v1_Order  : out Boolean) is
+      v2_Order  : out Boolean) is
 
       
       New_State : Blender_State := This.State;
@@ -64,29 +62,22 @@ package body Devices.Blenders is
          
 	 when Stop_State =>
 	    if Run  then
-	       New_State := starting_State;
-	    end if;
-	    
-	 when Starting_State =>
-	    if Speed_1 then
-	       New_State := Running_V1_State;
+	       New_State := Running_v1_State;
 	    end if;
 	    
 	 when Running_v1_State =>
             if Speed_2 then
 	       New_State := Running_V2_State;
-            else  New_State := stopping_state;
+            elsif not Run then 
+               New_State := stop_state;
 	    end if;	    
-
-	 when Stopping_State =>
-	    if not run then
-	       New_State := Stop_State;
-	    end if;
 	    
 	 when Running_V2_State =>
-	    if Speed_1 then
+	    if not Speed_2 then
 	       New_State := Running_V1_State;
-            end if;
+            elsif not Run then
+               New_State := stop_state;
+	    end if;	
 
 
 
@@ -98,8 +89,7 @@ package body Devices.Blenders is
    --Commande--
    ------------
 
-      Run_Order := (This.State = Starting_State) or (This.State = Running_V1_State) or (This.State = Running_V2_State); 
-      V1_Order  := (This.State = Running_V1_State);
+      Run_Order :=(This.State = Running_V1_State) or (This.State = Running_V2_State); 
       V2_Order  := (This.State = Running_V2_State);
       --  Fault     := (This.State = Faulty_State);
    end Cyclic;

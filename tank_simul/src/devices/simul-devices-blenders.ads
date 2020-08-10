@@ -26,19 +26,15 @@ package Simul.Devices.Blenders is
    type Blender_State is 
      (Init_State,
       Stop_State,
-      Running_V1_State,
-      Running_V2_State,
-      Stopping_State);
+      Running_V2_State);
    
    procedure Initialize (This : in out Blender_Record);
    
   
    procedure Cyclic
      (This      : in out Blender_Record;
-      V1_Order  : Boolean;
       V2_Order  : Boolean;
       Run_Order : Boolean;
-      Speed_1   : out Boolean;
       Speed_2   : out Boolean);
    
 private

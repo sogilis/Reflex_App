@@ -1,0 +1,108 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -gnat2012
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U ios_simul%b		ios_simul.adb		d1a23dc3 NE OO PK
+W ext_ios%s		ext_ios.ads		ext_ios.ali
+
+U ios_simul%s		ios_simul.ads		b023e221 EE NE OO PK
+
+D ext_ios.ads		20200628124123 3c293ae6 ext_ios%s
+D ios_simul.ads		20200628135540 b023e221 ios_simul%s
+D ios_simul.adb		20200628131951 5da8e504 ios_simul%b
+D system.ads		20190518041255 4635ec04 system%s
+G a e
+G c Z s b [acquire_inputs ios_simul 108 14 none]
+G c Z s b [set_outputs ios_simul 109 14 none]
+X 1 ext_ios.ads
+21K10*Ext_Ios 157e12 3|21w6 21r19
+28b9*Ext_V1_R1_Opened{boolean} 3|33m7
+29b9*Ext_V1_R1_Closed{boolean} 3|34m7
+33b9*Ext_V2_R1_Opened{boolean} 3|38m7
+34b9*Ext_V2_R1_Closed{boolean} 3|39m7
+38b9*Ext_V1_R2_Opened{boolean} 3|43m6
+39b9*Ext_V1_R2_Closed{boolean} 3|44m6
+43b9*Ext_V2_R2_Opened{boolean} 3|48m7
+44b9*Ext_V2_R2_Closed{boolean} 3|49m7
+48b9*Ext_V1_R3_Opened{boolean} 3|53m7
+49b9*Ext_V1_R3_Closed{boolean} 3|54m7
+53b9*Ext_V2_R3_Opened{boolean} 3|58m7
+54b9*Ext_V2_R3_Closed{boolean} 3|59m7
+61b9*Ext_P1_Started{boolean} 3|63m7
+65b9*Ext_P2_Started{boolean} 3|67m7
+69b9*Ext_P3_Started{boolean} 3|71m7
+73b9*Ext_Tank_Low_Level{boolean} 3|75m7
+74b9*Ext_Tank_Medium_Level{boolean} 3|76m7
+75b9*Ext_Tank_High_Level{boolean} 3|77m7
+98b9*Ext_V1_R1_Open_Order{boolean} 3|96r34
+99b9*Ext_V1_R1_Close_Order{boolean} 3|97r34
+103b9*Ext_V2_R1_Open_Order{boolean} 3|101r34
+104b9*Ext_V2_R1_Close_Order{boolean} 3|102r34
+108b9*Ext_V1_R2_Open_Order{boolean} 3|106r34
+109b11*Ext_V1_R2_Close_Order{boolean} 3|107r34
+113b9*Ext_V2_R2_Open_Order{boolean} 3|111r34
+114b9*Ext_V2_R2_Close_Order{boolean} 3|112r34
+118b9*Ext_V1_R3_Open_Order{boolean} 3|116r34
+119b9*Ext_V1_R3_Close_Order{boolean} 3|117r34
+123b9*Ext_V2_R3_Open_Order{boolean} 3|121r34
+124b9*Ext_V2_R3_Close_Order{boolean} 3|122r34
+128b9*Ext_P1_Start_Order{boolean} 3|126r31
+132b9*Ext_P2_Start_Order{boolean} 3|130r31
+136b9*Ext_P3_Start_Order{boolean} 3|134r31
+146b8*Ext_V1_Speed{boolean} 3|81m8
+147b8*Ext_V2_Speed{boolean} 3|82m8
+148b8*Ext_V1_Order{boolean} 3|139r27
+149b8*Ext_V2_Order{boolean} 3|140r27
+150b8*Ext_Blender_Start_Order{boolean} 3|138r36
+X 2 ios_simul.ads
+21K9*Ios_Simul 111l5 111e14 3|23b14 146l5 146t14
+26i4*Openning_Closing_Duration{integer}
+30b4*V1_R1_Opened_Simul{boolean} 3|33r27
+31b4*V1_R1_Closed_Simul{boolean} 3|34r27
+32b4*V1_R1_Open_Order_Simul{boolean} 3|96m7
+33b4*V1_R1_Close_Order_Simul{boolean} 3|97m7
+37b4*V2_R1_Opened_Simul{boolean} 3|38r27
+38b4*V2_R1_Closed_Simul{boolean} 3|39r27
+39b4*V2_R1_Open_Order_Simul{boolean} 3|101m7
+40b4*V2_R1_Close_Order_Simul{boolean} 3|102m7
+44b4*V1_R2_Opened_Simul{boolean} 3|43r26
+45b4*V1_R2_Closed_Simul{boolean} 3|44r26
+46b4*V1_R2_Open_Order_Simul{boolean} 3|106m7
+47b4*V1_R2_Close_Order_Simul{boolean} 3|107m7
+51b4*V2_R2_Opened_Simul{boolean} 3|48r27
+52b4*V2_R2_Closed_Simul{boolean} 3|49r27
+53b4*V2_R2_Open_Order_Simul{boolean} 3|111m7
+54b4*V2_R2_Close_Order_Simul{boolean} 3|112m7
+61b4*V1_R3_Opened_Simul{boolean} 3|53r27
+62b4*V1_R3_Closed_Simul{boolean} 3|54r27
+63b4*V1_R3_Open_Order_Simul{boolean} 3|116m7
+64b4*V1_R3_Close_Order_Simul{boolean} 3|117m7
+68b4*V2_R3_Opened_Simul{boolean} 3|58r27
+69b4*V2_R3_Closed_Simul{boolean} 3|59r27
+70b4*V2_R3_Open_Order_Simul{boolean} 3|121m7
+71b4*V2_R3_Close_Order_Simul{boolean} 3|122m7
+76b4*P1_Started_Simul{boolean} 3|63r25
+77b4*P1_Start_Order_Simul{boolean} 3|126m7
+81b4*P2_Started_Simul{boolean} 3|67r25
+82b4*P2_Start_Order_Simul{boolean} 3|130m7
+86b4*P3_Started_Simul{boolean} 3|71r25
+87b4*P3_Start_Order_Simul{boolean} 3|134m7
+91b4*Tank_Low_Level_Simul{boolean} 3|75r32
+92b4*Tank_Medium_Level_Simul{boolean} 3|76r32
+93b4*Tank_High_Level_Simul{boolean} 3|77r32
+98b4*V1_Speed_Simul{boolean} 3|81r24
+99b4*V2_Speed_Simul{boolean} 3|82r24
+100b4*Blender_Start_Order_Simul{boolean} 3|138m7
+101b4*V1_Order_Simul{boolean} 3|139m7
+102b4*V2_Order_Simul{boolean} 3|140m7
+106b4*Start_Cycle_Simul{boolean}
+108U14*Acquire_Inputs 3|29b14 86l8 86t22
+109U14*Set_Outputs 3|92b14 144l8 144t19
+

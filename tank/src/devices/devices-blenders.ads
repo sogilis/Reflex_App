@@ -26,10 +26,8 @@ package Devices.Blenders is
    type Blender_State is 
      (Init_State,
       Stop_State,
-      Starting_State,
       Running_V1_State,
-      Running_V2_State,
-      Stopping_State );
+      Running_V2_State);
    
    procedure Initialize (This : in out Blender_Record);
 
@@ -41,11 +39,9 @@ package Devices.Blenders is
    procedure Cyclic
      (This      : in out Blender_Record;
       Run       : Boolean;
-      Speed_1   : Boolean;
       Speed_2   : Boolean;
       Run_Order : out Boolean;
-      v2_Order  : out Boolean;
-      v1_Order  : out Boolean);
+      v2_Order  : out Boolean);
    
 private
    

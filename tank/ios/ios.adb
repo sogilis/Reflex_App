@@ -76,15 +76,7 @@ package body Ios is
       Tank_Medium_Level := Ext_Tank_Medium_Level;
       Tank_High_Level := Ext_Tank_High_Level;
       
-      --  Resistance Marche
-      
-      Resistance_SetPoint := Ext_Resistance_SetPoint;
-      
-      --Regulator
-      
-      Gradient := Ext_Gradient;
-      Tmax := Ext_Tmax;
-
+     
       --  Blender
       
       V1_Speed := ext_V1_Speed;

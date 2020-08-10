@@ -29,7 +29,7 @@ package Tank.Filling is
        Filling_emptying_State,
        Closing_Valves_State,
        Stopping_Pumps_State,
-       Waiting_State);
+       End_Filling_State);
    
    procedure Initialize (This : in out Filling_Record);
 
@@ -46,8 +46,9 @@ package Tank.Filling is
       Level_P        : Boolean;
       Open_Valves    : out Boolean;
       Start_Pumps    : out Boolean;
-      Close_Valves   : out Boolean);
-   
+      Close_Valves   : out Boolean;     
+      End_Filling    : out Boolean);
+
 private
    
    type Filling_Record  is tagged record

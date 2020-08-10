@@ -1,0 +1,39 @@
+[GENERATED OBJECT FILE]
+b__run_tank.o
+[PROJECT FILES]
+/home/sogilis/sb/reflex_software/tank/gpr/run_tank.gpr
+20200715074109
+[BOUND OBJECT FILES]
+/home/sogilis/sb/reflex_software/tank/obj/devices.o
+/home/sogilis/sb/reflex_software/tank/obj/devices-blenders.o
+/home/sogilis/sb/reflex_software/tank/obj/devices-pumps.o
+/home/sogilis/sb/reflex_software/tank/obj/devices-valves.o
+/home/sogilis/sb/reflex_software/tank/obj/ext_ios.o
+/home/sogilis/sb/reflex_software/tank/obj/ios.o
+/home/sogilis/sb/reflex_software/tank/obj/regul.o
+/home/sogilis/sb/reflex_software/tank/obj/regul-ramps.o
+/home/sogilis/sb/reflex_software/tank/obj/rx.o
+/home/sogilis/sb/reflex_software/tank/obj/rx-library.o
+/home/sogilis/sb/reflex_software/tank/obj/rx-library-analogs.o
+/home/sogilis/sb/reflex_software/tank/obj/rx-library-analogs-pid.o
+/home/sogilis/sb/reflex_software/tank/obj/rxclock.o
+/home/sogilis/sb/reflex_software/tank/obj/devices-resistances.o
+/home/sogilis/sb/reflex_software/tank/obj/tank.o
+/home/sogilis/sb/reflex_software/tank/obj/tank-cycle.o
+/home/sogilis/sb/reflex_software/tank/obj/tank-filling.o
+/home/sogilis/sb/reflex_software/tank/obj/tank-mixing.o
+/home/sogilis/sb/reflex_software/tank/obj/tank-variables.o
+/home/sogilis/sb/reflex_software/tank/obj/tank-main.o
+/home/sogilis/sb/reflex_software/tank/obj/run_tank.o
+[GENERATED SOURCE FILES]
+b__run_tank.ads
+b__run_tank.adb
+b__run_tank.ali
+[RESULTING OPTIONS]
+-L/home/sogilis/sb/reflex_software/tank/obj/
+-L/home/sogilis/sb/reflex_software/tank/obj/
+-L/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/
+-static
+-static-libgcc
+/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/libgnat.a
+-ldl
