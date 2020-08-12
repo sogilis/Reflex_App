@@ -25,7 +25,7 @@ package step_definitions is
    --  @then ^End_Mixing is (TRUE|FALSE)$
    procedure Then_End_Mixing_is_N (Args : in out Arg_Type);
 
-   --  @then ^New_state is (Mix_State|It_Mixes_State|End_Mixing_State)$
+   --  @then ^New_state is (Init_State|Mix_State|It_Mixes_State|End_Mixing_State)$
    procedure Then_New_state_is_N (Args : in out Arg_Type);
 
    --  @then ^Start_Resistance is (TRUE|FALSE)$

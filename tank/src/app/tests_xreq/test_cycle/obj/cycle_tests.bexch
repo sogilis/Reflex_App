@@ -1,0 +1,32 @@
+[GENERATED OBJECT FILE]
+b__cycle_tests.o
+[PROJECT FILES]
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_cycle/cycle_tests.gpr
+20200423082722
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_cycle/cycle_impl.gpr
+20200423082923
+/home/sogilis/sb/reflex_software/lib/XReq-Enhanced/xreq_lib.gpr
+20200318082638
+[BOUND OBJECT FILES]
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_cycle/obj/tank.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_cycle/obj/tank-cycle.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_cycle/obj/step_definitions.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_cycle/obj/feature_test001.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_cycle/obj/feature_test_002.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_cycle/obj/cycle_tests.o
+[GENERATED SOURCE FILES]
+b__cycle_tests.ads
+b__cycle_tests.adb
+b__cycle_tests.ali
+[RESULTING OPTIONS]
+-L/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_cycle/obj/
+-L/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_cycle/obj/
+-L/home/sogilis/sb/reflex_software/lib/XReq-Enhanced/build/lib/development/native/
+-L/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/
+-static
+-static-libgcc
+/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/libgnarl.a
+/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/libgnat.a
+-lrt
+-lpthread
+-ldl

@@ -60,7 +60,6 @@ package body step_definitions is
    	  ( Start_Mixing     => Boolean'value(Start_Mixing),
      	    Blender_Started  => Blender_Started,
      	    Mixing_Duration  => 3,
-     	    Second           => true,
       	    Start_Blender    => Start_Blender,
      	    Start_Resistance => Start_Resistance,
      	    End_Mixing       => End_Mixing );
@@ -115,5 +114,11 @@ package body step_definitions is
           & Expected_Start_Blender & "'");
 
    end Then_Start_Blender_is_N;
+
+   procedure Then_New_state_is_Init_State (Args : in out Arg_Type) is
+      Not_Yet_Implemented : exception;
+   begin
+      raise Not_Yet_Implemented;
+   end Then_New_state_is_Init_State;
 
 end step_definitions;

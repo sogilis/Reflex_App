@@ -305,7 +305,7 @@ package ada_main is
    pragma Export (C, u00133, "system__string_hashB");
    u00134 : constant Version_32 := 16#60a93490#;
    pragma Export (C, u00134, "system__string_hashS");
-   u00135 : constant Version_32 := 16#a1bd47e3#;
+   u00135 : constant Version_32 := 16#5fa39d5b#;
    pragma Export (C, u00135, "feature_testB");
    u00136 : constant Version_32 := 16#82256b5b#;
    pragma Export (C, u00136, "feature_testS");
@@ -363,9 +363,9 @@ package ada_main is
    pragma Export (C, u00162, "system__stream_attributesB");
    u00163 : constant Version_32 := 16#8bc30a4e#;
    pragma Export (C, u00163, "system__stream_attributesS");
-   u00164 : constant Version_32 := 16#12b9c3a8#;
+   u00164 : constant Version_32 := 16#eca71910#;
    pragma Export (C, u00164, "step_definitionsB");
-   u00165 : constant Version_32 := 16#48917d93#;
+   u00165 : constant Version_32 := 16#b68fa72b#;
    pragma Export (C, u00165, "step_definitionsS");
    u00166 : constant Version_32 := 16#1bbc1346#;
    pragma Export (C, u00166, "devicesB");

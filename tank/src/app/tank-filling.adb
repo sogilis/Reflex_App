@@ -102,7 +102,7 @@ package body Tank.Filling is
       -- Commandes
 
       Open_Valves  := (This.State = Openning_Valves_State);
-      Start_Pumps  := (This.State = Running_Pumps_State) ;
+      Start_Pumps  := (This.State = Running_Pumps_State) or (This.State = Filling_emptying_State);
       Close_Valves := (This.State = Closing_Valves_State);
       End_Filling := (This.State = End_Filling_State);
    end Cyclic;

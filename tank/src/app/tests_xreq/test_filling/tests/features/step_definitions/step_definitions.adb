@@ -13,6 +13,7 @@ package body step_definitions is
       Open_Valves   : Boolean;
       Start_Pumps   : Boolean;
       Close_Valves  : Boolean;
+      End_Filling   : Boolean;
 
    procedure Set_Up (Feature_File : in String) is
 
@@ -90,7 +91,8 @@ package body step_definitions is
      		 Level_P        => Boolean'Value(Level_P_s),
      		 Open_Valves    => Open_Valves,
      		 Start_Pumps    => Start_Pumps,
-     		 Close_Valves   => Close_Valves);
+     		 Close_Valves   => Close_Valves,
+     		 End_Filling    => End_Filling);
        
 
 
@@ -109,7 +111,7 @@ package body step_definitions is
    end Then_Open_Valves_is_N;
 
    procedure Then_Start_Pumps_is_N (Args : in out Arg_Type) is
-     Expected_Start_Pumps  : constant String        := Args.Match (1);
+     Expected_Start_Pumps  : constant String         := Args.Match (1);
    begin
 
      Assert
@@ -132,6 +134,19 @@ package body step_definitions is
 
 
    end Then_Close_Valves_is_N;
+
+   procedure Then_End_Filling_is_N (Args : in out Arg_Type) is
+     Expected_End_Filling  : constant String := Args.Match (1);
+   begin
+
+     Assert
+       (Cmp    => End_Filling = Boolean'Value ( Expected_End_Filling ),
+        Reason =>
+          "Wrong End_Filling : Actual =>'" & End_Filling'Img & "' Expected =>'"
+          &  Expected_End_Filling  & "'");
+
+
+   end Then_End_Filling_is_N;
 
 
    procedure Then_New_state_is_N(Args : in out Arg_Type) is

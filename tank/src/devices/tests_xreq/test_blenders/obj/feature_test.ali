@@ -33,7 +33,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U feature_test%b	feature_test.adb	a1bd47e3 OO PK IL
+U feature_test%b	feature_test.adb	5fa39d5b OO PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -69,9 +69,9 @@ D a-strunb.ads		20190518041255 1656705b ada.strings.unbounded%s
 D a-tags.ads		20190518041256 491b781d ada.tags%s
 D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20190518041255 eff36322 ada.unchecked_deallocation%s
-D feature_test.ads	20200810084345 bc011e82 feature_test%s
-D feature_test.adb	20200810084345 4087a2f3 feature_test%b
-D step_definitions.ads	20200810084345 e2d4e5a8 step_definitions%s
+D feature_test.ads	20200812122345 bc011e82 feature_test%s
+D feature_test.adb	20200812122345 4087a2f3 feature_test%b
+D step_definitions.ads	20200812122345 1cca3f10 step_definitions%s
 D system.ads		20190518041255 4635ec04 system%s
 D s-atocou.ads		20190518041256 b45c2d8d system.atomic_counters%s
 D s-exctab.ads		20190518041255 54135002 system.exception_table%s
@@ -642,7 +642,7 @@ X 20 feature_test.adb
 1669a7 Tags{46|44A9} 1672r21 1681r48 1692r48 1703r48 1714r48 1725r48 1736r48
 1748b7 Stop{boolean} 1758m48 1758r48 1764m48 1764r48
 X 21 step_definitions.ads
-7K9*step_definitions 20|1w6 1r28 21|58e21
+7K9*step_definitions 20|1w6 1r28 21|34e21
 9U14*Set_Up 20|96s10 360s10 624s10 888s10 1152s10 1416s10
 11U14*Tear_Down 20|333s10 597s10 861s10 1125s10 1389s10 1653s10
 14U14*Given_blender_component_is_initialized 20|50s16

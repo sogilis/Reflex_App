@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			html, body, div, iframe {
+				margin:0; 
+				padding:0;
+			}
+			
+			iframe {
+				display:block; 
+				width:100%; 
+				border:none;
+				margin-top:50px;
+			}
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				position: fixed;
+				top: 0;
+				width: 100%;
+				border: 1px solid #e7e7e7;
+				background-color: #f3f3f3;
+			}
+
+			li {
+				float: left;
+			}
+
+			li {
+				display: block;
+			    color: #666;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
+
+			li hover:not(.active) {
+				background-color: #ddd;
+			}
+
+			.active {
+			    color: white;
+				background-color: #4CAF50;
+			}
+		</style>
+
+	<script type="text/javascript">
+		function updateBody(tabId, page) {
+			document.getElementById(selectedTab).setAttribute("class", "inactive");
+			tab = document.getElementById(tabId)
+			tab.setAttribute("class", "active");
+			selectedTab = tabId;
+			iframe = document.getElementById("myframe");
+			iframe.src = tab.getAttribute("value");
+		}
+		
+		function updateViewport() {
+			 var viewportheight;
+
+			 // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+			 if (typeof window.innerWidth != 'undefined')
+			 {
+				  viewportheight = window.innerHeight
+			 }
+             // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+			 else if (typeof document.documentElement != 'undefined'
+				 && typeof document.documentElement.clientWidth !=
+				 'undefined' && document.documentElement.clientWidth != 0)
+			 {
+				   viewportheight = document.documentElement.clientHeight
+			 }
+ 			 // older versions of IE
+			 else
+			 { 
+				   viewportheight = document.getElementsByTagName('body')[0].clientHeight
+			 }
+	
+	 		 iframe = document.getElementById("myframe");
+			 iframe.style.height = (viewportheight - 50) + 'px';
+		}
+
+		function init(tabId) {
+			updateBody(tabId);
+			updateViewport();
+			window.onresize = updateViewport;
+		}
+
+		var selectedTab = "tab1"
+	</script>
+
+	</head>
+	
+	<body onload="init('tab1');">
+		<ul id="tabnav">
+			<li id="tab1" class="active" onclick="updateBody('tab1')" value="xreq/xreq_report.html">Test Execution</li>
+		</ul>
+
+		<div>
+			<iframe id="myframe" height="100%" width="100%" frameborder="0"></iframe>
+		</div>
+	</body>
+</html>
+

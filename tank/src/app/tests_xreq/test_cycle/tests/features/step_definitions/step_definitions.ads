@@ -12,7 +12,10 @@ package step_definitions is
    procedure Given_Cycle_is_initialized (Args : in out Arg_Type);
 
    --  @given ^State is (Init_State|Filling_P1_State|Filling_P2_State|Mixing_State|Emptying_State|End_Cycle_State)$
-   procedure Given_State_N(Args : in out Arg_Type);
+   procedure Given_State_N (Args : in out Arg_Type);
+
+   --  @when ^Start_cycle is (TRUE|FALSE)$
+   procedure When_Start_cycle_is_N (Args : in out Arg_Type);
 
    --  @when ^End_Filling_P1 is (TRUE|FALSE)$
    procedure When_End_Filling_P1_is_N (Args : in out Arg_Type);

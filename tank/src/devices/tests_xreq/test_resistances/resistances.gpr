@@ -1,6 +1,0 @@
-with "resistances_impl.gpr";
-with "resistances_tests.gpr";
-
-project Resistancesis
-
-end Resistances;

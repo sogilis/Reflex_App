@@ -1,0 +1,2 @@
+step_definitions.adb:8:09: warning: variable "Run_order" is never read and never assigned
+step_definitions.adb:118:14: warning: procedure "Then_New_state_is_Init_State" is not referenced

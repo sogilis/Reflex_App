@@ -13,7 +13,7 @@ package step_definitions is
    --  @given ^Filling app is initialized$
    procedure Given_filling_app_is_initialized (Args : in out Arg_Type);
 
-   --  @given ^State is (Init_State|Openning_Valves_State|Running_Pumps_State|Filling_emptying_State|Closing_Valves_State|Stopping_Pumps_State|Waiting_State)$
+   --  @given ^State is (Init_State|Openning_Valves_State|Running_Pumps_State|Filling_emptying_State|Closing_Valves_State|Stopping_Pumps_State|End_Filling_State)$
    procedure Given_State_N (Args : in out Arg_Type);
 
    --  @when ^Start_Filling is (TRUE|FALSE) $
@@ -31,7 +31,7 @@ package step_definitions is
    --  @when ^Level_P is (TRUE|FALSE)$
    procedure When_Level_P_is_N (Args : in out Arg_Type);
 
-   --  @then ^New_state is (Init_State|Openning_Valves_State|Running_Pumps_State|Filling_emptying_State|Closing_Valves_State|Stopping_Pumps_State|Waiting_State) $
+   --  @then ^New_state is (Init_State|Openning_Valves_State|Running_Pumps_State|Filling_emptying_State|Closing_Valves_State|Stopping_Pumps_State|End_Filling_State) $
    procedure Then_New_state_is_N (Args : in out Arg_Type);
 
    --  @then ^Open_Valves is (TRUE|FALSE) $
@@ -42,5 +42,8 @@ package step_definitions is
 
    --  @then ^Close_Valves is (TRUE|FALSE) $
    procedure Then_Close_Valves_is_N (Args : in out Arg_Type);
+
+   --  @then ^End_Filling is (TRUE|FALSE) $
+   procedure Then_End_Filling_is_N (Args : in out Arg_Type);
 
 end step_definitions;

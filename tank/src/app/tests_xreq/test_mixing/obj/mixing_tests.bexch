@@ -1,0 +1,31 @@
+[GENERATED OBJECT FILE]
+b__mixing_tests.o
+[PROJECT FILES]
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_mixing/mixing_tests.gpr
+20200614131202
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_mixing/mixing_impl.gpr
+20200422111442
+/home/sogilis/sb/reflex_software/lib/XReq-Enhanced/xreq_lib.gpr
+20200318082638
+[BOUND OBJECT FILES]
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_mixing/obj/tank.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_mixing/obj/tank-mixing.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_mixing/obj/step_definitions.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_mixing/obj/feature_test.o
+/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_mixing/obj/mixing_tests.o
+[GENERATED SOURCE FILES]
+b__mixing_tests.ads
+b__mixing_tests.adb
+b__mixing_tests.ali
+[RESULTING OPTIONS]
+-L/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_mixing/obj/
+-L/home/sogilis/sb/reflex_software/tank/src/app/tests_xreq/test_mixing/obj/
+-L/home/sogilis/sb/reflex_software/lib/XReq-Enhanced/build/lib/development/native/
+-L/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/
+-static
+-static-libgcc
+/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/libgnarl.a
+/home/sogilis/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/libgnat.a
+-lrt
+-lpthread
+-ldl

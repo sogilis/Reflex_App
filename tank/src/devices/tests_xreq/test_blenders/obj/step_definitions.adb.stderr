@@ -1,1 +1,9 @@
 step_definitions.adb:8:05: warning: variable "Speed_2" is never read and never assigned
+step_definitions.adb:108:14: warning: procedure "Then_New_state_is_Stopping_State" is not referenced
+step_definitions.adb:114:14: warning: procedure "Then_v1_Order_is_TRUE" is not referenced
+step_definitions.adb:120:14: warning: procedure "Given_State_is_Stopping_State" is not referenced
+step_definitions.adb:126:14: warning: procedure "Then_New_state_is_Starting_State" is not referenced
+step_definitions.adb:132:14: warning: procedure "When_Speed_1_is_TRUE" is not referenced
+step_definitions.adb:138:14: warning: procedure "When_Speed_1_is_FALSE" is not referenced
+step_definitions.adb:144:14: warning: procedure "Then_v1_Order_is_FALSE" is not referenced
+step_definitions.adb:150:14: warning: procedure "Given_State_is_Starting_State" is not referenced

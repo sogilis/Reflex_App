@@ -37,8 +37,8 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 D ada.ads		20190518041255 76789da1 ada%s
 D a-except.ads		20190518041255 291912d5 ada.exceptions%s
 D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
-D b__valves_tests.ads	20200810082349 d462e356 ada_main%s
-D b__valves_tests.adb	20200810082349 6226ee3b ada_main%b
+D b__valves_tests.ads	20200812122353 d462e356 ada_main%s
+D b__valves_tests.adb	20200812122353 6226ee3b ada_main%b
 D system.ads		20190518041255 4635ec04 system%s
 D s-parame.ads		20190518041256 48ec542b system.parameters%s
 D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s

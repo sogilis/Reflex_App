@@ -4,6 +4,7 @@ with Tank.Cycle; use Tank.Cycle;
 package body step_definitions is 
 
       Cycle            : Cycle_Record;
+      Start_Cycle      : Boolean;
       End_Filling_P1   : Boolean;
       End_Filling_P2   : Boolean;
       End_Mixing       : Boolean;
@@ -33,7 +34,7 @@ package body step_definitions is
    begin
 
       Cycle.Initialize;
-
+ 
    end Given_Cycle_is_initialized;
 
    procedure Given_State_N (Args : in out Arg_Type) is
@@ -44,7 +45,13 @@ package body step_definitions is
 
    end Given_State_N;
 
+   procedure When_Start_Cycle_is_N (Args : in out Arg_Type) is
+   Start_Cycle_s : constant String := Args.Match (1);
+   begin
 
+       Start_Cycle := Boolean'value(Start_Cycle_s);
+
+   end When_Start_Cycle_is_N;
 
    procedure When_End_Filling_P1_is_N (Args : in out Arg_Type) is
    End_Filling_P1_s : constant String := Args.Match (1);
@@ -79,7 +86,8 @@ package body step_definitions is
    begin
 
       Cycle.Cyclic 
-                (End_Filling_P1   => End_Filling_P1,
+                (Start_Cycle      => Start_Cycle,
+                 End_Filling_P1   => End_Filling_P1,
      		 End_Filling_P2   => End_Filling_P2,
      		 End_Mixing       => End_Mixing,
      		 End_Emptying     => Boolean'value(End_Emptying),
@@ -168,5 +176,12 @@ package body step_definitions is
           & Expected_End_Cycle & "'");
 
    end Then_End_Cycle_is_N;
+
+
+   procedure When_Start_Cycle_is_FALSE (Args : in out Arg_Type) is
+      Not_Yet_Implemented : exception;
+   begin
+      raise Not_Yet_Implemented;
+   end When_Start_Cycle_is_FALSE;
 
 end step_definitions;

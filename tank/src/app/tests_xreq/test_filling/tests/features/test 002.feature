@@ -16,6 +16,8 @@ Given Filling app is initialized
     And  Open_Valves is TRUE 
     And  Start_Pumps is FALSE 
     And  Close_Valves is FALSE 
+    And  Close_Valves is FALSE 
+    And  End_Filling is FALSE 
 
     Given State is Openning_Valves_State
 
@@ -29,6 +31,7 @@ Given Filling app is initialized
     And  Open_Valves is FALSE 
     And  Start_Pumps is TRUE 
     And  Close_Valves is FALSE 
+    And  End_Filling is FALSE 
 
     Given State is Running_Pumps_State
 
@@ -42,6 +45,7 @@ Given Filling app is initialized
     And  Open_Valves is FALSE 
     And  Start_Pumps is TRUE 
     And  Close_Valves is FALSE 
+    And  End_Filling is FALSE 
 
     Given State is Filling_emptying_State
 
@@ -55,6 +59,7 @@ Given Filling app is initialized
     And  Open_Valves is FALSE 
     And  Start_Pumps is FALSE 
     And  Close_Valves is FALSE 
+    And  End_Filling is FALSE 
 
     Given State is Stopping_Pumps_State
 
@@ -68,6 +73,7 @@ Given Filling app is initialized
     And  Open_Valves is FALSE 
     And  Start_Pumps is FALSE 
     And  Close_Valves is TRUE 
+    And  End_Filling is FALSE 
 
 
     Given State is Closing_Valves_State
@@ -78,12 +84,14 @@ Given Filling app is initialized
     And  Pumps_Started is FALSE 
     And  Level_P is FALSE
 
-    Then New_state is Waiting_State 
+    Then New_state is End_Filling_State 
     And  Open_Valves is FALSE 
     And  Start_Pumps is FALSE 
     And  Close_Valves is FALSE 
+    And  End_Filling is TRUE 
 
-    Given State is Waiting_State
+
+    Given State is End_Filling_State
 
     When Start_Filling is FALSE 
     And  Valves_Opened is FALSE 
@@ -95,4 +103,5 @@ Given Filling app is initialized
     And  Open_Valves is FALSE 
     And  Start_Pumps is FALSE 
     And  Close_Valves is FALSE 
+    And  End_Filling is FALSE 
 

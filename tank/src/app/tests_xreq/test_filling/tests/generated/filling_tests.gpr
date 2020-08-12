@@ -1,0 +1,13 @@
+with "xreqlib";
+
+project filling_tests is
+   for Languages   use ("Ada");
+   for Main        use ("filling_tests");
+   for Source_Dirs use (".", "../features/step_definitions");
+   package Compiler is
+      for Default_Switches ("Ada") use ("-gnat05", "-g");
+   end Compiler;
+   package Binder is
+      for Default_Switches ("Ada") use ("-E");
+   end Binder;
+end filling_tests;

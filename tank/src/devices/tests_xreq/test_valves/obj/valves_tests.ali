@@ -67,7 +67,7 @@ D a-strunb.ads		20190518041255 1656705b ada.strings.unbounded%s
 D a-tags.ads		20190518041256 491b781d ada.tags%s
 D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20190518041255 eff36322 ada.unchecked_deallocation%s
-D feature_test.ads	20200810082309 bc011e82 feature_test%s
+D feature_test.ads	20200812122345 bc011e82 feature_test%s
 D gnat.ads		20190518041256 b5988c27 gnat%s
 D g-os_lib.ads		20190518041254 0db74523 gnat.os_lib%s
 D interfac.ads		20190518041254 5ab55268 interfaces%s
@@ -102,7 +102,7 @@ D s-taprop.ads		20190518041256 1dd2e1b6 system.task_primitives.operations%s
 D s-taskin.ads		20190518041257 b9d612e2 system.tasking%s
 D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
-D valves_tests.adb	20200810082309 79e8d55c valves_tests%b
+D valves_tests.adb	20200812122345 79e8d55c valves_tests%b
 D xreqlib.ads		20200318082638 88a20b05 xreqlib%s
 D xreqlib-args.ads	20200318082638 aa45983b xreqlib.args%s
 D xreqlib-cli.ads	20200318082638 5ebb08ab xreqlib.cli%s
